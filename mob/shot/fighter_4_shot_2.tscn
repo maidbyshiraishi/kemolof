@@ -1,0 +1,134 @@
+[gd_scene load_steps=18 format=3 uid="uid://dy4ehu14pyk4u"]
+
+[ext_resource type="Script" uid="uid://c46wy184671o6" path="res://mob/shot/Fighter4Shot2.cs" id="1_w06dc"]
+[ext_resource type="Script" uid="uid://db8hbi1ec6vl4" path="res://mob/AttackArea.cs" id="2_y5fs0"]
+[ext_resource type="Texture2D" uid="uid://b5280jb7xcx5b" path="res://contents/image/shot/fighter_4_shot_2.png" id="3_w06dc"]
+[ext_resource type="Texture2D" uid="uid://b6nkeismufuem" path="res://contents/image/shot/fighter_4_shot_2_effect.png" id="4_y5fs0"]
+[ext_resource type="PackedScene" uid="uid://bh0d1pl6uidn6" path="res://system/se_player.tscn" id="5_y5fs0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w06dc"]
+size = Vector2(160, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5fs0"]
+size = Vector2(128, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5fs0"]
+atlas = ExtResource("3_w06dc")
+region = Rect2(0, 0, 156, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3ai2"]
+atlas = ExtResource("3_w06dc")
+region = Rect2(156, 0, 156, 95)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rkeub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5fs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3ai2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55etc"]
+radius = 56.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkeub"]
+atlas = ExtResource("4_y5fs0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l144i"]
+atlas = ExtResource("4_y5fs0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdvne"]
+atlas = ExtResource("4_y5fs0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ygng"]
+atlas = ExtResource("4_y5fs0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xva8m"]
+atlas = ExtResource("4_y5fs0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_laq18"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkeub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l144i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdvne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ygng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xva8m")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Shot" type="CharacterBody2D"]
+collision_layer = 32
+script = ExtResource("1_w06dc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -72)
+shape = SubResource("RectangleShape2D_w06dc")
+
+[node name="AttackArea1" type="Area2D" parent="."]
+z_index = 100
+position = Vector2(0, -64)
+collision_layer = 34
+collision_mask = 0
+script = ExtResource("2_y5fs0")
+HitVoice = Array[String](["fighter_1_hit"])
+
+[node name="AttackCollision" type="CollisionShape2D" parent="AttackArea1"]
+z_index = 100
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_y5fs0")
+disabled = true
+debug_color = Color(1, 0, 0, 0.313726)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -80)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_rkeub")
+autoplay = "default"
+frame_progress = 0.872433
+
+[node name="EraseCollision" type="Area2D" parent="."]
+visible = false
+collision_layer = 64
+collision_mask = 81
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EraseCollision"]
+position = Vector2(0, -64)
+shape = SubResource("CircleShape2D_55etc")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-4.76837e-06, -72)
+scale = Vector2(6.4, 4.4)
+rect = Rect2(-20, -20, 40, 40)
+
+[node name="Effect" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.86102e-06, -80)
+scale = Vector2(8, 6.25)
+sprite_frames = SubResource("SpriteFrames_laq18")
+autoplay = "default"
+frame = 4
+
+[node name="SePlayer" parent="." instance=ExtResource("5_y5fs0")]

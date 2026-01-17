@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=3 uid="uid://yhn3l7v3q7e5"]
+
+[ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_na8vy"]
+[ext_resource type="Script" uid="uid://cekplpvh6gcvo" path="res://screen/MessageDialog.cs" id="2_aeidt"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="3_vrsfp"]
+[ext_resource type="PackedScene" uid="uid://bre2fb1drg3wq" path="res://command/reference_command_container.tscn" id="4_ymhwy"]
+[ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="5_r71ln"]
+[ext_resource type="PackedScene" uid="uid://73dqa18ykkwt" path="res://command/focus.tscn" id="5_ymhwy"]
+[ext_resource type="PackedScene" uid="uid://dvbavm6ut2uel" path="res://command/dialog/open_screen_command.tscn" id="6_vrsfp"]
+[ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="7_ef3lv"]
+[ext_resource type="PackedScene" uid="uid://dpnl48f76kgdj" path="res://command/command_container.tscn" id="8_rxoue"]
+[ext_resource type="PackedScene" uid="uid://dvy8ox4sfd5hc" path="res://trigger/visible_trigger.tscn" id="10_e3o6m"]
+[ext_resource type="PackedScene" uid="uid://bwnbq0d05nrbf" path="res://command/audio/change_bgm_command.tscn" id="11_e33n5"]
+[ext_resource type="AudioStream" uid="uid://yrsd3ic1ixy8" path="res://contents/bgm/bgm11.ogg" id="12_u7v5c"]
+
+[node name="MessageDialog" type="Control"]
+light_mask = 2
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_na8vy")
+script = ExtResource("2_aeidt")
+
+[node name="Background" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 63.0
+offset_right = 608.0
+offset_bottom = 384.0
+color = Color(1, 1, 1, 0.25098)
+
+[node name="Border" type="ReferenceRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 63.0
+offset_right = 608.0
+offset_bottom = 384.0
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 80.0
+offset_right = 256.0
+offset_bottom = 109.0
+scale = Vector2(3, 3)
+text = "勝者"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message" type="Label" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 48.0
+offset_top = 168.0
+offset_right = 320.0
+offset_bottom = 244.0
+scale = Vector2(2, 2)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="."]
+light_mask = 2
+anchors_preset = 0
+
+[node name="Back" type="Button" parent="Control"]
+light_mask = 2
+layout_mode = 0
+offset_left = 256.0
+offset_top = 344.0
+offset_right = 400.0
+offset_bottom = 376.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+text = "タイトルへ戻る"
+
+[node name="Exec" type="Node" parent="Control/Back"]
+script = ExtResource("3_vrsfp")
+
+[node name="ReferenceCommandContainer" parent="Control/Back/Exec" node_paths=PackedStringArray("Target") instance=ExtResource("4_ymhwy")]
+Target = NodePath("../../../../Close")
+
+[node name="Focus" parent="Control/Back" instance=ExtResource("5_ymhwy")]
+
+[node name="EscapeKey" parent="." instance=ExtResource("7_ef3lv")]
+ActionName = "escape"
+
+[node name="ReferenceCommandContainer" parent="EscapeKey" node_paths=PackedStringArray("Target") instance=ExtResource("4_ymhwy")]
+Target = NodePath("../../Close")
+
+[node name="Close" parent="." instance=ExtResource("8_rxoue")]
+
+[node name="PlaySeCommand" parent="Close" instance=ExtResource("5_r71ln")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="OpenScreenCommand" parent="Close" instance=ExtResource("6_vrsfp")]
+Screen = "res://screen/title_screen.tscn"
+
+[node name="VisibleTrigger" parent="." instance=ExtResource("10_e3o6m")]
+position = Vector2(56, 88)
+
+[node name="ChangeBgmCommand" parent="VisibleTrigger" instance=ExtResource("11_e33n5")]
+Command = 1
+Stream = ExtResource("12_u7v5c")

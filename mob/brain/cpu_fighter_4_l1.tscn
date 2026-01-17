@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://difsvpvuas5po"]
+
+[ext_resource type="PackedScene" uid="uid://ckix3ji6swcxx" path="res://mob/brain/cpu_fighter_4_root.tscn" id="1_ljlt0"]
+
+[node name="Brain" instance=ExtResource("1_ljlt0")]
+Waza3Probability = 0.01
+ActionProbability = 0.4

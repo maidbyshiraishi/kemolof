@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://cr2lwjlb07c3g"]
+
+[ext_resource type="Script" uid="uid://cwsufbgy5awh0" path="res://stage/hud/Hud.cs" id="1_paadw"]
+[ext_resource type="PackedScene" uid="uid://cxafv8tj6dexo" path="res://trigger/timer_trigger.tscn" id="2_nku51"]
+[ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="3_bwh5j"]
+[ext_resource type="PackedScene" uid="uid://cf8axedfd5v81" path="res://command/hud/hide_hud_message_command.tscn" id="3_t2i1n"]
+[ext_resource type="PackedScene" uid="uid://l7xudjpc38ac" path="res://command/timer/start_timer_command.tscn" id="4_e1str"]
+[ext_resource type="PackedScene" uid="uid://dvy8ox4sfd5hc" path="res://trigger/visible_trigger.tscn" id="4_pn78j"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_paadw")
+metadata/_edit_vertical_guides_ = [320.0]
+metadata/_edit_horizontal_guides_ = [240.0]
+
+[node name="Start" type="Control" parent="."]
+light_mask = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+theme = ExtResource("3_bwh5j")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_1" type="Label" parent="Start"]
+light_mask = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.133
+anchor_right = 0.435937
+anchor_bottom = 0.135083
+offset_top = 0.159836
+offset_right = 213.0
+offset_bottom = 30.1598
+scale = Vector2(1.3, 1.3)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_2" type="Label" parent="Start"]
+light_mask = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.216833
+anchor_right = 0.435937
+anchor_bottom = 0.218916
+offset_top = -0.0801849
+offset_right = 213.0
+offset_bottom = 29.9198
+scale = Vector2(1.3, 1.3)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_3" type="Label" parent="Start"]
+light_mask = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.299665
+anchor_right = 0.435937
+anchor_bottom = 0.301748
+offset_top = 0.160522
+offset_right = 213.0
+offset_bottom = 30.1605
+scale = Vector2(1.3, 1.3)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VisibleTrigger" parent="Start" instance=ExtResource("4_pn78j")]
+position = Vector2(32, 32)
+
+[node name="StartTimerCommand" parent="Start/VisibleTrigger" node_paths=PackedStringArray("Target") instance=ExtResource("4_e1str")]
+Target = NodePath("../../Timer")
+
+[node name="Timer" type="Timer" parent="Start"]
+wait_time = 2.0
+one_shot = true
+
+[node name="TimerTrigger" parent="Start/Timer" instance=ExtResource("2_nku51")]
+
+[node name="HideHudMessageCommand" parent="Start/Timer/TimerTrigger" instance=ExtResource("3_t2i1n")]

@@ -1,0 +1,168 @@
+[gd_scene load_steps=19 format=3 uid="uid://ddw2g00yqtlmx"]
+
+[ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_7ly80"]
+[ext_resource type="Script" uid="uid://rmx1t3loo6oa" path="res://stage/GameStageRoot.cs" id="2_3hrrl"]
+[ext_resource type="Script" uid="uid://6lv42xkeogwo" path="res://tilemap/TileMapManager.cs" id="3_kiuo3"]
+[ext_resource type="TileSet" uid="uid://vlqhnvwag8d" path="res://contents/tilemap/tileset.tres" id="4_w2etb"]
+[ext_resource type="Script" uid="uid://nojtbikbv3es" path="res://stage/FighterList.cs" id="5_8t45x"]
+[ext_resource type="PackedScene" uid="uid://ccxq7k0i5717u" path="res://trigger/referee.tscn" id="6_vudmq"]
+[ext_resource type="PackedScene" uid="uid://dpnl48f76kgdj" path="res://command/command_container.tscn" id="7_fww8q"]
+[ext_resource type="PackedScene" uid="uid://mx0jhsu5i4r8" path="res://trigger/collision_trigger.tscn" id="7_re06b"]
+[ext_resource type="PackedScene" uid="uid://dk13403te08n5" path="res://command/fighter/outside_fighter_command.tscn" id="8_fvyii"]
+[ext_resource type="PackedScene" uid="uid://cr2lwjlb07c3g" path="res://stage/hud/hud.tscn" id="8_u0rxu"]
+[ext_resource type="Script" uid="uid://dhy2o5pxh12jv" path="res://stage/Camera.cs" id="9_i7mlx"]
+[ext_resource type="PackedScene" uid="uid://dvy8ox4sfd5hc" path="res://trigger/visible_trigger.tscn" id="10_52t1r"]
+[ext_resource type="PackedScene" uid="uid://l7xudjpc38ac" path="res://command/timer/start_timer_command.tscn" id="11_s52av"]
+[ext_resource type="PackedScene" uid="uid://cxafv8tj6dexo" path="res://trigger/timer_trigger.tscn" id="12_7rln4"]
+[ext_resource type="PackedScene" uid="uid://mm6miyrmbjvb" path="res://command/hud/show_hud_message_command.tscn" id="13_a0vkv"]
+[ext_resource type="PackedScene" uid="uid://7lc2ks6h6ce" path="res://trigger/shortcut_keys.tscn" id="13_rx2t0"]
+[ext_resource type="PackedScene" uid="uid://dyto000xvxglv" path="res://command/fighter/damage_all_fighters_command.tscn" id="14_3pafv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fww8q"]
+size = Vector2(2304, 64)
+
+[node name="Stage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_7ly80")
+script = ExtResource("2_3hrrl")
+MouseCaptured = true
+metadata/_edit_horizontal_guides_ = [240.0, 0.0, 480.0]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Parallax2D_1" type="Parallax2D" parent="Background"]
+z_index = -1000
+repeat_size = Vector2(1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Background/Parallax2D_1"]
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.447059, 0.678431, 0.933333, 1)
+
+[node name="Parallax2D_2" type="Parallax2D" parent="Background"]
+z_index = -990
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(640, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D_2"]
+modulate = Color(1, 1, 1, 0.196078)
+centered = false
+
+[node name="Parallax2D_3" type="Parallax2D" parent="Background"]
+visible = false
+z_index = -980
+repeat_size = Vector2(1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D_3"]
+scale = Vector2(2, 2)
+centered = false
+
+[node name="TileMap" type="Node2D" parent="."]
+
+[node name="Background_2" type="TileMapLayer" parent="TileMap"]
+z_index = -20
+tile_set = ExtResource("4_w2etb")
+collision_enabled = false
+
+[node name="Background_1" type="TileMapLayer" parent="TileMap"]
+self_modulate = Color(0.627451, 0.627451, 0.627451, 1)
+z_index = -20
+tile_set = ExtResource("4_w2etb")
+collision_enabled = false
+
+[node name="Ground" type="TileMapLayer" parent="TileMap"]
+tile_set = ExtResource("4_w2etb")
+script = ExtResource("3_kiuo3")
+
+[node name="Foreground" type="TileMapLayer" parent="TileMap"]
+z_index = 1
+tile_set = ExtResource("4_w2etb")
+collision_enabled = false
+
+[node name="Spawn" type="Node2D" parent="."]
+
+[node name="Player_1" type="Marker2D" parent="Spawn"]
+
+[node name="Player_2" type="Marker2D" parent="Spawn"]
+
+[node name="Player_3" type="Marker2D" parent="Spawn"]
+
+[node name="Player_4" type="Marker2D" parent="Spawn"]
+
+[node name="Player_5" type="Marker2D" parent="Spawn"]
+
+[node name="Player_6" type="Marker2D" parent="Spawn"]
+
+[node name="Player_7" type="Marker2D" parent="Spawn"]
+
+[node name="Respawn" type="Node2D" parent="."]
+
+[node name="Player_1" type="Marker2D" parent="Respawn"]
+
+[node name="Player_2" type="Marker2D" parent="Respawn"]
+
+[node name="Player_3" type="Marker2D" parent="Respawn"]
+
+[node name="Player_4" type="Marker2D" parent="Respawn"]
+
+[node name="Player_5" type="Marker2D" parent="Respawn"]
+
+[node name="Player_6" type="Marker2D" parent="Respawn"]
+
+[node name="Player_7" type="Marker2D" parent="Respawn"]
+
+[node name="Fighter" type="Node2D" parent="."]
+script = ExtResource("5_8t45x")
+
+[node name="Shot" type="Node2D" parent="."]
+z_index = 60
+
+[node name="Decoration" type="Node2D" parent="."]
+z_index = 40
+
+[node name="Scenario" type="Node2D" parent="."]
+
+[node name="Referee" parent="Scenario" instance=ExtResource("6_vudmq")]
+
+[node name="Draw" parent="Scenario/Referee" instance=ExtResource("7_fww8q")]
+
+[node name="Winner" parent="Scenario/Referee" instance=ExtResource("7_fww8q")]
+
+[node name="OutsideArea_1" parent="Scenario" instance=ExtResource("7_re06b")]
+position = Vector2(320, 552)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/OutsideArea_1"]
+shape = SubResource("RectangleShape2D_fww8q")
+
+[node name="OutsideFighterCommand" parent="Scenario/OutsideArea_1" instance=ExtResource("8_fvyii")]
+
+[node name="TimeupTimerStart" parent="Scenario" instance=ExtResource("10_52t1r")]
+position = Vector2(24, 0)
+
+[node name="StartTimerCommand" parent="Scenario/TimeupTimerStart" node_paths=PackedStringArray("Target") instance=ExtResource("11_s52av")]
+Target = NodePath("../../Timeup")
+
+[node name="Timeup" type="Timer" parent="Scenario"]
+wait_time = 180.0
+
+[node name="TimerTrigger" parent="Scenario/Timeup" instance=ExtResource("12_7rln4")]
+
+[node name="ShowHudMessageCommand" parent="Scenario/Timeup/TimerTrigger" instance=ExtResource("13_a0vkv")]
+Text1 = "早く決着をつけてください"
+Text2 = "全員にダメージ！"
+
+[node name="DamageAllFightersCommand" parent="Scenario/Timeup/TimerTrigger" instance=ExtResource("14_3pafv")]
+Damage = 3
+HitVoice = Array[String](["damage_all"])
+
+[node name="Hud" parent="." instance=ExtResource("8_u0rxu")]
+
+[node name="ShortcutKeys" parent="." instance=ExtResource("13_rx2t0")]
+
+[node name="Camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(320, 240)
+script = ExtResource("9_i7mlx")

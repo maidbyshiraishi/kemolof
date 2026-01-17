@@ -1,0 +1,383 @@
+[gd_scene load_steps=45 format=3 uid="uid://cmxbdhmxw1ib3"]
+
+[ext_resource type="Script" uid="uid://b41opevqecrrw" path="res://mob/fighter/Fighter4.cs" id="1_fy2pl"]
+[ext_resource type="PackedScene" uid="uid://dcaaok2vhuha4" path="res://decoration/effect_damage.tscn" id="2_hdx4v"]
+[ext_resource type="PackedScene" uid="uid://bfygg33ntyk47" path="res://decoration/effect_guard.tscn" id="3_fpt0c"]
+[ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="4_fpt0c"]
+[ext_resource type="Texture2D" uid="uid://cgfymxpgmcewo" path="res://contents/image/fighter/life_under.png" id="5_gdcmc"]
+[ext_resource type="Texture2D" uid="uid://do6244aynl8wi" path="res://contents/image/fighter/life_up.png" id="6_d1k8w"]
+[ext_resource type="Texture2D" uid="uid://dm4ox6peeqkwy" path="res://contents/image/fighter/life_bar.png" id="7_5mdh0"]
+[ext_resource type="AnimationLibrary" uid="uid://33yndv6wfsnx" path="res://contents/state_machine/fighter/fighter_4/animation_player.tres" id="7_m8uv7"]
+[ext_resource type="PackedScene" uid="uid://bh0d1pl6uidn6" path="res://system/se_player.tscn" id="8_1lhvq"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://cpgx4mmuo21se" path="res://contents/state_machine/fighter/fighter_4/animation_tree.tres" id="10_3spv1"]
+[ext_resource type="Script" uid="uid://dptf8elyoe57i" path="res://system/waza_analyzer/WazaAnalyzer.cs" id="11_ywyef"]
+[ext_resource type="Script" uid="uid://db8hbi1ec6vl4" path="res://mob/AttackArea.cs" id="12_13mjx"]
+[ext_resource type="Script" uid="uid://ciuhn4cjsb3fr" path="res://mob/DamageArea.cs" id="13_os5w2"]
+[ext_resource type="Texture2D" uid="uid://b6nkeismufuem" path="res://contents/image/shot/fighter_4_shot_2_effect.png" id="31_m8uv7"]
+[ext_resource type="Texture2D" uid="uid://lecauw6xg8pf" path="res://contents/image/fighter/fighter_4/body_upper_1.png" id="37_fy2pl"]
+[ext_resource type="Texture2D" uid="uid://bstf2bm0qkjpt" path="res://contents/image/fighter/fighter_4/arm_l_1.png" id="38_lnvvb"]
+[ext_resource type="Texture2D" uid="uid://dd8aoevtplpwh" path="res://contents/image/fighter/fighter_4/arm_l_2.png" id="39_3cnd6"]
+[ext_resource type="Texture2D" uid="uid://j417kyuln7ae" path="res://contents/image/fighter/fighter_4/head_1.png" id="40_ijx54"]
+[ext_resource type="Texture2D" uid="uid://bdq1jyxl7eyph" path="res://contents/image/fighter/fighter_4/ribbon.png" id="41_5cghh"]
+[ext_resource type="Texture2D" uid="uid://c6c1vv3qwgtj6" path="res://contents/image/fighter/fighter_4/ear_1.png" id="42_urce7"]
+[ext_resource type="Texture2D" uid="uid://fluuecafllgb" path="res://contents/image/fighter/fighter_4/ear_2.png" id="43_j62sx"]
+[ext_resource type="Texture2D" uid="uid://bptwn41ryhnx4" path="res://contents/image/fighter/fighter_4/leg_l_1.png" id="44_2afxg"]
+[ext_resource type="Texture2D" uid="uid://dr4hlkqp04qbf" path="res://contents/image/fighter/fighter_4/hair_1.png" id="44_3cnd6"]
+[ext_resource type="Texture2D" uid="uid://j7rtda8p3oiy" path="res://contents/image/fighter/fighter_4/leg_l_2.png" id="45_hbj6d"]
+[ext_resource type="Texture2D" uid="uid://cm4ehmst6n3ta" path="res://contents/image/fighter/fighter_4/hair_2.png" id="45_ijx54"]
+[ext_resource type="Texture2D" uid="uid://1jke6v1y33sg" path="res://contents/image/fighter/fighter_4/leg_l_3.png" id="46_r0twu"]
+[ext_resource type="Texture2D" uid="uid://ldjdvtyrl1k8" path="res://contents/image/fighter/fighter_4/tail_1.png" id="47_qy6kl"]
+[ext_resource type="Texture2D" uid="uid://ceaxhnu34nbya" path="res://contents/image/fighter/fighter_4/leg_r_1.png" id="48_rkrh6"]
+[ext_resource type="Texture2D" uid="uid://b5pl00jgmiu4v" path="res://contents/image/fighter/fighter_4/leg_r_2.png" id="49_fab3c"]
+[ext_resource type="Texture2D" uid="uid://b72f02tnusg0e" path="res://contents/image/fighter/fighter_4/leg_r_3.png" id="50_0lxaa"]
+[ext_resource type="Texture2D" uid="uid://cjem6j5u1qblr" path="res://contents/image/fighter/fighter_4/body_lower_1.png" id="51_y8akp"]
+[ext_resource type="Texture2D" uid="uid://dqby23jfgrc2c" path="res://contents/image/fighter/fighter_4/arm_r_1.png" id="52_six6p"]
+[ext_resource type="Texture2D" uid="uid://df22va7au3lbe" path="res://contents/image/fighter/fighter_4/arm_r_2.png" id="53_f5sux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6kg"]
+size = Vector2(32, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utcca"]
+size = Vector2(48, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fhxr"]
+size = Vector2(33, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iy8c2"]
+size = Vector2(27, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_norce"]
+size = Vector2(20, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3spv1"]
+atlas = ExtResource("31_m8uv7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8uv7"]
+atlas = ExtResource("31_m8uv7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lhvq"]
+atlas = ExtResource("31_m8uv7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqklf"]
+atlas = ExtResource("31_m8uv7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h40d"]
+atlas = ExtResource("31_m8uv7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1lhvq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"waza_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3spv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8uv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lhvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqklf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h40d")
+}],
+"loop": false,
+"name": &"waza_2",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"waza_3",
+"speed": 5.0
+}]
+
+[node name="Fighter4" type="CharacterBody2D"]
+collision_layer = 12
+collision_mask = 9
+platform_on_leave = 2
+script = ExtResource("1_fy2pl")
+FighterName = "忍者"
+EffectDamage = ExtResource("2_hdx4v")
+EffectGuard = ExtResource("3_fpt0c")
+MieVoice = Array[String](["fighter_4_mie"])
+ActionVoice = Array[String](["fighter_4_gozaru", "fighter_4_hehedane", "fighter_4_monjya", "fighter_4_ninjya", "fighter_4_ninnin"])
+DamageVoice = Array[String](["fighter_4_ouch", "fighter_4_nanjya", "fighter_4_ninjya"])
+KnockDownVoice = Array[String](["fighter_4_knock_down"])
+DeadVoice = Array[String](["fighter_4_dead"])
+Waza1Voice = Array[String](["fighter_4_waza_1"])
+Waza2Voice = Array[String](["fighter_4_waza_2"])
+Waza3Voice = Array[String](["fighter_4_waza_3_1", "fighter_4_waza_3_2"])
+GroundMaxSpeed = 300.0
+GuardMaxSpeed = 180.0
+JumpHeight = 300.0
+metadata/_edit_horizontal_guides_ = [-90.0, -45.0, 0.0, -135.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_rf6kg")
+
+[node name="Status" type="Node2D" parent="."]
+position = Vector2(0, -110)
+
+[node name="No" type="Label" parent="Status"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -74.0
+offset_right = 22.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_fpt0c")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LifeBar" type="TextureProgressBar" parent="Status"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -50.0
+offset_right = 40.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("5_gdcmc")
+texture_over = ExtResource("6_d1k8w")
+texture_progress = ExtResource("7_5mdh0")
+texture_progress_offset = Vector2(2, 2)
+
+[node name="SePlayer" parent="." instance=ExtResource("8_1lhvq")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("7_m8uv7")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+deterministic = false
+tree_root = ExtResource("10_3spv1")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/crouch = false
+parameters/conditions/crouch_guard = false
+parameters/conditions/guard = false
+parameters/conditions/jump = false
+parameters/conditions/kick = false
+parameters/conditions/not_crouch = false
+parameters/conditions/not_guard = false
+parameters/conditions/not_walk = false
+parameters/conditions/on_floor = false
+parameters/conditions/punch = false
+parameters/conditions/walk = false
+
+[node name="WazaAnalyzer" type="Node" parent="."]
+script = ExtResource("11_ywyef")
+
+[node name="Character" type="Node2D" parent="."]
+position = Vector2(0, -64)
+
+[node name="AttackArea1" type="Area2D" parent="Character"]
+z_index = 100
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("12_13mjx")
+HitVoice = Array[String](["fighter_1_hit"])
+
+[node name="AttackCollision" type="CollisionShape2D" parent="Character/AttackArea1"]
+z_index = 100
+shape = SubResource("RectangleShape2D_utcca")
+disabled = true
+debug_color = Color(1, 0, 0, 0.313726)
+
+[node name="DamageArea1" type="Area2D" parent="Character"]
+z_index = 100
+position = Vector2(2, -46)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("13_os5w2")
+Row = 1
+GuardVoice = Array[String](["fighter_1_guard"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea1"]
+shape = SubResource("RectangleShape2D_6fhxr")
+debug_color = Color(1, 0, 0.588235, 0.392157)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character/DamageArea1"]
+remote_path = NodePath("../../../Status")
+update_rotation = false
+update_scale = false
+
+[node name="DamageArea2" type="Area2D" parent="Character"]
+z_index = 100
+position = Vector2(2, -4)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("13_os5w2")
+Row = 2
+GuardVoice = Array[String](["fighter_1_guard"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea2"]
+shape = SubResource("RectangleShape2D_iy8c2")
+debug_color = Color(1, 0, 0.588235, 0.392157)
+
+[node name="DamageArea3" type="Area2D" parent="Character"]
+z_index = 100
+position = Vector2(2, 42)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("13_os5w2")
+Row = 3
+GuardVoice = Array[String](["fighter_1_guard"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea3"]
+shape = SubResource("RectangleShape2D_norce")
+debug_color = Color(1, 0, 0.588235, 0.392157)
+
+[node name="Sprites" type="Node2D" parent="Character"]
+position = Vector2(0, 6)
+scale = Vector2(3.5, 3.5)
+
+[node name="BodyUpper1" type="Sprite2D" parent="Character/Sprites"]
+position = Vector2(0, -0.5)
+texture = ExtResource("37_fy2pl")
+offset = Vector2(0, -2.5)
+
+[node name="ArmL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+show_behind_parent = true
+position = Vector2(0.5, -5.5)
+texture = ExtResource("38_lnvvb")
+
+[node name="ArmL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/ArmL1"]
+position = Vector2(0, 3.5)
+texture = ExtResource("39_3cnd6")
+offset = Vector2(0, 2.5)
+
+[node name="Head1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+show_behind_parent = true
+position = Vector2(0.5, -7.5)
+texture = ExtResource("40_ijx54")
+offset = Vector2(0, -7)
+
+[node name="Ribbon" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+position = Vector2(-4.5, -8)
+texture = ExtResource("41_5cghh")
+offset = Vector2(-2, -0.5)
+
+[node name="EarL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+show_behind_parent = true
+position = Vector2(0, -12)
+rotation = -0.261799
+texture = ExtResource("42_urce7")
+offset = Vector2(0.5, -3)
+
+[node name="EarL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/EarL1"]
+show_behind_parent = true
+position = Vector2(0, -6)
+rotation = 0.261799
+texture = ExtResource("43_j62sx")
+offset = Vector2(0.5, -3)
+
+[node name="EarR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+position = Vector2(0, -12)
+rotation = 0.261799
+texture = ExtResource("42_urce7")
+offset = Vector2(0.5, -3)
+
+[node name="EarR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/EarR1"]
+position = Vector2(0, -6)
+rotation = 0.261799
+texture = ExtResource("43_j62sx")
+offset = Vector2(0.5, -3)
+
+[node name="Hair1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+position = Vector2(-3.5, -3)
+rotation = 0.523598
+texture = ExtResource("44_3cnd6")
+offset = Vector2(0.5, 1.5)
+
+[node name="Hair2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/Hair1"]
+position = Vector2(-0.5, 4)
+rotation = 0.523598
+texture = ExtResource("45_ijx54")
+offset = Vector2(0.5, 1.5)
+
+[node name="Hip" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+offset = Vector2(0.5, 4)
+
+[node name="LegL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip"]
+show_behind_parent = true
+position = Vector2(0, 3)
+texture = ExtResource("44_2afxg")
+offset = Vector2(0, 1.5)
+
+[node name="LegL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1"]
+position = Vector2(1, 5)
+texture = ExtResource("45_hbj6d")
+offset = Vector2(-0.5, 2.5)
+
+[node name="LegL3" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1/LegL2"]
+position = Vector2(0, 5)
+texture = ExtResource("46_r0twu")
+offset = Vector2(1, 2)
+
+[node name="Tail1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip"]
+show_behind_parent = true
+position = Vector2(-2.5, 1)
+rotation = 0.261799
+texture = ExtResource("47_qy6kl")
+offset = Vector2(-1, -0.5)
+
+[node name="LegR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip"]
+position = Vector2(0, 3)
+texture = ExtResource("48_rkrh6")
+offset = Vector2(0, 1.5)
+
+[node name="LegR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegR1"]
+position = Vector2(1, 5)
+texture = ExtResource("49_fab3c")
+offset = Vector2(-0.5, 2.5)
+
+[node name="LegR3" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegR1/LegR2"]
+position = Vector2(0, 5)
+texture = ExtResource("50_0lxaa")
+offset = Vector2(1, 2)
+
+[node name="BodyLower1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+position = Vector2(0, -0.5)
+texture = ExtResource("51_y8akp")
+offset = Vector2(0.5, 4)
+
+[node name="ArmR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+position = Vector2(0.5, -5.5)
+texture = ExtResource("52_six6p")
+
+[node name="ArmR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/ArmR1"]
+position = Vector2(0, 3.5)
+texture = ExtResource("53_f5sux")
+offset = Vector2(0, 2.5)
+
+[node name="Aura" type="AnimatedSprite2D" parent="Character/Sprites"]
+sprite_frames = SubResource("SpriteFrames_1lhvq")

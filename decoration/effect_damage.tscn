@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcaaok2vhuha4"]
+
+[ext_resource type="PackedScene" uid="uid://d8ertj6jffv6" path="res://decoration/effect_root.tscn" id="1_iybaq"]
+[ext_resource type="Texture2D" uid="uid://cq4k4cwdltti" path="res://contents/image/fighter/effect_damage.png" id="2_y8fv8"]
+
+[node name="EffectRoot" instance=ExtResource("1_iybaq")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_y8fv8")

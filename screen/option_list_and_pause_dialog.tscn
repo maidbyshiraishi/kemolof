@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://yltdrtrk01dl"]
+
+[ext_resource type="PackedScene" uid="uid://djnbr5bus17iy" path="res://screen/option_list_dialog.tscn" id="1_jcb5i"]
+[ext_resource type="PackedScene" uid="uid://0g2eonhitvku" path="res://command/audio/resume_bgm_command.tscn" id="2_1boa5"]
+[ext_resource type="PackedScene" uid="uid://dvy8ox4sfd5hc" path="res://trigger/visible_trigger.tscn" id="2_uuw54"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="3_0feqh"]
+[ext_resource type="PackedScene" uid="uid://bp6p2o3vupf7t" path="res://command/audio/pause_bgm_command.tscn" id="3_30q8g"]
+[ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="4_4jutu"]
+[ext_resource type="PackedScene" uid="uid://4dnj27cvdryh" path="res://command/dialog/open_dialog_command.tscn" id="5_4u6ly"]
+[ext_resource type="PackedScene" uid="uid://73dqa18ykkwt" path="res://command/focus.tscn" id="6_0xv88"]
+
+[node name="OptionListAndPauseDialog" instance=ExtResource("1_jcb5i")]
+
+[node name="Background" parent="." index="0"]
+offset_bottom = 416.0
+
+[node name="Control_WazaCommand_Exec#ResumeBgmCommand" parent="." index="1" instance=ExtResource("2_1boa5")]
+
+[node name="Control_KeyOptions_Exec#ResumeBgmCommand" parent="." index="2" instance=ExtResource("2_1boa5")]
+
+[node name="Border" parent="." index="3"]
+offset_bottom = 416.0
+
+[node name="Title" parent="." index="4"]
+text = "設定一覧 / ポーズ"
+
+[node name="Label" type="Label" parent="." index="5"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 128.0
+offset_right = 464.0
+offset_bottom = 200.0
+text = "BGMを一時停止しています。
+メニューを選択すると
+BGMの演奏を再開します"
+horizontal_alignment = 1
+
+[node name="Back" parent="Control" index="0"]
+offset_top = 368.0
+offset_bottom = 400.0
+
+[node name="VolumeOptions" parent="Control" index="1"]
+offset_top = 272.0
+offset_bottom = 304.0
+
+[node name="ResumeBgmCommand" parent="Control/VolumeOptions/Exec" index="1" instance=ExtResource("2_1boa5")]
+
+[node name="ScreenOptions" parent="Control" index="2"]
+offset_top = 320.0
+offset_bottom = 352.0
+
+[node name="ResumeBgmCommand" parent="Control/ScreenOptions/Exec" index="1" instance=ExtResource("2_1boa5")]
+
+[node name="WazaCommand" type="Button" parent="Control" index="3"]
+light_mask = 2
+offset_left = 224.0
+offset_top = 216.0
+offset_right = 416.0
+offset_bottom = 248.0
+text = "必殺技コマンド表"
+
+[node name="Exec" type="Node" parent="Control/WazaCommand" index="0"]
+script = ExtResource("3_0feqh")
+
+[node name="PlaySeCommand" parent="Control/WazaCommand/Exec" index="0" instance=ExtResource("4_4jutu")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="ResumeBgmCommand" parent="Control/WazaCommand/Exec" index="1" instance=ExtResource("2_1boa5")]
+
+[node name="OpenDialogCommand" parent="Control/WazaCommand/Exec" index="2" instance=ExtResource("5_4u6ly")]
+DialogPath = "res://screen/waza_command_dialog.tscn"
+
+[node name="Focus" parent="Control/WazaCommand" index="1" instance=ExtResource("6_0xv88")]
+
+[node name="Focus" parent="." index="8" instance=ExtResource("2_uuw54")]
+position = Vector2(200, 96)
+
+[node name="PauseBgmCommand" parent="Focus" index="0" instance=ExtResource("3_30q8g")]
+
+[node name="ResumeBgmCommand" parent="Close" index="1" instance=ExtResource("2_1boa5")]

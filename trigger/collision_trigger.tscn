@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mx0jhsu5i4r8"]
+
+[ext_resource type="Script" uid="uid://kkd5350tpmoh" path="res://trigger/CollisionTrigger.cs" id="1_t00d5"]
+
+[node name="CollisionTrigger" type="Area2D"]
+script = ExtResource("1_t00d5")

@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://dwtgw43megp0l"]
+
+[ext_resource type="Texture2D" uid="uid://4hjxw87mw82a" path="res://contents/screen/select_fighter_screen/up.png" id="1_445q0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywwnh"]
+atlas = ExtResource("1_445q0")
+region = Rect2(0, 0, 72, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ki6i"]
+atlas = ExtResource("1_445q0")
+region = Rect2(72, 0, 72, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywwnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ki6i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

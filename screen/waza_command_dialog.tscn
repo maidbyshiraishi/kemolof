@@ -1,0 +1,1153 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxi76rit0fqvk"]
+
+[ext_resource type="PackedScene" uid="uid://bkoe5i6gpyyth" path="res://theater/story_theater.tscn" id="1_6k1gf"]
+[ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="2_c4efp"]
+[ext_resource type="Texture2D" uid="uid://b80876roihxb4" path="res://contents/screen/select_fighter_screen/select_fighter.png" id="3_a1vu2"]
+[ext_resource type="Texture2D" uid="uid://1rj0y2gel2p" path="res://contents/screen/waza_command_screen/keys.png" id="3_ubuwm"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="4_a1vu2"]
+[ext_resource type="PackedScene" uid="uid://c6qlmwp7c1hu5" path="res://command/dialog/close_dialog_command.tscn" id="5_8jehl"]
+[ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="5_c4efp"]
+[ext_resource type="PackedScene" uid="uid://g1lqac5js7pi" path="res://command/theater/go_page_command.tscn" id="6_tw1ft"]
+[ext_resource type="PackedScene" uid="uid://c21hot266v86s" path="res://command/theater/go_next_page_command.tscn" id="7_ubuwm"]
+[ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="10_tw1ft"]
+
+[node name="StoryTheater" instance=ExtResource("1_6k1gf")]
+
+[node name="Background" parent="." index="0"]
+visible = false
+
+[node name="Contents" type="Control" parent="Socket" index="0"]
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="Page1" type="Control" parent="Socket/Contents" index="0"]
+visible = false
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="ColorRect" type="ColorRect" parent="Socket/Contents/Page1" index="0"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+color = Color(0.470588, 0.784314, 0.784314, 1)
+
+[node name="Border" type="ReferenceRect" parent="Socket/Contents/Page1" index="1"]
+light_mask = 2
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+border_color = Color(0.313726, 0.313726, 0.313726, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Title" type="Label" parent="Socket/Contents/Page1" index="2"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 72.0
+text = "青メイドの必殺技コマンド"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Comment" type="Label" parent="Socket/Contents/Page1" index="3"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 72.0
+offset_right = 544.0
+offset_bottom = 104.0
+theme = ExtResource("2_c4efp")
+text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Character" type="Sprite2D" parent="Socket/Contents/Page1" index="4"]
+position = Vector2(136, 248)
+texture = ExtResource("3_a1vu2")
+hframes = 5
+
+[node name="Waza1" type="Label" parent="Socket/Contents/Page1" index="5"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 552.0
+offset_bottom = 152.0
+text = "メイド自由落下"
+vertical_alignment = 1
+
+[node name="WazaComment1" type="Label" parent="Socket/Contents/Page1" index="6"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 152.0
+offset_right = 576.0
+offset_bottom = 184.0
+text = "空中で"
+vertical_alignment = 1
+
+[node name="Waza1_1" type="Sprite2D" parent="Socket/Contents/Page1" index="7"]
+position = Vector2(304, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza1_2" type="Sprite2D" parent="Socket/Contents/Page1" index="8"]
+position = Vector2(344, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza1_3" type="Sprite2D" parent="Socket/Contents/Page1" index="9"]
+position = Vector2(384, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Waza2" type="Label" parent="Socket/Contents/Page1" index="10"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 200.0
+offset_right = 552.0
+offset_bottom = 240.0
+text = "むち打ちになるヘッドバット"
+vertical_alignment = 1
+
+[node name="WazaComment2" type="Label" parent="Socket/Contents/Page1" index="11"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 240.0
+offset_right = 576.0
+offset_bottom = 272.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza2_1" type="Sprite2D" parent="Socket/Contents/Page1" index="12"]
+position = Vector2(304, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza2_2" type="Sprite2D" parent="Socket/Contents/Page1" index="13"]
+position = Vector2(344, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza2_3" type="Sprite2D" parent="Socket/Contents/Page1" index="14"]
+position = Vector2(384, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza2_4" type="Sprite2D" parent="Socket/Contents/Page1" index="15"]
+position = Vector2(424, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Waza3" type="Label" parent="Socket/Contents/Page1" index="16"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 288.0
+offset_right = 552.0
+offset_bottom = 328.0
+text = "忍者にもらった手裏剣"
+vertical_alignment = 1
+
+[node name="WazaComment3" type="Label" parent="Socket/Contents/Page1" index="17"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 328.0
+offset_right = 576.0
+offset_bottom = 360.0
+text = "どこでも"
+vertical_alignment = 1
+
+[node name="Waza3_1" type="Sprite2D" parent="Socket/Contents/Page1" index="18"]
+position = Vector2(320, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza3_2" type="Sprite2D" parent="Socket/Contents/Page1" index="19"]
+position = Vector2(360, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza3_3" type="Sprite2D" parent="Socket/Contents/Page1" index="20"]
+position = Vector2(400, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Control" type="Control" parent="Socket/Contents/Page1" index="21"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Next" type="Button" parent="Socket/Contents/Page1/Control" index="0"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 392.0
+offset_right = 384.0
+offset_bottom = 432.0
+text = "次"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page1/Control/Next" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page1/Control/Next/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="GoNextPageCommand" parent="Socket/Contents/Page1/Control/Next/Exec" index="1" instance=ExtResource("7_ubuwm")]
+
+[node name="Close" type="Button" parent="Socket/Contents/Page1/Control" index="1"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 392.0
+offset_right = 528.0
+offset_bottom = 432.0
+text = "閉じる"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page1/Control/Close" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page1/Control/Close/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="CloseDialogCommand" parent="Socket/Contents/Page1/Control/Close/Exec" index="1" instance=ExtResource("5_8jehl")]
+
+[node name="Page2" type="Control" parent="Socket/Contents" index="1"]
+visible = false
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="ColorRect" type="ColorRect" parent="Socket/Contents/Page2" index="0"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+color = Color(1, 0.784314, 1, 1)
+
+[node name="Border" type="ReferenceRect" parent="Socket/Contents/Page2" index="1"]
+light_mask = 2
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+border_color = Color(0.313726, 0.313726, 0.313726, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Character" type="Sprite2D" parent="Socket/Contents/Page2" index="2"]
+position = Vector2(136, 248)
+texture = ExtResource("3_a1vu2")
+hframes = 5
+frame = 1
+
+[node name="Title" type="Label" parent="Socket/Contents/Page2" index="3"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 72.0
+text = "午後のメイドの必殺技コマンド"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Comment" type="Label" parent="Socket/Contents/Page2" index="4"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 72.0
+offset_right = 544.0
+offset_bottom = 104.0
+theme = ExtResource("2_c4efp")
+text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Waza1" type="Label" parent="Socket/Contents/Page2" index="5"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 552.0
+offset_bottom = 152.0
+text = "坂本さんショット"
+vertical_alignment = 1
+
+[node name="WazaComment1" type="Label" parent="Socket/Contents/Page2" index="6"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 152.0
+offset_right = 576.0
+offset_bottom = 184.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza1_1" type="Sprite2D" parent="Socket/Contents/Page2" index="7"]
+position = Vector2(304, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza1_2" type="Sprite2D" parent="Socket/Contents/Page2" index="8"]
+position = Vector2(344, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza1_3" type="Sprite2D" parent="Socket/Contents/Page2" index="9"]
+position = Vector2(384, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza2" type="Label" parent="Socket/Contents/Page2" index="10"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 200.0
+offset_right = 552.0
+offset_bottom = 240.0
+text = "前後不覚のポーズ"
+vertical_alignment = 1
+
+[node name="WazaComment2" type="Label" parent="Socket/Contents/Page2" index="11"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 240.0
+offset_right = 576.0
+offset_bottom = 272.0
+text = "どこでも"
+vertical_alignment = 1
+
+[node name="Waza2_1" type="Sprite2D" parent="Socket/Contents/Page2" index="12"]
+position = Vector2(320, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza2_2" type="Sprite2D" parent="Socket/Contents/Page2" index="13"]
+position = Vector2(360, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza2_3" type="Sprite2D" parent="Socket/Contents/Page2" index="14"]
+position = Vector2(400, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza2_4" type="Sprite2D" parent="Socket/Contents/Page2" index="15"]
+position = Vector2(440, 240)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza2_5" type="Sprite2D" parent="Socket/Contents/Page2" index="16"]
+position = Vector2(456, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Waza3" type="Label" parent="Socket/Contents/Page2" index="17"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 288.0
+offset_right = 552.0
+offset_bottom = 328.0
+text = "緊急避難"
+vertical_alignment = 1
+
+[node name="WazaComment3" type="Label" parent="Socket/Contents/Page2" index="18"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 328.0
+offset_right = 576.0
+offset_bottom = 360.0
+text = "どこでも"
+vertical_alignment = 1
+
+[node name="Waza3_1" type="Sprite2D" parent="Socket/Contents/Page2" index="19"]
+position = Vector2(320, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza3_2" type="Sprite2D" parent="Socket/Contents/Page2" index="20"]
+position = Vector2(360, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza3_3" type="Sprite2D" parent="Socket/Contents/Page2" index="21"]
+position = Vector2(400, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza3_4" type="Sprite2D" parent="Socket/Contents/Page2" index="22"]
+position = Vector2(440, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza3_5" type="Sprite2D" parent="Socket/Contents/Page2" index="23"]
+position = Vector2(480, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Control" type="Control" parent="Socket/Contents/Page2" index="24"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Next" type="Button" parent="Socket/Contents/Page2/Control" index="0"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 392.0
+offset_right = 384.0
+offset_bottom = 432.0
+text = "次"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page2/Control/Next" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page2/Control/Next/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="GoNextPageCommand" parent="Socket/Contents/Page2/Control/Next/Exec" index="1" instance=ExtResource("7_ubuwm")]
+
+[node name="Close" type="Button" parent="Socket/Contents/Page2/Control" index="1"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 392.0
+offset_right = 528.0
+offset_bottom = 432.0
+text = "閉じる"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page2/Control/Close" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page2/Control/Close/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="CloseDialogCommand" parent="Socket/Contents/Page2/Control/Close/Exec" index="1" instance=ExtResource("5_8jehl")]
+
+[node name="Page3" type="Control" parent="Socket/Contents" index="2"]
+visible = false
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="ColorRect" type="ColorRect" parent="Socket/Contents/Page3" index="0"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+color = Color(0.196078, 0.470588, 1, 1)
+
+[node name="Border" type="ReferenceRect" parent="Socket/Contents/Page3" index="1"]
+light_mask = 2
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+border_color = Color(0.313726, 0.313726, 0.313726, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Character" type="Sprite2D" parent="Socket/Contents/Page3" index="2"]
+position = Vector2(136, 248)
+texture = ExtResource("3_a1vu2")
+hframes = 5
+frame = 2
+
+[node name="Title" type="Label" parent="Socket/Contents/Page3" index="3"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 72.0
+text = "スクール水着の必殺技コマンド"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Comment" type="Label" parent="Socket/Contents/Page3" index="4"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 72.0
+offset_right = 544.0
+offset_bottom = 104.0
+theme = ExtResource("2_c4efp")
+text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Waza1" type="Label" parent="Socket/Contents/Page3" index="5"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 552.0
+offset_bottom = 152.0
+text = "碁石投げ"
+vertical_alignment = 1
+
+[node name="WazaComment1" type="Label" parent="Socket/Contents/Page3" index="6"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 152.0
+offset_right = 576.0
+offset_bottom = 184.0
+text = "どこでも"
+vertical_alignment = 1
+
+[node name="Waza1_1" type="Sprite2D" parent="Socket/Contents/Page3" index="7"]
+position = Vector2(320, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza1_2" type="Sprite2D" parent="Socket/Contents/Page3" index="8"]
+position = Vector2(360, 160)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza1_3" type="Sprite2D" parent="Socket/Contents/Page3" index="9"]
+position = Vector2(376, 184)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Waza1_4" type="Sprite2D" parent="Socket/Contents/Page3" index="10"]
+position = Vector2(416, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+
+[node name="Waza2" type="Label" parent="Socket/Contents/Page3" index="11"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 200.0
+offset_right = 552.0
+offset_bottom = 240.0
+text = "ビート板アッパーカット"
+vertical_alignment = 1
+
+[node name="WazaComment2" type="Label" parent="Socket/Contents/Page3" index="12"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 248.0
+offset_right = 576.0
+offset_bottom = 280.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza2_1" type="Sprite2D" parent="Socket/Contents/Page3" index="13"]
+position = Vector2(304, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza2_2" type="Sprite2D" parent="Socket/Contents/Page3" index="14"]
+position = Vector2(344, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza2_3" type="Sprite2D" parent="Socket/Contents/Page3" index="15"]
+position = Vector2(400, 280)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Waza2_4" type="Sprite2D" parent="Socket/Contents/Page3" index="16"]
+position = Vector2(384, 256)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza2_5" type="Sprite2D" parent="Socket/Contents/Page3" index="17"]
+position = Vector2(440, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+
+[node name="Waza3" type="Label" parent="Socket/Contents/Page3" index="18"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 288.0
+offset_right = 552.0
+offset_bottom = 328.0
+text = "白スク降臨"
+vertical_alignment = 1
+
+[node name="WazaComment3" type="Label" parent="Socket/Contents/Page3" index="19"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 328.0
+offset_right = 576.0
+offset_bottom = 360.0
+text = "どこでも"
+vertical_alignment = 1
+
+[node name="Waza3_1" type="Sprite2D" parent="Socket/Contents/Page3" index="20"]
+position = Vector2(312, 344)
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza3_2" type="Sprite2D" parent="Socket/Contents/Page3" index="21"]
+position = Vector2(336, 344)
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza3_3" type="Sprite2D" parent="Socket/Contents/Page3" index="22"]
+position = Vector2(360, 344)
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza3_5" type="Sprite2D" parent="Socket/Contents/Page3" index="23"]
+position = Vector2(384, 344)
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza3_6" type="Sprite2D" parent="Socket/Contents/Page3" index="24"]
+position = Vector2(408, 344)
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza3_7" type="Sprite2D" parent="Socket/Contents/Page3" index="25"]
+position = Vector2(432, 344)
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza3_8" type="Sprite2D" parent="Socket/Contents/Page3" index="26"]
+position = Vector2(456, 344)
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+
+[node name="Control" type="Control" parent="Socket/Contents/Page3" index="27"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Next" type="Button" parent="Socket/Contents/Page3/Control" index="0"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 392.0
+offset_right = 384.0
+offset_bottom = 432.0
+text = "次"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page3/Control/Next" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page3/Control/Next/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="GoNextPageCommand" parent="Socket/Contents/Page3/Control/Next/Exec" index="1" instance=ExtResource("7_ubuwm")]
+
+[node name="Close" type="Button" parent="Socket/Contents/Page3/Control" index="1"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 392.0
+offset_right = 528.0
+offset_bottom = 432.0
+text = "閉じる"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page3/Control/Close" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page3/Control/Close/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="CloseDialogCommand" parent="Socket/Contents/Page3/Control/Close/Exec" index="1" instance=ExtResource("5_8jehl")]
+
+[node name="Page4" type="Control" parent="Socket/Contents" index="3"]
+visible = false
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="ColorRect" type="ColorRect" parent="Socket/Contents/Page4" index="0"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+color = Color(0.8, 0.0862745, 0.247059, 1)
+
+[node name="Border" type="ReferenceRect" parent="Socket/Contents/Page4" index="1"]
+light_mask = 2
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+border_color = Color(0.313726, 0.313726, 0.313726, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Character" type="Sprite2D" parent="Socket/Contents/Page4" index="2"]
+position = Vector2(136, 248)
+texture = ExtResource("3_a1vu2")
+hframes = 5
+frame = 3
+
+[node name="Title" type="Label" parent="Socket/Contents/Page4" index="3"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 72.0
+text = "忍者の必殺技コマンド"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Comment" type="Label" parent="Socket/Contents/Page4" index="4"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 72.0
+offset_right = 544.0
+offset_bottom = 104.0
+theme = ExtResource("2_c4efp")
+text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Waza1" type="Label" parent="Socket/Contents/Page4" index="5"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 552.0
+offset_bottom = 152.0
+text = "メイドにあげた手裏剣"
+vertical_alignment = 1
+
+[node name="WazaComment1" type="Label" parent="Socket/Contents/Page4" index="6"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 152.0
+offset_right = 576.0
+offset_bottom = 184.0
+text = "どこでも"
+vertical_alignment = 1
+
+[node name="Waza1_1" type="Sprite2D" parent="Socket/Contents/Page4" index="7"]
+position = Vector2(320, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza1_2" type="Sprite2D" parent="Socket/Contents/Page4" index="8"]
+position = Vector2(360, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza1_3" type="Sprite2D" parent="Socket/Contents/Page4" index="9"]
+position = Vector2(400, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza2" type="Label" parent="Socket/Contents/Page4" index="10"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 200.0
+offset_right = 552.0
+offset_bottom = 240.0
+text = "完全シノビの術"
+vertical_alignment = 1
+
+[node name="WazaComment2" type="Label" parent="Socket/Contents/Page4" index="11"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 248.0
+offset_right = 576.0
+offset_bottom = 280.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza2_1" type="Sprite2D" parent="Socket/Contents/Page4" index="12"]
+position = Vector2(304, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza2_2" type="Sprite2D" parent="Socket/Contents/Page4" index="13"]
+position = Vector2(344, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza2_3" type="Sprite2D" parent="Socket/Contents/Page4" index="14"]
+position = Vector2(384, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Waza2_4" type="Sprite2D" parent="Socket/Contents/Page4" index="15"]
+position = Vector2(424, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza2_5" type="Sprite2D" parent="Socket/Contents/Page4" index="16"]
+position = Vector2(464, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza2_6" type="Sprite2D" parent="Socket/Contents/Page4" index="17"]
+position = Vector2(504, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza3" type="Label" parent="Socket/Contents/Page4" index="18"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 288.0
+offset_right = 552.0
+offset_bottom = 328.0
+text = "ときどき食用"
+vertical_alignment = 1
+
+[node name="WazaComment3" type="Label" parent="Socket/Contents/Page4" index="19"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 328.0
+offset_right = 576.0
+offset_bottom = 360.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza3_1" type="Sprite2D" parent="Socket/Contents/Page4" index="20"]
+position = Vector2(304, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza3_2" type="Sprite2D" parent="Socket/Contents/Page4" index="21"]
+position = Vector2(344, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza3_3" type="Sprite2D" parent="Socket/Contents/Page4" index="22"]
+position = Vector2(384, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza3_4" type="Sprite2D" parent="Socket/Contents/Page4" index="23"]
+position = Vector2(424, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Waza3_5" type="Sprite2D" parent="Socket/Contents/Page4" index="24"]
+position = Vector2(464, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza3_6" type="Sprite2D" parent="Socket/Contents/Page4" index="25"]
+position = Vector2(504, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+
+[node name="Control" type="Control" parent="Socket/Contents/Page4" index="26"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Next" type="Button" parent="Socket/Contents/Page4/Control" index="0"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 392.0
+offset_right = 384.0
+offset_bottom = 432.0
+text = "次"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page4/Control/Next" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page4/Control/Next/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="GoNextPageCommand" parent="Socket/Contents/Page4/Control/Next/Exec" index="1" instance=ExtResource("7_ubuwm")]
+
+[node name="Close" type="Button" parent="Socket/Contents/Page4/Control" index="1"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 392.0
+offset_right = 528.0
+offset_bottom = 432.0
+text = "閉じる"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page4/Control/Close" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page4/Control/Close/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="CloseDialogCommand" parent="Socket/Contents/Page4/Control/Close/Exec" index="1" instance=ExtResource("5_8jehl")]
+
+[node name="Page5" type="Control" parent="Socket/Contents" index="4"]
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="ColorRect" type="ColorRect" parent="Socket/Contents/Page5" index="0"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+color = Color(1, 0.886275, 0.776471, 1)
+
+[node name="Border" type="ReferenceRect" parent="Socket/Contents/Page5" index="1"]
+light_mask = 2
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 464.0
+border_color = Color(0.313726, 0.313726, 0.313726, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Character" type="Sprite2D" parent="Socket/Contents/Page5" index="2"]
+position = Vector2(136, 248)
+texture = ExtResource("3_a1vu2")
+hframes = 5
+frame = 4
+
+[node name="Title" type="Label" parent="Socket/Contents/Page5" index="3"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 72.0
+text = "ストリーファイター5の必殺技コマンド"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Comment" type="Label" parent="Socket/Contents/Page5" index="4"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 72.0
+offset_right = 544.0
+offset_bottom = 104.0
+theme = ExtResource("2_c4efp")
+text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Waza1" type="Label" parent="Socket/Contents/Page5" index="5"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 552.0
+offset_bottom = 152.0
+text = "全裸の波動"
+vertical_alignment = 1
+
+[node name="WazaComment1" type="Label" parent="Socket/Contents/Page5" index="6"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 152.0
+offset_right = 576.0
+offset_bottom = 184.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza1_1" type="Sprite2D" parent="Socket/Contents/Page5" index="7"]
+position = Vector2(304, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza1_2" type="Sprite2D" parent="Socket/Contents/Page5" index="8"]
+position = Vector2(344, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 6
+
+[node name="Waza1_3" type="Sprite2D" parent="Socket/Contents/Page5" index="9"]
+position = Vector2(384, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza1_4" type="Sprite2D" parent="Socket/Contents/Page5" index="10"]
+position = Vector2(424, 168)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza2" type="Label" parent="Socket/Contents/Page5" index="11"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 200.0
+offset_right = 552.0
+offset_bottom = 240.0
+text = "全裸の滝登り"
+vertical_alignment = 1
+
+[node name="WazaComment2" type="Label" parent="Socket/Contents/Page5" index="12"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 248.0
+offset_right = 576.0
+offset_bottom = 280.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza2_1" type="Sprite2D" parent="Socket/Contents/Page5" index="13"]
+position = Vector2(304, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 3
+
+[node name="Waza2_2" type="Sprite2D" parent="Socket/Contents/Page5" index="14"]
+position = Vector2(344, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza2_3" type="Sprite2D" parent="Socket/Contents/Page5" index="15"]
+position = Vector2(384, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 6
+
+[node name="Waza2_4" type="Sprite2D" parent="Socket/Contents/Page5" index="16"]
+position = Vector2(424, 264)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 4
+
+[node name="Waza3" type="Label" parent="Socket/Contents/Page5" index="17"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 288.0
+offset_right = 552.0
+offset_bottom = 328.0
+text = "全裸トルネード"
+vertical_alignment = 1
+
+[node name="WazaComment3" type="Label" parent="Socket/Contents/Page5" index="18"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 328.0
+offset_right = 576.0
+offset_bottom = 360.0
+text = "地上で"
+vertical_alignment = 1
+
+[node name="Waza3_1" type="Sprite2D" parent="Socket/Contents/Page5" index="19"]
+position = Vector2(304, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 1
+
+[node name="Waza3_2" type="Sprite2D" parent="Socket/Contents/Page5" index="20"]
+position = Vector2(344, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 7
+
+[node name="Waza3_3" type="Sprite2D" parent="Socket/Contents/Page5" index="21"]
+position = Vector2(384, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 2
+
+[node name="Waza3_4" type="Sprite2D" parent="Socket/Contents/Page5" index="22"]
+position = Vector2(424, 344)
+texture = ExtResource("3_ubuwm")
+hframes = 10
+frame = 5
+
+[node name="Control" type="Control" parent="Socket/Contents/Page5" index="23"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Back" type="Button" parent="Socket/Contents/Page5/Control" index="0"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 392.0
+offset_right = 384.0
+offset_bottom = 432.0
+text = "次"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page5/Control/Back" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page5/Control/Back/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="GoPageCommand" parent="Socket/Contents/Page5/Control/Back/Exec" index="1" node_paths=PackedStringArray("Page") instance=ExtResource("6_tw1ft")]
+Page = NodePath("../../../../../Page1")
+
+[node name="Close" type="Button" parent="Socket/Contents/Page5/Control" index="1"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 392.0
+offset_right = 528.0
+offset_bottom = 432.0
+text = "閉じる"
+
+[node name="Exec" type="Node" parent="Socket/Contents/Page5/Control/Close" index="0"]
+script = ExtResource("4_a1vu2")
+
+[node name="PlaySeCommand" parent="Socket/Contents/Page5/Control/Close/Exec" index="0" instance=ExtResource("5_c4efp")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="CloseDialogCommand" parent="Socket/Contents/Page5/Control/Close/Exec" index="1" instance=ExtResource("5_8jehl")]
+
+[node name="Frame" parent="." index="2"]
+texture = null
+
+[node name="EscapeKey" parent="." index="4" instance=ExtResource("10_tw1ft")]
+ActionName = "escape"
+
+[node name="CloseDialogCommand" parent="EscapeKey" index="0" instance=ExtResource("5_8jehl")]

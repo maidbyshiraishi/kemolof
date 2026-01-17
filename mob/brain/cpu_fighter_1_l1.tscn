@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb8r58gqwiggd"]
+
+[ext_resource type="PackedScene" uid="uid://mommfjr3ikrm" path="res://mob/brain/cpu_fighter_1_root.tscn" id="1_nxrwm"]
+
+[node name="Brain" instance=ExtResource("1_nxrwm")]
+ActionProbability = 0.3

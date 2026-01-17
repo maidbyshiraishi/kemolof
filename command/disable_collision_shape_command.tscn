@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://basrl1d1ki47q"]
+
+[ext_resource type="Script" uid="uid://crssqwruivarx" path="res://command/DisableCollisionShapeCommand.cs" id="1_fge5p"]
+
+[node name="DisableCollisionShapeCommand" type="Node"]
+script = ExtResource("1_fge5p")

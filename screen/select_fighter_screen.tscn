@@ -1,0 +1,451 @@
+[gd_scene load_steps=13 format=3 uid="uid://612ysnmvubrr"]
+
+[ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_yv2qw"]
+[ext_resource type="Script" uid="uid://c0jxt04ehfdfw" path="res://screen/SelectFighterScreen.cs" id="2_gli2l"]
+[ext_resource type="Texture2D" uid="uid://b80876roihxb4" path="res://contents/screen/select_fighter_screen/select_fighter.png" id="3_17426"]
+[ext_resource type="Texture2D" uid="uid://c4ecrjqqjolxs" path="res://contents/screen/select_fighter_screen/disable.png" id="3_yv2qw"]
+[ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="4_17426"]
+[ext_resource type="PackedScene" uid="uid://bre2fb1drg3wq" path="res://command/reference_command_container.tscn" id="5_0e1rh"]
+[ext_resource type="SpriteFrames" uid="uid://dwtgw43megp0l" path="res://contents/screen/select_fighter_screen/up.tres" id="5_hr24w"]
+[ext_resource type="SpriteFrames" uid="uid://bl41q1xvduury" path="res://contents/screen/select_fighter_screen/down.tres" id="6_17426"]
+[ext_resource type="SpriteFrames" uid="uid://4jhv6rqkv01w" path="res://contents/screen/select_fighter_screen/selected.tres" id="7_0e1rh"]
+[ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="7_vayuq"]
+[ext_resource type="PackedScene" uid="uid://dvbavm6ut2uel" path="res://command/dialog/open_screen_command.tscn" id="11_17426"]
+[ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="12_0e1rh"]
+
+[node name="SelectFighterScreen" type="Control"]
+light_mask = 2
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_yv2qw")
+script = ExtResource("2_gli2l")
+NumOfFighter = 5
+MouseCaptured = true
+
+[node name="Background" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.905882, 0.517647, 0.658824, 1)
+
+[node name="Title" type="Label" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 240.0
+offset_top = 24.0
+offset_right = 400.0
+offset_bottom = 56.0
+text = "ファイター選択"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player1" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 48.0
+offset_top = 64.0
+offset_right = 113.0
+offset_bottom = 86.0
+text = "No.1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player2" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 193.0
+offset_bottom = 86.0
+text = "No.2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player3" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 208.0
+offset_top = 64.0
+offset_right = 273.0
+offset_bottom = 86.0
+text = "No.3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player4" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 288.0
+offset_top = 64.0
+offset_right = 353.0
+offset_bottom = 86.0
+text = "No.4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player5" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 368.0
+offset_top = 64.0
+offset_right = 433.0
+offset_bottom = 86.0
+text = "No.5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player6" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 64.0
+offset_right = 513.0
+offset_bottom = 86.0
+text = "No.6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player7" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 528.0
+offset_top = 64.0
+offset_right = 593.0
+offset_bottom = 86.0
+text = "No.7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 352.0
+offset_right = 576.0
+offset_bottom = 457.0
+theme = ExtResource("12_0e1rh")
+text = "・操作するキャラクターを上下キーで選んでください。パンチまたはキックボタンで決定します。
+・全員の決定後、ゲームを開始します。
+・同じコントローラーに複数のキャラクターが割り当てられている場合、左から順に決定されます。
+・キーボードだとESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
+autowrap_mode = 2
+
+[node name="Background1" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 40.0
+offset_top = 96.0
+offset_right = 112.0
+offset_bottom = 328.0
+
+[node name="Background2" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 120.0
+offset_top = 96.0
+offset_right = 192.0
+offset_bottom = 328.0
+
+[node name="Background3" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 200.0
+offset_top = 96.0
+offset_right = 272.0
+offset_bottom = 328.0
+
+[node name="Background4" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 280.0
+offset_top = 96.0
+offset_right = 352.0
+offset_bottom = 328.0
+
+[node name="Background5" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 360.0
+offset_top = 96.0
+offset_right = 432.0
+offset_bottom = 328.0
+
+[node name="Background6" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 440.0
+offset_top = 96.0
+offset_right = 512.0
+offset_bottom = 328.0
+
+[node name="Background7" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 520.0
+offset_top = 96.0
+offset_right = 592.0
+offset_bottom = 328.0
+
+[node name="Fighter1" type="Sprite2D" parent="."]
+position = Vector2(-136, 184)
+texture = ExtResource("3_17426")
+offset = Vector2(212, 28)
+hframes = 5
+
+[node name="Fighter2" type="Sprite2D" parent="."]
+position = Vector2(-56, 184)
+texture = ExtResource("3_17426")
+offset = Vector2(212, 28)
+hframes = 5
+
+[node name="Fighter3" type="Sprite2D" parent="."]
+position = Vector2(24, 184)
+texture = ExtResource("3_17426")
+offset = Vector2(212, 28)
+hframes = 5
+
+[node name="Fighter4" type="Sprite2D" parent="."]
+position = Vector2(104, 184)
+texture = ExtResource("3_17426")
+offset = Vector2(212, 28)
+hframes = 5
+
+[node name="Fighter5" type="Sprite2D" parent="."]
+position = Vector2(184, 184)
+texture = ExtResource("3_17426")
+offset = Vector2(212, 28)
+hframes = 5
+
+[node name="Fighter6" type="Sprite2D" parent="."]
+position = Vector2(264, 184)
+texture = ExtResource("3_17426")
+offset = Vector2(212, 28)
+hframes = 5
+
+[node name="Fighter7" type="Sprite2D" parent="."]
+position = Vector2(344, 184)
+texture = ExtResource("3_17426")
+offset = Vector2(212, 28)
+hframes = 5
+
+[node name="Up1" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(40, 96)
+sprite_frames = ExtResource("5_hr24w")
+autoplay = "default"
+offset = Vector2(36, 20)
+
+[node name="Up2" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(120, 96)
+sprite_frames = ExtResource("5_hr24w")
+autoplay = "default"
+offset = Vector2(36, 20)
+
+[node name="Up3" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(200, 96)
+sprite_frames = ExtResource("5_hr24w")
+autoplay = "default"
+offset = Vector2(36, 20)
+
+[node name="Up4" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(280, 96)
+sprite_frames = ExtResource("5_hr24w")
+autoplay = "default"
+offset = Vector2(36, 20)
+
+[node name="Up5" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(360, 96)
+sprite_frames = ExtResource("5_hr24w")
+autoplay = "default"
+offset = Vector2(36, 20)
+
+[node name="Up6" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(440, 96)
+sprite_frames = ExtResource("5_hr24w")
+autoplay = "default"
+offset = Vector2(36, 20)
+
+[node name="Up7" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(520, 96)
+sprite_frames = ExtResource("5_hr24w")
+autoplay = "default"
+offset = Vector2(36, 20)
+
+[node name="Down1" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(40, 296)
+sprite_frames = ExtResource("6_17426")
+autoplay = "default"
+offset = Vector2(36, 12)
+
+[node name="Down2" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(120, 296)
+sprite_frames = ExtResource("6_17426")
+autoplay = "default"
+offset = Vector2(36, 12)
+
+[node name="Down3" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(200, 296)
+sprite_frames = ExtResource("6_17426")
+autoplay = "default"
+offset = Vector2(36, 12)
+
+[node name="Down4" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(280, 296)
+sprite_frames = ExtResource("6_17426")
+autoplay = "default"
+offset = Vector2(36, 12)
+
+[node name="Down5" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(360, 296)
+sprite_frames = ExtResource("6_17426")
+autoplay = "default"
+offset = Vector2(36, 12)
+
+[node name="Down6" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(440, 296)
+sprite_frames = ExtResource("6_17426")
+autoplay = "default"
+offset = Vector2(36, 12)
+
+[node name="Down7" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(520, 296)
+sprite_frames = ExtResource("6_17426")
+autoplay = "default"
+offset = Vector2(36, 12)
+
+[node name="Selected1" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(40, 176)
+sprite_frames = ExtResource("7_0e1rh")
+autoplay = "default"
+frame_progress = 0.19262
+offset = Vector2(36, 36)
+
+[node name="Selected2" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(120, 176)
+sprite_frames = ExtResource("7_0e1rh")
+autoplay = "default"
+frame_progress = 0.19262
+offset = Vector2(36, 36)
+
+[node name="Selected3" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(200, 176)
+sprite_frames = ExtResource("7_0e1rh")
+autoplay = "default"
+frame_progress = 0.19262
+offset = Vector2(36, 36)
+
+[node name="Selected4" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(280, 176)
+sprite_frames = ExtResource("7_0e1rh")
+autoplay = "default"
+frame_progress = 0.19262
+offset = Vector2(36, 36)
+
+[node name="Selected5" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(360, 176)
+sprite_frames = ExtResource("7_0e1rh")
+autoplay = "default"
+frame_progress = 0.19262
+offset = Vector2(36, 36)
+
+[node name="Selected6" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(440, 176)
+sprite_frames = ExtResource("7_0e1rh")
+autoplay = "default"
+frame_progress = 0.19262
+offset = Vector2(36, 36)
+
+[node name="Selected7" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(520, 176)
+sprite_frames = ExtResource("7_0e1rh")
+autoplay = "default"
+frame_progress = 0.19262
+offset = Vector2(36, 36)
+
+[node name="Disabled1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-136, 184)
+texture = ExtResource("3_yv2qw")
+offset = Vector2(212, 28)
+
+[node name="Disabled2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-56, 184)
+texture = ExtResource("3_yv2qw")
+offset = Vector2(212, 28)
+
+[node name="Disabled3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(24, 184)
+texture = ExtResource("3_yv2qw")
+offset = Vector2(212, 28)
+
+[node name="Disabled4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(104, 184)
+texture = ExtResource("3_yv2qw")
+offset = Vector2(212, 28)
+
+[node name="Disabled5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(184, 184)
+texture = ExtResource("3_yv2qw")
+offset = Vector2(212, 28)
+
+[node name="Disabled6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(264, 184)
+texture = ExtResource("3_yv2qw")
+offset = Vector2(212, 28)
+
+[node name="Disabled7" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(344, 184)
+texture = ExtResource("3_yv2qw")
+offset = Vector2(212, 28)
+
+[node name="Control" type="Control" parent="."]
+light_mask = 2
+anchors_preset = 0
+
+[node name="EscapeKey" parent="." instance=ExtResource("4_17426")]
+ActionName = "escape"
+
+[node name="PlaySeCommand" parent="EscapeKey" instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="OpenScreenCommand" parent="EscapeKey" instance=ExtResource("11_17426")]
+Screen = "res://screen/select_stage_screen.tscn"
+
+[node name="OptionKey" parent="." instance=ExtResource("4_17426")]
+ActionName = "option"
+
+[node name="ReferenceCommandContainer" parent="OptionKey" instance=ExtResource("5_0e1rh")]

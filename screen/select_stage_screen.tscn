@@ -1,0 +1,170 @@
+[gd_scene load_steps=24 format=3 uid="uid://cwn5ovcp3mf1"]
+
+[ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_ny3fg"]
+[ext_resource type="Script" uid="uid://142x3b00e0uf" path="res://screen/SelectStageScreen.cs" id="2_buqjm"]
+[ext_resource type="Texture2D" uid="uid://5tvvriqbvq2f" path="res://contents/screen/select_stage_screen/picture_stage_0001.png" id="3_5nr3a"]
+[ext_resource type="Texture2D" uid="uid://bkot2mgd1a8mi" path="res://contents/screen/select_stage_screen/picture_stage_random.png" id="4_ofbnq"]
+[ext_resource type="Texture2D" uid="uid://da1asrdedj1uy" path="res://contents/screen/select_stage_screen/picture_stage_0002.png" id="4_wc7lv"]
+[ext_resource type="Texture2D" uid="uid://coemqglwphpry" path="res://contents/screen/select_stage_screen/picture_stage_0003.png" id="5_wc7lv"]
+[ext_resource type="Texture2D" uid="uid://dycbnsbvvyre3" path="res://contents/screen/select_stage_screen/picture_stage_0004.png" id="6_fcifu"]
+[ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="6_tkqhi"]
+[ext_resource type="Texture2D" uid="uid://b2msn8guia62" path="res://contents/screen/select_stage_screen/picture_stage_0005.png" id="7_wc7lv"]
+[ext_resource type="Texture2D" uid="uid://uokbutismunv" path="res://contents/screen/select_stage_screen/left.png" id="9_lau16"]
+[ext_resource type="Texture2D" uid="uid://w0f30v2205ua" path="res://contents/screen/select_stage_screen/right.png" id="14_wc7lv"]
+[ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="16_a3lai"]
+[ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="16_buqjm"]
+[ext_resource type="PackedScene" uid="uid://dvbavm6ut2uel" path="res://command/dialog/open_screen_command.tscn" id="17_wo1hj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lau16"]
+atlas = ExtResource("6_fcifu")
+region = Rect2(0, 0, 640, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvv8q"]
+atlas = ExtResource("7_wc7lv")
+region = Rect2(0, 0, 640, 480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_buqjm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lau16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wc7lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wc7lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5nr3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvv8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ofbnq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55dpm"]
+atlas = ExtResource("9_lau16")
+region = Rect2(0, 0, 32, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r8yl"]
+atlas = ExtResource("9_lau16")
+region = Rect2(32, 0, 32, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1jo2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55dpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r8yl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buow4"]
+atlas = ExtResource("14_wc7lv")
+region = Rect2(0, 0, 32, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuxds"]
+atlas = ExtResource("14_wc7lv")
+region = Rect2(32, 0, 32, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3gm5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buow4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vuxds")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SelectStageScreen" type="Control"]
+light_mask = 2
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_ny3fg")
+script = ExtResource("2_buqjm")
+StageList = Array[String](["シンプルな平地", "列柱室", "山道", "石畳の闘技場", "罪人の大穴", "おまかせ"])
+StageIndex = Array[int]([1, 2, 3, 4, 5, -1])
+
+[node name="Background" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.905882, 0.517647, 0.658824, 1)
+
+[node name="Title" type="Label" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 576.0
+offset_bottom = 56.0
+text = "ステージ選択"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StageList" type="AnimatedSprite2D" parent="."]
+position = Vector2(320, 184)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_buqjm")
+
+[node name="StageName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 320.0
+offset_right = 480.0
+offset_bottom = 376.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Left" type="AnimatedSprite2D" parent="."]
+position = Vector2(128, 352)
+sprite_frames = SubResource("SpriteFrames_g1jo2")
+autoplay = "default"
+
+[node name="Right" type="AnimatedSprite2D" parent="."]
+position = Vector2(512, 350)
+sprite_frames = SubResource("SpriteFrames_c3gm5")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 400.0
+offset_right = 576.0
+offset_bottom = 456.0
+theme = ExtResource("16_buqjm")
+text = "・遊ぶステージを左右キーで選択してください。パンチまたはキックボタンで決定します。
+・キーボードのESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="."]
+light_mask = 2
+anchors_preset = 0
+
+[node name="EscapeKey" parent="." instance=ExtResource("16_a3lai")]
+ActionName = "escape"
+
+[node name="PlaySeCommand" parent="EscapeKey" instance=ExtResource("6_tkqhi")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="OpenScreenCommand" parent="EscapeKey" instance=ExtResource("17_wo1hj")]
+Screen = "res://screen/select_controller_screen.tscn"

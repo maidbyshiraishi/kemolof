@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbcs4n37ay3bw"]
+
+[ext_resource type="Script" uid="uid://b52lcf4sykssc" path="res://system/joy_pad_controller/JoyPadController.cs" id="1_1s22i"]
+
+[node name="JoyPadController" type="Node"]
+script = ExtResource("1_1s22i")

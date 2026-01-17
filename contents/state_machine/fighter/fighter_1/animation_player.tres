@@ -1,0 +1,54 @@
+[gd_resource type="AnimationLibrary" load_steps=25 format=3 uid="uid://b3yebe7w1o6f5"]
+
+[ext_resource type="Animation" uid="uid://kfwhvftf8dby" path="res://contents/state_machine/fighter/fighter_1/dead.tres" id="1_e2fee"]
+[ext_resource type="Animation" uid="uid://dawtsdpavl2mb" path="res://contents/state_machine/fighter/fighter_1/RESET.tres" id="1_ilgy7"]
+[ext_resource type="Animation" uid="uid://d2mmncqi872nv" path="res://contents/state_machine/fighter/fighter_1/dead_damaged.tres" id="2_r5ssn"]
+[ext_resource type="Animation" uid="uid://dgp3blvupyypf" path="res://contents/state_machine/fighter/fighter_1/crouch.tres" id="3_7dcy3"]
+[ext_resource type="Animation" uid="uid://mwxx4p3u08bg" path="res://contents/state_machine/fighter/fighter_1/crouch_guard.tres" id="4_pwhlo"]
+[ext_resource type="Animation" uid="uid://2lydf2i2wnih" path="res://contents/state_machine/fighter/fighter_1/crouch_kick.tres" id="5_a8ire"]
+[ext_resource type="Animation" uid="uid://dvt3ffig33b8y" path="res://contents/state_machine/fighter/fighter_1/crouch_punch.tres" id="6_duyrn"]
+[ext_resource type="Animation" uid="uid://0yih8atabc1n" path="res://contents/state_machine/fighter/fighter_1/damaged.tres" id="7_hcjua"]
+[ext_resource type="Animation" uid="uid://doopbon7nocql" path="res://contents/state_machine/fighter/fighter_1/damaged_knock_down.tres" id="8_xy2w3"]
+[ext_resource type="Animation" uid="uid://2414u2f7nfhp" path="res://contents/state_machine/fighter/fighter_1/initialize.tres" id="11_4mbbg"]
+[ext_resource type="Animation" uid="uid://c5knp7favpu0d" path="res://contents/state_machine/fighter/fighter_1/jump.tres" id="12_7p475"]
+[ext_resource type="Animation" uid="uid://ber2jhuq6psa4" path="res://contents/state_machine/fighter/fighter_1/jump_kick.tres" id="13_4mbbg"]
+[ext_resource type="Animation" uid="uid://c6hocrruapl1n" path="res://contents/state_machine/fighter/fighter_1/mie.tres" id="14_mobab"]
+[ext_resource type="Animation" uid="uid://3hgw43ff0oi5" path="res://contents/state_machine/fighter/fighter_1/sleep.tres" id="15_ao4i8"]
+[ext_resource type="Animation" uid="uid://b5lvdt5mi2mtk" path="res://contents/state_machine/fighter/fighter_1/stand.tres" id="16_accxn"]
+[ext_resource type="Animation" uid="uid://co21pqdk1lw8o" path="res://contents/state_machine/fighter/fighter_1/stand_guard.tres" id="17_ilgy7"]
+[ext_resource type="Animation" uid="uid://cg76vk6byj6fq" path="res://contents/state_machine/fighter/fighter_1/stand_kick.tres" id="18_raeps"]
+[ext_resource type="Animation" uid="uid://d0k2twltkq3nn" path="res://contents/state_machine/fighter/fighter_1/stand_punch.tres" id="19_578cx"]
+[ext_resource type="Animation" uid="uid://chvxfu32mt2ha" path="res://contents/state_machine/fighter/fighter_1/stand_up.tres" id="20_elt67"]
+[ext_resource type="Animation" uid="uid://cj34poo6r2pjv" path="res://contents/state_machine/fighter/fighter_1/walk.tres" id="22_f31i1"]
+[ext_resource type="Animation" uid="uid://342ix2wlyw1l" path="res://contents/state_machine/fighter/fighter_1/waza_1.tres" id="22_x4i5i"]
+[ext_resource type="Animation" uid="uid://chhilnfwf7het" path="res://contents/state_machine/fighter/fighter_1/waza_2.tres" id="23_bcdsy"]
+[ext_resource type="Animation" uid="uid://drvr4txlnfuqb" path="res://contents/state_machine/fighter/fighter_1/landing.tres" id="23_fr8lm"]
+[ext_resource type="Animation" uid="uid://d2dr7hq1sttr8" path="res://contents/state_machine/fighter/fighter_1/waza_3.tres" id="24_som6k"]
+
+[resource]
+_data = {
+&"RESET": ExtResource("1_ilgy7"),
+&"crouch": ExtResource("3_7dcy3"),
+&"crouch_guard": ExtResource("4_pwhlo"),
+&"crouch_kick": ExtResource("5_a8ire"),
+&"crouch_punch": ExtResource("6_duyrn"),
+&"damaged": ExtResource("7_hcjua"),
+&"damaged_knock_down": ExtResource("8_xy2w3"),
+&"dead": ExtResource("1_e2fee"),
+&"dead_damaged": ExtResource("2_r5ssn"),
+&"initialize": ExtResource("11_4mbbg"),
+&"jump": ExtResource("12_7p475"),
+&"jump_kick": ExtResource("13_4mbbg"),
+&"landing": ExtResource("23_fr8lm"),
+&"mie": ExtResource("14_mobab"),
+&"sleep": ExtResource("15_ao4i8"),
+&"stand": ExtResource("16_accxn"),
+&"stand_guard": ExtResource("17_ilgy7"),
+&"stand_kick": ExtResource("18_raeps"),
+&"stand_punch": ExtResource("19_578cx"),
+&"stand_up": ExtResource("20_elt67"),
+&"walk": ExtResource("22_f31i1"),
+&"waza_1": ExtResource("22_x4i5i"),
+&"waza_2": ExtResource("23_bcdsy"),
+&"waza_3": ExtResource("24_som6k")
+}

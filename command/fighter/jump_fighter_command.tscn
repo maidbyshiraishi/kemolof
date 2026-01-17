@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://567u8yb77okv"]
+
+[ext_resource type="Script" uid="uid://dvdfc5hvrwor5" path="res://command/fighter/JumpFighterCommand.cs" id="1_c7i6l"]
+
+[node name="JumpFighterCommand" type="Node"]
+script = ExtResource("1_c7i6l")

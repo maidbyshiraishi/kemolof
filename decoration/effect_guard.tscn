@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfygg33ntyk47"]
+
+[ext_resource type="PackedScene" uid="uid://d8ertj6jffv6" path="res://decoration/effect_root.tscn" id="1_pxyqm"]
+[ext_resource type="Texture2D" uid="uid://bxdwbvvdgj07p" path="res://contents/image/fighter/effect_guard.png" id="2_33flo"]
+
+[node name="EffectRoot" instance=ExtResource("1_pxyqm")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_33flo")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyto000xvxglv"]
+
+[ext_resource type="Script" uid="uid://c0w01an520gnf" path="res://command/fighter/DamageAllFightersCommand.cs" id="1_sdxly"]
+
+[node name="DamageAllFightersCommand" type="Node"]
+script = ExtResource("1_sdxly")

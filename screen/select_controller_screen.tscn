@@ -1,0 +1,2254 @@
+[gd_scene load_steps=26 format=3 uid="uid://ccewt2y1m2cq4"]
+
+[ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_rjuf6"]
+[ext_resource type="Script" uid="uid://j58lxvgciqjn" path="res://screen/SelectControllerScreen.cs" id="2_hf722"]
+[ext_resource type="ButtonGroup" uid="uid://bgrjj2y431e0k" path="res://screen/select_controller_screen/fighter_1_group.tres" id="3_cx4rg"]
+[ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="4_2lghb"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="4_foqb8"]
+[ext_resource type="PackedScene" uid="uid://73dqa18ykkwt" path="res://command/focus.tscn" id="7_ji66b"]
+[ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="7_msmwr"]
+[ext_resource type="Script" uid="uid://ddpxrl2viocbi" path="res://command/ToggledCommandContainer.cs" id="9_has6o"]
+[ext_resource type="ButtonGroup" uid="uid://cpvwabh68aley" path="res://screen/select_controller_screen/fighter_2_group.tres" id="9_umhl1"]
+[ext_resource type="ButtonGroup" uid="uid://dpsi65g02dib7" path="res://screen/select_controller_screen/fighter_3_group.tres" id="10_1fwwe"]
+[ext_resource type="PackedScene" uid="uid://dvbavm6ut2uel" path="res://command/dialog/open_screen_command.tscn" id="10_joxnn"]
+[ext_resource type="ButtonGroup" uid="uid://cwojdsmvulla0" path="res://screen/select_controller_screen/fighter_4_group.tres" id="11_swk0l"]
+[ext_resource type="ButtonGroup" uid="uid://cfmphwsknabtn" path="res://screen/select_controller_screen/fighter_5_group.tres" id="12_i5533"]
+[ext_resource type="ButtonGroup" uid="uid://cccbpeuno07vj" path="res://screen/select_controller_screen/fighter_6_group.tres" id="13_7sn8e"]
+[ext_resource type="ButtonGroup" uid="uid://doxy8f2himou2" path="res://screen/select_controller_screen/fighter_7_group.tres" id="14_86nuy"]
+[ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="15_7sn8e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcc5s"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hf722"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5533"]
+bg_color = Color(0.952941, 0.596078, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17ri1"]
+bg_color = Color(1, 0.945098, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sn8e"]
+bg_color = Color(0, 0.6, 0.266667, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86nuy"]
+bg_color = Color(0, 0.407843, 0.717647, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrmhh"]
+bg_color = Color(0.113725, 0.12549, 0.533333, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bam8w"]
+bg_color = Color(0.572549, 0.027451, 0.513726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gn28f"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[node name="SelectControllerScreen" type="Control"]
+light_mask = 2
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_rjuf6")
+script = ExtResource("2_hf722")
+
+[node name="Background" type="ColorRect" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.905882, 0.517647, 0.658824, 1)
+
+[node name="Title" type="Label" parent="."]
+light_mask = 2
+layout_mode = 0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 576.0
+offset_bottom = 56.0
+text = "コントローラー選択"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player1" type="Label" parent="."]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 128.0
+offset_top = 72.0
+offset_right = 193.0
+offset_bottom = 94.0
+text = "No.1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player2" type="Label" parent="."]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 197.0
+offset_top = 72.0
+offset_right = 262.0
+offset_bottom = 94.0
+text = "No.2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player3" type="Label" parent="."]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 266.0
+offset_top = 72.0
+offset_right = 331.0
+offset_bottom = 94.0
+text = "No.3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player4" type="Label" parent="."]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 335.0
+offset_top = 72.0
+offset_right = 400.0
+offset_bottom = 94.0
+text = "No.4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player5" type="Label" parent="."]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 404.0
+offset_top = 72.0
+offset_right = 469.0
+offset_bottom = 94.0
+text = "No.5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player6" type="Label" parent="."]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 473.0
+offset_top = 72.0
+offset_right = 538.0
+offset_bottom = 94.0
+text = "No.6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player7" type="Label" parent="."]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 0
+offset_left = 542.0
+offset_top = 72.0
+offset_right = 607.0
+offset_bottom = 94.0
+text = "No.7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Uninhabited" type="Label" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 106.0
+offset_right = 122.0
+offset_bottom = 128.0
+text = "不参加"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyb1" type="Label" parent="."]
+modulate = Color(0.901961, 0, 0.0705882, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 132.0
+offset_right = 122.0
+offset_bottom = 154.0
+text = "Keyb1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyb2" type="Label" parent="."]
+modulate = Color(0.952941, 0.596078, 0, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 158.0
+offset_right = 122.0
+offset_bottom = 180.0
+text = "Keyb2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyb3" type="Label" parent="."]
+modulate = Color(1, 0.945098, 0, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 122.0
+offset_bottom = 206.0
+text = "Keyb3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pad1" type="Label" parent="."]
+modulate = Color(0, 0.6, 0.266667, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 210.0
+offset_right = 122.0
+offset_bottom = 232.0
+text = "Pad1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pad2" type="Label" parent="."]
+modulate = Color(0, 0.407843, 0.717647, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 236.0
+offset_right = 122.0
+offset_bottom = 258.0
+text = "Pad2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pad3" type="Label" parent="."]
+modulate = Color(0.113725, 0.12549, 0.533333, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 262.0
+offset_right = 122.0
+offset_bottom = 284.0
+text = "Pad3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pad4" type="Label" parent="."]
+modulate = Color(0.572549, 0.027451, 0.513726, 1)
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 288.0
+offset_right = 122.0
+offset_bottom = 310.0
+text = "Pad4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cpu1" type="Label" parent="."]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 314.0
+offset_right = 122.0
+offset_bottom = 336.0
+text = "CPU 弱い"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cpu2" type="Label" parent="."]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 340.0
+offset_right = 122.0
+offset_bottom = 362.0
+text = "CPU 普通"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cpu3" type="Label" parent="."]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 366.0
+offset_right = 122.0
+offset_bottom = 388.0
+text = "CPU 強い"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 432.0
+offset_right = 576.0
+offset_bottom = 456.0
+theme = ExtResource("15_7sn8e")
+text = "キーボードのESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Control" type="Control" parent="."]
+light_mask = 2
+anchors_preset = 0
+
+[node name="NextScreen" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 400.0
+offset_right = 416.0
+offset_bottom = 432.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Cpu3_2")
+focus_neighbor_bottom = NodePath(".")
+text = "ステージ選択へ"
+
+[node name="Exec" type="Node" parent="Control/NextScreen"]
+script = ExtResource("4_foqb8")
+
+[node name="PlaySeCommand" parent="Control/NextScreen/Exec" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="OpenScreenCommand" parent="Control/NextScreen/Exec" instance=ExtResource("10_joxnn")]
+Screen = "res://screen/select_stage_screen.tscn"
+
+[node name="Focus" parent="Control/NextScreen" instance=ExtResource("7_ji66b")]
+
+[node name="Uninhabited1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 104.0
+offset_right = 193.0
+offset_bottom = 126.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Uninhabited1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Uninhabited1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Uninhabited1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Uninhabited1" instance=ExtResource("7_ji66b")]
+
+[node name="Uninhabited2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 104.0
+offset_right = 262.0
+offset_bottom = 126.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Uninhabited2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Uninhabited2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Uninhabited2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Uninhabited2" instance=ExtResource("7_ji66b")]
+
+[node name="Uninhabited3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 104.0
+offset_right = 331.0
+offset_bottom = 126.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Uninhabited3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Uninhabited3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Uninhabited3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Uninhabited3" instance=ExtResource("7_ji66b")]
+
+[node name="Uninhabited4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 104.0
+offset_right = 400.0
+offset_bottom = 126.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Uninhabited4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Uninhabited4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Uninhabited4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Uninhabited4" instance=ExtResource("7_ji66b")]
+
+[node name="Uninhabited5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 104.0
+offset_right = 469.0
+offset_bottom = 126.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Uninhabited5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Uninhabited5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Uninhabited5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Uninhabited5" instance=ExtResource("7_ji66b")]
+
+[node name="Uninhabited6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 104.0
+offset_right = 538.0
+offset_bottom = 126.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Uninhabited6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Uninhabited6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Uninhabited6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Uninhabited6" instance=ExtResource("7_ji66b")]
+
+[node name="Uninhabited7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 104.0
+offset_right = 607.0
+offset_bottom = 126.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Uninhabited7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Uninhabited7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Uninhabited7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Uninhabited7" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb1_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 130.0
+offset_right = 193.0
+offset_bottom = 152.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Keyb1_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb1_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb1_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb1_1" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb1_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 130.0
+offset_right = 262.0
+offset_bottom = 152.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Keyb1_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb1_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb1_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb1_2" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb1_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 130.0
+offset_right = 331.0
+offset_bottom = 152.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Keyb1_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb1_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb1_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb1_3" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb1_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 130.0
+offset_right = 400.0
+offset_bottom = 152.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Keyb1_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb1_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb1_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb1_4" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb1_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 130.0
+offset_right = 469.0
+offset_bottom = 152.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Keyb1_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb1_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb1_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb1_5" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb1_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 130.0
+offset_right = 538.0
+offset_bottom = 152.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Keyb1_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb1_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb1_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb1_6" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb1_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 130.0
+offset_right = 607.0
+offset_bottom = 152.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Keyb1_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb1_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb1_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb1_7" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb2_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 156.0
+offset_right = 193.0
+offset_bottom = 178.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Keyb2_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb2_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb2_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb2_1" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb2_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 156.0
+offset_right = 262.0
+offset_bottom = 178.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Keyb2_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb2_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb2_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb2_2" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb2_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 156.0
+offset_right = 331.0
+offset_bottom = 178.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Keyb2_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb2_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb2_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb2_3" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb2_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 156.0
+offset_right = 400.0
+offset_bottom = 178.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Keyb2_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb2_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb2_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb2_4" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb2_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 156.0
+offset_right = 469.0
+offset_bottom = 178.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Keyb2_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb2_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb2_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb2_5" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb2_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 156.0
+offset_right = 538.0
+offset_bottom = 178.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Keyb2_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb2_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb2_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb2_6" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb2_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 156.0
+offset_right = 607.0
+offset_bottom = 178.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Keyb2_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb2_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb2_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb2_7" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb3_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 182.0
+offset_right = 193.0
+offset_bottom = 204.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Keyb3_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb3_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb3_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb3_1" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb3_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 182.0
+offset_right = 262.0
+offset_bottom = 204.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Keyb3_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb3_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb3_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb3_2" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb3_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 182.0
+offset_right = 331.0
+offset_bottom = 204.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Keyb3_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb3_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb3_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb3_3" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb3_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 182.0
+offset_right = 400.0
+offset_bottom = 204.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Keyb3_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb3_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb3_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb3_4" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb3_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 182.0
+offset_right = 469.0
+offset_bottom = 204.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Keyb3_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb3_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb3_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb3_5" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb3_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 182.0
+offset_right = 538.0
+offset_bottom = 204.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Keyb3_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb3_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb3_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb3_6" instance=ExtResource("7_ji66b")]
+
+[node name="Keyb3_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 182.0
+offset_right = 607.0
+offset_bottom = 204.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Keyb3_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Keyb3_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Keyb3_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Keyb3_7" instance=ExtResource("7_ji66b")]
+
+[node name="Pad1_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 208.0
+offset_right = 193.0
+offset_bottom = 230.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7sn8e")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Pad1_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad1_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad1_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad1_1" instance=ExtResource("7_ji66b")]
+
+[node name="Pad1_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 208.0
+offset_right = 262.0
+offset_bottom = 230.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7sn8e")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Pad1_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad1_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad1_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad1_2" instance=ExtResource("7_ji66b")]
+
+[node name="Pad1_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 208.0
+offset_right = 331.0
+offset_bottom = 230.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7sn8e")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Pad1_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad1_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad1_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad1_3" instance=ExtResource("7_ji66b")]
+
+[node name="Pad1_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 208.0
+offset_right = 400.0
+offset_bottom = 230.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7sn8e")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Pad1_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad1_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad1_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad1_4" instance=ExtResource("7_ji66b")]
+
+[node name="Pad1_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 208.0
+offset_right = 469.0
+offset_bottom = 230.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7sn8e")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Pad1_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad1_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad1_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad1_5" instance=ExtResource("7_ji66b")]
+
+[node name="Pad1_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 208.0
+offset_right = 538.0
+offset_bottom = 230.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7sn8e")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Pad1_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad1_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad1_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad1_6" instance=ExtResource("7_ji66b")]
+
+[node name="Pad1_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 208.0
+offset_right = 607.0
+offset_bottom = 230.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7sn8e")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Pad1_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad1_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad1_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad1_7" instance=ExtResource("7_ji66b")]
+
+[node name="Pad2_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 234.0
+offset_right = 193.0
+offset_bottom = 256.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86nuy")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Pad2_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad2_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad2_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad2_1" instance=ExtResource("7_ji66b")]
+
+[node name="Pad2_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 234.0
+offset_right = 262.0
+offset_bottom = 256.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86nuy")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Pad2_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad2_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad2_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad2_2" instance=ExtResource("7_ji66b")]
+
+[node name="Pad2_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 234.0
+offset_right = 331.0
+offset_bottom = 256.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86nuy")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Pad2_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad2_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad2_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad2_3" instance=ExtResource("7_ji66b")]
+
+[node name="Pad2_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 234.0
+offset_right = 400.0
+offset_bottom = 256.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86nuy")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Pad2_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad2_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad2_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad2_4" instance=ExtResource("7_ji66b")]
+
+[node name="Pad2_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 234.0
+offset_right = 469.0
+offset_bottom = 256.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86nuy")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Pad2_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad2_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad2_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad2_5" instance=ExtResource("7_ji66b")]
+
+[node name="Pad2_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 234.0
+offset_right = 538.0
+offset_bottom = 256.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86nuy")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Pad2_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad2_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad2_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad2_6" instance=ExtResource("7_ji66b")]
+
+[node name="Pad2_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 234.0
+offset_right = 607.0
+offset_bottom = 256.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86nuy")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Pad2_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad2_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad2_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad2_7" instance=ExtResource("7_ji66b")]
+
+[node name="Pad3_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 260.0
+offset_right = 193.0
+offset_bottom = 282.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrmhh")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Pad3_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad3_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad3_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad3_1" instance=ExtResource("7_ji66b")]
+
+[node name="Pad3_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 260.0
+offset_right = 262.0
+offset_bottom = 282.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrmhh")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Pad3_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad3_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad3_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad3_2" instance=ExtResource("7_ji66b")]
+
+[node name="Pad3_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 260.0
+offset_right = 331.0
+offset_bottom = 282.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrmhh")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Pad3_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad3_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad3_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad3_3" instance=ExtResource("7_ji66b")]
+
+[node name="Pad3_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 260.0
+offset_right = 400.0
+offset_bottom = 282.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrmhh")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Pad3_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad3_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad3_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad3_4" instance=ExtResource("7_ji66b")]
+
+[node name="Pad3_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 260.0
+offset_right = 469.0
+offset_bottom = 282.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrmhh")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Pad3_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad3_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad3_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad3_5" instance=ExtResource("7_ji66b")]
+
+[node name="Pad3_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 260.0
+offset_right = 538.0
+offset_bottom = 282.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrmhh")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Pad3_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad3_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad3_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad3_6" instance=ExtResource("7_ji66b")]
+
+[node name="Pad3_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 260.0
+offset_right = 607.0
+offset_bottom = 282.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrmhh")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Pad3_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad3_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad3_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad3_7" instance=ExtResource("7_ji66b")]
+
+[node name="Pad4_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 286.0
+offset_right = 193.0
+offset_bottom = 308.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bam8w")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Pad4_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad4_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad4_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad4_1" instance=ExtResource("7_ji66b")]
+
+[node name="Pad4_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 286.0
+offset_right = 262.0
+offset_bottom = 308.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bam8w")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Pad4_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad4_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad4_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad4_2" instance=ExtResource("7_ji66b")]
+
+[node name="Pad4_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 286.0
+offset_right = 331.0
+offset_bottom = 308.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bam8w")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Pad4_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad4_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad4_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad4_3" instance=ExtResource("7_ji66b")]
+
+[node name="Pad4_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 286.0
+offset_right = 400.0
+offset_bottom = 308.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bam8w")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Pad4_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad4_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad4_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad4_4" instance=ExtResource("7_ji66b")]
+
+[node name="Pad4_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 286.0
+offset_right = 469.0
+offset_bottom = 308.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bam8w")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Pad4_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad4_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad4_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad4_5" instance=ExtResource("7_ji66b")]
+
+[node name="Pad4_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 286.0
+offset_right = 538.0
+offset_bottom = 308.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bam8w")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Pad4_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad4_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad4_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad4_6" instance=ExtResource("7_ji66b")]
+
+[node name="Pad4_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 286.0
+offset_right = 607.0
+offset_bottom = 308.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bam8w")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Pad4_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Pad4_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Pad4_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Pad4_7" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu1_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 312.0
+offset_right = 193.0
+offset_bottom = 334.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Cpu1_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu1_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu1_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu1_1" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu1_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 312.0
+offset_right = 262.0
+offset_bottom = 334.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Cpu1_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu1_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu1_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu1_2" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu1_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 312.0
+offset_right = 331.0
+offset_bottom = 334.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Cpu1_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu1_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu1_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu1_3" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu1_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 312.0
+offset_right = 400.0
+offset_bottom = 334.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Cpu1_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu1_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu1_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu1_4" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu1_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 312.0
+offset_right = 469.0
+offset_bottom = 334.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Cpu1_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu1_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu1_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu1_5" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu1_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 312.0
+offset_right = 538.0
+offset_bottom = 334.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Cpu1_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu1_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu1_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu1_6" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu1_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 312.0
+offset_right = 607.0
+offset_bottom = 334.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Cpu1_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu1_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu1_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu1_7" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu2_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 338.0
+offset_right = 193.0
+offset_bottom = 360.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Cpu2_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu2_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu2_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu2_1" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu2_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 338.0
+offset_right = 262.0
+offset_bottom = 360.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Cpu2_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu2_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu2_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu2_2" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu2_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 338.0
+offset_right = 331.0
+offset_bottom = 360.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Cpu2_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu2_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu2_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu2_3" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu2_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 338.0
+offset_right = 400.0
+offset_bottom = 360.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Cpu2_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu2_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu2_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu2_4" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu2_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 338.0
+offset_right = 469.0
+offset_bottom = 360.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Cpu2_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu2_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu2_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu2_5" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu2_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 338.0
+offset_right = 538.0
+offset_bottom = 360.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Cpu2_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu2_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu2_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu2_6" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu2_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 338.0
+offset_right = 607.0
+offset_bottom = 360.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Cpu2_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu2_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu2_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu2_7" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu3_1" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 364.0
+offset_right = 193.0
+offset_bottom = 386.0
+focus_neighbor_bottom = NodePath("../NextScreen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("3_cx4rg")
+
+[node name="Toggled" type="Node" parent="Control/Cpu3_1"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu3_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu3_1/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu3_1" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu3_2" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 197.0
+offset_top = 364.0
+offset_right = 262.0
+offset_bottom = 386.0
+focus_neighbor_bottom = NodePath("../NextScreen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("9_umhl1")
+
+[node name="Toggled" type="Node" parent="Control/Cpu3_2"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu3_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu3_2/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu3_2" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu3_3" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 266.0
+offset_top = 364.0
+offset_right = 331.0
+offset_bottom = 386.0
+focus_neighbor_bottom = NodePath("../NextScreen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("10_1fwwe")
+
+[node name="Toggled" type="Node" parent="Control/Cpu3_3"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu3_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu3_3/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu3_3" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu3_4" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 364.0
+offset_right = 400.0
+offset_bottom = 386.0
+focus_neighbor_bottom = NodePath("../NextScreen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("11_swk0l")
+
+[node name="Toggled" type="Node" parent="Control/Cpu3_4"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu3_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu3_4/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu3_4" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu3_5" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 364.0
+offset_right = 469.0
+offset_bottom = 386.0
+focus_neighbor_bottom = NodePath("../NextScreen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("12_i5533")
+
+[node name="Toggled" type="Node" parent="Control/Cpu3_5"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu3_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu3_5/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu3_5" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu3_6" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 364.0
+offset_right = 538.0
+offset_bottom = 386.0
+focus_neighbor_bottom = NodePath("../NextScreen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("13_7sn8e")
+
+[node name="Toggled" type="Node" parent="Control/Cpu3_6"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu3_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu3_6/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu3_6" instance=ExtResource("7_ji66b")]
+
+[node name="Cpu3_7" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 364.0
+offset_right = 607.0
+offset_bottom = 386.0
+focus_neighbor_bottom = NodePath("../NextScreen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
+toggle_mode = true
+button_group = ExtResource("14_86nuy")
+
+[node name="Toggled" type="Node" parent="Control/Cpu3_7"]
+script = ExtResource("9_has6o")
+
+[node name="PlaySeCommand" parent="Control/Cpu3_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="PlaySeCommand2" parent="Control/Cpu3_7/Toggled" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+ExecFlag = false
+
+[node name="Focus" parent="Control/Cpu3_7" instance=ExtResource("7_ji66b")]
+
+[node name="EscapeKey" parent="." instance=ExtResource("4_2lghb")]
+ActionName = "escape"
+
+[node name="PlaySeCommand" parent="EscapeKey" instance=ExtResource("7_msmwr")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="OpenScreenCommand" parent="EscapeKey" instance=ExtResource("10_joxnn")]
+Screen = "res://screen/title_screen.tscn"

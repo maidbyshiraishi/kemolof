@@ -1,0 +1,321 @@
+[gd_scene load_steps=19 format=4 uid="uid://cam2g7rxgmr4n"]
+
+[ext_resource type="PackedScene" uid="uid://ddw2g00yqtlmx" path="res://stage/stage_root.tscn" id="1_7cvju"]
+[ext_resource type="AudioStream" uid="uid://c338x67inbh86" path="res://contents/bgm/bgm7.ogg" id="2_e8wyi"]
+[ext_resource type="PackedScene" uid="uid://4dnj27cvdryh" path="res://command/dialog/open_dialog_command.tscn" id="3_r762j"]
+[ext_resource type="PackedScene" uid="uid://dvy8ox4sfd5hc" path="res://trigger/visible_trigger.tscn" id="4_y44cl"]
+[ext_resource type="PackedScene" uid="uid://mm6miyrmbjvb" path="res://command/hud/show_hud_message_command.tscn" id="5_236wv"]
+[ext_resource type="PackedScene" uid="uid://mx0jhsu5i4r8" path="res://trigger/collision_trigger.tscn" id="6_k8yt7"]
+[ext_resource type="PackedScene" uid="uid://cxafv8tj6dexo" path="res://trigger/timer_trigger.tscn" id="7_t150t"]
+[ext_resource type="PackedScene" uid="uid://basrl1d1ki47q" path="res://command/disable_collision_shape_command.tscn" id="8_m8qt8"]
+[ext_resource type="PackedScene" uid="uid://bc4apnsycw1d7" path="res://command/stage/offset_position_command.tscn" id="9_pyp10"]
+[ext_resource type="PackedScene" uid="uid://567u8yb77okv" path="res://command/fighter/jump_fighter_command.tscn" id="10_e8wyi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_es5s4"]
+size = Vector2(122, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_noi0u"]
+size = Vector2(58, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3na8"]
+size = Vector2(58, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cvju"]
+size = Vector2(58, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8wyi"]
+size = Vector2(50, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r762j"]
+size = Vector2(42, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y44cl"]
+size = Vector2(58, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_236wv"]
+size = Vector2(96, 4)
+
+[node name="Stage" instance=ExtResource("1_7cvju")]
+BgmStream = ExtResource("2_e8wyi")
+
+[node name="ColorRect" parent="Background/Parallax2D_1" index="0"]
+color = Color(0, 0, 0, 1)
+
+[node name="Ground" parent="TileMap" index="2"]
+tile_map_data = PackedByteArray("AAAAAA4AAAAIAAAAAAABAA4AAAAIAAAAAAACAA4AAAAIAAAAAAADAA4AAAAIAAAAAAAEAA4AAAAIAAAAAAAFAA4AAAAIAAAAAAAGAA4AAAAIAAAAAAAHAA4AAAAIAAAAAAAIAA4AAAAIAAAAAAAJAA4AAAAIAAAAAAAKAA4AAAAIAAAAAAALAA4AAAAIAAAAAAAMAA4AAAAIAAAAAAANAA4AAAAIAAAAAAAOAA4AAAAIAAAAAAAPAA4AAAAIAAAAAAAQAA4AAAAIAAAAAAARAA4AAAAIAAAAAAASAA4AAAAIAAAAAAATAA4AAAAIAAAAAAD//w4AAAAIAAAAAAD//w0AAAAIAAAAAAD//wwAAAAIAAAAAAD//wsAAAAIAAAAAAD//woAAAAIAAAAAAD//wkAAAAIAAAAAAD//wgAAAAIAAAAAAD//wcAAAAIAAAAAAD//wYAAAAIAAAAAAD//wUAAAAIAAAAAAD//wQAAAAIAAAAAAD//wMAAAAIAAAAAAD//wIAAAAIAAAAAAD//wEAAAAIAAAAAAD//wAAAAAIAAAAAAAUAAAAAAAIAAAAAAAUAAEAAAAIAAAAAAAUAAIAAAAIAAAAAAAUAAMAAAAIAAAAAAAUAAQAAAAIAAAAAAAUAAUAAAAIAAAAAAAUAAYAAAAIAAAAAAAUAAcAAAAIAAAAAAAUAAgAAAAIAAAAAAAUAAkAAAAIAAAAAAAUAAoAAAAIAAAAAAAUAA0AAAAIAAAAAAAUAA4AAAAIAAAAAAAUAAwAAAAIAAAAAAAUAAsAAAAIAAAAAAD/////AAAIAAAAAAAUAP//AAAIAAAAAAD///7/AAAIAAAAAAD///3/AAAIAAAAAAD///z/AAAIAAAAAAD///v/AAAIAAAAAAD///r/AAAIAAAAAAD///n/AAAIAAAAAAD///j/AAAIAAAAAAD///f/AAAIAAAAAAD///b/AAAIAAAAAAAUAP7/AAAIAAAAAAAUAP3/AAAIAAAAAAAUAPz/AAAIAAAAAAAUAPv/AAAIAAAAAAAUAPr/AAAIAAAAAAAUAPn/AAAIAAAAAAAUAPj/AAAIAAAAAAAUAPf/AAAIAAAAAAAUAPb/AAAIAAAAAAAUAPX/AAAIAAAAAAAUAPT/AAAIAAAAAAD///T/AAAIAAAAAAD///X/AAAIAAAAAAD///D/AAAIAAAAAAD///H/AAAIAAAAAAD///L/AAAIAAAAAAAUAPP/AAAIAAAAAAAUAPL/AAAIAAAAAAAUAPH/AAAIAAAAAAAUAPD/AAAIAAAAAAD///P/AAAIAAAAAAAHAA0AAAAIAAAAAAAHAAwAAAAIAAAAAAAHAAsAAAAIAAAAAAAMAA0AAAAIAAAAAAAMAAwAAAAIAAAAAAAMAAsAAAAIAAAAAAAHAAoAAAAIAAAAAAAMAAoAAAAIAAAAAAAGAAkAAAAIAAAAAAAGAAgAAAAIAAAAAAAGAAcAAAAIAAAAAAAGAAYAAAAIAAAAAAANAAkAAAAIAAAAAAANAAgAAAAIAAAAAAANAAcAAAAIAAAAAAANAAYAAAAIAAAAAAAFAAUAAAAIAAAAAAAFAAQAAAAIAAAAAAAFAAMAAAAIAAAAAAAFAAIAAAAIAAAAAAAFAAEAAAAIAAAAAAAFAAAAAAAIAAAAAAAOAAUAAAAIAAAAAAAOAAQAAAAIAAAAAAAOAAMAAAAIAAAAAAAOAAIAAAAIAAAAAAAOAAEAAAAIAAAAAAAOAAAAAAAIAAAAAAAFAP//AAAIAAAAAAAFAP7/AAAIAAAAAAAFAP3/AAAIAAAAAAAFAPz/AAAIAAAAAAAFAPv/AAAIAAAAAAAFAPr/AAAIAAAAAAAFAPn/AAAIAAAAAAAFAPj/AAAIAAAAAAAFAPf/AAAIAAAAAAAFAPb/AAAIAAAAAAAAAPD/AAAIAAAAAAABAPD/AAAIAAAAAAACAPD/AAAIAAAAAAADAPD/AAAIAAAAAAAEAPD/AAAIAAAAAAAFAPD/AAAIAAAAAAAFAPH/AAAIAAAAAAAFAPL/AAAIAAAAAAAFAPP/AAAIAAAAAAAFAPT/AAAIAAAAAAAFAPX/AAAIAAAAAAAOAP//AAAIAAAAAAAOAP7/AAAIAAAAAAAOAP3/AAAIAAAAAAAOAPz/AAAIAAAAAAAOAPv/AAAIAAAAAAAOAPr/AAAIAAAAAAAOAPn/AAAIAAAAAAAOAPj/AAAIAAAAAAAOAPf/AAAIAAAAAAAOAPb/AAAIAAAAAAAOAPX/AAAIAAAAAAAOAPT/AAAIAAAAAAAOAPP/AAAIAAAAAAAOAPL/AAAIAAAAAAAOAPH/AAAIAAAAAAAOAPD/AAAIAAAAAAAPAPD/AAAIAAAAAAAQAPD/AAAIAAAAAAARAPD/AAAIAAAAAAASAPD/AAAIAAAAAAATAPD/AAAIAAAAAAACAPf/AAAIAAAAAAACAPb/AAAIAAAAAAACAPX/AAAIAAAAAAACAPT/AAAIAAAAAAACAPP/AAAIAAAAAAACAPL/AAAIAAAAAAACAPH/AAAIAAAAAAABAPH/AAAIAAAAAAAAAPH/AAAIAAAAAAAAAPL/AAAIAAAAAAAAAPP/AAAIAAAAAAAAAPT/AAAIAAAAAAAAAPX/AAAIAAAAAAAAAPb/AAAIAAAAAAAAAPf/AAAIAAAAAAAAAPj/AAAIAAAAAAAAAPn/AAAIAAAAAAAAAPr/AAAIAAAAAAAAAPv/AAAIAAAAAAAAAPz/AAAIAAAAAAAAAP3/AAAIAAAAAAAAAP7/AAAIAAAAAAAAAP//AAAIAAAAAAAAAAAAAAAIAAAAAAAAAAEAAAAIAAAAAAAAAAIAAAAIAAAAAAAAAAMAAAAIAAAAAAAAAAQAAAAIAAAAAAAAAAUAAAAIAAAAAAAAAAYAAAAIAAAAAAAAAAcAAAAIAAAAAAAAAAgAAAAIAAAAAAAAAAkAAAAIAAAAAAAAAAoAAAAIAAAAAAAAAAsAAAAIAAAAAAAAAAwAAAAIAAAAAAAAAA0AAAAIAAAAAAABAA0AAAAIAAAAAAABAAwAAAAIAAAAAAABAAsAAAAIAAAAAAABAAoAAAAIAAAAAAABAAkAAAAIAAAAAAABAAgAAAAIAAAAAAABAAcAAAAIAAAAAAABAAYAAAAIAAAAAAABAAUAAAAIAAAAAAABAAQAAAAIAAAAAAABAAMAAAAIAAAAAAABAAIAAAAIAAAAAAABAAEAAAAIAAAAAAABAAAAAAAIAAAAAAABAP//AAAIAAAAAAABAP7/AAAIAAAAAAABAP3/AAAIAAAAAAABAPz/AAAIAAAAAAABAPv/AAAIAAAAAAABAPr/AAAIAAAAAAABAPn/AAAIAAAAAAABAPj/AAAIAAAAAAABAPf/AAAIAAAAAAABAPb/AAAIAAAAAAABAPX/AAAIAAAAAAABAPT/AAAIAAAAAAABAPP/AAAIAAAAAAABAPL/AAAIAAAAAAACAPj/AAAIAAAAAAACAPn/AAAIAAAAAAACAPr/AAAIAAAAAAACAPv/AAAIAAAAAAACAPz/AAAIAAAAAAACAP3/AAAIAAAAAAACAP7/AAAIAAAAAAACAP//AAAIAAAAAAACAAAAAAAIAAAAAAACAAEAAAAIAAAAAAACAAIAAAAIAAAAAAACAAMAAAAIAAAAAAACAAQAAAAIAAAAAAACAAUAAAAIAAAAAAACAAYAAAAIAAAAAAACAAcAAAAIAAAAAAACAAgAAAAIAAAAAAACAAkAAAAIAAAAAAACAAoAAAAIAAAAAAACAAsAAAAIAAAAAAACAAwAAAAIAAAAAAACAA0AAAAIAAAAAAADAA0AAAAIAAAAAAADAAwAAAAIAAAAAAADAAsAAAAIAAAAAAADAAoAAAAIAAAAAAADAAkAAAAIAAAAAAADAAgAAAAIAAAAAAADAAcAAAAIAAAAAAADAAYAAAAIAAAAAAADAAUAAAAIAAAAAAADAAQAAAAIAAAAAAADAAMAAAAIAAAAAAADAAIAAAAIAAAAAAADAAEAAAAIAAAAAAADAAAAAAAIAAAAAAADAP//AAAIAAAAAAADAP7/AAAIAAAAAAADAP3/AAAIAAAAAAADAPz/AAAIAAAAAAADAPv/AAAIAAAAAAADAPr/AAAIAAAAAAADAPn/AAAIAAAAAAADAPj/AAAIAAAAAAADAPf/AAAIAAAAAAADAPb/AAAIAAAAAAADAPX/AAAIAAAAAAADAPT/AAAIAAAAAAADAPP/AAAIAAAAAAADAPL/AAAIAAAAAAADAPH/AAAIAAAAAAAEAPH/AAAIAAAAAAAEAPL/AAAIAAAAAAAEAPP/AAAIAAAAAAAEAPT/AAAIAAAAAAAEAPX/AAAIAAAAAAAEAPb/AAAIAAAAAAAEAPf/AAAIAAAAAAAEAPj/AAAIAAAAAAAEAPn/AAAIAAAAAAAEAPr/AAAIAAAAAAAEAPv/AAAIAAAAAAAEAPz/AAAIAAAAAAAEAP3/AAAIAAAAAAAEAP7/AAAIAAAAAAAEAP//AAAIAAAAAAAEAAAAAAAIAAAAAAAEAAEAAAAIAAAAAAAEAAIAAAAIAAAAAAAEAAMAAAAIAAAAAAAEAAQAAAAIAAAAAAAEAAUAAAAIAAAAAAAEAAYAAAAIAAAAAAAEAAcAAAAIAAAAAAAEAAgAAAAIAAAAAAAEAAkAAAAIAAAAAAAEAAoAAAAIAAAAAAAEAAsAAAAIAAAAAAAEAAwAAAAIAAAAAAAEAA0AAAAIAAAAAAAFAA0AAAAIAAAAAAAFAAwAAAAIAAAAAAAFAAsAAAAIAAAAAAAFAAoAAAAIAAAAAAAFAAkAAAAIAAAAAAAFAAgAAAAIAAAAAAAFAAcAAAAIAAAAAAAFAAYAAAAIAAAAAAAGAAoAAAAIAAAAAAAGAAsAAAAIAAAAAAAGAAwAAAAIAAAAAAAGAA0AAAAIAAAAAAASAPf/AAAIAAAAAAASAPb/AAAIAAAAAAASAPX/AAAIAAAAAAASAPT/AAAIAAAAAAASAPP/AAAIAAAAAAASAPL/AAAIAAAAAAASAPH/AAAIAAAAAAARAPH/AAAIAAAAAAAQAPH/AAAIAAAAAAAPAPH/AAAIAAAAAAAPAPL/AAAIAAAAAAAPAPP/AAAIAAAAAAAPAPT/AAAIAAAAAAAPAPX/AAAIAAAAAAAPAPb/AAAIAAAAAAAPAPf/AAAIAAAAAAAPAPj/AAAIAAAAAAAPAPn/AAAIAAAAAAAPAPr/AAAIAAAAAAAPAPv/AAAIAAAAAAAPAPz/AAAIAAAAAAAPAP3/AAAIAAAAAAAPAP7/AAAIAAAAAAAPAP//AAAIAAAAAAAPAAAAAAAIAAAAAAAPAAEAAAAIAAAAAAAPAAIAAAAIAAAAAAAPAAMAAAAIAAAAAAAPAAQAAAAIAAAAAAAPAAUAAAAIAAAAAAAPAAYAAAAIAAAAAAAOAAYAAAAIAAAAAAAOAAcAAAAIAAAAAAAOAAgAAAAIAAAAAAAOAAkAAAAIAAAAAAAOAAoAAAAIAAAAAAANAAoAAAAIAAAAAAANAAsAAAAIAAAAAAANAAwAAAAIAAAAAAANAA0AAAAIAAAAAAAOAA0AAAAIAAAAAAAOAAwAAAAIAAAAAAAOAAsAAAAIAAAAAAAPAAsAAAAIAAAAAAAPAAoAAAAIAAAAAAAPAAkAAAAIAAAAAAAPAAgAAAAIAAAAAAAPAAcAAAAIAAAAAAAQAAcAAAAIAAAAAAAQAAYAAAAIAAAAAAAQAAUAAAAIAAAAAAAQAAQAAAAIAAAAAAAQAAMAAAAIAAAAAAAQAAIAAAAIAAAAAAAQAAEAAAAIAAAAAAAQAAAAAAAIAAAAAAAQAP//AAAIAAAAAAAQAP7/AAAIAAAAAAAQAP3/AAAIAAAAAAAQAPz/AAAIAAAAAAAQAPv/AAAIAAAAAAAQAPr/AAAIAAAAAAAQAPn/AAAIAAAAAAAQAPj/AAAIAAAAAAAQAPf/AAAIAAAAAAAQAPb/AAAIAAAAAAAQAPX/AAAIAAAAAAAQAPT/AAAIAAAAAAAQAPP/AAAIAAAAAAAQAPL/AAAIAAAAAAARAPL/AAAIAAAAAAARAPP/AAAIAAAAAAARAPT/AAAIAAAAAAARAPX/AAAIAAAAAAARAPb/AAAIAAAAAAARAPf/AAAIAAAAAAARAPj/AAAIAAAAAAARAPn/AAAIAAAAAAARAPr/AAAIAAAAAAARAPv/AAAIAAAAAAARAPz/AAAIAAAAAAARAP3/AAAIAAAAAAARAP7/AAAIAAAAAAARAP//AAAIAAAAAAARAAAAAAAIAAAAAAARAAEAAAAIAAAAAAARAAIAAAAIAAAAAAARAAMAAAAIAAAAAAARAAQAAAAIAAAAAAARAAUAAAAIAAAAAAARAAYAAAAIAAAAAAARAAcAAAAIAAAAAAARAAgAAAAIAAAAAAAQAAgAAAAIAAAAAAAQAAkAAAAIAAAAAAAQAAoAAAAIAAAAAAAQAAsAAAAIAAAAAAAQAAwAAAAIAAAAAAAPAAwAAAAIAAAAAAAPAA0AAAAIAAAAAAAQAA0AAAAIAAAAAAARAA0AAAAIAAAAAAARAAwAAAAIAAAAAAARAAsAAAAIAAAAAAARAAoAAAAIAAAAAAARAAkAAAAIAAAAAAASAAkAAAAIAAAAAAASAAgAAAAIAAAAAAASAAcAAAAIAAAAAAASAAYAAAAIAAAAAAASAAUAAAAIAAAAAAASAAQAAAAIAAAAAAASAAMAAAAIAAAAAAASAAIAAAAIAAAAAAASAAEAAAAIAAAAAAASAAAAAAAIAAAAAAASAP//AAAIAAAAAAASAP7/AAAIAAAAAAASAP3/AAAIAAAAAAASAPz/AAAIAAAAAAASAPv/AAAIAAAAAAASAPr/AAAIAAAAAAASAPn/AAAIAAAAAAASAPj/AAAIAAAAAAATAPj/AAAIAAAAAAATAPf/AAAIAAAAAAATAPb/AAAIAAAAAAATAPX/AAAIAAAAAAATAPT/AAAIAAAAAAATAPP/AAAIAAAAAAATAPL/AAAIAAAAAAATAPH/AAAIAAAAAAATAPn/AAAIAAAAAAATAPr/AAAIAAAAAAATAPv/AAAIAAAAAAATAPz/AAAIAAAAAAATAP3/AAAIAAAAAAATAP7/AAAIAAAAAAATAP//AAAIAAAAAAATAAAAAAAIAAAAAAATAAEAAAAIAAAAAAATAAIAAAAIAAAAAAATAAMAAAAIAAAAAAATAAQAAAAIAAAAAAATAAUAAAAIAAAAAAATAAYAAAAIAAAAAAATAAcAAAAIAAAAAAATAAgAAAAIAAAAAAATAAkAAAAIAAAAAAATAAoAAAAIAAAAAAASAAoAAAAIAAAAAAASAAsAAAAIAAAAAAASAAwAAAAIAAAAAAASAA0AAAAIAAAAAAATAA0AAAAIAAAAAAATAAwAAAAIAAAAAAATAAsAAAAIAAAAAAA=")
+
+[node name="Player_1" parent="Spawn" index="0"]
+position = Vector2(208, 191)
+
+[node name="Player_2" parent="Spawn" index="1"]
+position = Vector2(432, 191)
+
+[node name="Player_3" parent="Spawn" index="2"]
+position = Vector2(272, 447)
+
+[node name="Player_4" parent="Spawn" index="3"]
+position = Vector2(368, 447)
+
+[node name="Player_5" parent="Spawn" index="4"]
+position = Vector2(240, 319)
+
+[node name="Player_6" parent="Spawn" index="5"]
+position = Vector2(400, 319)
+
+[node name="Player_7" parent="Spawn" index="6"]
+position = Vector2(320, 447)
+
+[node name="Player_1" parent="Respawn" index="0"]
+position = Vector2(208, -64)
+
+[node name="Player_2" parent="Respawn" index="1"]
+position = Vector2(432, -64)
+
+[node name="Player_3" parent="Respawn" index="2"]
+position = Vector2(280, -64)
+
+[node name="Player_4" parent="Respawn" index="3"]
+position = Vector2(360, -64)
+
+[node name="Player_5" parent="Respawn" index="4"]
+position = Vector2(256, -128)
+
+[node name="Player_6" parent="Respawn" index="5"]
+position = Vector2(384, -128)
+
+[node name="Player_7" parent="Respawn" index="6"]
+position = Vector2(320, -128)
+
+[node name="OpenDialogCommand" parent="Scenario/Referee/Draw" index="0" instance=ExtResource("3_r762j")]
+DialogPath = "res://screen/game_result_dialog.tscn"
+ArgumentKey = "MessageDialog"
+Argument = ["なし", Color(1, 1, 1, 1)]
+
+[node name="OpenDialogCommand" parent="Scenario/Referee/Winner" index="0" instance=ExtResource("3_r762j")]
+DialogPath = "res://screen/game_result_dialog.tscn"
+ArgumentKey = "MessageDialog"
+Argument = ["なし", Color(0, 0, 0, 1)]
+
+[node name="OutsideArea_1" parent="Scenario" index="1"]
+position = Vector2(320, 544)
+collision_mask = 8
+
+[node name="VisibleTrigger_1" parent="Scenario" index="2" instance=ExtResource("4_y44cl")]
+
+[node name="ShowHudMessageCommand" parent="Scenario/VisibleTrigger_1" index="0" instance=ExtResource("5_236wv")]
+Text1 = "この国では罪人は"
+Text2 = "深い穴のへ"
+Text3 = "落とされるのだ"
+
+[node name="PushingArea_1" parent="Scenario" index="3" instance=ExtResource("6_k8yt7")]
+position = Vector2(320, 464)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_1" index="0"]
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/PushingArea_1/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_1/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_1/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_1" index="1"]
+shape = SubResource("RectangleShape2D_es5s4")
+
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_1" index="2" instance=ExtResource("9_pyp10")]
+Value = Vector2(0, -1)
+
+[node name="PushingArea_2" parent="Scenario" index="4" instance=ExtResource("6_k8yt7")]
+position = Vector2(160, -160)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_2" index="0"]
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/PushingArea_2/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_2/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_2/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_2" index="1"]
+shape = SubResource("RectangleShape2D_noi0u")
+
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_2" index="2" instance=ExtResource("9_pyp10")]
+Value = Vector2(1, 0)
+
+[node name="PushingArea_3" parent="Scenario" index="5" instance=ExtResource("6_k8yt7")]
+position = Vector2(480, -160)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_3" index="0"]
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/PushingArea_3/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_3/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_3/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_3" index="1"]
+shape = SubResource("RectangleShape2D_m3na8")
+
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_3" index="2" instance=ExtResource("9_pyp10")]
+Value = Vector2(-1, 0)
+
+[node name="PushingArea_4" parent="Scenario" index="6" instance=ExtResource("6_k8yt7")]
+position = Vector2(448, 256)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_4" index="0"]
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/PushingArea_4/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_4/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_4/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_4" index="1"]
+shape = SubResource("RectangleShape2D_7cvju")
+
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_4" index="2" instance=ExtResource("9_pyp10")]
+Value = Vector2(-1, 0)
+
+[node name="PushingArea_5" parent="Scenario" index="7" instance=ExtResource("6_k8yt7")]
+position = Vector2(196, 256)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_5" index="0"]
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/PushingArea_5/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_5/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_5/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_5" index="1"]
+shape = SubResource("RectangleShape2D_e8wyi")
+
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_5" index="2" instance=ExtResource("9_pyp10")]
+Value = Vector2(1, 0)
+
+[node name="PushingArea_7" parent="Scenario" index="8" instance=ExtResource("6_k8yt7")]
+position = Vector2(233, 384)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_7" index="0"]
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/PushingArea_7/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_7/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_7/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_7" index="1"]
+shape = SubResource("RectangleShape2D_r762j")
+
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_7" index="2" instance=ExtResource("9_pyp10")]
+Value = Vector2(1, 0)
+
+[node name="PushingArea_6" parent="Scenario" index="9" instance=ExtResource("6_k8yt7")]
+position = Vector2(416, 384)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_6" index="0"]
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/PushingArea_6/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_6/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_6/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_6" index="1"]
+shape = SubResource("RectangleShape2D_y44cl")
+
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_6" index="2" instance=ExtResource("9_pyp10")]
+Value = Vector2(-1, 0)
+
+[node name="AthleticArea_1" parent="Scenario" index="10" instance=ExtResource("6_k8yt7")]
+position = Vector2(320, 446)
+collision_layer = 0
+collision_mask = 4
+
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_1" index="0"]
+wait_time = 0.1
+autostart = true
+
+[node name="TimerTrigger" parent="Scenario/AthleticArea_1/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_t150t")]
+Target = NodePath("../../CollisionShape2D")
+SwapExecFlag = true
+
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_1/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_1/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("8_m8qt8")]
+Target = NodePath("../../../CollisionShape2D")
+Value = true
+ExecFlag = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_1" index="1"]
+shape = SubResource("RectangleShape2D_236wv")
+debug_color = Color(1, 1, 0, 0.392157)
+
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_1" index="2" instance=ExtResource("10_e8wyi")]
+Direction = 3
+
+[node name="Camera" parent="." index="10"]
+visible = false

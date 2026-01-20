@@ -13,7 +13,7 @@ public partial class HumanPad : BrainRoot
     public override void _Ready()
     {
         base._Ready();
-        _pad = GetNode<JoyPadController>("/root/GamePadController");
+        _pad = GetNode<JoyPadController>("/root/JoyPadController");
     }
 
     public override void _Process(double delta)

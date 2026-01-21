@@ -81,8 +81,15 @@ public partial class CpuFighter2 : CpuFighterRoot
             return;
         }
 
+        // 足元に敵がいる場合必殺技3で後退する
+        if (m_Random.Randf() <= Waza3Probability && m_UnderfootArea.HasFighter(FighterId) is not null)
+        {
+            InsertWaza3();
+            return;
+        }
+
         // 防御
-        if (m_Random.Randf() <= ActionProbability && onFloor)
+        if (m_Random.Randf() <= DefendProbability && onFloor)
         {
             // 背後から離攻撃を受けた場合、ジャンプ
             {
@@ -174,15 +181,6 @@ public partial class CpuFighter2 : CpuFighterRoot
             return;
         }
 
-        // 必殺技3の射程距離
-        {
-            if (m_Random.Randf() <= Waza3Probability && _waza3Area.HasFighter(FighterId) is FighterRoot enemy && enemy.State.StartsWith("waza"))
-            {
-                InsertWaza3();
-                return;
-            }
-        }
-
         // 地上
         if (onFloor)
         {
@@ -193,15 +191,8 @@ public partial class CpuFighter2 : CpuFighterRoot
                 return;
             }
 
-            // 足元に敵がいる場合必殺技3で後退する
-            if (m_UnderfootArea.HasFighter(FighterId) is not null)
-            {
-                InsertWaza3();
-                return;
-            }
-
             // 格闘戦
-            if (m_Random.Randf() <= ActionProbability && attackAreaEnemy is not null)
+            if (m_Random.Randf() <= AttackProbability && attackAreaEnemy is not null)
             {
                 switch (attackAreaEnemy.State)
                 {

@@ -36,10 +36,16 @@ public partial class CpuFighterRoot : BrainRoot, IOuterControledBrain
     public float Waza3Probability { get; set; } = 0.1f;
 
     /// <summary>
-    /// 通常行動確率
+    /// 通常攻撃確率
     /// </summary>
     [Export]
-    public float ActionProbability { get; set; } = 0.33333f;
+    public float AttackProbability { get; set; } = 0.33333f;
+
+    /// <summary>
+    /// 通常攻撃確率
+    /// </summary>
+    [Export]
+    public float DefendProbability { get; set; } = 0.65f;
 
     protected RandomNumberGenerator m_Random = new();
     protected Array<int> m_NextKey = [];

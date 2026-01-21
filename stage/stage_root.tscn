@@ -146,7 +146,8 @@ position = Vector2(24, 0)
 Target = NodePath("../../Timeup")
 
 [node name="Timeup" type="Timer" parent="Scenario"]
-wait_time = 180.0
+wait_time = 90.0
+autostart = true
 
 [node name="TimerTrigger" parent="Scenario/Timeup" instance=ExtResource("12_7rln4")]
 

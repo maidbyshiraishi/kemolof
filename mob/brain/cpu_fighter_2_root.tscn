@@ -13,7 +13,7 @@ size = Vector2(32, 112)
 size = Vector2(32, 450)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rk03d"]
-size = Vector2(192, 152)
+size = Vector2(128, 152)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d184q"]
 size = Vector2(32, 112)
@@ -69,12 +69,12 @@ debug_color = Color(0, 0.7, 0, 0.419608)
 
 [node name="Waza3Area" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 8
+collision_mask = 40
 script = ExtResource("2_piut2")
 ConnectArea = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Waza3Area"]
-position = Vector2(160, -84)
+position = Vector2(192, -84)
 shape = SubResource("RectangleShape2D_rk03d")
 debug_color = Color(0.784314, 0.25098, 0.784314, 0.419608)
 

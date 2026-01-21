@@ -9,11 +9,11 @@ size = Vector2(64, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7kgn"]
 size = Vector2(32, 112)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fkbk"]
-size = Vector2(160, 50)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riavq"]
 size = Vector2(136, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fkbk"]
+size = Vector2(160, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d184q"]
 size = Vector2(32, 112)
@@ -56,17 +56,6 @@ script = ExtResource("2_j8qps")
 position = Vector2(32, -64)
 shape = SubResource("RectangleShape2D_e7kgn")
 
-[node name="Waza3Area" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 8
-script = ExtResource("2_j8qps")
-ConnectArea = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza3Area"]
-position = Vector2(208, -70)
-shape = SubResource("RectangleShape2D_8fkbk")
-debug_color = Color(0, 0.7, 0, 0.419608)
-
 [node name="Waza2Area" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 8
@@ -77,6 +66,17 @@ ConnectArea = false
 position = Vector2(124, -44)
 shape = SubResource("RectangleShape2D_riavq")
 debug_color = Color(0.7, 0, 0.7, 0.419608)
+
+[node name="Waza3Area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 40
+script = ExtResource("2_j8qps")
+ConnectArea = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza3Area"]
+position = Vector2(208, -70)
+shape = SubResource("RectangleShape2D_8fkbk")
+debug_color = Color(0, 0.7, 0, 0.419608)
 
 [node name="BackArea" type="Area2D" parent="."]
 collision_layer = 0

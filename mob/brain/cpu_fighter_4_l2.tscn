@@ -6,4 +6,5 @@
 Waza1Probability = 0.2
 Waza2Probability = 0.3
 Waza3Probability = 0.2
-ActionProbability = 0.7
+AttackProbability = 0.7
+DefendProbability = 0.85

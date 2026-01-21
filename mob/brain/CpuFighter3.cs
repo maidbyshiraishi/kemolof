@@ -91,7 +91,7 @@ public partial class CpuFighter3 : CpuFighterRoot
         }
 
         // 防御
-        if (m_Random.Randf() <= ActionProbability && onFloor)
+        if (m_Random.Randf() <= DefendProbability && onFloor)
         {
             // 背後から離攻撃を受けた場合、ジャンプ
             {
@@ -184,7 +184,7 @@ public partial class CpuFighter3 : CpuFighterRoot
         }
 
         // 頭上と足元に敵がいる場合、移動する
-        if ((m_Random.Randf() <= ActionProbability && m_OverheadArea.HasFighter(FighterId) is not null) || m_UnderfootArea.HasFighter(FighterId) is not null)
+        if ((m_Random.Randf() <= DefendProbability && m_OverheadArea.HasFighter(FighterId) is not null) || m_UnderfootArea.HasFighter(FighterId) is not null)
         {
             InsertBuffer(WazaKey.Up | (Fighter.RightSide ? WazaKey.Right : WazaKey.Left));
             return;
@@ -201,7 +201,7 @@ public partial class CpuFighter3 : CpuFighterRoot
             }
 
             // 格闘戦
-            if (m_Random.Randf() <= ActionProbability && attackAreaEnemy is not null)
+            if (m_Random.Randf() <= AttackProbability && attackAreaEnemy is not null)
             {
                 switch (attackAreaEnemy.State)
                 {

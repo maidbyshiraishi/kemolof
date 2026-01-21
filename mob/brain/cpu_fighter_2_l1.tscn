@@ -4,4 +4,4 @@
 
 [node name="Brain" instance=ExtResource("1_syux4")]
 Waza2Probability = 0.2
-ActionProbability = 0.3
+AttackProbability = 0.3

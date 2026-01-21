@@ -5,5 +5,6 @@
 [node name="Brain" instance=ExtResource("1_a8nqg")]
 Waza1Probability = 0.4
 Waza2Probability = 0.5
-Waza3Probability = 0.4
-ActionProbability = 0.95
+Waza3Probability = 0.3
+AttackProbability = 0.95
+DefendProbability = 0.98

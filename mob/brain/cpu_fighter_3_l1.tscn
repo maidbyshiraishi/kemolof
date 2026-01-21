@@ -3,4 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://bay7hombkrknw" path="res://mob/brain/cpu_fighter_3_root.tscn" id="1_mv88l"]
 
 [node name="Brain" instance=ExtResource("1_mv88l")]
-ActionProbability = 0.3
+AttackProbability = 0.3

@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.command;
+namespace kemolof.command.dialog;
 
 /// <summary>
 /// システムのファイルマネージャで指定フォルダを開くコマンド

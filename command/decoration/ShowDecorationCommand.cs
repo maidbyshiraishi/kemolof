@@ -2,7 +2,7 @@ using Godot;
 using kemolof.decoration;
 using kemolof.system;
 
-namespace kemolof.command;
+namespace kemolof.command.decoration;
 
 /// <summary>
 /// デコレーションを表示するコマンド

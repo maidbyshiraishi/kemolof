@@ -2,7 +2,7 @@ using Godot;
 using kemolof.decoration;
 using kemolof.system;
 
-namespace kemolof.command;
+namespace kemolof.command.decoration;
 
 /// <summary>
 /// フローティングメッセージを表示するコマンド

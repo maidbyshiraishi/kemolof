@@ -1,7 +1,7 @@
 using Godot;
 using kemolof.system;
 
-namespace kemolof.command;
+namespace kemolof.command.dialog;
 
 /// <summary>
 /// ゲームを終了するコマンド

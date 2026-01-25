@@ -2,7 +2,7 @@ using Godot;
 using kemolof.stage;
 using kemolof.system;
 
-namespace kemolof.command;
+namespace kemolof.command.stage;
 
 /// <summary>
 /// シーンを生成するコマンド

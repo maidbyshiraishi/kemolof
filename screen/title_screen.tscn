@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bwnbq0d05nrbf" path="res://command/audio/change_bgm_command.tscn" id="15_7piwm"]
 [ext_resource type="PackedScene" uid="uid://doinxgb12hhfy" path="res://command/version_label_command.tscn" id="17_igc8e"]
 [ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="17_uhsa7"]
-[ext_resource type="PackedScene" uid="uid://ye80q7cyvfw8" path="res://command/quit_game_command.tscn" id="18_85irx"]
+[ext_resource type="PackedScene" uid="uid://ye80q7cyvfw8" path="res://command/dialog/quit_game_command.tscn" id="18_85irx"]
 
 [node name="TitleScreen" type="Control"]
 light_mask = 2

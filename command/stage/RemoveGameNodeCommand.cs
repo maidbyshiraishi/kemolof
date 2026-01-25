@@ -1,7 +1,7 @@
 using Godot;
 using kemolof.stage;
 
-namespace kemolof.command;
+namespace kemolof.command.stage;
 
 /// <summary>
 /// 接触したGameNodeを除去するコマンド

@@ -17,6 +17,9 @@
 [node name="Background" parent="." index="0"]
 visible = false
 
+[node name="Socket" parent="." index="1"]
+layout_mode = 0
+
 [node name="Contents" type="Control" parent="Socket" index="0"]
 anchors_preset = 0
 offset_right = 640.0
@@ -894,6 +897,7 @@ ProcessAlways = true
 [node name="CloseDialogCommand" parent="Socket/Contents/Page4/Control/Close/Exec" index="1" instance=ExtResource("5_8jehl")]
 
 [node name="Douji" type="Label" parent="Socket/Contents/Page4" index="28"]
+layout_mode = 0
 offset_left = 336.0
 offset_top = 184.0
 offset_right = 392.0
@@ -904,6 +908,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Douji2" type="Label" parent="Socket/Contents/Page4" index="29"]
+layout_mode = 0
 offset_left = 360.0
 offset_top = 304.0
 offset_right = 416.0

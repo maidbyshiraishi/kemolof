@@ -359,7 +359,7 @@ Screen = "res://screen/select_stage_screen.tscn"
 [node name="Focus" parent="Control/NextScreen" instance=ExtResource("7_ji66b")]
 
 [node name="Uninhabited1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 104.0
 offset_right = 193.0
@@ -384,7 +384,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Uninhabited1" instance=ExtResource("7_ji66b")]
 
 [node name="Uninhabited2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 104.0
 offset_right = 262.0
@@ -409,7 +409,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Uninhabited2" instance=ExtResource("7_ji66b")]
 
 [node name="Uninhabited3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 104.0
 offset_right = 331.0
@@ -433,7 +433,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Uninhabited3" instance=ExtResource("7_ji66b")]
 
 [node name="Uninhabited4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 104.0
 offset_right = 400.0
@@ -457,7 +457,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Uninhabited4" instance=ExtResource("7_ji66b")]
 
 [node name="Uninhabited5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 104.0
 offset_right = 469.0
@@ -481,7 +481,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Uninhabited5" instance=ExtResource("7_ji66b")]
 
 [node name="Uninhabited6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 104.0
 offset_right = 538.0
@@ -505,7 +505,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Uninhabited6" instance=ExtResource("7_ji66b")]
 
 [node name="Uninhabited7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 104.0
 offset_right = 607.0
@@ -529,7 +529,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Uninhabited7" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb1_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 130.0
 offset_right = 193.0
@@ -553,7 +553,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb1_1" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb1_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 130.0
 offset_right = 262.0
@@ -577,7 +577,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb1_2" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb1_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 130.0
 offset_right = 331.0
@@ -601,7 +601,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb1_3" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb1_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 130.0
 offset_right = 400.0
@@ -625,7 +625,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb1_4" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb1_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 130.0
 offset_right = 469.0
@@ -649,7 +649,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb1_5" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb1_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 130.0
 offset_right = 538.0
@@ -673,7 +673,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb1_6" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb1_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 130.0
 offset_right = 607.0
@@ -697,7 +697,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb1_7" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb2_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 156.0
 offset_right = 193.0
@@ -721,7 +721,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb2_1" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb2_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 156.0
 offset_right = 262.0
@@ -745,7 +745,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb2_2" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb2_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 156.0
 offset_right = 331.0
@@ -769,7 +769,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb2_3" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb2_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 156.0
 offset_right = 400.0
@@ -793,7 +793,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb2_4" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb2_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 156.0
 offset_right = 469.0
@@ -817,7 +817,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb2_5" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb2_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 156.0
 offset_right = 538.0
@@ -841,7 +841,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb2_6" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb2_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 156.0
 offset_right = 607.0
@@ -865,7 +865,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb2_7" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb3_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 182.0
 offset_right = 193.0
@@ -889,7 +889,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb3_1" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb3_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 182.0
 offset_right = 262.0
@@ -913,7 +913,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb3_2" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb3_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 182.0
 offset_right = 331.0
@@ -937,7 +937,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb3_3" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb3_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 182.0
 offset_right = 400.0
@@ -961,7 +961,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb3_4" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb3_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 182.0
 offset_right = 469.0
@@ -985,7 +985,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb3_5" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb3_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 182.0
 offset_right = 538.0
@@ -1009,7 +1009,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb3_6" instance=ExtResource("7_ji66b")]
 
 [node name="Keyb3_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 182.0
 offset_right = 607.0
@@ -1033,7 +1033,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Keyb3_7" instance=ExtResource("7_ji66b")]
 
 [node name="Pad1_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 208.0
 offset_right = 193.0
@@ -1058,7 +1058,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad1_1" instance=ExtResource("7_ji66b")]
 
 [node name="Pad1_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 208.0
 offset_right = 262.0
@@ -1083,7 +1083,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad1_2" instance=ExtResource("7_ji66b")]
 
 [node name="Pad1_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 208.0
 offset_right = 331.0
@@ -1108,7 +1108,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad1_3" instance=ExtResource("7_ji66b")]
 
 [node name="Pad1_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 208.0
 offset_right = 400.0
@@ -1133,7 +1133,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad1_4" instance=ExtResource("7_ji66b")]
 
 [node name="Pad1_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 208.0
 offset_right = 469.0
@@ -1158,7 +1158,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad1_5" instance=ExtResource("7_ji66b")]
 
 [node name="Pad1_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 208.0
 offset_right = 538.0
@@ -1183,7 +1183,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad1_6" instance=ExtResource("7_ji66b")]
 
 [node name="Pad1_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 208.0
 offset_right = 607.0
@@ -1208,7 +1208,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad1_7" instance=ExtResource("7_ji66b")]
 
 [node name="Pad2_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 234.0
 offset_right = 193.0
@@ -1233,7 +1233,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad2_1" instance=ExtResource("7_ji66b")]
 
 [node name="Pad2_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 234.0
 offset_right = 262.0
@@ -1258,7 +1258,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad2_2" instance=ExtResource("7_ji66b")]
 
 [node name="Pad2_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 234.0
 offset_right = 331.0
@@ -1283,7 +1283,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad2_3" instance=ExtResource("7_ji66b")]
 
 [node name="Pad2_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 234.0
 offset_right = 400.0
@@ -1308,7 +1308,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad2_4" instance=ExtResource("7_ji66b")]
 
 [node name="Pad2_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 234.0
 offset_right = 469.0
@@ -1333,7 +1333,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad2_5" instance=ExtResource("7_ji66b")]
 
 [node name="Pad2_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 234.0
 offset_right = 538.0
@@ -1358,7 +1358,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad2_6" instance=ExtResource("7_ji66b")]
 
 [node name="Pad2_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 234.0
 offset_right = 607.0
@@ -1383,7 +1383,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad2_7" instance=ExtResource("7_ji66b")]
 
 [node name="Pad3_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 260.0
 offset_right = 193.0
@@ -1408,7 +1408,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad3_1" instance=ExtResource("7_ji66b")]
 
 [node name="Pad3_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 260.0
 offset_right = 262.0
@@ -1433,7 +1433,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad3_2" instance=ExtResource("7_ji66b")]
 
 [node name="Pad3_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 260.0
 offset_right = 331.0
@@ -1458,7 +1458,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad3_3" instance=ExtResource("7_ji66b")]
 
 [node name="Pad3_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 260.0
 offset_right = 400.0
@@ -1483,7 +1483,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad3_4" instance=ExtResource("7_ji66b")]
 
 [node name="Pad3_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 260.0
 offset_right = 469.0
@@ -1508,7 +1508,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad3_5" instance=ExtResource("7_ji66b")]
 
 [node name="Pad3_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 260.0
 offset_right = 538.0
@@ -1533,7 +1533,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad3_6" instance=ExtResource("7_ji66b")]
 
 [node name="Pad3_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 260.0
 offset_right = 607.0
@@ -1558,7 +1558,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad3_7" instance=ExtResource("7_ji66b")]
 
 [node name="Pad4_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 286.0
 offset_right = 193.0
@@ -1583,7 +1583,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad4_1" instance=ExtResource("7_ji66b")]
 
 [node name="Pad4_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 286.0
 offset_right = 262.0
@@ -1608,7 +1608,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad4_2" instance=ExtResource("7_ji66b")]
 
 [node name="Pad4_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 286.0
 offset_right = 331.0
@@ -1633,7 +1633,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad4_3" instance=ExtResource("7_ji66b")]
 
 [node name="Pad4_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 286.0
 offset_right = 400.0
@@ -1658,7 +1658,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad4_4" instance=ExtResource("7_ji66b")]
 
 [node name="Pad4_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 286.0
 offset_right = 469.0
@@ -1683,7 +1683,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad4_5" instance=ExtResource("7_ji66b")]
 
 [node name="Pad4_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 286.0
 offset_right = 538.0
@@ -1708,7 +1708,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad4_6" instance=ExtResource("7_ji66b")]
 
 [node name="Pad4_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 286.0
 offset_right = 607.0
@@ -1733,7 +1733,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Pad4_7" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu1_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 312.0
 offset_right = 193.0
@@ -1757,7 +1757,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu1_1" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu1_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 312.0
 offset_right = 262.0
@@ -1781,7 +1781,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu1_2" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu1_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 312.0
 offset_right = 331.0
@@ -1805,7 +1805,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu1_3" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu1_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 312.0
 offset_right = 400.0
@@ -1829,7 +1829,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu1_4" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu1_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 312.0
 offset_right = 469.0
@@ -1853,7 +1853,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu1_5" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu1_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 312.0
 offset_right = 538.0
@@ -1877,7 +1877,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu1_6" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu1_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 312.0
 offset_right = 607.0
@@ -1901,7 +1901,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu1_7" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu2_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 338.0
 offset_right = 193.0
@@ -1925,7 +1925,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu2_1" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu2_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 338.0
 offset_right = 262.0
@@ -1949,7 +1949,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu2_2" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu2_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 338.0
 offset_right = 331.0
@@ -1973,7 +1973,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu2_3" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu2_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 338.0
 offset_right = 400.0
@@ -1997,7 +1997,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu2_4" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu2_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 338.0
 offset_right = 469.0
@@ -2021,7 +2021,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu2_5" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu2_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 338.0
 offset_right = 538.0
@@ -2045,7 +2045,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu2_6" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu2_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 338.0
 offset_right = 607.0
@@ -2069,7 +2069,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu2_7" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu3_1" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 128.0
 offset_top = 364.0
 offset_right = 193.0
@@ -2094,7 +2094,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu3_1" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu3_2" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 197.0
 offset_top = 364.0
 offset_right = 262.0
@@ -2119,7 +2119,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu3_2" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu3_3" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 266.0
 offset_top = 364.0
 offset_right = 331.0
@@ -2144,7 +2144,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu3_3" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu3_4" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 335.0
 offset_top = 364.0
 offset_right = 400.0
@@ -2169,7 +2169,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu3_4" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu3_5" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 404.0
 offset_top = 364.0
 offset_right = 469.0
@@ -2194,7 +2194,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu3_5" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu3_6" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 473.0
 offset_top = 364.0
 offset_right = 538.0
@@ -2219,7 +2219,7 @@ ExecFlag = false
 [node name="Focus" parent="Control/Cpu3_6" instance=ExtResource("7_ji66b")]
 
 [node name="Cpu3_7" type="Button" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 542.0
 offset_top = 364.0
 offset_right = 607.0

@@ -126,6 +126,7 @@ Waza3Voice = Array[String](["fighter_4_waza_3_1", "fighter_4_waza_3_2"])
 GroundMaxSpeed = 300.0
 GuardMaxSpeed = 180.0
 JumpHeight = 300.0
+Waza2Enabled = false
 metadata/_edit_horizontal_guides_ = [-90.0, -45.0, 0.0, -135.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

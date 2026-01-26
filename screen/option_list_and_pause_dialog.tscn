@@ -53,6 +53,7 @@ offset_bottom = 352.0
 
 [node name="WazaCommand" type="Button" parent="Control" index="3"]
 light_mask = 2
+layout_mode = 0
 offset_left = 224.0
 offset_top = 216.0
 offset_right = 416.0

@@ -350,13 +350,12 @@ offset = Vector2(0, -2.5)
 hframes = 2
 
 [node name="ArmL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
-self_modulate = Color(0.784314, 0.784314, 0.784314, 1)
+modulate = Color(0.784314, 0.784314, 0.784314, 1)
 show_behind_parent = true
 position = Vector2(0.5, -5.5)
 texture = ExtResource("41_fiyeo")
 
 [node name="ArmL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/ArmL1"]
-self_modulate = Color(0.784314, 0.784314, 0.784314, 1)
 position = Vector2(0, 3.5)
 texture = ExtResource("42_bpa8y")
 offset = Vector2(0, 2.5)
@@ -373,20 +372,18 @@ offset = Vector2(0.5, 4)
 hframes = 12
 
 [node name="LegL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip"]
-self_modulate = Color(0.784314, 0.784314, 0.784314, 1)
+modulate = Color(0.784314, 0.784314, 0.784314, 1)
 show_behind_parent = true
 position = Vector2(0, 3)
 texture = ExtResource("34_rxm41")
 offset = Vector2(0, 1.5)
 
 [node name="LegL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1"]
-self_modulate = Color(0.784314, 0.784314, 0.784314, 1)
 position = Vector2(1, 5)
 texture = ExtResource("35_rvvq2")
 offset = Vector2(-0.5, 2.5)
 
 [node name="LegL3" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1/LegL2"]
-self_modulate = Color(0.784314, 0.784314, 0.784314, 1)
 position = Vector2(0, 5)
 texture = ExtResource("36_6ap1m")
 offset = Vector2(1, 2)

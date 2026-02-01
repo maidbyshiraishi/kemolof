@@ -77,7 +77,8 @@ script = ExtResource("2_ssylw")
 ConnectArea = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Waza2Area"]
-position = Vector2(52, -135.75)
+position = Vector2(56, -144)
+rotation = 0.2617994
 shape = SubResource("RectangleShape2D_2mk4j")
 debug_color = Color(0.705882, 0, 0, 0.419608)
 

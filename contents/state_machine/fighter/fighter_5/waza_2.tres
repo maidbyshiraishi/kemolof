@@ -672,10 +672,10 @@ tracks/55/path = NodePath("Character/AttackArea1:position")
 tracks/55/interp = 1
 tracks/55/loop_wrap = true
 tracks/55/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(0, 16), Vector2(40, -26), Vector2(40, -48)]
+"values": [Vector2(0, 16), Vector2(44, -40)]
 }
 tracks/56/type = "value"
 tracks/56/imported = false
@@ -684,10 +684,10 @@ tracks/56/path = NodePath("Character/AttackArea1:rotation")
 tracks/56/interp = 1
 tracks/56/loop_wrap = true
 tracks/56/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0.0, -1.57079, -1.57079]
+"values": [0.0, -1.57079]
 }
 tracks/57/type = "value"
 tracks/57/imported = false
@@ -696,10 +696,10 @@ tracks/57/path = NodePath("Character/AttackArea1:scale")
 tracks/57/interp = 1
 tracks/57/loop_wrap = true
 tracks/57/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+"values": [Vector2(1, 1), Vector2(2, 1.2)]
 }
 tracks/58/type = "value"
 tracks/58/imported = false

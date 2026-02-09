@@ -110,10 +110,7 @@ public partial class GameStageRoot : StageRoot
         }
     }
 
-    public void AddSceneToNode(Node node, Node parentNode)
-    {
-        _ = CallDeferred(MethodName.DeferredAddSceneToNode, [node, parentNode]);
-    }
+    public void AddSceneToNode(Node node, Node parentNode) => _ = CallDeferred(MethodName.DeferredAddSceneToNode, [node, parentNode]);
 
     private static void DeferredAddSceneToNode(Node node, Node parentNode)
     {
@@ -139,10 +136,7 @@ public partial class GameStageRoot : StageRoot
         }
     }
 
-    public void ReparentNode(Node2D node, string nodeName)
-    {
-        _ = node?.CallDeferred(Node.MethodName.Reparent, [GetNode(nodeName)]);
-    }
+    public void ReparentNode(Node2D node, string nodeName) => _ = node?.CallDeferred(Node.MethodName.Reparent, [GetNode(nodeName)]);
 
     public void DamageAllFighters(int damage, Array<string> hitVoice)
     {

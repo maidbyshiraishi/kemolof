@@ -9,15 +9,9 @@ public partial class FighterList : Node2D
 {
     private Array<FighterRoot> _fighter = [];
 
-    public Array<FighterRoot> GetAvailableFighters()
-    {
-        return _fighter;
-    }
+    public Array<FighterRoot> GetAvailableFighters() => _fighter;
 
-    public override void _Process(double delta)
-    {
-        _ = CallDeferred(MethodName.UpdateFighterList, []);
-    }
+    public override void _Process(double delta) => _ = CallDeferred(MethodName.UpdateFighterList, []);
 
     public void UpdateFighterList()
     {
@@ -33,10 +27,7 @@ public partial class FighterList : Node2D
         }
     }
 
-    public Array<FighterRoot> GetFighters()
-    {
-        return _fighter;
-    }
+    public Array<FighterRoot> GetFighters() => _fighter;
 
     public void DamageAllFighters(int damage, Array<string> hitVoice)
     {

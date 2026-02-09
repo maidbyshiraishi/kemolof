@@ -122,10 +122,7 @@ public partial class CpuFighterRoot : BrainRoot, IOuterControledBrain
         InsertBufferSequence(key, 5);
     }
 
-    protected virtual void InsertJumpKick()
-    {
-        InsertBuffer(WazaKey.Kick | (Fighter.RightSide ? WazaKey.Left : WazaKey.Right));
-    }
+    protected virtual void InsertJumpKick() => InsertBuffer(WazaKey.Kick | (Fighter.RightSide ? WazaKey.Left : WazaKey.Right));
 
     #region ファイター外部制御インタフェース
     /// <summary>

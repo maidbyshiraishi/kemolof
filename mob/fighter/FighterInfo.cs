@@ -15,15 +15,12 @@ public class FighterInfo : DataRoot
     public int FighterNo = -1;
     public Color Color = Color.Color8(100, 100, 100);
 
-    public FighterInfo Copy()
+    public FighterInfo Copy() => new()
     {
-        return new()
-        {
-            Uninhabited = Uninhabited,
-            Keyb = Keyb,
-            Pad = Pad,
-            Cpu = Cpu,
-            Color = Color
-        };
-    }
+        Uninhabited = Uninhabited,
+        Keyb = Keyb,
+        Pad = Pad,
+        Cpu = Cpu,
+        Color = Color
+    };
 }

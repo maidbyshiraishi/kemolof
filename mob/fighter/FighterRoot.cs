@@ -235,10 +235,7 @@ public partial class FighterRoot : MobRoot, IGameNode
     {
     }
 
-    protected void AddWaza(string wazaName, Array<int> wazaCommand, Array<int> wazaMask)
-    {
-        _wazaAnalyzer.AddWaza(wazaName, wazaCommand, wazaMask);
-    }
+    protected void AddWaza(string wazaName, Array<int> wazaCommand, Array<int> wazaMask) => _wazaAnalyzer.AddWaza(wazaName, wazaCommand, wazaMask);
 
     protected bool AnalyzeWaza(string wazaName, Array<int> buffer)
     {
@@ -366,30 +363,15 @@ public partial class FighterRoot : MobRoot, IGameNode
     {
     }
 
-    public void PlayMieVoice()
-    {
-        PlayRandomVoice(MieVoice);
-    }
+    public void PlayMieVoice() => PlayRandomVoice(MieVoice);
 
-    public void PlayActionVoice()
-    {
-        PlayRandomVoice(ActionVoice);
-    }
+    public void PlayActionVoice() => PlayRandomVoice(ActionVoice);
 
-    public void PlayDamageVoice()
-    {
-        PlayRandomVoice(DamageVoice);
-    }
+    public void PlayDamageVoice() => PlayRandomVoice(DamageVoice);
 
-    public void PlayKnockDownVoice()
-    {
-        PlayRandomVoice(KnockDownVoice);
-    }
+    public void PlayKnockDownVoice() => PlayRandomVoice(KnockDownVoice);
 
-    public void PlayDeadVoice()
-    {
-        PlayRandomVoice(DeadVoice);
-    }
+    public void PlayDeadVoice() => PlayRandomVoice(DeadVoice);
 
     protected void PlayRandomVoice(Array<string> voice)
     {
@@ -425,9 +407,6 @@ public partial class FighterRoot : MobRoot, IGameNode
     /// <summary>
     /// 初期化
     /// </summary>
-    public virtual void InitializeNode()
-    {
-        m_StateMachine.Start("mie");
-    }
+    public virtual void InitializeNode() => m_StateMachine.Start("mie");
     #endregion
 }

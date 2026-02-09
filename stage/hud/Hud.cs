@@ -18,10 +18,7 @@ public partial class Hud : CanvasLayer, IGameNode
     [Export]
     public string Text3 { get; set; }
 
-    public override void _Ready()
-    {
-        AddToGroup(IGameNode.GameNodeGroup);
-    }
+    public override void _Ready() => AddToGroup(IGameNode.GameNodeGroup);
 
     public void ShowMessage()
     {
@@ -31,10 +28,7 @@ public partial class Hud : CanvasLayer, IGameNode
         GetNode<Control>("Start").Show();
     }
 
-    public void HideMessage()
-    {
-        GetNode<Control>("Start").Hide();
-    }
+    public void HideMessage() => GetNode<Control>("Start").Hide();
 
     public void SetMessage(string text1, string text2, string text3)
     {

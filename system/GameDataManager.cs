@@ -57,15 +57,9 @@ public partial class GameDataManager : Node
         _packData.StartNewGame();
     }
 
-    public void Backup()
-    {
-        _packData.Backup();
-    }
+    public void Backup() => _packData.Backup();
 
-    public void Restore()
-    {
-        _packData.Restore();
-    }
+    public void Restore() => _packData.Restore();
 
     public FlagData GetFlagData()
     {
@@ -213,15 +207,9 @@ public partial class GameDataManager : Node
         return localtime;
     }
 
-    public void SetStageData(int stageNo, string key, int value)
-    {
-        _file.SetValue(GetStageSectionName(stageNo), key, value);
-    }
+    public void SetStageData(int stageNo, string key, int value) => _file.SetValue(GetStageSectionName(stageNo), key, value);
 
-    public void AddStageData(int stageNo, string key, int value)
-    {
-        SetStageData(stageNo, key, GetStageData(stageNo, key) + value);
-    }
+    public void AddStageData(int stageNo, string key, int value) => SetStageData(stageNo, key, GetStageData(stageNo, key) + value);
 
     /// <summary>
     /// ステージデータを取得する
@@ -235,34 +223,22 @@ public partial class GameDataManager : Node
         return v.VariantType is Variant.Type.Int ? v.AsInt32() : 0;
     }
 
-    public bool HasStageData(int stageNo, string key)
-    {
-        return _file.HasSectionKey(GetStageSectionName(stageNo), key);
-    }
+    public bool HasStageData(int stageNo, string key) => _file.HasSectionKey(GetStageSectionName(stageNo), key);
 
     /// <summary>
     /// ステージデータを削除する
     /// </summary>
     /// <param name="stageNo">ステージ番号</param>
     /// <param name="key">key</param>
-    public void RemoveStageData(int stageNo, string key)
-    {
-        _file.EraseSectionKey(GetStageSectionName(stageNo), key);
-    }
+    public void RemoveStageData(int stageNo, string key) => _file.EraseSectionKey(GetStageSectionName(stageNo), key);
 
     /// <summary>
     /// ステージデータをすべて消去する
     /// </summary>
     /// <param name="stageNo">ステージ番号</param>
-    public void ClearStageData(int stageNo)
-    {
-        _file.EraseSection(GetStageSectionName(stageNo));
-    }
+    public void ClearStageData(int stageNo) => _file.EraseSection(GetStageSectionName(stageNo));
 
-    private static string GetStageSectionName(int stageNo)
-    {
-        return string.Format(StageSection, stageNo);
-    }
+    private static string GetStageSectionName(int stageNo) => string.Format(StageSection, stageNo);
 
     public void GetKeysAndValues(out string[] keys, out Godot.Collections.Array values)
     {
@@ -270,43 +246,19 @@ public partial class GameDataManager : Node
         values = _packData.GetSectionValues(_file);
     }
 
-    public void AddFlagData(string key, int value)
-    {
-        _packData.FlagData.AddFlag(key, value);
-    }
+    public void AddFlagData(string key, int value) => _packData.FlagData.AddFlag(key, value);
 
-    public void RemoveFlagData(string key)
-    {
-        _packData.FlagData.RemoveFlag(key);
-    }
+    public void RemoveFlagData(string key) => _packData.FlagData.RemoveFlag(key);
 
-    public void SetFlagData(string key, int value)
-    {
-        _packData.FlagData.SetFlag(key, value);
-    }
+    public void SetFlagData(string key, int value) => _packData.FlagData.SetFlag(key, value);
 
-    public int GetFlagData(string key)
-    {
-        return _packData.FlagData.GetFlag(key);
-    }
+    public int GetFlagData(string key) => _packData.FlagData.GetFlag(key);
 
-    public void SetThumbnail(Image imagge)
-    {
-        _thumbnail = imagge;
-    }
+    public void SetThumbnail(Image imagge) => _thumbnail = imagge;
 
-    public static string GenerateName(Node node)
-    {
-        return RootNodeRegex().Replace(node.GetPath().ToString(), "");
-    }
+    public static string GenerateName(Node node) => RootNodeRegex().Replace(node.GetPath().ToString(), "");
 
-    public int GetStageNo()
-    {
-        return _packData.StageNo;
-    }
+    public int GetStageNo() => _packData.StageNo;
 
-    public void SetStageNo(int stageNo)
-    {
-        _packData.StageNo = stageNo;
-    }
+    public void SetStageNo(int stageNo) => _packData.StageNo = stageNo;
 }

@@ -29,8 +29,5 @@ public partial class FloatingMessage : Node2D
         GetNode<AnimationPlayer>("AnimationPlayer").Play("floating_message");
     }
 
-    public void AnimationFinished(StringName animName)
-    {
-        QueueFree();
-    }
+    public void AnimationFinished(StringName animName) => QueueFree();
 }

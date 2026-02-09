@@ -96,10 +96,7 @@ public partial class JoyPadController : Node
         _mutex.Unlock();
     }
 
-    public int DeviceCount()
-    {
-        return _deviceId.Count;
-    }
+    public int DeviceCount() => _deviceId.Count;
 
     public void ScanInputMap()
     {
@@ -255,13 +252,7 @@ public partial class JoyPadController : Node
         return false;
     }
 
-    public bool IsActionJustPressed(int deviceIndex, string actionName)
-    {
-        return IsJustActionCommon(deviceIndex, actionName, JustMode.Pressed);
-    }
+    public bool IsActionJustPressed(int deviceIndex, string actionName) => IsJustActionCommon(deviceIndex, actionName, JustMode.Pressed);
 
-    public bool IsActionJustReleased(int deviceIndex, string actionName)
-    {
-        return IsJustActionCommon(deviceIndex, actionName, JustMode.Released);
-    }
+    public bool IsActionJustReleased(int deviceIndex, string actionName) => IsJustActionCommon(deviceIndex, actionName, JustMode.Released);
 }

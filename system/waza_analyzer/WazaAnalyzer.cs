@@ -35,10 +35,7 @@ public partial class WazaAnalyzer : Node
     private readonly Dictionary<string, Waza> _waza = [];
     private int[] _lrConversionTable = new int[128];
 
-    public override void _Ready()
-    {
-        MakeLrConversionTable();
-    }
+    public override void _Ready() => MakeLrConversionTable();
 
     /// <summary>
     /// 左右キーのビットを入れ替えるテーブルを作成する

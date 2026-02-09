@@ -105,15 +105,9 @@ public partial class SightArea : Area2D
         }
     }
 
-    public void Area2DEntered(Area2D area)
-    {
-        _ = CallDeferred(MethodName.DeferredArea2DEntered, area);
-    }
+    public void Area2DEntered(Area2D area) => _ = CallDeferred(MethodName.DeferredArea2DEntered, area);
 
-    public void Area2DExited(Area2D area)
-    {
-        _ = CallDeferred(MethodName.DeferredArea2DExited, area);
-    }
+    public void Area2DExited(Area2D area) => _ = CallDeferred(MethodName.DeferredArea2DExited, area);
 
     public void DeferredArea2DEntered(Area2D area)
     {
@@ -141,15 +135,9 @@ public partial class SightArea : Area2D
         }
     }
 
-    public void Node2DEntered(Node2D node)
-    {
-        _ = CallDeferred(MethodName.DeferredNode2DEntered, node);
-    }
+    public void Node2DEntered(Node2D node) => _ = CallDeferred(MethodName.DeferredNode2DEntered, node);
 
-    public void Node2DExited(Node2D node)
-    {
-        _ = CallDeferred(MethodName.DeferredNode2DExited, node);
-    }
+    public void Node2DExited(Node2D node) => _ = CallDeferred(MethodName.DeferredNode2DExited, node);
 
     public void DeferredNode2DEntered(Node2D node)
     {

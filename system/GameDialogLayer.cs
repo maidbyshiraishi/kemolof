@@ -9,8 +9,5 @@ namespace kemolof.system;
 /// </summary>
 public partial class GameDialogLayer : DialogLayer
 {
-    public GameStageRoot GetCurrentGameRoot()
-    {
-        return GetCurrentStageRoot() is GameStageRoot gameStageRoot ? gameStageRoot : null;
-    }
+    public GameStageRoot GetCurrentGameRoot() => GetCurrentStageRoot() is GameStageRoot gameStageRoot ? gameStageRoot : null;
 }

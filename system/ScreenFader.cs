@@ -46,8 +46,5 @@ public partial class ScreenFader : CanvasLayer
         AnimationFinished();
     }
 
-    public void AnimationFinished()
-    {
-        _ = EmitSignal(SignalName.ScreenFadeFinished);
-    }
+    public void AnimationFinished() => _ = EmitSignal(SignalName.ScreenFadeFinished);
 }

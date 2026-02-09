@@ -47,10 +47,7 @@ public partial class BrainRoot : Node2D
     /// 処理は今フレームの終了後に行われ、現フレーム内でキーバッファが変更されることはない。
     /// </summary>
     /// <param name="key">キーデータ</param>
-    public void InsertBuffer(int key)
-    {
-        _ = CallDeferred(MethodName.DeferredInsertBuffer, [key]);
-    }
+    public void InsertBuffer(int key) => _ = CallDeferred(MethodName.DeferredInsertBuffer, [key]);
 
     /// <summary>
     /// 今フレームの終了後にキーバッファにキーデータを追加する。
@@ -73,24 +70,15 @@ public partial class BrainRoot : Node2D
     /// バッファをクリアする
     /// 処理は今フレームの終了後に行われ、現フレーム内でキーバッファが変更されることはない。
     /// </summary>
-    public void ClearBuffer()
-    {
-        _ = CallDeferred(MethodName.DeferredClearBuffer, []);
-    }
+    public void ClearBuffer() => _ = CallDeferred(MethodName.DeferredClearBuffer, []);
 
-    private void DeferredClearBuffer()
-    {
-        m_Buffer.Clear();
-    }
+    private void DeferredClearBuffer() => m_Buffer.Clear();
 
     /// <summary>
     /// キーバッファのコピーを返す
     /// </summary>
     /// <returns>キーバッファのコピー</returns>
-    public Array<int> GetBufferCopy()
-    {
-        return m_Buffer.Duplicate();
-    }
+    public Array<int> GetBufferCopy() => m_Buffer.Duplicate();
 
     /// <summary>
     /// 指定キーが押されているか返す
@@ -98,10 +86,7 @@ public partial class BrainRoot : Node2D
     /// <param name="key">指定キー</param>
     /// <param name="keyMask">指定キーのマスク</param>
     /// <returns>指定キーが押されているか</returns>
-    internal bool IsKeyPressed(int key, int keyMask)
-    {
-        return key == (_now & keyMask);
-    }
+    internal bool IsKeyPressed(int key, int keyMask) => key == (_now & keyMask);
 
     /// <summary>
     /// 指定キーが今フレームで押されたか返す
@@ -135,8 +120,5 @@ public partial class BrainRoot : Node2D
     /// 今フレームで押されたキーを返す
     /// </summary>
     /// <returns>今フレームで押されたキー</returns>
-    public int GetNowBuffer()
-    {
-        return 0 < m_Buffer.Count ? m_Buffer[0] : WazaKey.Free;
-    }
+    public int GetNowBuffer() => 0 < m_Buffer.Count ? m_Buffer[0] : WazaKey.Free;
 }

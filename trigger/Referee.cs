@@ -16,27 +16,16 @@ public partial class Referee : Node
     private bool _finished = false;
     private bool _started = false;
 
-    public override void _Ready()
-    {
+    public override void _Ready() =>
         // Godotエディタからシグナルを接続すると
         // リリースビルドのエクスポート時、接続が失われることがある。
         _ = GetNodeOrNull<Timer>("Timer")?.Connect(Timer.SignalName.Timeout, new(this, MethodName.JudgeGame));
-    }
 
-    public void StartJudge(bool started)
-    {
-        _started = started;
-    }
+    public void StartJudge(bool started) => _started = started;
 
-    public void EntryLoser(FighterRoot fighter)
-    {
-        _loser.Add(fighter);
-    }
+    public void EntryLoser(FighterRoot fighter) => _loser.Add(fighter);
 
-    public void EntryFighter(FighterRoot fighter)
-    {
-        _all.Add(fighter);
-    }
+    public void EntryFighter(FighterRoot fighter) => _all.Add(fighter);
 
     public void JudgeGame()
     {

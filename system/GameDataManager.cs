@@ -1,6 +1,5 @@
 using Godot;
 using kemolof.data;
-using kemolof.mob.fighter;
 using System;
 using System.Text.RegularExpressions;
 
@@ -301,16 +300,6 @@ public partial class GameDataManager : Node
         return RootNodeRegex().Replace(node.GetPath().ToString(), "");
     }
 
-    public void SetFighterInfo(int index, FighterInfo fighterInfo)
-    {
-        _packData.FighterInfo[index] = fighterInfo;
-    }
-
-    public FighterInfo GetFighterInfo(int index)
-    {
-        return _packData.FighterInfo[index];
-    }
-
     public int GetStageNo()
     {
         return _packData.StageNo;
@@ -319,15 +308,5 @@ public partial class GameDataManager : Node
     public void SetStageNo(int stageNo)
     {
         _packData.StageNo = stageNo;
-    }
-
-    public int GetStageFrame()
-    {
-        return _packData.StageFrame;
-    }
-
-    public void SetStageFrame(int stageFrame)
-    {
-        _packData.StageFrame = stageFrame;
     }
 }

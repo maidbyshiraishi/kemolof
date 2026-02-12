@@ -21,13 +21,24 @@ public partial class TimerTrigger : Node
 
     public override void _Ready()
     {
-        _timer = GetParentOrNull<Timer>();
-        _ = _timer?.Connect(Timer.SignalName.Timeout, new(this, MethodName.Exec));
+        if (GetParent() is Timer timer)
+        {
+            _timer = timer;
+            _timer.Timeout += Exec;
+        }
     }
 
     public virtual void Exec()
     {
-        CommandRoot.ExecChildren(this, Target is null ? _timer : Target, ExecFlag);
+        if (Target is not null)
+        {
+            CommandRoot.ExecChildren(this, Target, ExecFlag);
+        }
+        else if (_timer is not null)
+        {
+            CommandRoot.ExecChildren(this, _timer, ExecFlag);
+        }
+
         ExecFlag = SwapExecFlag ? !ExecFlag : ExecFlag;
     }
 

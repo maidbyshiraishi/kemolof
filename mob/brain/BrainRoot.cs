@@ -47,7 +47,7 @@ public partial class BrainRoot : Node2D
     /// 処理は今フレームの終了後に行われ、現フレーム内でキーバッファが変更されることはない。
     /// </summary>
     /// <param name="key">キーデータ</param>
-    public void InsertBuffer(int key) => _ = CallDeferred(MethodName.DeferredInsertBuffer, [key]);
+    public void InsertBuffer(int key) => CallDeferred(MethodName.DeferredInsertBuffer, [key]);
 
     /// <summary>
     /// 今フレームの終了後にキーバッファにキーデータを追加する。
@@ -70,7 +70,7 @@ public partial class BrainRoot : Node2D
     /// バッファをクリアする
     /// 処理は今フレームの終了後に行われ、現フレーム内でキーバッファが変更されることはない。
     /// </summary>
-    public void ClearBuffer() => _ = CallDeferred(MethodName.DeferredClearBuffer, []);
+    public void ClearBuffer() => CallDeferred(MethodName.DeferredClearBuffer, []);
 
     private void DeferredClearBuffer() => m_Buffer.Clear();
 

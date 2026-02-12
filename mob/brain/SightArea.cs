@@ -29,14 +29,14 @@ public partial class SightArea : Area2D
     {
         if (ConnectArea)
         {
-            _ = Connect(Area2D.SignalName.AreaEntered, new(this, MethodName.Area2DEntered));
-            _ = Connect(Area2D.SignalName.AreaExited, new(this, MethodName.Area2DExited));
+            AreaEntered += Area2DEntered;
+            AreaExited += Area2DExited;
         }
 
         if (ConnectNode)
         {
-            _ = Connect(Area2D.SignalName.BodyEntered, new(this, MethodName.Node2DEntered));
-            _ = Connect(Area2D.SignalName.BodyExited, new(this, MethodName.Node2DExited));
+            BodyEntered += Node2DEntered;
+            BodyExited += Node2DExited;
         }
     }
 
@@ -105,9 +105,9 @@ public partial class SightArea : Area2D
         }
     }
 
-    public void Area2DEntered(Area2D area) => _ = CallDeferred(MethodName.DeferredArea2DEntered, area);
+    public void Area2DEntered(Area2D area) => CallDeferred(MethodName.DeferredArea2DEntered, area);
 
-    public void Area2DExited(Area2D area) => _ = CallDeferred(MethodName.DeferredArea2DExited, area);
+    public void Area2DExited(Area2D area) => CallDeferred(MethodName.DeferredArea2DExited, area);
 
     public void DeferredArea2DEntered(Area2D area)
     {
@@ -135,9 +135,9 @@ public partial class SightArea : Area2D
         }
     }
 
-    public void Node2DEntered(Node2D node) => _ = CallDeferred(MethodName.DeferredNode2DEntered, node);
+    public void Node2DEntered(Node2D node) => CallDeferred(MethodName.DeferredNode2DEntered, node);
 
-    public void Node2DExited(Node2D node) => _ = CallDeferred(MethodName.DeferredNode2DExited, node);
+    public void Node2DExited(Node2D node) => CallDeferred(MethodName.DeferredNode2DExited, node);
 
     public void DeferredNode2DEntered(Node2D node)
     {

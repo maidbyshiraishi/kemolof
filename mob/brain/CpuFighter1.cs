@@ -171,7 +171,7 @@ public partial class CpuFighter1 : CpuFighterRoot
         }
 
         // 頭上に敵がいる場合、移動する
-        if ((m_Random.Randf() <= DefendProbability && m_OverheadArea.HasFighter(FighterId) is not null))
+        if (m_Random.Randf() <= DefendProbability && m_OverheadArea.HasFighter(FighterId) is not null)
         {
             InsertBuffer(WazaKey.Up | (Fighter.RightSide ? WazaKey.Right : WazaKey.Left));
             return;

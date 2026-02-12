@@ -127,9 +127,20 @@ public partial class FighterRoot : MobRoot, IGameNode
 
         // Godotエディタからシグナルを接続すると
         // リリースビルドのエクスポート時、接続が失われることがある。
-        _ = GetNodeOrNull<DamageArea>("Character/DamageArea1")?.Connect(DamageArea.SignalName.Damaged, new(this, MethodName.Damaged));
-        _ = GetNodeOrNull<DamageArea>("Character/DamageArea2")?.Connect(DamageArea.SignalName.Damaged, new(this, MethodName.Damaged));
-        _ = GetNodeOrNull<DamageArea>("Character/DamageArea3")?.Connect(DamageArea.SignalName.Damaged, new(this, MethodName.Damaged));
+        if (GetNodeOrNull("Character/DamageArea1") is DamageArea damageArea1)
+        {
+            damageArea1.Damaged += Damaged;
+        }
+
+        if (GetNodeOrNull("Character/DamageArea2") is DamageArea damageArea2)
+        {
+            damageArea2.Damaged += Damaged;
+        }
+
+        if (GetNodeOrNull("Character/DamageArea3") is DamageArea damageArea3)
+        {
+            damageArea3.Damaged += Damaged;
+        }
 
         m_Brain = GetNode<BrainRoot>("Brain");
         m_SePlayer = GetNode<SePlayer>("SePlayer");

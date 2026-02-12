@@ -1,5 +1,6 @@
 using Godot;
 using Godot.Collections;
+using System;
 
 namespace kemolof.system.joy_pad_controller;
 
@@ -35,7 +36,7 @@ public partial class JoyPadController : Node
     {
         ScanDevice();
         ScanInputMap();
-        _ = Input.Singleton.Connect(Input.SignalName.JoyConnectionChanged, new(this, MethodName.OnJoyConnectionChanged));
+        Input.JoyConnectionChanged += OnJoyConnectionChanged;
     }
 
     public override void _Process(double delta)
@@ -44,7 +45,7 @@ public partial class JoyPadController : Node
         _ = CallDeferred(MethodName.UpdateInputEvent, []);
     }
 
-    public void OnJoyConnectionChanged(int device, bool connected)
+    public void OnJoyConnectionChanged(long device, bool connected)
     {
         ScanDevice();
         _ = EmitSignal(SignalName.JoyConnectionChanged, [device, connected]);

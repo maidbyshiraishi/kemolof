@@ -68,7 +68,7 @@ public partial class GameStageRoot : StageRoot
             if (Lib.GetPackedScene($"res://mob/fighter/fighter_{_info[i].FighterNo + 1}.tscn") is PackedScene pack && pack.Instantiate() is FighterRoot fighter)
             {
                 _referee.EntryFighter(fighter);
-                _ = fighter.Connect(FighterRoot.SignalName.Defeated, new Callable(_referee, Referee.MethodName.EntryLoser));
+                fighter.Defeated += _referee.EntryLoser;
                 fighter.StageRoot = this;
                 fighter.Name = $"Fighter_{i + 1}";
                 fighter.FighterName = $"{fighter.FighterName} ({name})";

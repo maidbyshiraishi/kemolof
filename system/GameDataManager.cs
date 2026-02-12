@@ -1,5 +1,6 @@
 using Godot;
 using kemolof.data;
+using kemolof.mob.fighter;
 using System;
 using System.Text.RegularExpressions;
 
@@ -41,9 +42,17 @@ public partial class GameDataManager : Node
     private Image _thumbnail;
     private ConfigFile _file = new();
     private PackData _packData;
+    private FighterInfo[] FighterInfo { get; set; }
 
     public override void _Ready()
     {
+        FighterInfo = new FighterInfo[7];
+
+        for (int i = 0; i < 7; i++)
+        {
+            FighterInfo[i] = new FighterInfo();
+        }
+
         _packData = new();
         base._Ready();
     }
@@ -257,6 +266,16 @@ public partial class GameDataManager : Node
     public void SetThumbnail(Image imagge) => _thumbnail = imagge;
 
     public static string GenerateName(Node node) => RootNodeRegex().Replace(node.GetPath().ToString(), "");
+
+    public void SetFighterInfo(int index, FighterInfo fighterInfo)
+    {
+        FighterInfo[index] = fighterInfo;
+    }
+
+    public FighterInfo GetFighterInfo(int index)
+    {
+        return FighterInfo[index];
+    }
 
     public int GetStageNo() => _packData.StageNo;
 

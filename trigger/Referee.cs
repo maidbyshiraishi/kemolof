@@ -19,7 +19,7 @@ public partial class Referee : Node
     public override void _Ready() =>
         // Godotエディタからシグナルを接続すると
         // リリースビルドのエクスポート時、接続が失われることがある。
-        _ = GetNodeOrNull<Timer>("Timer")?.Connect(Timer.SignalName.Timeout, new(this, MethodName.JudgeGame));
+        GetNode<Timer>("Timer").Timeout += JudgeGame;
 
     public void StartJudge(bool started) => _started = started;
 

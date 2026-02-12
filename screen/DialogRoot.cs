@@ -19,7 +19,7 @@ public partial class DialogRoot : Control
 
     public override void _EnterTree()
     {
-        _ = Connect(Node.SignalName.Ready, new(this, MethodName.InitializeNode));
+        Ready += InitializeNode;
         GetArgument();
     }
 

@@ -14,7 +14,7 @@ public partial class Fighter3Shot2 : ShotRoot
 
         // Godotエディタからシグナルを接続すると
         // リリースビルドのエクスポート時、接続が失われることがある。
-        _ = GetNodeOrNull<Timer>("Timer")?.Connect(Timer.SignalName.Timeout, new(this, MethodName.WakeUpShot));
+        GetNode<Timer>("Timer").Timeout += WakeUpShot;
     }
 
     public void WakeUpShot()

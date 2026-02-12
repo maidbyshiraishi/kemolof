@@ -25,7 +25,7 @@ public partial class DamageArea : Area2D
     public override void _Ready()
     {
         _collisionShape = GetNodeOrNull<CollisionShape2D>("CollisionShape2D");
-        _ = Connect(Area2D.SignalName.AreaEntered, new(this, MethodName.Hit));
+        AreaEntered += Hit;
     }
 
     public void Hit(Area2D area)

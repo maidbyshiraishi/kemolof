@@ -29,7 +29,7 @@ public partial class Fighter4Shot2 : MobRoot, IShot
 
         // Godotエディタからシグナルを接続すると
         // リリースビルドのエクスポート時、接続が失われることがある。
-        _ = GetNodeOrNull<AnimatedSprite2D>("Effect")?.Connect(AnimatedSprite2D.SignalName.AnimationFinished, new(this, MethodName.AnimationFinished));
+        GetNode<AnimatedSprite2D>("Effect").AnimationFinished += AnimationFinished;
 
         m_SePlayer = GetNode<SePlayer>("SePlayer");
         _effect = GetNode<AnimatedSprite2D>("Effect");

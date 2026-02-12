@@ -27,8 +27,11 @@ public partial class ShotRoot : Area2D, IShot
     {
         // Godotエディタからシグナルを接続すると
         // リリースビルドのエクスポート時、接続が失われることがある。
-        _ = GetNodeOrNull<Area2D>("EraseCollision")?.Connect(Area2D.SignalName.AreaEntered, new(this, MethodName.HitArea2D));
-        _ = GetNodeOrNull<Area2D>("EraseCollision")?.Connect(Area2D.SignalName.BodyEntered, new(this, MethodName.HitNode2D));
+        if (GetNodeOrNull("EraseCollision") is Area2D area2D)
+        {
+            area2D.AreaEntered += HitArea2D;
+            area2D.BodyEntered += HitNode2D;
+        }
 
         Array<Node> children = GetChildren();
         GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = RightSide;

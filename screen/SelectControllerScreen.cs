@@ -19,7 +19,7 @@ public partial class SelectControllerScreen : DialogRoot
         base._Ready();
         _gameDataManager = GetNode<GameDataManager>("/root/GameDataManager");
         _joyPad = GetNode<JoyPadController>("/root/JoyPadController");
-        _ = _joyPad.Connect(JoyPadController.SignalName.JoyConnectionChanged, new(this, MethodName.OnJoyConnectionChanged));
+        _joyPad.JoyConnectionChanged += OnJoyConnectionChanged;
 
         // パッドの接続台数に応じてPad選択ボタンを有効化する。
         int deviceCount = _joyPad.DeviceCount();

@@ -53,7 +53,6 @@ public partial class SelectStageScreen : DialogRoot
     public override void Active()
     {
         base.Active();
-        _stageList.Frame = _gameDataManager.GetStageFrame();
         UpdateFocus();
     }
 
@@ -70,7 +69,6 @@ public partial class SelectStageScreen : DialogRoot
         }
 
         _gameDataManager.SetStageNo(stageNo - 1);
-        _gameDataManager.SetStageFrame(stageFrame);
     }
 
     public override void _Process(double delta)

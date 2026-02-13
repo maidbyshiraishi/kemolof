@@ -1,6 +1,5 @@
 using Godot;
 using Godot.Collections;
-using System;
 
 namespace kemolof.system.joy_pad_controller;
 

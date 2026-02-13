@@ -267,15 +267,9 @@ public partial class GameDataManager : Node
 
     public static string GenerateName(Node node) => RootNodeRegex().Replace(node.GetPath().ToString(), "");
 
-    public void SetFighterInfo(int index, FighterInfo fighterInfo)
-    {
-        FighterInfo[index] = fighterInfo;
-    }
+    public void SetFighterInfo(int index, FighterInfo fighterInfo) => FighterInfo[index] = fighterInfo;
 
-    public FighterInfo GetFighterInfo(int index)
-    {
-        return FighterInfo[index];
-    }
+    public FighterInfo GetFighterInfo(int index) => FighterInfo[index];
 
     public int GetStageNo() => _packData.StageNo;
 

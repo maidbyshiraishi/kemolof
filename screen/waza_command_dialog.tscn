@@ -17,9 +17,6 @@
 [node name="Background" parent="." index="0"]
 visible = false
 
-[node name="Socket" parent="." index="1"]
-layout_mode = 0
-
 [node name="Contents" type="Control" parent="Socket" index="0"]
 anchors_preset = 0
 offset_right = 640.0

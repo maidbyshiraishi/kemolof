@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://yfdk7t1rq5dc"]
+[gd_scene format=3 uid="uid://yfdk7t1rq5dc"]
 
 [ext_resource type="PackedScene" uid="uid://bay7hombkrknw" path="res://mob/brain/cpu_fighter_3_root.tscn" id="1_xpatv"]
 
-[node name="Brain" instance=ExtResource("1_xpatv")]
+[node name="Brain" unique_id=2049384461 instance=ExtResource("1_xpatv")]
 Waza1Probability = 0.2
 Waza2Probability = 0.2
 Waza3Probability = 0.002

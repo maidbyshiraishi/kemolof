@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ddw2g00yqtlmx"]
+[gd_scene format=3 uid="uid://ddw2g00yqtlmx"]
 
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_7ly80"]
 [ext_resource type="Script" uid="uid://rmx1t3loo6oa" path="res://stage/GameStageRoot.cs" id="2_3hrrl"]
@@ -21,7 +21,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fww8q"]
 size = Vector2(2304, 64)
 
-[node name="Stage" type="Control"]
+[node name="Stage" type="Control" unique_id=1884280855]
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_7ly80")
@@ -29,141 +29,141 @@ script = ExtResource("2_3hrrl")
 MouseCaptured = true
 metadata/_edit_horizontal_guides_ = [240.0, 0.0, 480.0]
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="." unique_id=579548587]
 
-[node name="Parallax2D_1" type="Parallax2D" parent="Background"]
+[node name="Parallax2D_1" type="Parallax2D" parent="Background" unique_id=243324851]
 z_index = -1000
 repeat_size = Vector2(1, 1)
 
-[node name="ColorRect" type="ColorRect" parent="Background/Parallax2D_1"]
+[node name="ColorRect" type="ColorRect" parent="Background/Parallax2D_1" unique_id=716916825]
 offset_right = 640.0
 offset_bottom = 480.0
 color = Color(0.447059, 0.678431, 0.933333, 1)
 
-[node name="Parallax2D_2" type="Parallax2D" parent="Background"]
+[node name="Parallax2D_2" type="Parallax2D" parent="Background" unique_id=233004503]
 z_index = -990
 scroll_scale = Vector2(0.5, 1)
 repeat_size = Vector2(640, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D_2"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D_2" unique_id=1876575943]
 modulate = Color(1, 1, 1, 0.196078)
 centered = false
 
-[node name="Parallax2D_3" type="Parallax2D" parent="Background"]
+[node name="Parallax2D_3" type="Parallax2D" parent="Background" unique_id=1275619469]
 visible = false
 z_index = -980
 repeat_size = Vector2(1, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D_3"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D_3" unique_id=422098488]
 scale = Vector2(2, 2)
 centered = false
 
-[node name="TileMap" type="Node2D" parent="."]
+[node name="TileMap" type="Node2D" parent="." unique_id=1590114456]
 
-[node name="Background_2" type="TileMapLayer" parent="TileMap"]
+[node name="Background_2" type="TileMapLayer" parent="TileMap" unique_id=2075118208]
 z_index = -20
 tile_set = ExtResource("4_w2etb")
 collision_enabled = false
 
-[node name="Background_1" type="TileMapLayer" parent="TileMap"]
+[node name="Background_1" type="TileMapLayer" parent="TileMap" unique_id=1789821897]
 self_modulate = Color(0.627451, 0.627451, 0.627451, 1)
 z_index = -20
 tile_set = ExtResource("4_w2etb")
 collision_enabled = false
 
-[node name="Ground" type="TileMapLayer" parent="TileMap"]
+[node name="Ground" type="TileMapLayer" parent="TileMap" unique_id=719859096]
 tile_set = ExtResource("4_w2etb")
 script = ExtResource("3_kiuo3")
 
-[node name="Foreground" type="TileMapLayer" parent="TileMap"]
+[node name="Foreground" type="TileMapLayer" parent="TileMap" unique_id=1915460519]
 z_index = 1
 tile_set = ExtResource("4_w2etb")
 collision_enabled = false
 
-[node name="Spawn" type="Node2D" parent="."]
+[node name="Spawn" type="Node2D" parent="." unique_id=1260666912]
 
-[node name="Player_1" type="Marker2D" parent="Spawn"]
+[node name="Player_1" type="Marker2D" parent="Spawn" unique_id=1130300222]
 
-[node name="Player_2" type="Marker2D" parent="Spawn"]
+[node name="Player_2" type="Marker2D" parent="Spawn" unique_id=1508515330]
 
-[node name="Player_3" type="Marker2D" parent="Spawn"]
+[node name="Player_3" type="Marker2D" parent="Spawn" unique_id=515069250]
 
-[node name="Player_4" type="Marker2D" parent="Spawn"]
+[node name="Player_4" type="Marker2D" parent="Spawn" unique_id=1088525128]
 
-[node name="Player_5" type="Marker2D" parent="Spawn"]
+[node name="Player_5" type="Marker2D" parent="Spawn" unique_id=523433254]
 
-[node name="Player_6" type="Marker2D" parent="Spawn"]
+[node name="Player_6" type="Marker2D" parent="Spawn" unique_id=1832598475]
 
-[node name="Player_7" type="Marker2D" parent="Spawn"]
+[node name="Player_7" type="Marker2D" parent="Spawn" unique_id=1204168380]
 
-[node name="Respawn" type="Node2D" parent="."]
+[node name="Respawn" type="Node2D" parent="." unique_id=494900941]
 
-[node name="Player_1" type="Marker2D" parent="Respawn"]
+[node name="Player_1" type="Marker2D" parent="Respawn" unique_id=902964928]
 
-[node name="Player_2" type="Marker2D" parent="Respawn"]
+[node name="Player_2" type="Marker2D" parent="Respawn" unique_id=2049719751]
 
-[node name="Player_3" type="Marker2D" parent="Respawn"]
+[node name="Player_3" type="Marker2D" parent="Respawn" unique_id=606101080]
 
-[node name="Player_4" type="Marker2D" parent="Respawn"]
+[node name="Player_4" type="Marker2D" parent="Respawn" unique_id=839752695]
 
-[node name="Player_5" type="Marker2D" parent="Respawn"]
+[node name="Player_5" type="Marker2D" parent="Respawn" unique_id=345764008]
 
-[node name="Player_6" type="Marker2D" parent="Respawn"]
+[node name="Player_6" type="Marker2D" parent="Respawn" unique_id=1281201875]
 
-[node name="Player_7" type="Marker2D" parent="Respawn"]
+[node name="Player_7" type="Marker2D" parent="Respawn" unique_id=482730009]
 
-[node name="Fighter" type="Node2D" parent="."]
+[node name="Fighter" type="Node2D" parent="." unique_id=1966079815]
 script = ExtResource("5_8t45x")
 
-[node name="Shot" type="Node2D" parent="."]
+[node name="Shot" type="Node2D" parent="." unique_id=2035266111]
 z_index = 60
 
-[node name="Decoration" type="Node2D" parent="."]
+[node name="Decoration" type="Node2D" parent="." unique_id=254874214]
 z_index = 40
 
-[node name="Scenario" type="Node2D" parent="."]
+[node name="Scenario" type="Node2D" parent="." unique_id=759445518]
 
-[node name="Referee" parent="Scenario" instance=ExtResource("6_vudmq")]
+[node name="Referee" parent="Scenario" unique_id=697342820 instance=ExtResource("6_vudmq")]
 
-[node name="Draw" parent="Scenario/Referee" instance=ExtResource("7_fww8q")]
+[node name="Draw" parent="Scenario/Referee" unique_id=900708988 instance=ExtResource("7_fww8q")]
 
-[node name="Winner" parent="Scenario/Referee" instance=ExtResource("7_fww8q")]
+[node name="Winner" parent="Scenario/Referee" unique_id=336038202 instance=ExtResource("7_fww8q")]
 
-[node name="OutsideArea_1" parent="Scenario" instance=ExtResource("7_re06b")]
+[node name="OutsideArea_1" parent="Scenario" unique_id=1473808628 instance=ExtResource("7_re06b")]
 position = Vector2(320, 552)
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/OutsideArea_1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/OutsideArea_1" unique_id=1032914272]
 shape = SubResource("RectangleShape2D_fww8q")
 
-[node name="OutsideFighterCommand" parent="Scenario/OutsideArea_1" instance=ExtResource("8_fvyii")]
+[node name="OutsideFighterCommand" parent="Scenario/OutsideArea_1" unique_id=696236180 instance=ExtResource("8_fvyii")]
 
-[node name="TimeupTimerStart" parent="Scenario" instance=ExtResource("10_52t1r")]
+[node name="TimeupTimerStart" parent="Scenario" unique_id=799999910 instance=ExtResource("10_52t1r")]
 position = Vector2(24, 0)
 
-[node name="StartTimerCommand" parent="Scenario/TimeupTimerStart" node_paths=PackedStringArray("Target") instance=ExtResource("11_s52av")]
+[node name="StartTimerCommand" parent="Scenario/TimeupTimerStart" unique_id=1321033320 node_paths=PackedStringArray("Target") instance=ExtResource("11_s52av")]
 Target = NodePath("../../Timeup")
 
-[node name="Timeup" type="Timer" parent="Scenario"]
+[node name="Timeup" type="Timer" parent="Scenario" unique_id=118768480]
 wait_time = 90.0
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/Timeup" instance=ExtResource("12_7rln4")]
+[node name="TimerTrigger" parent="Scenario/Timeup" unique_id=862270697 instance=ExtResource("12_7rln4")]
 
-[node name="ShowHudMessageCommand" parent="Scenario/Timeup/TimerTrigger" instance=ExtResource("13_a0vkv")]
+[node name="ShowHudMessageCommand" parent="Scenario/Timeup/TimerTrigger" unique_id=842592088 instance=ExtResource("13_a0vkv")]
 Text1 = "早く決着をつけてください"
 Text2 = "全員にダメージ！"
 
-[node name="DamageAllFightersCommand" parent="Scenario/Timeup/TimerTrigger" instance=ExtResource("14_3pafv")]
+[node name="DamageAllFightersCommand" parent="Scenario/Timeup/TimerTrigger" unique_id=14033670 instance=ExtResource("14_3pafv")]
 Damage = 3
 HitVoice = Array[String](["damage_all"])
 
-[node name="Hud" parent="." instance=ExtResource("8_u0rxu")]
+[node name="Hud" parent="." unique_id=565784973 instance=ExtResource("8_u0rxu")]
 
-[node name="ShortcutKeys" parent="." instance=ExtResource("13_rx2t0")]
+[node name="ShortcutKeys" parent="." unique_id=1985556990 instance=ExtResource("13_rx2t0")]
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." unique_id=310750223]
 unique_name_in_owner = true
 position = Vector2(320, 240)
 script = ExtResource("9_i7mlx")

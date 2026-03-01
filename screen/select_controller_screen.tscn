@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ccewt2y1m2cq4"]
+[gd_scene format=3 uid="uid://ccewt2y1m2cq4"]
 
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_rjuf6"]
 [ext_resource type="Script" uid="uid://j58lxvgciqjn" path="res://screen/SelectControllerScreen.cs" id="2_hf722"]
@@ -89,21 +89,21 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0, 0, 0, 1)
 
-[node name="SelectControllerScreen" type="Control"]
+[node name="SelectControllerScreen" type="Control" unique_id=71630587]
 light_mask = 2
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_rjuf6")
 script = ExtResource("2_hf722")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=2093108109]
 light_mask = 2
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 480.0
 color = Color(0.905882, 0.517647, 0.658824, 1)
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=861432121]
 light_mask = 2
 layout_mode = 0
 offset_left = 64.0
@@ -114,7 +114,7 @@ text = "コントローラー選択"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player1" type="Label" parent="."]
+[node name="Player1" type="Label" parent="." unique_id=288992665]
 custom_minimum_size = Vector2(65, 0)
 layout_mode = 0
 offset_left = 128.0
@@ -125,7 +125,7 @@ text = "No.1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player2" type="Label" parent="."]
+[node name="Player2" type="Label" parent="." unique_id=1399132851]
 custom_minimum_size = Vector2(65, 0)
 layout_mode = 0
 offset_left = 197.0
@@ -136,7 +136,7 @@ text = "No.2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player3" type="Label" parent="."]
+[node name="Player3" type="Label" parent="." unique_id=1015433686]
 custom_minimum_size = Vector2(65, 0)
 layout_mode = 0
 offset_left = 266.0
@@ -147,7 +147,7 @@ text = "No.3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player4" type="Label" parent="."]
+[node name="Player4" type="Label" parent="." unique_id=950279236]
 custom_minimum_size = Vector2(65, 0)
 layout_mode = 0
 offset_left = 335.0
@@ -158,7 +158,7 @@ text = "No.4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player5" type="Label" parent="."]
+[node name="Player5" type="Label" parent="." unique_id=1404395125]
 custom_minimum_size = Vector2(65, 0)
 layout_mode = 0
 offset_left = 404.0
@@ -169,7 +169,7 @@ text = "No.5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player6" type="Label" parent="."]
+[node name="Player6" type="Label" parent="." unique_id=305184420]
 custom_minimum_size = Vector2(65, 0)
 layout_mode = 0
 offset_left = 473.0
@@ -180,7 +180,7 @@ text = "No.6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player7" type="Label" parent="."]
+[node name="Player7" type="Label" parent="." unique_id=451188837]
 custom_minimum_size = Vector2(65, 0)
 layout_mode = 0
 offset_left = 542.0
@@ -191,7 +191,7 @@ text = "No.7"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Uninhabited" type="Label" parent="."]
+[node name="Uninhabited" type="Label" parent="." unique_id=1994558150]
 modulate = Color(0.392157, 0.392157, 0.392157, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -203,7 +203,7 @@ text = "不参加"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Keyb1" type="Label" parent="."]
+[node name="Keyb1" type="Label" parent="." unique_id=327193722]
 modulate = Color(0.901961, 0, 0.0705882, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -215,7 +215,7 @@ text = "Keyb1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Keyb2" type="Label" parent="."]
+[node name="Keyb2" type="Label" parent="." unique_id=510259276]
 modulate = Color(0.952941, 0.596078, 0, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -227,7 +227,7 @@ text = "Keyb2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Keyb3" type="Label" parent="."]
+[node name="Keyb3" type="Label" parent="." unique_id=756683360]
 modulate = Color(1, 0.945098, 0, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -239,7 +239,7 @@ text = "Keyb3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pad1" type="Label" parent="."]
+[node name="Pad1" type="Label" parent="." unique_id=1102378112]
 modulate = Color(0, 0.6, 0.266667, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -251,7 +251,7 @@ text = "Pad1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pad2" type="Label" parent="."]
+[node name="Pad2" type="Label" parent="." unique_id=1726347609]
 modulate = Color(0, 0.407843, 0.717647, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -263,7 +263,7 @@ text = "Pad2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pad3" type="Label" parent="."]
+[node name="Pad3" type="Label" parent="." unique_id=2139172635]
 modulate = Color(0.113725, 0.12549, 0.533333, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -275,7 +275,7 @@ text = "Pad3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pad4" type="Label" parent="."]
+[node name="Pad4" type="Label" parent="." unique_id=16084491]
 modulate = Color(0.572549, 0.027451, 0.513726, 1)
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
@@ -287,7 +287,7 @@ text = "Pad4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cpu1" type="Label" parent="."]
+[node name="Cpu1" type="Label" parent="." unique_id=2017849474]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
 offset_left = 32.0
@@ -298,7 +298,7 @@ text = "CPU 弱い"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cpu2" type="Label" parent="."]
+[node name="Cpu2" type="Label" parent="." unique_id=466343611]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
 offset_left = 32.0
@@ -309,7 +309,7 @@ text = "CPU 普通"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cpu3" type="Label" parent="."]
+[node name="Cpu3" type="Label" parent="." unique_id=1129577582]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 0
 offset_left = 32.0
@@ -320,7 +320,7 @@ text = "CPU 強い"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=935952978]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 432.0
@@ -331,11 +331,11 @@ text = "キーボードのESCまたはXboxコントローラのBackボタンで�
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1657956255]
 light_mask = 2
 anchors_preset = 0
 
-[node name="NextScreen" type="Button" parent="Control"]
+[node name="NextScreen" type="Button" parent="Control" unique_id=457234675]
 layout_mode = 0
 offset_left = 224.0
 offset_top = 400.0
@@ -346,19 +346,19 @@ focus_neighbor_top = NodePath("../Cpu3_2")
 focus_neighbor_bottom = NodePath(".")
 text = "ステージ選択へ"
 
-[node name="Exec" type="Node" parent="Control/NextScreen"]
+[node name="Exec" type="Node" parent="Control/NextScreen" unique_id=105660864]
 script = ExtResource("4_foqb8")
 
-[node name="PlaySeCommand" parent="Control/NextScreen/Exec" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/NextScreen/Exec" unique_id=311579969 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="OpenScreenCommand" parent="Control/NextScreen/Exec" instance=ExtResource("10_joxnn")]
+[node name="OpenScreenCommand" parent="Control/NextScreen/Exec" unique_id=42639944 instance=ExtResource("10_joxnn")]
 Screen = "res://screen/select_stage_screen.tscn"
 
-[node name="Focus" parent="Control/NextScreen" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/NextScreen" unique_id=922516762 instance=ExtResource("7_ji66b")]
 
-[node name="Uninhabited1" type="Button" parent="Control"]
+[node name="Uninhabited1" type="Button" parent="Control" unique_id=1019245653]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 104.0
@@ -369,21 +369,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Uninhabited1"]
+[node name="Toggled" type="Node" parent="Control/Uninhabited1" unique_id=1286857703]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Uninhabited1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Uninhabited1/Toggled" unique_id=753244501 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Uninhabited1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Uninhabited1/Toggled" unique_id=1695161265 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Uninhabited1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Uninhabited1" unique_id=1941079655 instance=ExtResource("7_ji66b")]
 
-[node name="Uninhabited2" type="Button" parent="Control"]
+[node name="Uninhabited2" type="Button" parent="Control" unique_id=1673031303]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 104.0
@@ -394,21 +394,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Uninhabited2"]
+[node name="Toggled" type="Node" parent="Control/Uninhabited2" unique_id=1972349027]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Uninhabited2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Uninhabited2/Toggled" unique_id=841321951 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Uninhabited2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Uninhabited2/Toggled" unique_id=1141842313 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Uninhabited2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Uninhabited2" unique_id=982295365 instance=ExtResource("7_ji66b")]
 
-[node name="Uninhabited3" type="Button" parent="Control"]
+[node name="Uninhabited3" type="Button" parent="Control" unique_id=1839264530]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 104.0
@@ -418,21 +418,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Uninhabited3"]
+[node name="Toggled" type="Node" parent="Control/Uninhabited3" unique_id=1711285259]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Uninhabited3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Uninhabited3/Toggled" unique_id=914049674 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Uninhabited3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Uninhabited3/Toggled" unique_id=890753068 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Uninhabited3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Uninhabited3" unique_id=1271108194 instance=ExtResource("7_ji66b")]
 
-[node name="Uninhabited4" type="Button" parent="Control"]
+[node name="Uninhabited4" type="Button" parent="Control" unique_id=1648532282]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 104.0
@@ -442,21 +442,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Uninhabited4"]
+[node name="Toggled" type="Node" parent="Control/Uninhabited4" unique_id=1475427269]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Uninhabited4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Uninhabited4/Toggled" unique_id=431637004 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Uninhabited4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Uninhabited4/Toggled" unique_id=1896608965 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Uninhabited4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Uninhabited4" unique_id=1357950886 instance=ExtResource("7_ji66b")]
 
-[node name="Uninhabited5" type="Button" parent="Control"]
+[node name="Uninhabited5" type="Button" parent="Control" unique_id=242196116]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 104.0
@@ -466,21 +466,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Uninhabited5"]
+[node name="Toggled" type="Node" parent="Control/Uninhabited5" unique_id=490341061]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Uninhabited5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Uninhabited5/Toggled" unique_id=578921929 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Uninhabited5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Uninhabited5/Toggled" unique_id=1975904548 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Uninhabited5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Uninhabited5" unique_id=1623082551 instance=ExtResource("7_ji66b")]
 
-[node name="Uninhabited6" type="Button" parent="Control"]
+[node name="Uninhabited6" type="Button" parent="Control" unique_id=569985066]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 104.0
@@ -490,21 +490,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Uninhabited6"]
+[node name="Toggled" type="Node" parent="Control/Uninhabited6" unique_id=121826783]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Uninhabited6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Uninhabited6/Toggled" unique_id=452096759 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Uninhabited6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Uninhabited6/Toggled" unique_id=1631305754 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Uninhabited6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Uninhabited6" unique_id=264933511 instance=ExtResource("7_ji66b")]
 
-[node name="Uninhabited7" type="Button" parent="Control"]
+[node name="Uninhabited7" type="Button" parent="Control" unique_id=1474952338]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 104.0
@@ -514,21 +514,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pcc5s")
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Uninhabited7"]
+[node name="Toggled" type="Node" parent="Control/Uninhabited7" unique_id=1977211014]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Uninhabited7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Uninhabited7/Toggled" unique_id=1547121637 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Uninhabited7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Uninhabited7/Toggled" unique_id=471963549 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Uninhabited7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Uninhabited7" unique_id=318565075 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb1_1" type="Button" parent="Control"]
+[node name="Keyb1_1" type="Button" parent="Control" unique_id=409379273]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 130.0
@@ -538,21 +538,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Keyb1_1"]
+[node name="Toggled" type="Node" parent="Control/Keyb1_1" unique_id=10275339]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb1_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb1_1/Toggled" unique_id=836750965 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb1_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb1_1/Toggled" unique_id=1792779313 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb1_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb1_1" unique_id=2082702101 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb1_2" type="Button" parent="Control"]
+[node name="Keyb1_2" type="Button" parent="Control" unique_id=583811957]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 130.0
@@ -562,21 +562,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Keyb1_2"]
+[node name="Toggled" type="Node" parent="Control/Keyb1_2" unique_id=1765877135]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb1_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb1_2/Toggled" unique_id=1566655006 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb1_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb1_2/Toggled" unique_id=1294185921 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb1_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb1_2" unique_id=1577720433 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb1_3" type="Button" parent="Control"]
+[node name="Keyb1_3" type="Button" parent="Control" unique_id=1628945794]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 130.0
@@ -586,21 +586,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Keyb1_3"]
+[node name="Toggled" type="Node" parent="Control/Keyb1_3" unique_id=1897405457]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb1_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb1_3/Toggled" unique_id=156037843 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb1_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb1_3/Toggled" unique_id=348411127 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb1_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb1_3" unique_id=12889709 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb1_4" type="Button" parent="Control"]
+[node name="Keyb1_4" type="Button" parent="Control" unique_id=2056153304]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 130.0
@@ -610,21 +610,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Keyb1_4"]
+[node name="Toggled" type="Node" parent="Control/Keyb1_4" unique_id=474255020]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb1_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb1_4/Toggled" unique_id=1664181726 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb1_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb1_4/Toggled" unique_id=1481590986 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb1_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb1_4" unique_id=1612121973 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb1_5" type="Button" parent="Control"]
+[node name="Keyb1_5" type="Button" parent="Control" unique_id=1701428626]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 130.0
@@ -634,21 +634,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Keyb1_5"]
+[node name="Toggled" type="Node" parent="Control/Keyb1_5" unique_id=948280648]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb1_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb1_5/Toggled" unique_id=1341827661 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb1_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb1_5/Toggled" unique_id=107237966 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb1_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb1_5" unique_id=869181751 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb1_6" type="Button" parent="Control"]
+[node name="Keyb1_6" type="Button" parent="Control" unique_id=470802627]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 130.0
@@ -658,21 +658,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Keyb1_6"]
+[node name="Toggled" type="Node" parent="Control/Keyb1_6" unique_id=480508932]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb1_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb1_6/Toggled" unique_id=1487498048 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb1_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb1_6/Toggled" unique_id=1698226031 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb1_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb1_6" unique_id=26764300 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb1_7" type="Button" parent="Control"]
+[node name="Keyb1_7" type="Button" parent="Control" unique_id=1406508101]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 130.0
@@ -682,21 +682,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf722")
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Keyb1_7"]
+[node name="Toggled" type="Node" parent="Control/Keyb1_7" unique_id=1526232886]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb1_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb1_7/Toggled" unique_id=1144402899 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb1_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb1_7/Toggled" unique_id=1366368443 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb1_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb1_7" unique_id=546861934 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb2_1" type="Button" parent="Control"]
+[node name="Keyb2_1" type="Button" parent="Control" unique_id=495919550]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 156.0
@@ -706,21 +706,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Keyb2_1"]
+[node name="Toggled" type="Node" parent="Control/Keyb2_1" unique_id=2041929145]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb2_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb2_1/Toggled" unique_id=1021278539 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb2_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb2_1/Toggled" unique_id=796906024 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb2_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb2_1" unique_id=1628078469 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb2_2" type="Button" parent="Control"]
+[node name="Keyb2_2" type="Button" parent="Control" unique_id=1931241463]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 156.0
@@ -730,21 +730,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Keyb2_2"]
+[node name="Toggled" type="Node" parent="Control/Keyb2_2" unique_id=937121385]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb2_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb2_2/Toggled" unique_id=219807905 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb2_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb2_2/Toggled" unique_id=943679490 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb2_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb2_2" unique_id=131876528 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb2_3" type="Button" parent="Control"]
+[node name="Keyb2_3" type="Button" parent="Control" unique_id=322745383]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 156.0
@@ -754,21 +754,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Keyb2_3"]
+[node name="Toggled" type="Node" parent="Control/Keyb2_3" unique_id=1989610066]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb2_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb2_3/Toggled" unique_id=1672758206 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb2_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb2_3/Toggled" unique_id=1081028495 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb2_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb2_3" unique_id=19363137 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb2_4" type="Button" parent="Control"]
+[node name="Keyb2_4" type="Button" parent="Control" unique_id=109601710]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 156.0
@@ -778,21 +778,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Keyb2_4"]
+[node name="Toggled" type="Node" parent="Control/Keyb2_4" unique_id=767642855]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb2_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb2_4/Toggled" unique_id=1128202307 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb2_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb2_4/Toggled" unique_id=389870908 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb2_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb2_4" unique_id=616489564 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb2_5" type="Button" parent="Control"]
+[node name="Keyb2_5" type="Button" parent="Control" unique_id=1357110828]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 156.0
@@ -802,21 +802,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Keyb2_5"]
+[node name="Toggled" type="Node" parent="Control/Keyb2_5" unique_id=986717148]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb2_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb2_5/Toggled" unique_id=9188574 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb2_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb2_5/Toggled" unique_id=1291692697 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb2_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb2_5" unique_id=625555844 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb2_6" type="Button" parent="Control"]
+[node name="Keyb2_6" type="Button" parent="Control" unique_id=2051928963]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 156.0
@@ -826,21 +826,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Keyb2_6"]
+[node name="Toggled" type="Node" parent="Control/Keyb2_6" unique_id=28387844]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb2_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb2_6/Toggled" unique_id=987714910 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb2_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb2_6/Toggled" unique_id=1618640582 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb2_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb2_6" unique_id=44934977 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb2_7" type="Button" parent="Control"]
+[node name="Keyb2_7" type="Button" parent="Control" unique_id=1080690860]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 156.0
@@ -850,21 +850,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i5533")
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Keyb2_7"]
+[node name="Toggled" type="Node" parent="Control/Keyb2_7" unique_id=1653290117]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb2_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb2_7/Toggled" unique_id=870552179 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb2_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb2_7/Toggled" unique_id=600759947 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb2_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb2_7" unique_id=309358499 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb3_1" type="Button" parent="Control"]
+[node name="Keyb3_1" type="Button" parent="Control" unique_id=362353128]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 182.0
@@ -874,21 +874,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Keyb3_1"]
+[node name="Toggled" type="Node" parent="Control/Keyb3_1" unique_id=822618767]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb3_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb3_1/Toggled" unique_id=76874728 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb3_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb3_1/Toggled" unique_id=1578779785 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb3_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb3_1" unique_id=91784892 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb3_2" type="Button" parent="Control"]
+[node name="Keyb3_2" type="Button" parent="Control" unique_id=43771058]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 182.0
@@ -898,21 +898,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Keyb3_2"]
+[node name="Toggled" type="Node" parent="Control/Keyb3_2" unique_id=2092218838]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb3_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb3_2/Toggled" unique_id=1049881288 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb3_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb3_2/Toggled" unique_id=1774494702 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb3_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb3_2" unique_id=1928366520 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb3_3" type="Button" parent="Control"]
+[node name="Keyb3_3" type="Button" parent="Control" unique_id=1893225979]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 182.0
@@ -922,21 +922,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Keyb3_3"]
+[node name="Toggled" type="Node" parent="Control/Keyb3_3" unique_id=1259415618]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb3_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb3_3/Toggled" unique_id=790293739 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb3_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb3_3/Toggled" unique_id=1352901925 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb3_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb3_3" unique_id=629452260 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb3_4" type="Button" parent="Control"]
+[node name="Keyb3_4" type="Button" parent="Control" unique_id=1037603620]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 182.0
@@ -946,21 +946,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Keyb3_4"]
+[node name="Toggled" type="Node" parent="Control/Keyb3_4" unique_id=1080769798]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb3_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb3_4/Toggled" unique_id=1127653301 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb3_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb3_4/Toggled" unique_id=1185540474 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb3_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb3_4" unique_id=1109718743 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb3_5" type="Button" parent="Control"]
+[node name="Keyb3_5" type="Button" parent="Control" unique_id=349904954]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 182.0
@@ -970,21 +970,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Keyb3_5"]
+[node name="Toggled" type="Node" parent="Control/Keyb3_5" unique_id=1682904975]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb3_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb3_5/Toggled" unique_id=2007658672 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb3_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb3_5/Toggled" unique_id=293427324 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb3_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb3_5" unique_id=1987468836 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb3_6" type="Button" parent="Control"]
+[node name="Keyb3_6" type="Button" parent="Control" unique_id=1512373516]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 182.0
@@ -994,21 +994,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Keyb3_6"]
+[node name="Toggled" type="Node" parent="Control/Keyb3_6" unique_id=1110484988]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb3_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb3_6/Toggled" unique_id=958561508 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb3_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb3_6/Toggled" unique_id=554675215 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb3_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb3_6" unique_id=707300157 instance=ExtResource("7_ji66b")]
 
-[node name="Keyb3_7" type="Button" parent="Control"]
+[node name="Keyb3_7" type="Button" parent="Control" unique_id=348160830]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 182.0
@@ -1018,21 +1018,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_17ri1")
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Keyb3_7"]
+[node name="Toggled" type="Node" parent="Control/Keyb3_7" unique_id=186754732]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Keyb3_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Keyb3_7/Toggled" unique_id=1053669190 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Keyb3_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Keyb3_7/Toggled" unique_id=255818774 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Keyb3_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Keyb3_7" unique_id=1200467283 instance=ExtResource("7_ji66b")]
 
-[node name="Pad1_1" type="Button" parent="Control"]
+[node name="Pad1_1" type="Button" parent="Control" unique_id=1986482899]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 208.0
@@ -1043,21 +1043,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Pad1_1"]
+[node name="Toggled" type="Node" parent="Control/Pad1_1" unique_id=957891757]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad1_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad1_1/Toggled" unique_id=240877503 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad1_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad1_1/Toggled" unique_id=878522944 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad1_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad1_1" unique_id=103519141 instance=ExtResource("7_ji66b")]
 
-[node name="Pad1_2" type="Button" parent="Control"]
+[node name="Pad1_2" type="Button" parent="Control" unique_id=1116307726]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 208.0
@@ -1068,21 +1068,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Pad1_2"]
+[node name="Toggled" type="Node" parent="Control/Pad1_2" unique_id=1446522158]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad1_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad1_2/Toggled" unique_id=1079716968 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad1_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad1_2/Toggled" unique_id=172311301 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad1_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad1_2" unique_id=50222474 instance=ExtResource("7_ji66b")]
 
-[node name="Pad1_3" type="Button" parent="Control"]
+[node name="Pad1_3" type="Button" parent="Control" unique_id=1225668815]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 208.0
@@ -1093,21 +1093,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Pad1_3"]
+[node name="Toggled" type="Node" parent="Control/Pad1_3" unique_id=1507698944]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad1_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad1_3/Toggled" unique_id=1244564007 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad1_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad1_3/Toggled" unique_id=41123280 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad1_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad1_3" unique_id=862837766 instance=ExtResource("7_ji66b")]
 
-[node name="Pad1_4" type="Button" parent="Control"]
+[node name="Pad1_4" type="Button" parent="Control" unique_id=2050812205]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 208.0
@@ -1118,21 +1118,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Pad1_4"]
+[node name="Toggled" type="Node" parent="Control/Pad1_4" unique_id=323927345]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad1_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad1_4/Toggled" unique_id=762363433 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad1_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad1_4/Toggled" unique_id=856527999 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad1_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad1_4" unique_id=293032554 instance=ExtResource("7_ji66b")]
 
-[node name="Pad1_5" type="Button" parent="Control"]
+[node name="Pad1_5" type="Button" parent="Control" unique_id=1429052250]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 208.0
@@ -1143,21 +1143,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Pad1_5"]
+[node name="Toggled" type="Node" parent="Control/Pad1_5" unique_id=925836501]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad1_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad1_5/Toggled" unique_id=1962644570 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad1_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad1_5/Toggled" unique_id=513705835 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad1_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad1_5" unique_id=1343774368 instance=ExtResource("7_ji66b")]
 
-[node name="Pad1_6" type="Button" parent="Control"]
+[node name="Pad1_6" type="Button" parent="Control" unique_id=1018010383]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 208.0
@@ -1168,21 +1168,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Pad1_6"]
+[node name="Toggled" type="Node" parent="Control/Pad1_6" unique_id=1866413764]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad1_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad1_6/Toggled" unique_id=123407774 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad1_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad1_6/Toggled" unique_id=1060556367 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad1_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad1_6" unique_id=1360126893 instance=ExtResource("7_ji66b")]
 
-[node name="Pad1_7" type="Button" parent="Control"]
+[node name="Pad1_7" type="Button" parent="Control" unique_id=1870519516]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 208.0
@@ -1193,21 +1193,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Pad1_7"]
+[node name="Toggled" type="Node" parent="Control/Pad1_7" unique_id=161148153]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad1_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad1_7/Toggled" unique_id=1356817497 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad1_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad1_7/Toggled" unique_id=131632732 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad1_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad1_7" unique_id=618081935 instance=ExtResource("7_ji66b")]
 
-[node name="Pad2_1" type="Button" parent="Control"]
+[node name="Pad2_1" type="Button" parent="Control" unique_id=2119853313]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 234.0
@@ -1218,21 +1218,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Pad2_1"]
+[node name="Toggled" type="Node" parent="Control/Pad2_1" unique_id=788034871]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad2_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad2_1/Toggled" unique_id=1087003114 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad2_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad2_1/Toggled" unique_id=149913166 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad2_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad2_1" unique_id=1126031142 instance=ExtResource("7_ji66b")]
 
-[node name="Pad2_2" type="Button" parent="Control"]
+[node name="Pad2_2" type="Button" parent="Control" unique_id=1264521506]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 234.0
@@ -1243,21 +1243,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Pad2_2"]
+[node name="Toggled" type="Node" parent="Control/Pad2_2" unique_id=1222489575]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad2_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad2_2/Toggled" unique_id=890372920 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad2_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad2_2/Toggled" unique_id=1235487065 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad2_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad2_2" unique_id=2062349263 instance=ExtResource("7_ji66b")]
 
-[node name="Pad2_3" type="Button" parent="Control"]
+[node name="Pad2_3" type="Button" parent="Control" unique_id=1349540152]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 234.0
@@ -1268,21 +1268,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Pad2_3"]
+[node name="Toggled" type="Node" parent="Control/Pad2_3" unique_id=935284492]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad2_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad2_3/Toggled" unique_id=292355000 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad2_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad2_3/Toggled" unique_id=882849320 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad2_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad2_3" unique_id=639904915 instance=ExtResource("7_ji66b")]
 
-[node name="Pad2_4" type="Button" parent="Control"]
+[node name="Pad2_4" type="Button" parent="Control" unique_id=1272125053]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 234.0
@@ -1293,21 +1293,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Pad2_4"]
+[node name="Toggled" type="Node" parent="Control/Pad2_4" unique_id=275067074]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad2_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad2_4/Toggled" unique_id=1872558045 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad2_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad2_4/Toggled" unique_id=1754837758 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad2_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad2_4" unique_id=388744316 instance=ExtResource("7_ji66b")]
 
-[node name="Pad2_5" type="Button" parent="Control"]
+[node name="Pad2_5" type="Button" parent="Control" unique_id=374666275]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 234.0
@@ -1318,21 +1318,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Pad2_5"]
+[node name="Toggled" type="Node" parent="Control/Pad2_5" unique_id=760740073]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad2_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad2_5/Toggled" unique_id=662057585 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad2_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad2_5/Toggled" unique_id=278875412 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad2_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad2_5" unique_id=1780312932 instance=ExtResource("7_ji66b")]
 
-[node name="Pad2_6" type="Button" parent="Control"]
+[node name="Pad2_6" type="Button" parent="Control" unique_id=1336265724]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 234.0
@@ -1343,21 +1343,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Pad2_6"]
+[node name="Toggled" type="Node" parent="Control/Pad2_6" unique_id=1537996520]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad2_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad2_6/Toggled" unique_id=2049368771 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad2_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad2_6/Toggled" unique_id=1877228436 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad2_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad2_6" unique_id=1833265491 instance=ExtResource("7_ji66b")]
 
-[node name="Pad2_7" type="Button" parent="Control"]
+[node name="Pad2_7" type="Button" parent="Control" unique_id=240777523]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 234.0
@@ -1368,21 +1368,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Pad2_7"]
+[node name="Toggled" type="Node" parent="Control/Pad2_7" unique_id=1610986208]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad2_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad2_7/Toggled" unique_id=910499618 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad2_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad2_7/Toggled" unique_id=1722784724 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad2_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad2_7" unique_id=1788350419 instance=ExtResource("7_ji66b")]
 
-[node name="Pad3_1" type="Button" parent="Control"]
+[node name="Pad3_1" type="Button" parent="Control" unique_id=285300536]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 260.0
@@ -1393,21 +1393,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Pad3_1"]
+[node name="Toggled" type="Node" parent="Control/Pad3_1" unique_id=98973353]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad3_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad3_1/Toggled" unique_id=1660210792 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad3_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad3_1/Toggled" unique_id=1563370764 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad3_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad3_1" unique_id=1559699026 instance=ExtResource("7_ji66b")]
 
-[node name="Pad3_2" type="Button" parent="Control"]
+[node name="Pad3_2" type="Button" parent="Control" unique_id=29482141]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 260.0
@@ -1418,21 +1418,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Pad3_2"]
+[node name="Toggled" type="Node" parent="Control/Pad3_2" unique_id=295825237]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad3_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad3_2/Toggled" unique_id=2134384705 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad3_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad3_2/Toggled" unique_id=29661126 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad3_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad3_2" unique_id=385319888 instance=ExtResource("7_ji66b")]
 
-[node name="Pad3_3" type="Button" parent="Control"]
+[node name="Pad3_3" type="Button" parent="Control" unique_id=391649336]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 260.0
@@ -1443,21 +1443,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Pad3_3"]
+[node name="Toggled" type="Node" parent="Control/Pad3_3" unique_id=1165708237]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad3_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad3_3/Toggled" unique_id=1562145111 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad3_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad3_3/Toggled" unique_id=1003296965 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad3_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad3_3" unique_id=1537063879 instance=ExtResource("7_ji66b")]
 
-[node name="Pad3_4" type="Button" parent="Control"]
+[node name="Pad3_4" type="Button" parent="Control" unique_id=1247706379]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 260.0
@@ -1468,21 +1468,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Pad3_4"]
+[node name="Toggled" type="Node" parent="Control/Pad3_4" unique_id=13335748]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad3_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad3_4/Toggled" unique_id=2016249915 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad3_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad3_4/Toggled" unique_id=2014654657 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad3_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad3_4" unique_id=922454904 instance=ExtResource("7_ji66b")]
 
-[node name="Pad3_5" type="Button" parent="Control"]
+[node name="Pad3_5" type="Button" parent="Control" unique_id=290187188]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 260.0
@@ -1493,21 +1493,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Pad3_5"]
+[node name="Toggled" type="Node" parent="Control/Pad3_5" unique_id=618680544]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad3_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad3_5/Toggled" unique_id=1166768010 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad3_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad3_5/Toggled" unique_id=1459848209 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad3_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad3_5" unique_id=526209431 instance=ExtResource("7_ji66b")]
 
-[node name="Pad3_6" type="Button" parent="Control"]
+[node name="Pad3_6" type="Button" parent="Control" unique_id=1608160569]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 260.0
@@ -1518,21 +1518,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Pad3_6"]
+[node name="Toggled" type="Node" parent="Control/Pad3_6" unique_id=996255292]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad3_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad3_6/Toggled" unique_id=1239302002 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad3_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad3_6/Toggled" unique_id=1878734806 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad3_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad3_6" unique_id=1678219530 instance=ExtResource("7_ji66b")]
 
-[node name="Pad3_7" type="Button" parent="Control"]
+[node name="Pad3_7" type="Button" parent="Control" unique_id=109064670]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 260.0
@@ -1543,21 +1543,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Pad3_7"]
+[node name="Toggled" type="Node" parent="Control/Pad3_7" unique_id=329634391]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad3_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad3_7/Toggled" unique_id=1802822712 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad3_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad3_7/Toggled" unique_id=2003492178 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad3_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad3_7" unique_id=2121346028 instance=ExtResource("7_ji66b")]
 
-[node name="Pad4_1" type="Button" parent="Control"]
+[node name="Pad4_1" type="Button" parent="Control" unique_id=1076939200]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 286.0
@@ -1568,21 +1568,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Pad4_1"]
+[node name="Toggled" type="Node" parent="Control/Pad4_1" unique_id=1470375038]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad4_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad4_1/Toggled" unique_id=1104184159 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad4_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad4_1/Toggled" unique_id=913986331 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad4_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad4_1" unique_id=221003303 instance=ExtResource("7_ji66b")]
 
-[node name="Pad4_2" type="Button" parent="Control"]
+[node name="Pad4_2" type="Button" parent="Control" unique_id=968096719]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 286.0
@@ -1593,21 +1593,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Pad4_2"]
+[node name="Toggled" type="Node" parent="Control/Pad4_2" unique_id=1920099711]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad4_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad4_2/Toggled" unique_id=1943901256 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad4_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad4_2/Toggled" unique_id=150799123 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad4_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad4_2" unique_id=144144879 instance=ExtResource("7_ji66b")]
 
-[node name="Pad4_3" type="Button" parent="Control"]
+[node name="Pad4_3" type="Button" parent="Control" unique_id=115482702]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 286.0
@@ -1618,21 +1618,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Pad4_3"]
+[node name="Toggled" type="Node" parent="Control/Pad4_3" unique_id=399495630]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad4_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad4_3/Toggled" unique_id=1543794652 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad4_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad4_3/Toggled" unique_id=1960182287 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad4_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad4_3" unique_id=1912898320 instance=ExtResource("7_ji66b")]
 
-[node name="Pad4_4" type="Button" parent="Control"]
+[node name="Pad4_4" type="Button" parent="Control" unique_id=1082557304]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 286.0
@@ -1643,21 +1643,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Pad4_4"]
+[node name="Toggled" type="Node" parent="Control/Pad4_4" unique_id=1064729467]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad4_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad4_4/Toggled" unique_id=262909806 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad4_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad4_4/Toggled" unique_id=1313298712 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad4_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad4_4" unique_id=1733702459 instance=ExtResource("7_ji66b")]
 
-[node name="Pad4_5" type="Button" parent="Control"]
+[node name="Pad4_5" type="Button" parent="Control" unique_id=1512954412]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 286.0
@@ -1668,21 +1668,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Pad4_5"]
+[node name="Toggled" type="Node" parent="Control/Pad4_5" unique_id=181810061]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad4_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad4_5/Toggled" unique_id=1438914939 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad4_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad4_5/Toggled" unique_id=278032786 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad4_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad4_5" unique_id=810705454 instance=ExtResource("7_ji66b")]
 
-[node name="Pad4_6" type="Button" parent="Control"]
+[node name="Pad4_6" type="Button" parent="Control" unique_id=407911614]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 286.0
@@ -1693,21 +1693,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Pad4_6"]
+[node name="Toggled" type="Node" parent="Control/Pad4_6" unique_id=304759245]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad4_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad4_6/Toggled" unique_id=943974356 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad4_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad4_6/Toggled" unique_id=392942232 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad4_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad4_6" unique_id=346586662 instance=ExtResource("7_ji66b")]
 
-[node name="Pad4_7" type="Button" parent="Control"]
+[node name="Pad4_7" type="Button" parent="Control" unique_id=1780061559]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 286.0
@@ -1718,21 +1718,21 @@ disabled = true
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Pad4_7"]
+[node name="Toggled" type="Node" parent="Control/Pad4_7" unique_id=264963188]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Pad4_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Pad4_7/Toggled" unique_id=1616451681 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Pad4_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Pad4_7/Toggled" unique_id=1324068155 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Pad4_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Pad4_7" unique_id=20961821 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu1_1" type="Button" parent="Control"]
+[node name="Cpu1_1" type="Button" parent="Control" unique_id=2051423737]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 312.0
@@ -1742,21 +1742,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Cpu1_1"]
+[node name="Toggled" type="Node" parent="Control/Cpu1_1" unique_id=363717252]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu1_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu1_1/Toggled" unique_id=1883223585 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu1_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu1_1/Toggled" unique_id=1427531398 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu1_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu1_1" unique_id=1261590181 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu1_2" type="Button" parent="Control"]
+[node name="Cpu1_2" type="Button" parent="Control" unique_id=1607253041]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 312.0
@@ -1766,21 +1766,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Cpu1_2"]
+[node name="Toggled" type="Node" parent="Control/Cpu1_2" unique_id=1615081621]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu1_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu1_2/Toggled" unique_id=2070493158 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu1_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu1_2/Toggled" unique_id=635026702 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu1_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu1_2" unique_id=1566540402 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu1_3" type="Button" parent="Control"]
+[node name="Cpu1_3" type="Button" parent="Control" unique_id=728923157]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 312.0
@@ -1790,21 +1790,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Cpu1_3"]
+[node name="Toggled" type="Node" parent="Control/Cpu1_3" unique_id=1750794936]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu1_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu1_3/Toggled" unique_id=1671869998 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu1_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu1_3/Toggled" unique_id=1846926740 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu1_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu1_3" unique_id=52741083 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu1_4" type="Button" parent="Control"]
+[node name="Cpu1_4" type="Button" parent="Control" unique_id=1729852750]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 312.0
@@ -1814,21 +1814,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Cpu1_4"]
+[node name="Toggled" type="Node" parent="Control/Cpu1_4" unique_id=1206791136]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu1_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu1_4/Toggled" unique_id=714027569 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu1_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu1_4/Toggled" unique_id=501297081 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu1_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu1_4" unique_id=1205765932 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu1_5" type="Button" parent="Control"]
+[node name="Cpu1_5" type="Button" parent="Control" unique_id=1781305613]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 312.0
@@ -1838,21 +1838,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Cpu1_5"]
+[node name="Toggled" type="Node" parent="Control/Cpu1_5" unique_id=1008095569]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu1_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu1_5/Toggled" unique_id=2062147829 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu1_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu1_5/Toggled" unique_id=1581453960 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu1_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu1_5" unique_id=287415864 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu1_6" type="Button" parent="Control"]
+[node name="Cpu1_6" type="Button" parent="Control" unique_id=1772960262]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 312.0
@@ -1862,21 +1862,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Cpu1_6"]
+[node name="Toggled" type="Node" parent="Control/Cpu1_6" unique_id=544851224]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu1_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu1_6/Toggled" unique_id=825039133 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu1_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu1_6/Toggled" unique_id=432098929 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu1_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu1_6" unique_id=2033152775 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu1_7" type="Button" parent="Control"]
+[node name="Cpu1_7" type="Button" parent="Control" unique_id=2077331928]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 312.0
@@ -1886,21 +1886,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Cpu1_7"]
+[node name="Toggled" type="Node" parent="Control/Cpu1_7" unique_id=147408299]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu1_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu1_7/Toggled" unique_id=1174327262 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu1_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu1_7/Toggled" unique_id=1665709901 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu1_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu1_7" unique_id=138834190 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu2_1" type="Button" parent="Control"]
+[node name="Cpu2_1" type="Button" parent="Control" unique_id=1489278775]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 338.0
@@ -1910,21 +1910,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Cpu2_1"]
+[node name="Toggled" type="Node" parent="Control/Cpu2_1" unique_id=883838166]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu2_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu2_1/Toggled" unique_id=392383345 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu2_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu2_1/Toggled" unique_id=1008983065 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu2_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu2_1" unique_id=646030275 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu2_2" type="Button" parent="Control"]
+[node name="Cpu2_2" type="Button" parent="Control" unique_id=1142366434]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 338.0
@@ -1934,21 +1934,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Cpu2_2"]
+[node name="Toggled" type="Node" parent="Control/Cpu2_2" unique_id=146214101]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu2_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu2_2/Toggled" unique_id=664414676 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu2_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu2_2/Toggled" unique_id=1315051782 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu2_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu2_2" unique_id=237264151 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu2_3" type="Button" parent="Control"]
+[node name="Cpu2_3" type="Button" parent="Control" unique_id=703221115]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 338.0
@@ -1958,21 +1958,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Cpu2_3"]
+[node name="Toggled" type="Node" parent="Control/Cpu2_3" unique_id=1006923775]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu2_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu2_3/Toggled" unique_id=589716187 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu2_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu2_3/Toggled" unique_id=1868008116 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu2_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu2_3" unique_id=844411379 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu2_4" type="Button" parent="Control"]
+[node name="Cpu2_4" type="Button" parent="Control" unique_id=1191782601]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 338.0
@@ -1982,21 +1982,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Cpu2_4"]
+[node name="Toggled" type="Node" parent="Control/Cpu2_4" unique_id=430071878]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu2_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu2_4/Toggled" unique_id=905298442 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu2_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu2_4/Toggled" unique_id=2128506966 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu2_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu2_4" unique_id=1494000528 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu2_5" type="Button" parent="Control"]
+[node name="Cpu2_5" type="Button" parent="Control" unique_id=1901790445]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 338.0
@@ -2006,21 +2006,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Cpu2_5"]
+[node name="Toggled" type="Node" parent="Control/Cpu2_5" unique_id=516021589]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu2_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu2_5/Toggled" unique_id=1933382555 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu2_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu2_5/Toggled" unique_id=2082853301 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu2_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu2_5" unique_id=990515009 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu2_6" type="Button" parent="Control"]
+[node name="Cpu2_6" type="Button" parent="Control" unique_id=1055857677]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 338.0
@@ -2030,21 +2030,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Cpu2_6"]
+[node name="Toggled" type="Node" parent="Control/Cpu2_6" unique_id=1865276141]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu2_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu2_6/Toggled" unique_id=101839969 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu2_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu2_6/Toggled" unique_id=1904218255 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu2_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu2_6" unique_id=262712563 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu2_7" type="Button" parent="Control"]
+[node name="Cpu2_7" type="Button" parent="Control" unique_id=1532516648]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 338.0
@@ -2054,21 +2054,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Cpu2_7"]
+[node name="Toggled" type="Node" parent="Control/Cpu2_7" unique_id=949123714]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu2_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu2_7/Toggled" unique_id=1673576300 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu2_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu2_7/Toggled" unique_id=1485704728 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu2_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu2_7" unique_id=1180050916 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu3_1" type="Button" parent="Control"]
+[node name="Cpu3_1" type="Button" parent="Control" unique_id=67430637]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 364.0
@@ -2079,21 +2079,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("3_cx4rg")
 
-[node name="Toggled" type="Node" parent="Control/Cpu3_1"]
+[node name="Toggled" type="Node" parent="Control/Cpu3_1" unique_id=1203442400]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu3_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu3_1/Toggled" unique_id=2039625192 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu3_1/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu3_1/Toggled" unique_id=936702556 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu3_1" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu3_1" unique_id=99756282 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu3_2" type="Button" parent="Control"]
+[node name="Cpu3_2" type="Button" parent="Control" unique_id=447234532]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 364.0
@@ -2104,21 +2104,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("9_umhl1")
 
-[node name="Toggled" type="Node" parent="Control/Cpu3_2"]
+[node name="Toggled" type="Node" parent="Control/Cpu3_2" unique_id=952421422]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu3_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu3_2/Toggled" unique_id=1635149617 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu3_2/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu3_2/Toggled" unique_id=1445354524 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu3_2" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu3_2" unique_id=211294981 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu3_3" type="Button" parent="Control"]
+[node name="Cpu3_3" type="Button" parent="Control" unique_id=1848271446]
 layout_mode = 0
 offset_left = 266.0
 offset_top = 364.0
@@ -2129,21 +2129,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("10_1fwwe")
 
-[node name="Toggled" type="Node" parent="Control/Cpu3_3"]
+[node name="Toggled" type="Node" parent="Control/Cpu3_3" unique_id=1107346731]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu3_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu3_3/Toggled" unique_id=1300674558 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu3_3/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu3_3/Toggled" unique_id=2010337694 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu3_3" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu3_3" unique_id=356847114 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu3_4" type="Button" parent="Control"]
+[node name="Cpu3_4" type="Button" parent="Control" unique_id=1260566730]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 364.0
@@ -2154,21 +2154,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("11_swk0l")
 
-[node name="Toggled" type="Node" parent="Control/Cpu3_4"]
+[node name="Toggled" type="Node" parent="Control/Cpu3_4" unique_id=674187406]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu3_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu3_4/Toggled" unique_id=471564026 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu3_4/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu3_4/Toggled" unique_id=839282255 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu3_4" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu3_4" unique_id=1477060284 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu3_5" type="Button" parent="Control"]
+[node name="Cpu3_5" type="Button" parent="Control" unique_id=236388593]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 364.0
@@ -2179,21 +2179,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("12_i5533")
 
-[node name="Toggled" type="Node" parent="Control/Cpu3_5"]
+[node name="Toggled" type="Node" parent="Control/Cpu3_5" unique_id=640657958]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu3_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu3_5/Toggled" unique_id=1224199603 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu3_5/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu3_5/Toggled" unique_id=457003334 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu3_5" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu3_5" unique_id=1873448727 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu3_6" type="Button" parent="Control"]
+[node name="Cpu3_6" type="Button" parent="Control" unique_id=26717380]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 364.0
@@ -2204,21 +2204,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("13_7sn8e")
 
-[node name="Toggled" type="Node" parent="Control/Cpu3_6"]
+[node name="Toggled" type="Node" parent="Control/Cpu3_6" unique_id=249267924]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu3_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu3_6/Toggled" unique_id=551731963 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu3_6/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu3_6/Toggled" unique_id=2028509014 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu3_6" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu3_6" unique_id=536376416 instance=ExtResource("7_ji66b")]
 
-[node name="Cpu3_7" type="Button" parent="Control"]
+[node name="Cpu3_7" type="Button" parent="Control" unique_id=1298982819]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 364.0
@@ -2229,26 +2229,26 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gn28f")
 toggle_mode = true
 button_group = ExtResource("14_86nuy")
 
-[node name="Toggled" type="Node" parent="Control/Cpu3_7"]
+[node name="Toggled" type="Node" parent="Control/Cpu3_7" unique_id=1876079481]
 script = ExtResource("9_has6o")
 
-[node name="PlaySeCommand" parent="Control/Cpu3_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="Control/Cpu3_7/Toggled" unique_id=1825921722 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="PlaySeCommand2" parent="Control/Cpu3_7/Toggled" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand2" parent="Control/Cpu3_7/Toggled" unique_id=2063003429 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 ExecFlag = false
 
-[node name="Focus" parent="Control/Cpu3_7" instance=ExtResource("7_ji66b")]
+[node name="Focus" parent="Control/Cpu3_7" unique_id=1509263189 instance=ExtResource("7_ji66b")]
 
-[node name="EscapeKey" parent="." instance=ExtResource("4_2lghb")]
+[node name="EscapeKey" parent="." unique_id=1030541394 instance=ExtResource("4_2lghb")]
 ActionName = "escape"
 
-[node name="PlaySeCommand" parent="EscapeKey" instance=ExtResource("7_msmwr")]
+[node name="PlaySeCommand" parent="EscapeKey" unique_id=327566268 instance=ExtResource("7_msmwr")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="OpenScreenCommand" parent="EscapeKey" instance=ExtResource("10_joxnn")]
+[node name="OpenScreenCommand" parent="EscapeKey" unique_id=14654249 instance=ExtResource("10_joxnn")]
 Screen = "res://screen/title_screen.tscn"

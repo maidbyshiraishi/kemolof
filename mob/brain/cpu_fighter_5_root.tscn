@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlyoajbyv3lbp"]
+[gd_scene format=3 uid="uid://dlyoajbyv3lbp"]
 
 [ext_resource type="Script" uid="uid://cisgvhi8o3yb6" path="res://mob/brain/CpuFighter5.cs" id="1_2sl2m"]
 [ext_resource type="Script" uid="uid://dc3dvku47lgvf" path="res://mob/brain/SightArea.cs" id="2_ssylw"]
@@ -24,10 +24,10 @@ size = Vector2(32, 112)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qhhp"]
 size = Vector2(64, 32)
 
-[node name="Brain" type="Node2D"]
+[node name="Brain" type="Node2D" unique_id=2114403785]
 script = ExtResource("1_2sl2m")
 
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=928127237]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -39,88 +39,88 @@ offset_right = 16.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="OverheadArea" type="Area2D" parent="."]
+[node name="OverheadArea" type="Area2D" parent="." unique_id=144809353]
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("2_ssylw")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OverheadArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OverheadArea" unique_id=1230554998]
 position = Vector2(0, -144)
 shape = SubResource("RectangleShape2D_7fkpy")
 debug_color = Color(0.7, 0.35, 0, 0.419608)
 
-[node name="AttackArea" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="." unique_id=1261085659]
 collision_layer = 0
 collision_mask = 40
 script = ExtResource("2_ssylw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=402803767]
 position = Vector2(32, -64)
 shape = SubResource("RectangleShape2D_e7kgn")
 
-[node name="Waza1Area" type="Area2D" parent="."]
+[node name="Waza1Area" type="Area2D" parent="." unique_id=1372514708]
 collision_layer = 0
 collision_mask = 40
 script = ExtResource("2_ssylw")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza1Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza1Area" unique_id=1730013445]
 position = Vector2(256, -64)
 shape = SubResource("RectangleShape2D_uje2w")
 debug_color = Color(0, 0.7, 0, 0.419608)
 
-[node name="Waza2Area" type="Area2D" parent="."]
+[node name="Waza2Area" type="Area2D" parent="." unique_id=1031284989]
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("2_ssylw")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza2Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza2Area" unique_id=1085048784]
 position = Vector2(56, -144)
 rotation = 0.2617994
 shape = SubResource("RectangleShape2D_2mk4j")
 debug_color = Color(0.705882, 0, 0, 0.419608)
 
-[node name="Waza3Area" type="Area2D" parent="."]
+[node name="Waza3Area" type="Area2D" parent="." unique_id=1592963347]
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("2_ssylw")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza3Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza3Area" unique_id=293059554]
 position = Vector2(128, -64)
 shape = SubResource("RectangleShape2D_xsw6l")
 debug_color = Color(0.705882, 0.705882, 0, 0.419608)
 
-[node name="BackArea" type="Area2D" parent="."]
+[node name="BackArea" type="Area2D" parent="." unique_id=1784112105]
 collision_layer = 0
 collision_mask = 40
 script = ExtResource("2_ssylw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BackArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackArea" unique_id=1378355240]
 position = Vector2(-32, -64)
 shape = SubResource("RectangleShape2D_d184q")
 debug_color = Color(0.7, 0.583333, 0, 0.419608)
 
-[node name="UnderfootArea" type="Area2D" parent="."]
+[node name="UnderfootArea" type="Area2D" parent="." unique_id=1474215864]
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("2_ssylw")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderfootArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderfootArea" unique_id=857423208]
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_1qhhp")
 debug_color = Color(0.7, 0.35, 0, 0.419608)
 
-[node name="GroundRay" type="RayCast2D" parent="."]
+[node name="GroundRay" type="RayCast2D" parent="." unique_id=1877427815]
 position = Vector2(0, 32)
 target_position = Vector2(0, 400)
 collision_mask = 9
 hit_from_inside = true
 
-[node name="JumpRay" type="RayCast2D" parent="."]
+[node name="JumpRay" type="RayCast2D" parent="." unique_id=1954129588]
 position = Vector2(32, -96)
 target_position = Vector2(64, 64)
 collision_mask = 9

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cwn5ovcp3mf1"]
+[gd_scene format=3 uid="uid://cwn5ovcp3mf1"]
 
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_ny3fg"]
 [ext_resource type="Script" uid="uid://142x3b00e0uf" path="res://screen/SelectStageScreen.cs" id="2_buqjm"]
@@ -93,7 +93,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SelectStageScreen" type="Control"]
+[node name="SelectStageScreen" type="Control" unique_id=1126636395]
 light_mask = 2
 layout_mode = 3
 anchors_preset = 0
@@ -102,14 +102,14 @@ script = ExtResource("2_buqjm")
 StageList = Array[String](["シンプルな平地", "列柱室", "山道", "石畳の闘技場", "罪人の大穴", "おまかせ"])
 StageIndex = Array[int]([1, 2, 3, 4, 5, -1])
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=955926219]
 light_mask = 2
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 480.0
 color = Color(0.905882, 0.517647, 0.658824, 1)
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=1511197397]
 light_mask = 2
 layout_mode = 0
 offset_left = 64.0
@@ -120,12 +120,12 @@ text = "ステージ選択"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StageList" type="AnimatedSprite2D" parent="."]
+[node name="StageList" type="AnimatedSprite2D" parent="." unique_id=1236288641]
 position = Vector2(320, 184)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_buqjm")
 
-[node name="StageName" type="Label" parent="."]
+[node name="StageName" type="Label" parent="." unique_id=575188660]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
@@ -134,17 +134,17 @@ offset_bottom = 376.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Left" type="AnimatedSprite2D" parent="."]
+[node name="Left" type="AnimatedSprite2D" parent="." unique_id=1692582343]
 position = Vector2(128, 352)
 sprite_frames = SubResource("SpriteFrames_g1jo2")
 autoplay = "default"
 
-[node name="Right" type="AnimatedSprite2D" parent="."]
+[node name="Right" type="AnimatedSprite2D" parent="." unique_id=1227947755]
 position = Vector2(512, 350)
 sprite_frames = SubResource("SpriteFrames_c3gm5")
 autoplay = "default"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=320548906]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 400.0
@@ -155,16 +155,16 @@ text = "・遊ぶステージを左右キーで選択してください。パン
 ・キーボードのESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
 autowrap_mode = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=758225862]
 light_mask = 2
 anchors_preset = 0
 
-[node name="EscapeKey" parent="." instance=ExtResource("16_a3lai")]
+[node name="EscapeKey" parent="." unique_id=1685192558 instance=ExtResource("16_a3lai")]
 ActionName = "escape"
 
-[node name="PlaySeCommand" parent="EscapeKey" instance=ExtResource("6_tkqhi")]
+[node name="PlaySeCommand" parent="EscapeKey" unique_id=863347837 instance=ExtResource("6_tkqhi")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="OpenScreenCommand" parent="EscapeKey" instance=ExtResource("17_wo1hj")]
+[node name="OpenScreenCommand" parent="EscapeKey" unique_id=745653677 instance=ExtResource("17_wo1hj")]
 Screen = "res://screen/select_controller_screen.tscn"

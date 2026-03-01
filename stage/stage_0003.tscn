@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://60u4i5xcqmdq"]
+[gd_scene format=4 uid="uid://60u4i5xcqmdq"]
 
 [ext_resource type="PackedScene" uid="uid://ddw2g00yqtlmx" path="res://stage/stage_root.tscn" id="1_ugxy8"]
 [ext_resource type="PackedScene" uid="uid://4dnj27cvdryh" path="res://command/dialog/open_dialog_command.tscn" id="2_6jynu"]
@@ -23,7 +23,7 @@ size = Vector2(26, 954)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_375uw"]
 size = Vector2(64, 4)
 
-[node name="Stage" instance=ExtResource("1_ugxy8")]
+[node name="Stage" unique_id=1470840847 instance=ExtResource("1_ugxy8")]
 BgmStream = ExtResource("2_ir3rd")
 
 [node name="ColorRect" parent="Background/Parallax2D_1" index="0"]
@@ -80,12 +80,12 @@ position = Vector2(384, -64)
 [node name="Player_7" parent="Respawn" index="6"]
 position = Vector2(320, -64)
 
-[node name="OpenDialogCommand" parent="Scenario/Referee/Draw" index="0" instance=ExtResource("2_6jynu")]
+[node name="OpenDialogCommand" parent="Scenario/Referee/Draw" index="0" unique_id=640072766 instance=ExtResource("2_6jynu")]
 DialogPath = "res://screen/game_result_dialog.tscn"
 ArgumentKey = "MessageDialog"
 Argument = ["なし", Color(1, 1, 1, 1)]
 
-[node name="OpenDialogCommand" parent="Scenario/Referee/Winner" index="0" instance=ExtResource("2_6jynu")]
+[node name="OpenDialogCommand" parent="Scenario/Referee/Winner" index="0" unique_id=163966996 instance=ExtResource("2_6jynu")]
 DialogPath = "res://screen/game_result_dialog.tscn"
 ArgumentKey = "MessageDialog"
 Argument = ["なし", Color(0, 0, 0, 1)]
@@ -94,610 +94,610 @@ Argument = ["なし", Color(0, 0, 0, 1)]
 position = Vector2(320, 544)
 collision_mask = 8
 
-[node name="VisibleTrigger_1" parent="Scenario" index="2" instance=ExtResource("3_ir3rd")]
+[node name="VisibleTrigger_1" parent="Scenario" index="2" unique_id=1795011329 instance=ExtResource("3_ir3rd")]
 
-[node name="ShowHudMessageCommand" parent="Scenario/VisibleTrigger_1" index="0" instance=ExtResource("4_ssewp")]
+[node name="ShowHudMessageCommand" parent="Scenario/VisibleTrigger_1" index="0" unique_id=1082842495 instance=ExtResource("4_ssewp")]
 Text2 = "山がそこにあるからは"
 Text3 = "理由になっていない。"
 
-[node name="PushingArea_1" parent="Scenario" index="3" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_1" parent="Scenario" index="3" unique_id=1623073697 instance=ExtResource("5_qhw6f")]
 position = Vector2(32, 432)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_1" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_1" index="0" unique_id=567917002]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_1/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_1/Timer" index="0" unique_id=69059118 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_1/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_1/Timer/TimerTrigger" index="0" unique_id=661913714 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_1/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_1/Timer/TimerTrigger" index="1" unique_id=564489272 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_1" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_1" index="1" unique_id=864895490]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_1" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_1" index="2" unique_id=1214054978 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_2" parent="Scenario" index="4" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_2" parent="Scenario" index="4" unique_id=1542756535 instance=ExtResource("5_qhw6f")]
 position = Vector2(-16, -32)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_2" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_2" index="0" unique_id=96835054]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_2/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_2/Timer" index="0" unique_id=1366687130 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_2/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_2/Timer/TimerTrigger" index="0" unique_id=393031366 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_2/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_2/Timer/TimerTrigger" index="1" unique_id=1570585061 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_2" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_2" index="1" unique_id=663565762]
 shape = SubResource("RectangleShape2D_noi0u")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_2" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_2" index="2" unique_id=1902150623 instance=ExtResource("8_7x1gp")]
 Value = Vector2(1, 0)
 
-[node name="PushingArea_3" parent="Scenario" index="5" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_3" parent="Scenario" index="5" unique_id=566828324 instance=ExtResource("5_qhw6f")]
 position = Vector2(656, -32)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_3" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_3" index="0" unique_id=2072811141]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_3/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_3/Timer" index="0" unique_id=1490814319 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_3/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_3/Timer/TimerTrigger" index="0" unique_id=172464409 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_3/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_3/Timer/TimerTrigger" index="1" unique_id=1061665814 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_3" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_3" index="1" unique_id=1776306936]
 shape = SubResource("RectangleShape2D_m3na8")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_3" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_3" index="2" unique_id=2059851316 instance=ExtResource("8_7x1gp")]
 Value = Vector2(-1, 0)
 
-[node name="PushingArea_4" parent="Scenario" index="6" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_4" parent="Scenario" index="6" unique_id=1311834845 instance=ExtResource("5_qhw6f")]
 position = Vector2(96, 400)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_4" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_4" index="0" unique_id=1999436885]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_4/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_4/Timer" index="0" unique_id=248733691 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_4/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_4/Timer/TimerTrigger" index="0" unique_id=293055537 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_4/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_4/Timer/TimerTrigger" index="1" unique_id=168757561 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_4" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_4" index="1" unique_id=1960296075]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_4" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_4" index="2" unique_id=1281740517 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_5" parent="Scenario" index="7" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_5" parent="Scenario" index="7" unique_id=1761810555 instance=ExtResource("5_qhw6f")]
 position = Vector2(160, 368)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_5" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_5" index="0" unique_id=67742887]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_5/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_5/Timer" index="0" unique_id=450797866 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_5/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_5/Timer/TimerTrigger" index="0" unique_id=1020387606 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_5/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_5/Timer/TimerTrigger" index="1" unique_id=1733453990 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_5" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_5" index="1" unique_id=881479436]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_5" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_5" index="2" unique_id=504471498 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_6" parent="Scenario" index="8" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_6" parent="Scenario" index="8" unique_id=1041632237 instance=ExtResource("5_qhw6f")]
 position = Vector2(224, 336)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_6" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_6" index="0" unique_id=2081914978]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_6/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_6/Timer" index="0" unique_id=434317465 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_6/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_6/Timer/TimerTrigger" index="0" unique_id=78455897 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_6/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_6/Timer/TimerTrigger" index="1" unique_id=1222365725 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_6" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_6" index="1" unique_id=2022727070]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_6" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_6" index="2" unique_id=2130667690 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_7" parent="Scenario" index="9" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_7" parent="Scenario" index="9" unique_id=1645699403 instance=ExtResource("5_qhw6f")]
 position = Vector2(288, 304)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_7" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_7" index="0" unique_id=107630050]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_7/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_7/Timer" index="0" unique_id=1652839712 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_7/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_7/Timer/TimerTrigger" index="0" unique_id=872269121 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_7/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_7/Timer/TimerTrigger" index="1" unique_id=1376549026 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_7" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_7" index="1" unique_id=797331260]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_7" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_7" index="2" unique_id=280908335 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_8" parent="Scenario" index="10" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_8" parent="Scenario" index="10" unique_id=223111982 instance=ExtResource("5_qhw6f")]
 position = Vector2(352, 272)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_8" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_8" index="0" unique_id=1867496363]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_8/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_8/Timer" index="0" unique_id=999539479 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_8/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_8/Timer/TimerTrigger" index="0" unique_id=41001269 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_8/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_8/Timer/TimerTrigger" index="1" unique_id=1155431199 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_8" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_8" index="1" unique_id=1900650931]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_8" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_8" index="2" unique_id=1374315227 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_9" parent="Scenario" index="11" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_9" parent="Scenario" index="11" unique_id=475381515 instance=ExtResource("5_qhw6f")]
 position = Vector2(416, 240)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_9" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_9" index="0" unique_id=1676930247]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_9/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_9/Timer" index="0" unique_id=949974468 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_9/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_9/Timer/TimerTrigger" index="0" unique_id=462709111 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_9/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_9/Timer/TimerTrigger" index="1" unique_id=347224481 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_9" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_9" index="1" unique_id=538769966]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_9" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_9" index="2" unique_id=1502402269 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_10" parent="Scenario" index="12" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_10" parent="Scenario" index="12" unique_id=303879067 instance=ExtResource("5_qhw6f")]
 position = Vector2(480, 208)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_10" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_10" index="0" unique_id=1312592747]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_10/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_10/Timer" index="0" unique_id=494647840 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_10/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_10/Timer/TimerTrigger" index="0" unique_id=1519456066 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_10/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_10/Timer/TimerTrigger" index="1" unique_id=1613637558 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_10" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_10" index="1" unique_id=1879181367]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_10" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_10" index="2" unique_id=1961323406 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_11" parent="Scenario" index="13" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_11" parent="Scenario" index="13" unique_id=2111412111 instance=ExtResource("5_qhw6f")]
 position = Vector2(544, 176)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_11" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_11" index="0" unique_id=1029656813]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_11/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_11/Timer" index="0" unique_id=1930525326 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_11/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_11/Timer/TimerTrigger" index="0" unique_id=1107187993 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_11/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_11/Timer/TimerTrigger" index="1" unique_id=1760096646 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_11" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_11" index="1" unique_id=1489341188]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_11" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_11" index="2" unique_id=271814009 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_12" parent="Scenario" index="14" instance=ExtResource("5_qhw6f")]
+[node name="PushingArea_12" parent="Scenario" index="14" unique_id=1902246470 instance=ExtResource("5_qhw6f")]
 position = Vector2(608, 144)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/PushingArea_12" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/PushingArea_12" index="0" unique_id=1893210161]
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/PushingArea_12/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/PushingArea_12/Timer" index="0" unique_id=436759597 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_12/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/PushingArea_12/Timer/TimerTrigger" index="0" unique_id=380518597 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_12/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/PushingArea_12/Timer/TimerTrigger" index="1" unique_id=492896965 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_12" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/PushingArea_12" index="1" unique_id=637778617]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_es5s4")
 
-[node name="OffsetPositionCommand" parent="Scenario/PushingArea_12" index="2" instance=ExtResource("8_7x1gp")]
+[node name="OffsetPositionCommand" parent="Scenario/PushingArea_12" index="2" unique_id=818102092 instance=ExtResource("8_7x1gp")]
 Value = Vector2(0, -1)
 
-[node name="AthleticArea_1" parent="Scenario" index="15" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_1" parent="Scenario" index="15" unique_id=1265955948 instance=ExtResource("5_qhw6f")]
 position = Vector2(32, 414)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_1" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_1" index="0" unique_id=1706437039]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_1/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_1/Timer" index="0" unique_id=99870738 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_1/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_1/Timer/TimerTrigger" index="0" unique_id=771417896 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_1/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_1/Timer/TimerTrigger" index="1" unique_id=2004603712 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_1" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_1" index="1" unique_id=1798290809]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_1" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_1" index="2" unique_id=377933604 instance=ExtResource("9_nc1c6")]
 Direction = 2
 
-[node name="AthleticArea_2" parent="Scenario" index="16" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_2" parent="Scenario" index="16" unique_id=422665359 instance=ExtResource("5_qhw6f")]
 position = Vector2(608, 126)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_2" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_2" index="0" unique_id=101113471]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_2/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_2/Timer" index="0" unique_id=1713472274 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_2/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_2/Timer/TimerTrigger" index="0" unique_id=1711836631 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_2/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_2/Timer/TimerTrigger" index="1" unique_id=1769453906 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_2" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_2" index="1" unique_id=115651796]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_2" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_2" index="2" unique_id=1577327632 instance=ExtResource("9_nc1c6")]
 Direction = 1
 
-[node name="AthleticArea_3" parent="Scenario" index="17" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_3" parent="Scenario" index="17" unique_id=650346948 instance=ExtResource("5_qhw6f")]
 position = Vector2(96, 382)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_3" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_3" index="0" unique_id=809282460]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_3/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_3/Timer" index="0" unique_id=1582419496 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_3/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_3/Timer/TimerTrigger" index="0" unique_id=641695723 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_3/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_3/Timer/TimerTrigger" index="1" unique_id=1070812107 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_3" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_3" index="1" unique_id=925645449]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_3" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_3" index="2" unique_id=986680384 instance=ExtResource("9_nc1c6")]
 Direction = 3
 
-[node name="AthleticArea_4" parent="Scenario" index="18" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_4" parent="Scenario" index="18" unique_id=1658580396 instance=ExtResource("5_qhw6f")]
 position = Vector2(160, 350)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_4" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_4" index="0" unique_id=1783083763]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_4/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_4/Timer" index="0" unique_id=1924312069 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_4/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_4/Timer/TimerTrigger" index="0" unique_id=244710702 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_4/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_4/Timer/TimerTrigger" index="1" unique_id=521056876 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_4" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_4" index="1" unique_id=1161404785]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_4" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_4" index="2" unique_id=1573271418 instance=ExtResource("9_nc1c6")]
 Direction = 3
 
-[node name="AthleticArea_5" parent="Scenario" index="19" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_5" parent="Scenario" index="19" unique_id=1924660955 instance=ExtResource("5_qhw6f")]
 position = Vector2(224, 318)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_5" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_5" index="0" unique_id=94451301]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_5/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_5/Timer" index="0" unique_id=1895084020 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_5/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_5/Timer/TimerTrigger" index="0" unique_id=538554610 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_5/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_5/Timer/TimerTrigger" index="1" unique_id=712860457 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_5" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_5" index="1" unique_id=1212196634]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_5" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_5" index="2" unique_id=529157828 instance=ExtResource("9_nc1c6")]
 Direction = 3
 
-[node name="AthleticArea_6" parent="Scenario" index="20" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_6" parent="Scenario" index="20" unique_id=1415434571 instance=ExtResource("5_qhw6f")]
 position = Vector2(288, 286)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_6" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_6" index="0" unique_id=438342742]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_6/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_6/Timer" index="0" unique_id=457000939 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_6/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_6/Timer/TimerTrigger" index="0" unique_id=2140862773 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_6/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_6/Timer/TimerTrigger" index="1" unique_id=991788805 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_6" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_6" index="1" unique_id=1401684794]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_6" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_6" index="2" unique_id=1505214831 instance=ExtResource("9_nc1c6")]
 Direction = 3
 
-[node name="AthleticArea_7" parent="Scenario" index="21" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_7" parent="Scenario" index="21" unique_id=69629441 instance=ExtResource("5_qhw6f")]
 position = Vector2(352, 254)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_7" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_7" index="0" unique_id=1698839626]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_7/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_7/Timer" index="0" unique_id=901950603 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_7/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_7/Timer/TimerTrigger" index="0" unique_id=2089646065 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_7/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_7/Timer/TimerTrigger" index="1" unique_id=2085151701 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_7" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_7" index="1" unique_id=8647991]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_7" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_7" index="2" unique_id=2128954896 instance=ExtResource("9_nc1c6")]
 Direction = 3
 
-[node name="AthleticArea_8" parent="Scenario" index="22" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_8" parent="Scenario" index="22" unique_id=360560626 instance=ExtResource("5_qhw6f")]
 position = Vector2(416, 222)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_8" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_8" index="0" unique_id=1889072149]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_8/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_8/Timer" index="0" unique_id=197768486 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_8/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_8/Timer/TimerTrigger" index="0" unique_id=737325941 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_8/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_8/Timer/TimerTrigger" index="1" unique_id=1953261928 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_8" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_8" index="1" unique_id=1244615333]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_8" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_8" index="2" unique_id=2006161007 instance=ExtResource("9_nc1c6")]
 Direction = 3
 
-[node name="AthleticArea_9" parent="Scenario" index="23" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_9" parent="Scenario" index="23" unique_id=149940181 instance=ExtResource("5_qhw6f")]
 position = Vector2(480, 190)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_9" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_9" index="0" unique_id=1127293615]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_9/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_9/Timer" index="0" unique_id=1503514805 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_9/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_9/Timer/TimerTrigger" index="0" unique_id=1274210463 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_9/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_9/Timer/TimerTrigger" index="1" unique_id=1721116797 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_9" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_9" index="1" unique_id=1422501345]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_9" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_9" index="2" unique_id=775816886 instance=ExtResource("9_nc1c6")]
 Direction = 3
 
-[node name="AthleticArea_10" parent="Scenario" index="24" instance=ExtResource("5_qhw6f")]
+[node name="AthleticArea_10" parent="Scenario" index="24" unique_id=704693005 instance=ExtResource("5_qhw6f")]
 position = Vector2(544, 158)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Timer" type="Timer" parent="Scenario/AthleticArea_10" index="0"]
+[node name="Timer" type="Timer" parent="Scenario/AthleticArea_10" index="0" unique_id=1256279418]
 wait_time = 0.1
 autostart = true
 
-[node name="TimerTrigger" parent="Scenario/AthleticArea_10/Timer" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
+[node name="TimerTrigger" parent="Scenario/AthleticArea_10/Timer" index="0" unique_id=1625765270 node_paths=PackedStringArray("Target") instance=ExtResource("6_iysxx")]
 SwapExecFlag = true
 Target = NodePath("../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_10/Timer/TimerTrigger" index="0" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOff" parent="Scenario/AthleticArea_10/Timer/TimerTrigger" index="0" unique_id=1048514109 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_10/Timer/TimerTrigger" index="1" node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
+[node name="DisableCollisionShapeCommandOn" parent="Scenario/AthleticArea_10/Timer/TimerTrigger" index="1" unique_id=456817905 node_paths=PackedStringArray("Target") instance=ExtResource("7_kt0fe")]
 Value = true
 ExecFlag = false
 Target = NodePath("../../../CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_10" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/AthleticArea_10" index="1" unique_id=1873197038]
 shape = SubResource("RectangleShape2D_375uw")
 debug_color = Color(1, 1, 0, 0.392157)
 
-[node name="JumpFighterCommand" parent="Scenario/AthleticArea_10" index="2" instance=ExtResource("9_nc1c6")]
+[node name="JumpFighterCommand" parent="Scenario/AthleticArea_10" index="2" unique_id=1666630026 instance=ExtResource("9_nc1c6")]
 Direction = 3

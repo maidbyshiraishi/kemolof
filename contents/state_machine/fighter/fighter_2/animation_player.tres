@@ -1,4 +1,4 @@
-[gd_resource type="AnimationLibrary" load_steps=25 format=3 uid="uid://dw5bs1247sv6i"]
+[gd_resource type="AnimationLibrary" format=3 uid="uid://dw5bs1247sv6i"]
 
 [ext_resource type="Animation" uid="uid://do1j3v3ni7s3l" path="res://contents/state_machine/fighter/fighter_2/waza_1.tres" id="1_4oajg"]
 [ext_resource type="Animation" uid="uid://sg6nek4t4ka1" path="res://contents/state_machine/fighter/fighter_2/waza_2.tres" id="2_4r0bx"]

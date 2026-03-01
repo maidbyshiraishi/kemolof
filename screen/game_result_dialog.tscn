@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://yhn3l7v3q7e5"]
+[gd_scene format=3 uid="uid://yhn3l7v3q7e5"]
 
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_na8vy"]
 [ext_resource type="Script" uid="uid://cekplpvh6gcvo" path="res://screen/MessageDialog.cs" id="2_aeidt"]
@@ -13,14 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://bwnbq0d05nrbf" path="res://command/audio/change_bgm_command.tscn" id="11_e33n5"]
 [ext_resource type="AudioStream" uid="uid://yrsd3ic1ixy8" path="res://contents/bgm/bgm11.ogg" id="12_u7v5c"]
 
-[node name="MessageDialog" type="Control"]
+[node name="MessageDialog" type="Control" unique_id=1217251838]
 light_mask = 2
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_na8vy")
 script = ExtResource("2_aeidt")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=219517863]
 light_mask = 2
 layout_mode = 0
 offset_left = 32.0
@@ -29,7 +29,7 @@ offset_right = 608.0
 offset_bottom = 384.0
 color = Color(1, 1, 1, 0.25098)
 
-[node name="Border" type="ReferenceRect" parent="."]
+[node name="Border" type="ReferenceRect" parent="." unique_id=1279073791]
 light_mask = 2
 layout_mode = 0
 offset_left = 32.0
@@ -40,7 +40,7 @@ border_color = Color(0.933333, 0.933333, 0.933333, 1)
 border_width = 4.0
 editor_only = false
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1260098565]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 80.0
@@ -51,7 +51,7 @@ text = "勝者"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Message" type="Label" parent="."]
+[node name="Message" type="Label" parent="." unique_id=1224978917]
 light_mask = 2
 layout_mode = 0
 offset_left = 48.0
@@ -63,11 +63,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=589124677]
 light_mask = 2
 anchors_preset = 0
 
-[node name="Back" type="Button" parent="Control"]
+[node name="Back" type="Button" parent="Control" unique_id=14596745]
 light_mask = 2
 layout_mode = 0
 offset_left = 256.0
@@ -82,32 +82,32 @@ focus_next = NodePath(".")
 focus_previous = NodePath(".")
 text = "タイトルへ戻る"
 
-[node name="Exec" type="Node" parent="Control/Back"]
+[node name="Exec" type="Node" parent="Control/Back" unique_id=443755422]
 script = ExtResource("3_vrsfp")
 
-[node name="ReferenceCommandContainer" parent="Control/Back/Exec" node_paths=PackedStringArray("Target") instance=ExtResource("4_ymhwy")]
+[node name="ReferenceCommandContainer" parent="Control/Back/Exec" unique_id=1303711770 node_paths=PackedStringArray("Target") instance=ExtResource("4_ymhwy")]
 Target = NodePath("../../../../Close")
 
-[node name="Focus" parent="Control/Back" instance=ExtResource("5_ymhwy")]
+[node name="Focus" parent="Control/Back" unique_id=269321384 instance=ExtResource("5_ymhwy")]
 
-[node name="EscapeKey" parent="." instance=ExtResource("7_ef3lv")]
+[node name="EscapeKey" parent="." unique_id=1678605872 instance=ExtResource("7_ef3lv")]
 ActionName = "escape"
 
-[node name="ReferenceCommandContainer" parent="EscapeKey" node_paths=PackedStringArray("Target") instance=ExtResource("4_ymhwy")]
+[node name="ReferenceCommandContainer" parent="EscapeKey" unique_id=1145538025 node_paths=PackedStringArray("Target") instance=ExtResource("4_ymhwy")]
 Target = NodePath("../../Close")
 
-[node name="Close" parent="." instance=ExtResource("8_rxoue")]
+[node name="Close" parent="." unique_id=899834383 instance=ExtResource("8_rxoue")]
 
-[node name="PlaySeCommand" parent="Close" instance=ExtResource("5_r71ln")]
+[node name="PlaySeCommand" parent="Close" unique_id=934469880 instance=ExtResource("5_r71ln")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="OpenScreenCommand" parent="Close" instance=ExtResource("6_vrsfp")]
+[node name="OpenScreenCommand" parent="Close" unique_id=1100839372 instance=ExtResource("6_vrsfp")]
 Screen = "res://screen/title_screen.tscn"
 
-[node name="VisibleTrigger" parent="." instance=ExtResource("10_e3o6m")]
+[node name="VisibleTrigger" parent="." unique_id=1965277325 instance=ExtResource("10_e3o6m")]
 position = Vector2(56, 88)
 
-[node name="ChangeBgmCommand" parent="VisibleTrigger" instance=ExtResource("11_e33n5")]
+[node name="ChangeBgmCommand" parent="VisibleTrigger" unique_id=586091304 instance=ExtResource("11_e33n5")]
 Command = 1
 Stream = ExtResource("12_u7v5c")

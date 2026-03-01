@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cmxbdhmxw1ib3"]
+[gd_scene format=3 uid="uid://cmxbdhmxw1ib3"]
 
 [ext_resource type="Script" uid="uid://b41opevqecrrw" path="res://mob/fighter/Fighter4.cs" id="1_fy2pl"]
 [ext_resource type="PackedScene" uid="uid://dcaaok2vhuha4" path="res://decoration/effect_damage.tscn" id="2_hdx4v"]
@@ -107,7 +107,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Fighter4" type="CharacterBody2D"]
+[node name="Fighter4" type="CharacterBody2D" unique_id=542734238]
 collision_layer = 12
 collision_mask = 9
 platform_on_leave = 2
@@ -129,14 +129,14 @@ JumpHeight = 300.0
 Waza2Enabled = false
 metadata/_edit_horizontal_guides_ = [-90.0, -45.0, 0.0, -135.0]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1877415744]
 position = Vector2(0, -64)
 shape = SubResource("RectangleShape2D_rf6kg")
 
-[node name="Status" type="Node2D" parent="."]
+[node name="Status" type="Node2D" parent="." unique_id=1697464917]
 position = Vector2(0, -110)
 
-[node name="No" type="Label" parent="Status"]
+[node name="No" type="Label" parent="Status" unique_id=1808861328]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -152,7 +152,7 @@ theme = ExtResource("4_fpt0c")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LifeBar" type="TextureProgressBar" parent="Status"]
+[node name="LifeBar" type="TextureProgressBar" parent="Status" unique_id=1623480815]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -171,14 +171,12 @@ texture_over = ExtResource("6_d1k8w")
 texture_progress = ExtResource("7_5mdh0")
 texture_progress_offset = Vector2(2, 2)
 
-[node name="SePlayer" parent="." instance=ExtResource("8_1lhvq")]
+[node name="SePlayer" parent="." unique_id=932680841 instance=ExtResource("8_1lhvq")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": ExtResource("7_m8uv7")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=511010389]
+libraries/ = ExtResource("7_m8uv7")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=133851542]
 deterministic = false
 tree_root = ExtResource("10_3spv1")
 anim_player = NodePath("../AnimationPlayer")
@@ -194,26 +192,26 @@ parameters/conditions/on_floor = false
 parameters/conditions/punch = false
 parameters/conditions/walk = false
 
-[node name="WazaAnalyzer" type="Node" parent="."]
+[node name="WazaAnalyzer" type="Node" parent="." unique_id=1479914167]
 script = ExtResource("11_ywyef")
 
-[node name="Character" type="Node2D" parent="."]
+[node name="Character" type="Node2D" parent="." unique_id=1349672081]
 position = Vector2(0, -64)
 
-[node name="AttackArea1" type="Area2D" parent="Character"]
+[node name="AttackArea1" type="Area2D" parent="Character" unique_id=402021474]
 z_index = 100
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("12_13mjx")
 HitVoice = Array[String](["fighter_1_hit"])
 
-[node name="AttackCollision" type="CollisionShape2D" parent="Character/AttackArea1"]
+[node name="AttackCollision" type="CollisionShape2D" parent="Character/AttackArea1" unique_id=792750387]
 z_index = 100
 shape = SubResource("RectangleShape2D_utcca")
 disabled = true
 debug_color = Color(1, 0, 0, 0.313726)
 
-[node name="DamageArea1" type="Area2D" parent="Character"]
+[node name="DamageArea1" type="Area2D" parent="Character" unique_id=1683954389]
 z_index = 100
 position = Vector2(2, -46)
 collision_layer = 16
@@ -222,16 +220,16 @@ script = ExtResource("13_os5w2")
 Row = 1
 GuardVoice = Array[String](["fighter_1_guard"])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea1" unique_id=1438026918]
 shape = SubResource("RectangleShape2D_6fhxr")
 debug_color = Color(1, 0, 0.588235, 0.392157)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character/DamageArea1"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character/DamageArea1" unique_id=330699172]
 remote_path = NodePath("../../../Status")
 update_rotation = false
 update_scale = false
 
-[node name="DamageArea2" type="Area2D" parent="Character"]
+[node name="DamageArea2" type="Area2D" parent="Character" unique_id=1594938087]
 z_index = 100
 position = Vector2(2, -4)
 collision_layer = 16
@@ -240,11 +238,11 @@ script = ExtResource("13_os5w2")
 Row = 2
 GuardVoice = Array[String](["fighter_1_guard"])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea2" unique_id=2072107117]
 shape = SubResource("RectangleShape2D_iy8c2")
 debug_color = Color(1, 0, 0.588235, 0.392157)
 
-[node name="DamageArea3" type="Area2D" parent="Character"]
+[node name="DamageArea3" type="Area2D" parent="Character" unique_id=1887060656]
 z_index = 100
 position = Vector2(2, 42)
 collision_layer = 16
@@ -253,134 +251,134 @@ script = ExtResource("13_os5w2")
 Row = 3
 GuardVoice = Array[String](["fighter_1_guard"])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/DamageArea3" unique_id=584025949]
 shape = SubResource("RectangleShape2D_norce")
 debug_color = Color(1, 0, 0.588235, 0.392157)
 
-[node name="Sprites" type="Node2D" parent="Character"]
+[node name="Sprites" type="Node2D" parent="Character" unique_id=837658678]
 position = Vector2(0, 6)
 scale = Vector2(3.5, 3.5)
 
-[node name="BodyUpper1" type="Sprite2D" parent="Character/Sprites"]
+[node name="BodyUpper1" type="Sprite2D" parent="Character/Sprites" unique_id=1760318044]
 position = Vector2(0, -0.5)
 texture = ExtResource("37_fy2pl")
 offset = Vector2(0, -2.5)
 
-[node name="ArmL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+[node name="ArmL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1" unique_id=1788664962]
 modulate = Color(0.784314, 0.784314, 0.784314, 1)
 show_behind_parent = true
 position = Vector2(0.5, -5.5)
 texture = ExtResource("38_lnvvb")
 
-[node name="ArmL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/ArmL1"]
+[node name="ArmL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/ArmL1" unique_id=450617292]
 position = Vector2(0, 3.5)
 texture = ExtResource("39_3cnd6")
 offset = Vector2(0, 2.5)
 
-[node name="Head1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+[node name="Head1" type="Sprite2D" parent="Character/Sprites/BodyUpper1" unique_id=1128034054]
 show_behind_parent = true
 position = Vector2(0.5, -7.5)
 texture = ExtResource("40_ijx54")
 offset = Vector2(0, -7)
 
-[node name="Ribbon" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+[node name="Ribbon" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1" unique_id=2099195807]
 position = Vector2(-4.5, -8)
 texture = ExtResource("41_5cghh")
 offset = Vector2(-2, -0.5)
 
-[node name="EarL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+[node name="EarL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1" unique_id=679335161]
 show_behind_parent = true
 position = Vector2(0, -12)
 rotation = -0.261799
 texture = ExtResource("42_urce7")
 offset = Vector2(0.5, -3)
 
-[node name="EarL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/EarL1"]
+[node name="EarL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/EarL1" unique_id=1353804203]
 show_behind_parent = true
 position = Vector2(0, -6)
 rotation = 0.261799
 texture = ExtResource("43_j62sx")
 offset = Vector2(0.5, -3)
 
-[node name="EarR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+[node name="EarR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1" unique_id=1248563707]
 position = Vector2(0, -12)
 rotation = 0.261799
 texture = ExtResource("42_urce7")
 offset = Vector2(0.5, -3)
 
-[node name="EarR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/EarR1"]
+[node name="EarR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/EarR1" unique_id=111329246]
 position = Vector2(0, -6)
 rotation = 0.261799
 texture = ExtResource("43_j62sx")
 offset = Vector2(0.5, -3)
 
-[node name="Hair1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1"]
+[node name="Hair1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1" unique_id=401471510]
 position = Vector2(-3.5, -3)
 rotation = 0.523598
 texture = ExtResource("44_3cnd6")
 offset = Vector2(0.5, 1.5)
 
-[node name="Hair2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/Hair1"]
+[node name="Hair2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Head1/Hair1" unique_id=851570685]
 position = Vector2(-0.5, 4)
 rotation = 0.523598
 texture = ExtResource("45_ijx54")
 offset = Vector2(0.5, 1.5)
 
-[node name="Hip" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+[node name="Hip" type="Sprite2D" parent="Character/Sprites/BodyUpper1" unique_id=579112983]
 offset = Vector2(0.5, 4)
 
-[node name="LegL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip"]
+[node name="LegL1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip" unique_id=85043771]
 modulate = Color(0.784314, 0.784314, 0.784314, 1)
 show_behind_parent = true
 position = Vector2(0, 3)
 texture = ExtResource("44_2afxg")
 offset = Vector2(0, 1.5)
 
-[node name="LegL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1"]
+[node name="LegL2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1" unique_id=1417443534]
 position = Vector2(1, 5)
 texture = ExtResource("45_hbj6d")
 offset = Vector2(-0.5, 2.5)
 
-[node name="LegL3" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1/LegL2"]
+[node name="LegL3" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegL1/LegL2" unique_id=924004626]
 position = Vector2(0, 5)
 texture = ExtResource("46_r0twu")
 offset = Vector2(1, 2)
 
-[node name="Tail1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip"]
+[node name="Tail1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip" unique_id=748418753]
 show_behind_parent = true
 position = Vector2(-2.5, 1)
 rotation = 0.261799
 texture = ExtResource("47_qy6kl")
 offset = Vector2(-1, -0.5)
 
-[node name="LegR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip"]
+[node name="LegR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip" unique_id=737526137]
 position = Vector2(0, 3)
 texture = ExtResource("48_rkrh6")
 offset = Vector2(0, 1.5)
 
-[node name="LegR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegR1"]
+[node name="LegR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegR1" unique_id=566828504]
 position = Vector2(1, 5)
 texture = ExtResource("49_fab3c")
 offset = Vector2(-0.5, 2.5)
 
-[node name="LegR3" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegR1/LegR2"]
+[node name="LegR3" type="Sprite2D" parent="Character/Sprites/BodyUpper1/Hip/LegR1/LegR2" unique_id=1602997068]
 position = Vector2(0, 5)
 texture = ExtResource("50_0lxaa")
 offset = Vector2(1, 2)
 
-[node name="BodyLower1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+[node name="BodyLower1" type="Sprite2D" parent="Character/Sprites/BodyUpper1" unique_id=1567580682]
 position = Vector2(0, -0.5)
 texture = ExtResource("51_y8akp")
 offset = Vector2(0.5, 4)
 
-[node name="ArmR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1"]
+[node name="ArmR1" type="Sprite2D" parent="Character/Sprites/BodyUpper1" unique_id=1238381170]
 position = Vector2(0.5, -5.5)
 texture = ExtResource("52_six6p")
 
-[node name="ArmR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/ArmR1"]
+[node name="ArmR2" type="Sprite2D" parent="Character/Sprites/BodyUpper1/ArmR1" unique_id=260469480]
 position = Vector2(0, 3.5)
 texture = ExtResource("53_f5sux")
 offset = Vector2(0, 2.5)
 
-[node name="Aura" type="AnimatedSprite2D" parent="Character/Sprites"]
+[node name="Aura" type="AnimatedSprite2D" parent="Character/Sprites" unique_id=1980151799]
 sprite_frames = SubResource("SpriteFrames_1lhvq")

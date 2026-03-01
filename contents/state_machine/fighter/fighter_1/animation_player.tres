@@ -1,4 +1,4 @@
-[gd_resource type="AnimationLibrary" load_steps=25 format=3 uid="uid://b3yebe7w1o6f5"]
+[gd_resource type="AnimationLibrary" format=3 uid="uid://b3yebe7w1o6f5"]
 
 [ext_resource type="Animation" uid="uid://kfwhvftf8dby" path="res://contents/state_machine/fighter/fighter_1/dead.tres" id="1_e2fee"]
 [ext_resource type="Animation" uid="uid://dawtsdpavl2mb" path="res://contents/state_machine/fighter/fighter_1/RESET.tres" id="1_ilgy7"]

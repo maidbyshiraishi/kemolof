@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cgo5nw4mlh7pe"]
+[gd_scene format=3 uid="uid://cgo5nw4mlh7pe"]
 
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_d5hvi"]
 [ext_resource type="Script" uid="uid://cf7w4x10j02ww" path="res://screen/JukeboxDialog.cs" id="2_lfgcj"]
@@ -19,14 +19,14 @@
 [ext_resource type="PackedScene" uid="uid://c6qlmwp7c1hu5" path="res://command/dialog/close_dialog_command.tscn" id="19_ntrhu"]
 [ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="21_e5wmd"]
 
-[node name="JukeboxDialog" type="Control"]
+[node name="JukeboxDialog" type="Control" unique_id=481299418]
 light_mask = 2
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_d5hvi")
 script = ExtResource("2_lfgcj")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=103619294]
 light_mask = 2
 layout_mode = 0
 offset_left = 64.0
@@ -35,7 +35,7 @@ offset_right = 576.0
 offset_bottom = 456.0
 color = Color(0.2, 0.2, 0.2, 1)
 
-[node name="Border" type="ReferenceRect" parent="."]
+[node name="Border" type="ReferenceRect" parent="." unique_id=934049152]
 light_mask = 2
 layout_mode = 0
 offset_left = 64.0
@@ -46,7 +46,7 @@ border_color = Color(0.933333, 0.933333, 0.933333, 1)
 border_width = 4.0
 editor_only = false
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=2119548011]
 light_mask = 2
 layout_mode = 0
 offset_left = 96.0
@@ -56,7 +56,7 @@ offset_bottom = 65.0
 text = "ジュークボックス"
 horizontal_alignment = 1
 
-[node name="Bgm" type="Label" parent="."]
+[node name="Bgm" type="Label" parent="." unique_id=1454772537]
 light_mask = 2
 layout_mode = 0
 offset_left = 88.0
@@ -67,7 +67,7 @@ text = "BGM 音量"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="BgmValue" type="Label" parent="."]
+[node name="BgmValue" type="Label" parent="." unique_id=134691227]
 light_mask = 2
 layout_mode = 0
 offset_left = 480.0
@@ -79,11 +79,11 @@ text = "0%
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=547771223]
 light_mask = 2
 anchors_preset = 0
 
-[node name="Data_5" type="Button" parent="Control"]
+[node name="Data_5" type="Button" parent="Control" unique_id=1334980285]
 light_mask = 2
 layout_mode = 0
 offset_left = 88.0
@@ -92,16 +92,16 @@ offset_right = 552.0
 offset_bottom = 112.0
 text = "決闘!! 地球のメイド 対 宇宙のメイド"
 
-[node name="Exec" type="Node" parent="Control/Data_5"]
+[node name="Exec" type="Node" parent="Control/Data_5" unique_id=833126169]
 script = ExtResource("5_jao6p")
 
-[node name="ChangeBgmCommand" parent="Control/Data_5/Exec" instance=ExtResource("4_vx7g3")]
+[node name="ChangeBgmCommand" parent="Control/Data_5/Exec" unique_id=1247450747 instance=ExtResource("4_vx7g3")]
 Command = 1
 Stream = ExtResource("9_5wi21")
 
-[node name="Focus" parent="Control/Data_5" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/Data_5" unique_id=195223048 instance=ExtResource("6_jao6p")]
 
-[node name="Data_6" type="Button" parent="Control"]
+[node name="Data_6" type="Button" parent="Control" unique_id=2001314278]
 light_mask = 2
 layout_mode = 0
 offset_left = 88.0
@@ -110,16 +110,16 @@ offset_right = 312.0
 offset_bottom = 160.0
 text = "メイドを超えろ"
 
-[node name="Exec" type="Node" parent="Control/Data_6"]
+[node name="Exec" type="Node" parent="Control/Data_6" unique_id=2142385598]
 script = ExtResource("5_jao6p")
 
-[node name="ChangeBgmCommand" parent="Control/Data_6/Exec" instance=ExtResource("4_vx7g3")]
+[node name="ChangeBgmCommand" parent="Control/Data_6/Exec" unique_id=1557270441 instance=ExtResource("4_vx7g3")]
 Command = 1
 Stream = ExtResource("12_60qon")
 
-[node name="Focus" parent="Control/Data_6" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/Data_6" unique_id=1084254018 instance=ExtResource("6_jao6p")]
 
-[node name="Data_7" type="Button" parent="Control"]
+[node name="Data_7" type="Button" parent="Control" unique_id=925630126]
 light_mask = 2
 layout_mode = 0
 offset_left = 328.0
@@ -128,16 +128,16 @@ offset_right = 552.0
 offset_bottom = 160.0
 text = "地球のメイドが急ぐ!!"
 
-[node name="Exec" type="Node" parent="Control/Data_7"]
+[node name="Exec" type="Node" parent="Control/Data_7" unique_id=1677440024]
 script = ExtResource("5_jao6p")
 
-[node name="ChangeBgmCommand" parent="Control/Data_7/Exec" instance=ExtResource("4_vx7g3")]
+[node name="ChangeBgmCommand" parent="Control/Data_7/Exec" unique_id=1910164706 instance=ExtResource("4_vx7g3")]
 Command = 1
 Stream = ExtResource("12_60qon")
 
-[node name="Focus" parent="Control/Data_7" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/Data_7" unique_id=587978155 instance=ExtResource("6_jao6p")]
 
-[node name="Data_10" type="Button" parent="Control"]
+[node name="Data_10" type="Button" parent="Control" unique_id=1292096975]
 light_mask = 2
 layout_mode = 0
 offset_left = 88.0
@@ -146,16 +146,16 @@ offset_right = 312.0
 offset_bottom = 208.0
 text = "空飛ぶティーワゴン"
 
-[node name="Exec" type="Node" parent="Control/Data_10"]
+[node name="Exec" type="Node" parent="Control/Data_10" unique_id=1367133143]
 script = ExtResource("5_jao6p")
 
-[node name="ChangeBgmCommand" parent="Control/Data_10/Exec" instance=ExtResource("4_vx7g3")]
+[node name="ChangeBgmCommand" parent="Control/Data_10/Exec" unique_id=1491729154 instance=ExtResource("4_vx7g3")]
 Command = 1
 Stream = ExtResource("7_1ktcg")
 
-[node name="Focus" parent="Control/Data_10" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/Data_10" unique_id=1739718361 instance=ExtResource("6_jao6p")]
 
-[node name="Data_11" type="Button" parent="Control"]
+[node name="Data_11" type="Button" parent="Control" unique_id=1657569258]
 light_mask = 2
 layout_mode = 0
 offset_left = 328.0
@@ -164,16 +164,16 @@ offset_right = 552.0
 offset_bottom = 208.0
 text = "ティーワゴン行進曲"
 
-[node name="Exec" type="Node" parent="Control/Data_11"]
+[node name="Exec" type="Node" parent="Control/Data_11" unique_id=2055345540]
 script = ExtResource("5_jao6p")
 
-[node name="ChangeBgmCommand" parent="Control/Data_11/Exec" instance=ExtResource("4_vx7g3")]
+[node name="ChangeBgmCommand" parent="Control/Data_11/Exec" unique_id=974749998 instance=ExtResource("4_vx7g3")]
 Command = 1
 Stream = ExtResource("8_cwipe")
 
-[node name="Focus" parent="Control/Data_11" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/Data_11" unique_id=1284995000 instance=ExtResource("6_jao6p")]
 
-[node name="Data_12" type="Button" parent="Control"]
+[node name="Data_12" type="Button" parent="Control" unique_id=1455375703]
 light_mask = 2
 layout_mode = 0
 offset_left = 88.0
@@ -182,16 +182,16 @@ offset_right = 552.0
 offset_bottom = 256.0
 text = "ティーワゴンでぶっ飛ばせ"
 
-[node name="Exec" type="Node" parent="Control/Data_12"]
+[node name="Exec" type="Node" parent="Control/Data_12" unique_id=1177032136]
 script = ExtResource("5_jao6p")
 
-[node name="ChangeBgmCommand" parent="Control/Data_12/Exec" instance=ExtResource("4_vx7g3")]
+[node name="ChangeBgmCommand" parent="Control/Data_12/Exec" unique_id=601941458 instance=ExtResource("4_vx7g3")]
 Command = 1
 Stream = ExtResource("9_o72l3")
 
-[node name="Focus" parent="Control/Data_12" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/Data_12" unique_id=1364788472 instance=ExtResource("6_jao6p")]
 
-[node name="Back" type="Button" parent="Control"]
+[node name="Back" type="Button" parent="Control" unique_id=1857178375]
 light_mask = 2
 layout_mode = 0
 offset_left = 272.0
@@ -200,15 +200,15 @@ offset_right = 368.0
 offset_bottom = 440.0
 text = "戻る"
 
-[node name="Exec" type="Node" parent="Control/Back"]
+[node name="Exec" type="Node" parent="Control/Back" unique_id=399580400]
 script = ExtResource("5_jao6p")
 
-[node name="ReferenceCommandContainer" parent="Control/Back/Exec" node_paths=PackedStringArray("Target") instance=ExtResource("14_jao6p")]
+[node name="ReferenceCommandContainer" parent="Control/Back/Exec" unique_id=1133573576 node_paths=PackedStringArray("Target") instance=ExtResource("14_jao6p")]
 Target = NodePath("../../../../Close")
 
-[node name="Focus" parent="Control/Back" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/Back" unique_id=1834960042 instance=ExtResource("6_jao6p")]
 
-[node name="BgmSlider" type="HSlider" parent="Control"]
+[node name="BgmSlider" type="HSlider" parent="Control" unique_id=721392499]
 light_mask = 2
 layout_mode = 0
 offset_left = 208.0
@@ -217,24 +217,24 @@ offset_right = 472.0
 offset_bottom = 398.0
 step = 5.0
 
-[node name="Focus" parent="Control/BgmSlider" instance=ExtResource("6_jao6p")]
+[node name="Focus" parent="Control/BgmSlider" unique_id=1001091541 instance=ExtResource("6_jao6p")]
 
-[node name="EscapeKey" parent="." instance=ExtResource("21_e5wmd")]
+[node name="EscapeKey" parent="." unique_id=653593815 instance=ExtResource("21_e5wmd")]
 ActionName = "escape"
 
-[node name="ReferenceCommandContainer" parent="EscapeKey" node_paths=PackedStringArray("Target") instance=ExtResource("14_jao6p")]
+[node name="ReferenceCommandContainer" parent="EscapeKey" unique_id=267806717 node_paths=PackedStringArray("Target") instance=ExtResource("14_jao6p")]
 Target = NodePath("../../Close")
 
-[node name="Close" parent="." instance=ExtResource("15_m5k74")]
+[node name="Close" parent="." unique_id=960827327 instance=ExtResource("15_m5k74")]
 
-[node name="PlaySeCommand" parent="Close" instance=ExtResource("7_dkqhw")]
+[node name="PlaySeCommand" parent="Close" unique_id=907519461 instance=ExtResource("7_dkqhw")]
 SeName = "menu_select"
 ProcessAlways = true
 
-[node name="LoadGameOptionsCommand" parent="Close" instance=ExtResource("16_rncda")]
+[node name="LoadGameOptionsCommand" parent="Close" unique_id=250227081 instance=ExtResource("16_rncda")]
 
-[node name="SetGameOptionsCommand" parent="Close" instance=ExtResource("17_54top")]
+[node name="SetGameOptionsCommand" parent="Close" unique_id=1356106910 instance=ExtResource("17_54top")]
 
-[node name="UpdateDialogScreenCommand" parent="Close" instance=ExtResource("18_ngv3k")]
+[node name="UpdateDialogScreenCommand" parent="Close" unique_id=196868777 instance=ExtResource("18_ngv3k")]
 
-[node name="CloseDialogCommand" parent="Close" instance=ExtResource("19_ntrhu")]
+[node name="CloseDialogCommand" parent="Close" unique_id=211466038 instance=ExtResource("19_ntrhu")]

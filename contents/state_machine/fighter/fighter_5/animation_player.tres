@@ -1,4 +1,4 @@
-[gd_resource type="AnimationLibrary" load_steps=25 format=3 uid="uid://babuwi2dnhkpe"]
+[gd_resource type="AnimationLibrary" format=3 uid="uid://babuwi2dnhkpe"]
 
 [ext_resource type="Animation" uid="uid://c24wpl1gvynxa" path="res://contents/state_machine/fighter/fighter_5/crouch.tres" id="1_gaqws"]
 [ext_resource type="Animation" uid="uid://dgb0cb8q0cecc" path="res://contents/state_machine/fighter/fighter_5/crouch_guard.tres" id="2_2rqcw"]

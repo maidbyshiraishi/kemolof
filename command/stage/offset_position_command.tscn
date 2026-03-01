@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc4apnsycw1d7"]
+[gd_scene format=3 uid="uid://bc4apnsycw1d7"]
 
 [ext_resource type="Script" uid="uid://hq8arfeo73tc" path="res://command/stage/OffsetPositionCommand.cs" id="1_pgdmb"]
 
-[node name="OffsetPositionCommand" type="Node"]
+[node name="OffsetPositionCommand" type="Node" unique_id=1638300746]
 script = ExtResource("1_pgdmb")

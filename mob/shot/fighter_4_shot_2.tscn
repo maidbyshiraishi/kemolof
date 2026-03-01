@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dy4ehu14pyk4u"]
+[gd_scene format=3 uid="uid://dy4ehu14pyk4u"]
 
 [ext_resource type="Script" uid="uid://c46wy184671o6" path="res://mob/shot/Fighter4Shot2.cs" id="1_w06dc"]
 [ext_resource type="Script" uid="uid://db8hbi1ec6vl4" path="res://mob/AttackArea.cs" id="2_y5fs0"]
@@ -80,15 +80,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Shot" type="CharacterBody2D"]
+[node name="Shot" type="CharacterBody2D" unique_id=923587418]
 collision_layer = 32
 script = ExtResource("1_w06dc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=93013506]
 position = Vector2(0, -72)
 shape = SubResource("RectangleShape2D_w06dc")
 
-[node name="AttackArea1" type="Area2D" parent="."]
+[node name="AttackArea1" type="Area2D" parent="." unique_id=2118591931]
 z_index = 100
 position = Vector2(0, -64)
 collision_layer = 34
@@ -96,39 +96,39 @@ collision_mask = 0
 script = ExtResource("2_y5fs0")
 HitVoice = Array[String](["fighter_1_hit"])
 
-[node name="AttackCollision" type="CollisionShape2D" parent="AttackArea1"]
+[node name="AttackCollision" type="CollisionShape2D" parent="AttackArea1" unique_id=1933149403]
 z_index = 100
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_y5fs0")
 disabled = true
 debug_color = Color(1, 0, 0, 0.313726)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1377246892]
 position = Vector2(0, -80)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rkeub")
 autoplay = "default"
 frame_progress = 0.872433
 
-[node name="EraseCollision" type="Area2D" parent="."]
+[node name="EraseCollision" type="Area2D" parent="." unique_id=1663904548]
 visible = false
 collision_layer = 64
 collision_mask = 81
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EraseCollision"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EraseCollision" unique_id=2110415254]
 position = Vector2(0, -64)
 shape = SubResource("CircleShape2D_55etc")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1017066302]
 position = Vector2(-4.76837e-06, -72)
 scale = Vector2(6.4, 4.4)
 rect = Rect2(-20, -20, 40, 40)
 
-[node name="Effect" type="AnimatedSprite2D" parent="."]
+[node name="Effect" type="AnimatedSprite2D" parent="." unique_id=745106602]
 position = Vector2(-2.86102e-06, -80)
 scale = Vector2(8, 6.25)
 sprite_frames = SubResource("SpriteFrames_laq18")
 autoplay = "default"
 frame = 4
 
-[node name="SePlayer" parent="." instance=ExtResource("5_y5fs0")]
+[node name="SePlayer" parent="." unique_id=1719034153 instance=ExtResource("5_y5fs0")]

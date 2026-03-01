@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://btv58kgacq7cb"]
+[gd_scene format=3 uid="uid://btv58kgacq7cb"]
 
 [ext_resource type="Script" uid="uid://wtv6rfv11hyg" path="res://mob/brain/CpuFighter2.cs" id="1_rk03d"]
 [ext_resource type="Script" uid="uid://dc3dvku47lgvf" path="res://mob/brain/SightArea.cs" id="2_piut2"]
@@ -21,10 +21,10 @@ size = Vector2(32, 112)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qhhp"]
 size = Vector2(64, 32)
 
-[node name="Brain" type="Node2D"]
+[node name="Brain" type="Node2D" unique_id=585206262]
 script = ExtResource("1_rk03d")
 
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1568343752]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -36,76 +36,76 @@ offset_right = 16.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="OverheadArea" type="Area2D" parent="."]
+[node name="OverheadArea" type="Area2D" parent="." unique_id=453697732]
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("2_piut2")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OverheadArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OverheadArea" unique_id=1873635270]
 position = Vector2(0, -144)
 shape = SubResource("RectangleShape2D_7fkpy")
 debug_color = Color(0.7, 0.35, 0, 0.419608)
 
-[node name="AttackArea" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="." unique_id=636372662]
 collision_layer = 0
 collision_mask = 40
 script = ExtResource("2_piut2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=751185738]
 position = Vector2(32, -64)
 shape = SubResource("RectangleShape2D_e7kgn")
 
-[node name="Waza1Area" type="Area2D" parent="."]
+[node name="Waza1Area" type="Area2D" parent="." unique_id=1198726726]
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("2_piut2")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza1Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza1Area" unique_id=611757829]
 position = Vector2(0, -352)
 shape = SubResource("RectangleShape2D_8fkbk")
 debug_color = Color(0, 0.7, 0, 0.419608)
 
-[node name="Waza3Area" type="Area2D" parent="."]
+[node name="Waza3Area" type="Area2D" parent="." unique_id=542255333]
 collision_layer = 0
 collision_mask = 40
 script = ExtResource("2_piut2")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza3Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Waza3Area" unique_id=811813976]
 position = Vector2(192, -84)
 shape = SubResource("RectangleShape2D_rk03d")
 debug_color = Color(0.784314, 0.25098, 0.784314, 0.419608)
 
-[node name="BackArea" type="Area2D" parent="."]
+[node name="BackArea" type="Area2D" parent="." unique_id=939764463]
 collision_layer = 0
 collision_mask = 40
 script = ExtResource("2_piut2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BackArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackArea" unique_id=1590057283]
 position = Vector2(-32, -64)
 shape = SubResource("RectangleShape2D_d184q")
 debug_color = Color(0.7, 0.583333, 0, 0.419608)
 
-[node name="UnderfootArea" type="Area2D" parent="."]
+[node name="UnderfootArea" type="Area2D" parent="." unique_id=1146203030]
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("2_piut2")
 ConnectArea = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderfootArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderfootArea" unique_id=2007879042]
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_1qhhp")
 debug_color = Color(0.7, 0.35, 0, 0.419608)
 
-[node name="GroundRay" type="RayCast2D" parent="."]
+[node name="GroundRay" type="RayCast2D" parent="." unique_id=25800537]
 position = Vector2(0, 32)
 target_position = Vector2(0, 400)
 collision_mask = 9
 hit_from_inside = true
 
-[node name="JumpRay" type="RayCast2D" parent="."]
+[node name="JumpRay" type="RayCast2D" parent="." unique_id=619797731]
 position = Vector2(32, -96)
 target_position = Vector2(64, 64)
 collision_mask = 9

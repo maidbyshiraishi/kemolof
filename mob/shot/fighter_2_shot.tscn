@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cnq6npcn2v1wh"]
+[gd_scene format=3 uid="uid://cnq6npcn2v1wh"]
 
 [ext_resource type="Script" uid="uid://30k82w8ynluf" path="res://mob/shot/ShotRoot.cs" id="1_i6nf2"]
 [ext_resource type="Script" uid="uid://db8hbi1ec6vl4" path="res://mob/AttackArea.cs" id="2_yfvch"]
@@ -68,45 +68,45 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="Shot" type="Area2D"]
+[node name="Shot" type="Area2D" unique_id=1407708329]
 collision_layer = 32
 collision_mask = 0
 script = ExtResource("1_i6nf2")
 Velocity = Vector2(10, -180)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1640925331]
 shape = SubResource("CircleShape2D_41wc7")
 
-[node name="AttackArea1" type="Area2D" parent="."]
+[node name="AttackArea1" type="Area2D" parent="." unique_id=678706748]
 z_index = 100
 collision_layer = 34
 collision_mask = 0
 script = ExtResource("2_yfvch")
 HitVoice = Array[String](["fighter_1_hit"])
 
-[node name="AttackCollision" type="CollisionShape2D" parent="AttackArea1"]
+[node name="AttackCollision" type="CollisionShape2D" parent="AttackArea1" unique_id=1613488924]
 z_index = 100
 shape = SubResource("CircleShape2D_kyn6s")
 debug_color = Color(1, 0, 0, 0.313726)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=188175327]
 position = Vector2(0, 10)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_41wc7")
 autoplay = "default"
 frame_progress = 0.27916
 
-[node name="EraseCollision" type="Area2D" parent="."]
+[node name="EraseCollision" type="Area2D" parent="." unique_id=761698388]
 collision_layer = 64
 collision_mask = 81
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EraseCollision"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EraseCollision" unique_id=1364349773]
 shape = SubResource("CircleShape2D_55etc")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1729390607]
 rect = Rect2(-20, -20, 40, 40)
 
-[node name="Effect" type="AnimatedSprite2D" parent="."]
+[node name="Effect" type="AnimatedSprite2D" parent="." unique_id=543458198]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3nd76")
 autoplay = "default"

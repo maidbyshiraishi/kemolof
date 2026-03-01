@@ -1,15 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://d8ertj6jffv6"]
+[gd_scene format=3 uid="uid://d8ertj6jffv6"]
 
 [ext_resource type="Script" uid="uid://dpfy3sqf6yk4p" path="res://decoration/Decoration.cs" id="1_0k7ls"]
 
-[node name="EffectRoot" type="Node2D"]
+[node name="EffectRoot" type="Node2D" unique_id=2085907714]
 z_index = 10
 script = ExtResource("1_0k7ls")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=350959924]
 scale = Vector2(3, 3)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=62185190]
 wait_time = 0.3
 one_shot = true
 autostart = true

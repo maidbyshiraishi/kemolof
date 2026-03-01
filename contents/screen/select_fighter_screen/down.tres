@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://bl41q1xvduury"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://bl41q1xvduury"]
 
 [ext_resource type="Texture2D" uid="uid://c2fmk0h6mf3ku" path="res://contents/screen/select_fighter_screen/down.png" id="1_rk0k5"]
 

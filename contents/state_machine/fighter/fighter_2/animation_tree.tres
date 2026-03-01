@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=65 format=3 uid="uid://dq4wiaad5p3r6"]
+[gd_resource type="AnimationNodeStateMachine" format=3 uid="uid://dq4wiaad5p3r6"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4jb8x"]
 animation = &"crouch"

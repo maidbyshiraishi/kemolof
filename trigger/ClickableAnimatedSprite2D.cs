@@ -25,7 +25,7 @@ public partial class ClickableAnimatedSprite2D : AnimatedSprite2D
             return new Rect2();
         }
 
-        Vector2 size = tex.GetSize() * Scale;
+        Vector2 size = tex.GetSize() * GlobalScale;
         Vector2 center = Position + Offset;
         return new Rect2(center - (size / 2f), size);
     }

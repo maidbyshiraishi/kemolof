@@ -135,7 +135,7 @@ text = "・操作するキャラクターを上下キーで選んでください
 ・全員の決定後、ゲームを開始します。
 ・同じコントローラーに複数のキャラクターが割り当てられている場合、左から順に決定されます。
 ・キーボードだとESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
-autowrap_mode = 2
+autowrap_mode = 3
 
 [node name="Background1" type="ColorRect" parent="." unique_id=1093927146]
 light_mask = 2

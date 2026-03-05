@@ -61,7 +61,7 @@ offset_bottom = 244.0
 scale = Vector2(2, 2)
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
 
 [node name="Control" type="Control" parent="." unique_id=589124677]
 light_mask = 2

@@ -153,7 +153,7 @@ offset_bottom = 456.0
 theme = ExtResource("16_buqjm")
 text = "・遊ぶステージを左右キーで選択してください。パンチまたはキックボタンで決定します。この画面ではマウスは使えません。
 ・キーボードのESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
-autowrap_mode = 2
+autowrap_mode = 3
 
 [node name="Control" type="Control" parent="." unique_id=758225862]
 light_mask = 2

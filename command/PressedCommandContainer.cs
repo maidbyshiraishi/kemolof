@@ -9,23 +9,40 @@ namespace kemolof.command;
 public partial class PressedCommandContainer : CommandContainer
 {
     private Control _control;
+    private CanvasItem _canvasItem;
 
     public override void _Ready()
     {
         base._Ready();
-        _control = GetParent<Control>();
+        Node node = GetParent();
 
-        if (_control is BaseButton baseButton)
+        if (node is Control control && control is BaseButton baseButton)
         {
+            _control = control;
             baseButton.Pressed += Pressed;
+            return;
+        }
+
+        if (node is CanvasItem canvasItem && node.HasSignal("Pressed"))
+        {
+            _canvasItem = canvasItem;
+            _ = _canvasItem.Connect("Pressed", new(this, MethodName.Pressed));
+            return;
         }
     }
 
     public virtual void Pressed()
     {
-        if (_control.FocusMode != FocusModeEnum.None)
+        if (_control is not null && _control.FocusMode != FocusModeEnum.None)
         {
             ExecAllCommand(this, _control, true);
+            return;
+        }
+
+        if (_canvasItem is not null && _canvasItem.IsVisibleInTree())
+        {
+            ExecAllCommand(this, _canvasItem, true);
+            return;
         }
     }
 }

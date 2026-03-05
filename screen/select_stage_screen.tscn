@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="6_tkqhi"]
 [ext_resource type="Texture2D" uid="uid://b2msn8guia62" path="res://contents/screen/select_stage_screen/picture_stage_0005.png" id="7_wc7lv"]
 [ext_resource type="Texture2D" uid="uid://uokbutismunv" path="res://contents/screen/select_stage_screen/left.png" id="9_lau16"]
+[ext_resource type="Script" uid="uid://b6q328cyq1oy7" path="res://trigger/ClickableAnimatedSprite2D.cs" id="10_wc7lv"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="11_nvv8q"]
 [ext_resource type="Texture2D" uid="uid://w0f30v2205ua" path="res://contents/screen/select_stage_screen/right.png" id="14_wc7lv"]
 [ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="16_a3lai"]
 [ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="16_buqjm"]
@@ -124,6 +126,17 @@ vertical_alignment = 1
 position = Vector2(320, 184)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_buqjm")
+script = ExtResource("10_wc7lv")
+
+[node name="Exec" type="Node" parent="StageList" unique_id=996545557]
+script = ExtResource("11_nvv8q")
+
+[node name="PlaySeCommand" parent="StageList/Exec" unique_id=1614589882 instance=ExtResource("6_tkqhi")]
+SeName = "menu_select"
+ProcessAlways = true
+
+[node name="OpenScreenCommand" parent="StageList/Exec" unique_id=602127450 instance=ExtResource("17_wo1hj")]
+Screen = "res://screen/select_fighter_screen.tscn"
 
 [node name="StageName" type="Label" parent="." unique_id=575188660]
 layout_mode = 0
@@ -138,11 +151,27 @@ vertical_alignment = 1
 position = Vector2(128, 352)
 sprite_frames = SubResource("SpriteFrames_g1jo2")
 autoplay = "default"
+script = ExtResource("10_wc7lv")
+
+[node name="Exec" type="Node" parent="Left" unique_id=1897885252]
+script = ExtResource("11_nvv8q")
+
+[node name="PlaySeCommand" parent="Left/Exec" unique_id=1796584187 instance=ExtResource("6_tkqhi")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Right" type="AnimatedSprite2D" parent="." unique_id=1227947755]
 position = Vector2(512, 350)
 sprite_frames = SubResource("SpriteFrames_c3gm5")
 autoplay = "default"
+script = ExtResource("10_wc7lv")
+
+[node name="Exec" type="Node" parent="Right" unique_id=1872591668]
+script = ExtResource("11_nvv8q")
+
+[node name="PlaySeCommand" parent="Right/Exec" unique_id=2129708105 instance=ExtResource("6_tkqhi")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Label" type="Label" parent="." unique_id=320548906]
 layout_mode = 0
@@ -151,7 +180,7 @@ offset_top = 400.0
 offset_right = 576.0
 offset_bottom = 456.0
 theme = ExtResource("16_buqjm")
-text = "・遊ぶステージを左右キーで選択してください。パンチまたはキックボタンで決定します。この画面ではマウスは使えません。
+text = "・遊ぶステージを左右キーで選択してください。パンチまたはキックボタンで決定します。マウスで決定するにはステージ画像をクリックしてください。
 ・キーボードのESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
 autowrap_mode = 3
 
@@ -168,3 +197,6 @@ ProcessAlways = true
 
 [node name="OpenScreenCommand" parent="EscapeKey" unique_id=745653677 instance=ExtResource("17_wo1hj")]
 Screen = "res://screen/select_controller_screen.tscn"
+
+[connection signal="Pressed" from="Left" to="." method="BackStageIndex"]
+[connection signal="Pressed" from="Right" to="." method="NextStageIndex"]

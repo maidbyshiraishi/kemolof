@@ -8,41 +8,61 @@ namespace kemolof.command;
 /// </summary>
 public partial class PressedCommandContainer : CommandContainer
 {
-    private Control _control;
-    private CanvasItem _canvasItem;
+    private Node _node;
 
     public override void _Ready()
     {
         base._Ready();
-        Node node = GetParent();
+        _node = GetParent();
 
-        if (node is Control control && control is BaseButton baseButton)
+        if (_node is null)
         {
-            _control = control;
-            baseButton.Pressed += Pressed;
             return;
         }
 
-        if (node is CanvasItem canvasItem && node.HasSignal("Pressed"))
+        // Godotデフォ由来は小文字スタート
+        if (_node.HasSignal("pressed"))
         {
-            _canvasItem = canvasItem;
-            _ = _canvasItem.Connect("Pressed", new(this, MethodName.Pressed));
+            _ = _node.Connect("pressed", new(this, MethodName.Pressed));
+            return;
+        }
+
+        // C#由来は大文字スタート
+        if (_node.HasSignal("Pressed"))
+        {
+            _ = _node.Connect("Pressed", new(this, MethodName.Pressed));
             return;
         }
     }
 
     public virtual void Pressed()
     {
-        if (_control is not null && _control.FocusMode != FocusModeEnum.None)
+        switch (_node)
         {
-            ExecAllCommand(this, _control, true);
-            return;
+            case null:
+                return;
+
+            case Control control:
+
+                // ノードがControlの場合はフォーカスモードを確認する
+                if (control.FocusMode == FocusModeEnum.None)
+                {
+                    return;
+                }
+
+                break;
+
+            case CanvasItem canvasItem:
+
+                // ノードがCanvasItemの場合は画面に表示されているかを確認する
+                if (!canvasItem.IsVisibleInTree())
+                {
+                    return;
+                }
+
+                break;
         }
 
-        if (_canvasItem is not null && _canvasItem.IsVisibleInTree())
-        {
-            ExecAllCommand(this, _canvasItem, true);
-            return;
-        }
+        ExecAllCommand(this, _node, true);
     }
 }

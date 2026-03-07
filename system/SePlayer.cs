@@ -45,11 +45,11 @@ public partial class SePlayer : Node
             Bus = voice ? "VOICE" : "SE",
             MaxPolyphony = MaxPolyphony.TryGetValue(name, out int value) ? value : voice ? 1 : DefaultMaxPolyphony,
             Stream = audio,
-            ProcessMode = processAlways ? ProcessModeEnum.Inherit : ProcessModeEnum.Pausable
+            ProcessMode = processAlways ? ProcessModeEnum.Inherit : ProcessModeEnum.Pausable,
+            Autoplay = true
         };
 
         AddChild(audioStreamPlayer);
-        audioStreamPlayer.Play();
     }
 
     public void ClearAllAudioStreamPlayer()

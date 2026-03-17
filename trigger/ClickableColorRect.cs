@@ -3,9 +3,9 @@ using Godot;
 namespace kemolof.trigger;
 
 /// <summary>
-/// クリック可能なAnimatedSprite2D
+/// クリック可能なColorRect
 /// </summary>
-public partial class ClickableAnimatedSprite2D : AnimatedSprite2D
+public partial class ClickableColorRect : ColorRect
 {
     [Signal]
     public delegate void PressedEventHandler();
@@ -17,18 +17,6 @@ public partial class ClickableAnimatedSprite2D : AnimatedSprite2D
     public delegate void MouseExitedEventHandler();
 
     private bool _last = false;
-
-    private Rect2 GetRect()
-    {
-        if (SpriteFrames is null || string.IsNullOrWhiteSpace(Animation) || SpriteFrames.GetFrameTexture(Animation, Frame) is not Texture2D tex)
-        {
-            return new Rect2();
-        }
-
-        Vector2 size = tex.GetSize() * GlobalScale;
-        Vector2 center = Position + Offset;
-        return new Rect2(center - (size / 2f), size);
-    }
 
     public override void _Input(InputEvent @event)
     {

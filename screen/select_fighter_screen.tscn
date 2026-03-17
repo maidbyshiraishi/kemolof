@@ -9,9 +9,12 @@
 [ext_resource type="SpriteFrames" uid="uid://dwtgw43megp0l" path="res://contents/screen/select_fighter_screen/up.tres" id="5_hr24w"]
 [ext_resource type="SpriteFrames" uid="uid://bl41q1xvduury" path="res://contents/screen/select_fighter_screen/down.tres" id="6_17426"]
 [ext_resource type="SpriteFrames" uid="uid://4jhv6rqkv01w" path="res://contents/screen/select_fighter_screen/selected.tres" id="7_0e1rh"]
+[ext_resource type="Script" uid="uid://b6q328cyq1oy7" path="res://trigger/ClickableAnimatedSprite2D.cs" id="7_p72ly"]
 [ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="7_vayuq"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="8_p72ly"]
 [ext_resource type="PackedScene" uid="uid://dvbavm6ut2uel" path="res://command/dialog/open_screen_command.tscn" id="11_17426"]
 [ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="12_0e1rh"]
+[ext_resource type="Script" uid="uid://dx0ofojs0m47p" path="res://trigger/ClickableColorRect.cs" id="15_p72ly"]
 
 [node name="SelectFighterScreen" type="Control" unique_id=743067809]
 light_mask = 2
@@ -20,7 +23,6 @@ anchors_preset = 0
 theme = ExtResource("1_yv2qw")
 script = ExtResource("2_gli2l")
 NumOfFighter = 5
-MouseCaptured = true
 
 [node name="Background" type="ColorRect" parent="." unique_id=2091308391]
 light_mask = 2
@@ -131,7 +133,7 @@ offset_top = 352.0
 offset_right = 576.0
 offset_bottom = 457.0
 theme = ExtResource("12_0e1rh")
-text = "・操作するキャラクターを上下キーで選んでください。パンチまたはキックボタンで決定します。この画面ではマウスは使えません。
+text = "・操作するキャラクターを上下キーで選んでください。パンチまたはキックボタンで決定します。マウスで決定するにはキャラクターの顔画像をクリックしてください。
 ・全員の決定後、ゲームを開始します。
 ・同じコントローラーに複数のキャラクターが割り当てられている場合、左から順に決定されます。
 ・キーボードだとESCまたはXboxコントローラのBackボタンで前の画面に戻ります。"
@@ -194,10 +196,17 @@ offset_right = 592.0
 offset_bottom = 328.0
 
 [node name="Fighter1" type="Sprite2D" parent="." unique_id=43127710]
-position = Vector2(-136, 184)
+position = Vector2(-136, 183.99998)
 texture = ExtResource("3_17426")
 offset = Vector2(212, 28)
 hframes = 5
+
+[node name="Exec" type="Node" parent="Fighter1" unique_id=963323580]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Fighter1/Exec" unique_id=1614589882 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Fighter2" type="Sprite2D" parent="." unique_id=763342485]
 position = Vector2(-56, 184)
@@ -205,11 +214,25 @@ texture = ExtResource("3_17426")
 offset = Vector2(212, 28)
 hframes = 5
 
+[node name="Exec" type="Node" parent="Fighter2" unique_id=538681252]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Fighter2/Exec" unique_id=1247047011 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
+
 [node name="Fighter3" type="Sprite2D" parent="." unique_id=472821638]
 position = Vector2(24, 184)
 texture = ExtResource("3_17426")
 offset = Vector2(212, 28)
 hframes = 5
+
+[node name="Exec" type="Node" parent="Fighter3" unique_id=565179059]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Fighter3/Exec" unique_id=858538093 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Fighter4" type="Sprite2D" parent="." unique_id=1298375185]
 position = Vector2(104, 184)
@@ -217,11 +240,25 @@ texture = ExtResource("3_17426")
 offset = Vector2(212, 28)
 hframes = 5
 
+[node name="Exec" type="Node" parent="Fighter4" unique_id=38673049]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Fighter4/Exec" unique_id=1526700573 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
+
 [node name="Fighter5" type="Sprite2D" parent="." unique_id=403804564]
 position = Vector2(184, 184)
 texture = ExtResource("3_17426")
 offset = Vector2(212, 28)
 hframes = 5
+
+[node name="Exec" type="Node" parent="Fighter5" unique_id=2133269878]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Fighter5/Exec" unique_id=912134644 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Fighter6" type="Sprite2D" parent="." unique_id=1371982070]
 position = Vector2(264, 184)
@@ -229,11 +266,25 @@ texture = ExtResource("3_17426")
 offset = Vector2(212, 28)
 hframes = 5
 
+[node name="Exec" type="Node" parent="Fighter6" unique_id=2129311644]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Fighter6/Exec" unique_id=116523191 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
+
 [node name="Fighter7" type="Sprite2D" parent="." unique_id=1148428460]
 position = Vector2(344, 184)
 texture = ExtResource("3_17426")
 offset = Vector2(212, 28)
 hframes = 5
+
+[node name="Exec" type="Node" parent="Fighter7" unique_id=583058354]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Fighter7/Exec" unique_id=154055748 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Up1" type="AnimatedSprite2D" parent="." unique_id=614127709]
 visible = false
@@ -241,6 +292,14 @@ position = Vector2(40, 96)
 sprite_frames = ExtResource("5_hr24w")
 autoplay = "default"
 offset = Vector2(36, 20)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Up1" unique_id=225320138]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Up1/Exec" unique_id=1569294776 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Up2" type="AnimatedSprite2D" parent="." unique_id=809110695]
 visible = false
@@ -248,6 +307,14 @@ position = Vector2(120, 96)
 sprite_frames = ExtResource("5_hr24w")
 autoplay = "default"
 offset = Vector2(36, 20)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Up2" unique_id=315981723]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Up2/Exec" unique_id=513698184 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Up3" type="AnimatedSprite2D" parent="." unique_id=1186779679]
 visible = false
@@ -255,6 +322,14 @@ position = Vector2(200, 96)
 sprite_frames = ExtResource("5_hr24w")
 autoplay = "default"
 offset = Vector2(36, 20)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Up3" unique_id=1958213250]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Up3/Exec" unique_id=1493334543 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Up4" type="AnimatedSprite2D" parent="." unique_id=2086318862]
 visible = false
@@ -262,6 +337,14 @@ position = Vector2(280, 96)
 sprite_frames = ExtResource("5_hr24w")
 autoplay = "default"
 offset = Vector2(36, 20)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Up4" unique_id=1498547070]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Up4/Exec" unique_id=121431481 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Up5" type="AnimatedSprite2D" parent="." unique_id=1560149309]
 visible = false
@@ -269,6 +352,14 @@ position = Vector2(360, 96)
 sprite_frames = ExtResource("5_hr24w")
 autoplay = "default"
 offset = Vector2(36, 20)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Up5" unique_id=1699356245]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Up5/Exec" unique_id=426985542 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Up6" type="AnimatedSprite2D" parent="." unique_id=574340423]
 visible = false
@@ -276,6 +367,14 @@ position = Vector2(440, 96)
 sprite_frames = ExtResource("5_hr24w")
 autoplay = "default"
 offset = Vector2(36, 20)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Up6" unique_id=1336718059]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Up6/Exec" unique_id=1675648491 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Up7" type="AnimatedSprite2D" parent="." unique_id=2117704385]
 visible = false
@@ -283,6 +382,14 @@ position = Vector2(520, 96)
 sprite_frames = ExtResource("5_hr24w")
 autoplay = "default"
 offset = Vector2(36, 20)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Up7" unique_id=1554342972]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Up7/Exec" unique_id=1506635056 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Down1" type="AnimatedSprite2D" parent="." unique_id=995773617]
 visible = false
@@ -290,6 +397,14 @@ position = Vector2(40, 296)
 sprite_frames = ExtResource("6_17426")
 autoplay = "default"
 offset = Vector2(36, 12)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Down1" unique_id=178274087]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Down1/Exec" unique_id=2059737754 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Down2" type="AnimatedSprite2D" parent="." unique_id=1314229026]
 visible = false
@@ -297,6 +412,14 @@ position = Vector2(120, 296)
 sprite_frames = ExtResource("6_17426")
 autoplay = "default"
 offset = Vector2(36, 12)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Down2" unique_id=1475134745]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Down2/Exec" unique_id=595299965 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Down3" type="AnimatedSprite2D" parent="." unique_id=947202968]
 visible = false
@@ -304,6 +427,14 @@ position = Vector2(200, 296)
 sprite_frames = ExtResource("6_17426")
 autoplay = "default"
 offset = Vector2(36, 12)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Down3" unique_id=1834637153]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Down3/Exec" unique_id=1115522286 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Down4" type="AnimatedSprite2D" parent="." unique_id=2060564987]
 visible = false
@@ -311,6 +442,14 @@ position = Vector2(280, 296)
 sprite_frames = ExtResource("6_17426")
 autoplay = "default"
 offset = Vector2(36, 12)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Down4" unique_id=3749487]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Down4/Exec" unique_id=1051887262 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Down5" type="AnimatedSprite2D" parent="." unique_id=1761363397]
 visible = false
@@ -318,6 +457,14 @@ position = Vector2(360, 296)
 sprite_frames = ExtResource("6_17426")
 autoplay = "default"
 offset = Vector2(36, 12)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Down5" unique_id=1306942548]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Down5/Exec" unique_id=662151192 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Down6" type="AnimatedSprite2D" parent="." unique_id=1344452315]
 visible = false
@@ -325,6 +472,14 @@ position = Vector2(440, 296)
 sprite_frames = ExtResource("6_17426")
 autoplay = "default"
 offset = Vector2(36, 12)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Down6" unique_id=1917016311]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Down6/Exec" unique_id=1875557935 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Down7" type="AnimatedSprite2D" parent="." unique_id=503133615]
 visible = false
@@ -332,6 +487,14 @@ position = Vector2(520, 296)
 sprite_frames = ExtResource("6_17426")
 autoplay = "default"
 offset = Vector2(36, 12)
+script = ExtResource("7_p72ly")
+
+[node name="Exec" type="Node" parent="Down7" unique_id=687827651]
+script = ExtResource("8_p72ly")
+
+[node name="PlaySeCommand" parent="Down7/Exec" unique_id=1299562055 instance=ExtResource("7_vayuq")]
+SeName = "menu_select"
+ProcessAlways = true
 
 [node name="Selected1" type="AnimatedSprite2D" parent="." unique_id=886863252]
 visible = false
@@ -449,3 +612,102 @@ Screen = "res://screen/select_stage_screen.tscn"
 ActionName = "option"
 
 [node name="ReferenceCommandContainer" parent="OptionKey" unique_id=1704379898 instance=ExtResource("5_0e1rh")]
+
+[node name="Select1" type="ColorRect" parent="." unique_id=2064900133]
+visible = false
+light_mask = 2
+layout_mode = 0
+offset_left = 40.0
+offset_top = 128.0
+offset_right = 112.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("15_p72ly")
+
+[node name="Select2" type="ColorRect" parent="." unique_id=579797691]
+visible = false
+light_mask = 2
+layout_mode = 0
+offset_left = 120.0
+offset_top = 128.0
+offset_right = 192.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("15_p72ly")
+
+[node name="Select3" type="ColorRect" parent="." unique_id=1124664309]
+visible = false
+light_mask = 2
+layout_mode = 0
+offset_left = 200.0
+offset_top = 128.0
+offset_right = 272.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("15_p72ly")
+
+[node name="Select4" type="ColorRect" parent="." unique_id=645381740]
+visible = false
+light_mask = 2
+layout_mode = 0
+offset_left = 280.0
+offset_top = 128.0
+offset_right = 352.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("15_p72ly")
+
+[node name="Select5" type="ColorRect" parent="." unique_id=163799782]
+visible = false
+light_mask = 2
+layout_mode = 0
+offset_left = 360.0
+offset_top = 128.0
+offset_right = 432.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("15_p72ly")
+
+[node name="Select6" type="ColorRect" parent="." unique_id=192815437]
+visible = false
+light_mask = 2
+layout_mode = 0
+offset_left = 440.0
+offset_top = 128.0
+offset_right = 512.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("15_p72ly")
+
+[node name="Select7" type="ColorRect" parent="." unique_id=1363361399]
+visible = false
+light_mask = 2
+layout_mode = 0
+offset_left = 520.0
+offset_top = 104.0
+offset_right = 592.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("15_p72ly")
+
+[connection signal="Pressed" from="Up1" to="." method="Up1"]
+[connection signal="Pressed" from="Up2" to="." method="Up2"]
+[connection signal="Pressed" from="Up3" to="." method="Up3"]
+[connection signal="Pressed" from="Up4" to="." method="Up4"]
+[connection signal="Pressed" from="Up5" to="." method="Up5"]
+[connection signal="Pressed" from="Up6" to="." method="Up6"]
+[connection signal="Pressed" from="Up7" to="." method="Up7"]
+[connection signal="Pressed" from="Down1" to="." method="Down1"]
+[connection signal="Pressed" from="Down2" to="." method="Down2"]
+[connection signal="Pressed" from="Down3" to="." method="Down3"]
+[connection signal="Pressed" from="Down4" to="." method="Down4"]
+[connection signal="Pressed" from="Down5" to="." method="Down5"]
+[connection signal="Pressed" from="Down6" to="." method="Down6"]
+[connection signal="Pressed" from="Down7" to="." method="Down7"]
+[connection signal="Pressed" from="Select1" to="." method="Select1"]
+[connection signal="Pressed" from="Select2" to="." method="Select2"]
+[connection signal="Pressed" from="Select3" to="." method="Select3"]
+[connection signal="Pressed" from="Select4" to="." method="Select4"]
+[connection signal="Pressed" from="Select5" to="." method="Select5"]
+[connection signal="Pressed" from="Select6" to="." method="Select6"]
+[connection signal="Pressed" from="Select7" to="." method="Select7"]

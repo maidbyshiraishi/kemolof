@@ -46,6 +46,7 @@ public partial class SelectFighterScreen : DialogRoot
             _selectedFighterNo[i] = _info[i].FighterNo;
             _info[i].FighterNo = -1;
             GetNode<Sprite2D>($"Disabled{i + 1}").Visible = _info[i].Uninhabited;
+            GetNode<ColorRect>($"Select{i + 1}").Visible = !_info[i].Uninhabited;
             GetNode<ColorRect>($"Background{i + 1}").Color = _info[i].Color;
             GetNode<Label>($"Player{i + 1}").Modulate = _info[i].Color;
             GetNode<AnimatedSprite2D>($"Selected{i + 1}").Visible = false;
@@ -188,5 +189,110 @@ public partial class SelectFighterScreen : DialogRoot
         GetNode<AnimatedSprite2D>($"Selected{playerIndex + 1}").Visible = true;
         GetNode<AnimatedSprite2D>($"Up{playerIndex + 1}").Visible = false;
         GetNode<AnimatedSprite2D>($"Down{playerIndex + 1}").Visible = false;
+    }
+
+    public void Up1()
+    {
+        _ = UpdateSelect(0, true, false, false);
+    }
+
+    public void Up2()
+    {
+        _ = UpdateSelect(1, true, false, false);
+    }
+
+    public void Up3()
+    {
+        _ = UpdateSelect(2, true, false, false);
+    }
+
+    public void Up4()
+    {
+        _ = UpdateSelect(3, true, false, false);
+    }
+
+    public void Up5()
+    {
+        _ = UpdateSelect(4, true, false, false);
+    }
+
+    public void Up6()
+    {
+        _ = UpdateSelect(5, true, false, false);
+    }
+
+    public void Up7()
+    {
+        _ = UpdateSelect(6, true, false, false);
+    }
+
+    public void Down1()
+    {
+        _ = UpdateSelect(0, false, true, false);
+    }
+
+    public void Down2()
+    {
+        _ = UpdateSelect(1, false, true, false);
+    }
+
+    public void Down3()
+    {
+        _ = UpdateSelect(2, false, true, false);
+    }
+
+    public void Down4()
+    {
+        _ = UpdateSelect(3, false, true, false);
+    }
+
+    public void Down5()
+    {
+        _ = UpdateSelect(4, false, true, false);
+    }
+
+    public void Down6()
+    {
+        _ = UpdateSelect(5, false, true, false);
+    }
+
+    public void Down7()
+    {
+        _ = UpdateSelect(6, false, true, false);
+    }
+
+    public void Select1()
+    {
+        _ = UpdateSelect(0, false, false, true);
+    }
+
+    public void Select2()
+    {
+        _ = UpdateSelect(1, false, false, true);
+    }
+
+    public void Select3()
+    {
+        _ = UpdateSelect(2, false, false, true);
+    }
+
+    public void Select4()
+    {
+        _ = UpdateSelect(3, false, false, true);
+    }
+
+    public void Select5()
+    {
+        _ = UpdateSelect(4, false, false, true);
+    }
+
+    public void Select6()
+    {
+        _ = UpdateSelect(5, false, false, true);
+    }
+
+    public void Select7()
+    {
+        _ = UpdateSelect(6, false, false, true);
     }
 }

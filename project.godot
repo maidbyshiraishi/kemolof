@@ -25,7 +25,7 @@ buses/default_bus_layout="uid://c0p5qk4ruxyol"
 [autoload]
 
 ScreenOption="*res://system/screen_option.tscn"
-DialogLayer="*res://system/game_dialog_layer.tscn"
+DialogLayer="*res://system/dialog_layer.tscn"
 DialogArgument="*res://system/dialog_argument.tscn"
 ScreenFader="*res://system/screen_fader.tscn"
 JoyPadController="*res://system/joy_pad_controller/joy_pad_controller.tscn"

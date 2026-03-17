@@ -1,6 +1,7 @@
 using Godot;
 using Godot.Collections;
 using kemolof.system;
+using kemolof.trigger;
 
 namespace kemolof.screen;
 
@@ -38,6 +39,7 @@ public partial class SelectStageScreen : DialogRoot
     public override void _Ready()
     {
         base._Ready();
+
         _gameDataManager = GetNode<GameDataManager>("/root/GameDataManager");
         _stageList = GetNode<AnimatedSprite2D>("StageList");
 
@@ -48,6 +50,9 @@ public partial class SelectStageScreen : DialogRoot
                 RandomIndex.Add(item);
             }
         }
+
+        GetNode<ClickableAnimatedSprite2D>("Right").Pressed += NextStageIndex;
+        GetNode<ClickableAnimatedSprite2D>("Left").Pressed += BackStageIndex;
     }
 
     public override void Active()

@@ -25,9 +25,10 @@ public partial class ClickableColorRect : ColorRect
             return;
         }
 
+        Rect2 rect = GetRect();
+
         if (@event is InputEventMouseMotion motion)
         {
-            Rect2 rect = GetRect();
             bool now = rect.HasPoint(motion.Position);
 
             if (_last && !now)
@@ -42,9 +43,11 @@ public partial class ClickableColorRect : ColorRect
             _last = now;
         }
 
-        if (_last && @event is InputEventMouseButton mouseButton)
+        if (@event is InputEventMouseButton mouseButton)
         {
-            if (mouseButton.IsPressed())
+            bool now = rect.HasPoint(mouseButton.Position);
+
+            if (now && mouseButton.IsPressed())
             {
                 _ = EmitSignal(SignalName.Pressed);
             }

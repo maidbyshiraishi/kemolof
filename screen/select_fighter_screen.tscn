@@ -689,25 +689,3 @@ offset_right = 592.0
 offset_bottom = 288.0
 color = Color(1, 1, 1, 0)
 script = ExtResource("15_p72ly")
-
-[connection signal="Pressed" from="Up1" to="." method="Up1"]
-[connection signal="Pressed" from="Up2" to="." method="Up2"]
-[connection signal="Pressed" from="Up3" to="." method="Up3"]
-[connection signal="Pressed" from="Up4" to="." method="Up4"]
-[connection signal="Pressed" from="Up5" to="." method="Up5"]
-[connection signal="Pressed" from="Up6" to="." method="Up6"]
-[connection signal="Pressed" from="Up7" to="." method="Up7"]
-[connection signal="Pressed" from="Down1" to="." method="Down1"]
-[connection signal="Pressed" from="Down2" to="." method="Down2"]
-[connection signal="Pressed" from="Down3" to="." method="Down3"]
-[connection signal="Pressed" from="Down4" to="." method="Down4"]
-[connection signal="Pressed" from="Down5" to="." method="Down5"]
-[connection signal="Pressed" from="Down6" to="." method="Down6"]
-[connection signal="Pressed" from="Down7" to="." method="Down7"]
-[connection signal="Pressed" from="Select1" to="." method="Select1"]
-[connection signal="Pressed" from="Select2" to="." method="Select2"]
-[connection signal="Pressed" from="Select3" to="." method="Select3"]
-[connection signal="Pressed" from="Select4" to="." method="Select4"]
-[connection signal="Pressed" from="Select5" to="." method="Select5"]
-[connection signal="Pressed" from="Select6" to="." method="Select6"]
-[connection signal="Pressed" from="Select7" to="." method="Select7"]

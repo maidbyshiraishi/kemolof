@@ -197,6 +197,3 @@ ProcessAlways = true
 
 [node name="OpenScreenCommand" parent="EscapeKey" unique_id=745653677 instance=ExtResource("17_wo1hj")]
 Screen = "res://screen/select_controller_screen.tscn"
-
-[connection signal="Pressed" from="Left" to="." method="BackStageIndex"]
-[connection signal="Pressed" from="Right" to="." method="NextStageIndex"]

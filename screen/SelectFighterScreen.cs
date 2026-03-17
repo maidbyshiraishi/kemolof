@@ -3,6 +3,7 @@ using Godot.Collections;
 using kemolof.mob.fighter;
 using kemolof.system;
 using kemolof.system.joy_pad_controller;
+using kemolof.trigger;
 
 namespace kemolof.screen;
 
@@ -39,6 +40,27 @@ public partial class SelectFighterScreen : DialogRoot
         base._Ready();
         _joyPad = GetNode<JoyPadController>("/root/JoyPadController");
         _gameDataManager = GetNode<GameDataManager>("/root/GameDataManager");
+
+        GetNode<ClickableAnimatedSprite2D>("Up1").Pressed += Up1;
+        GetNode<ClickableAnimatedSprite2D>("Up2").Pressed += Up2;
+        GetNode<ClickableAnimatedSprite2D>("Up3").Pressed += Up3;
+        GetNode<ClickableAnimatedSprite2D>("Up4").Pressed += Up4;
+        GetNode<ClickableAnimatedSprite2D>("Up5").Pressed += Up5;
+        GetNode<ClickableAnimatedSprite2D>("Up6").Pressed += Up6;
+
+        GetNode<ClickableAnimatedSprite2D>("Down1").Pressed += Down1;
+        GetNode<ClickableAnimatedSprite2D>("Down2").Pressed += Down2;
+        GetNode<ClickableAnimatedSprite2D>("Down3").Pressed += Down3;
+        GetNode<ClickableAnimatedSprite2D>("Down4").Pressed += Down4;
+        GetNode<ClickableAnimatedSprite2D>("Down5").Pressed += Down5;
+        GetNode<ClickableAnimatedSprite2D>("Down6").Pressed += Down6;
+
+        GetNode<ClickableColorRect>("Select1").Pressed += Select1;
+        GetNode<ClickableColorRect>("Select2").Pressed += Select2;
+        GetNode<ClickableColorRect>("Select3").Pressed += Select3;
+        GetNode<ClickableColorRect>("Select4").Pressed += Select4;
+        GetNode<ClickableColorRect>("Select5").Pressed += Select5;
+        GetNode<ClickableColorRect>("Select6").Pressed += Select6;
 
         for (int i = 0; i < 7; i++)
         {

@@ -2,6 +2,7 @@ using Godot;
 using Godot.Collections;
 using kemolof.mob.brain;
 using kemolof.mob.fighter;
+using kemolof.screen;
 using kemolof.system;
 using kemolof.trigger;
 
@@ -10,8 +11,21 @@ namespace kemolof.stage;
 /// <summary>
 /// ゲームステージの親
 /// </summary>
-public partial class GameStageRoot : StageRoot
+public partial class GameStageRoot : DialogRoot, IStateful
 {
+    public static readonly string ProcessGroup = "ProcessGroup";
+
+    [ExportGroup("BGM")]
+
+    /// <summary>
+    /// BGMなし
+    /// </summary>
+    [Export]
+    public bool NoBgm { get; set; }
+
+    [Export]
+    public AudioStream BgmStream { get; set; }
+
     private readonly FighterInfo[] _info = new FighterInfo[7];
     private Referee _referee;
 
@@ -99,7 +113,9 @@ public partial class GameStageRoot : StageRoot
     public override void InitializeNode()
     {
         GetNode<GameDataManager>("/root/GameDataManager").Restore();
-        base.InitializeNode();
+        GetTree().CallGroup(IGameNode.GameNodeGroup, "InitializeNode");
+        LoadState();
+        PlayBgm();
     }
 
     public void AddScene(Node node, string parentNodeName)
@@ -143,4 +159,30 @@ public partial class GameStageRoot : StageRoot
         FighterList fighterList = GetNode<FighterList>("Fighter");
         fighterList.DamageAllFighters(damage, hitVoice);
     }
+
+    protected void PlayBgm()
+    {
+        if (NoBgm)
+        {
+            GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.Mute);
+            return;
+        }
+
+        if (BgmStream is null)
+        {
+            return;
+        }
+
+        GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastPlay, BgmStream);
+    }
+
+    #region IStatefulインタフェース
+    /// <summary>
+    /// ステージ状態の保存を行う。
+    /// 画面切り替え前、セーブ前に行われる
+    /// </summary>
+    public void SaveState() => GetTree().CallGroup(IStateful.StatefulGroup, "StateSave");
+
+    public void LoadState() => GetTree().CallGroup(IStateful.StatefulGroup, "StateLoad");
+    #endregion
 }

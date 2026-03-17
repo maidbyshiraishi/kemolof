@@ -28,12 +28,6 @@ public partial class DialogLayer : CanvasLayer
     public DialogRoot GetCurrentScreen() => GetTree().CurrentScene as DialogRoot;
 
     /// <summary>
-    /// 現在のゲーム画面を返す
-    /// </summary>
-    /// <returns>ScreenRoot</returns>
-    public StageRoot GetCurrentStageRoot() => GetTree().CurrentScene as StageRoot;
-
-    /// <summary>
     /// 現在のダイアログを返す
     /// </summary>
     /// <returns>DialogRoot</returns>
@@ -238,4 +232,10 @@ public partial class DialogLayer : CanvasLayer
     }
 
     public void QuitGame() => GetTree().Quit();
+
+    /// <summary>
+    /// 現在のゲーム画面を返す
+    /// </summary>
+    /// <returns>ScreenRoot</returns>
+    public GameStageRoot GetCurrentGameStageRoot() => GetTree().CurrentScene as GameStageRoot;
 }

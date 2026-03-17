@@ -23,7 +23,7 @@ public partial class DamageAllFightersCommand : CommandRoot
             return;
         }
 
-        GameStageRoot gameStageRoot = GetNode<GameDialogLayer>("/root/DialogLayer").GetCurrentGameRoot();
+        GameStageRoot gameStageRoot = GetNode<DialogLayer>("/root/DialogLayer").GetCurrentGameStageRoot();
         gameStageRoot.DamageAllFighters(Damage, HitVoice);
     }
 }

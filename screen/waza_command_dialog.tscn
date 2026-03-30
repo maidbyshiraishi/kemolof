@@ -168,7 +168,7 @@ offset_top = 72.0
 offset_right = 544.0
 offset_bottom = 104.0
 theme = ExtResource("2_c4efp")
-text = "キャラクターが左向きの場合、操作の左右は反転します。"
+text = "ファイターが左向きの場合、操作の左右は反転します。"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -253,7 +253,7 @@ offset_top = 72.0
 offset_right = 544.0
 offset_bottom = 104.0
 theme = ExtResource("2_c4efp")
-text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+text = "ファイターが左向きの場合、コマンドの左右は反転します。"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -463,7 +463,7 @@ offset_top = 72.0
 offset_right = 544.0
 offset_bottom = 104.0
 theme = ExtResource("2_c4efp")
-text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+text = "ファイターが左向きの場合、コマンドの左右は反転します。"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -696,7 +696,7 @@ offset_top = 72.0
 offset_right = 544.0
 offset_bottom = 104.0
 theme = ExtResource("2_c4efp")
-text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+text = "ファイターが左向きの場合、コマンドの左右は反転します。"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -963,7 +963,7 @@ offset_top = 72.0
 offset_right = 544.0
 offset_bottom = 104.0
 theme = ExtResource("2_c4efp")
-text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+text = "ファイターが左向きの場合、コマンドの左右は反転します。"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1197,7 +1197,7 @@ offset_top = 72.0
 offset_right = 544.0
 offset_bottom = 104.0
 theme = ExtResource("2_c4efp")
-text = "キャラクターが左向きの場合、コマンドの左右は反転します。"
+text = "ファイターが左向きの場合、コマンドの左右は反転します。"
 horizontal_alignment = 1
 vertical_alignment = 1
 

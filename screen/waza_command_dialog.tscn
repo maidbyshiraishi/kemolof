@@ -14,10 +14,10 @@
 
 [node name="StoryTheater" unique_id=1997723473 instance=ExtResource("1_6k1gf")]
 
-[node name="Background" parent="." index="0"]
+[node name="Background" parent="." index="0" unique_id=1698593284]
 visible = false
 
-[node name="Contents" type="Control" parent="Socket" index="0" unique_id=284739943]
+[node name="Contents" type="Control" parent="Socket" parent_id_path=PackedInt32Array(1288008848) index="0" unique_id=284739943]
 anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 480.0
@@ -1367,7 +1367,7 @@ ProcessAlways = true
 
 [node name="CloseDialogCommand" parent="Socket/Contents/Page6/Control/Close/Exec" index="1" unique_id=1743866439 instance=ExtResource("5_8jehl")]
 
-[node name="Frame" parent="." index="2"]
+[node name="Frame" parent="." index="2" unique_id=1733118794]
 texture = null
 
 [node name="EscapeKey" parent="." index="4" unique_id=898525775 instance=ExtResource("10_tw1ft")]

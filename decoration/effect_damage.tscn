@@ -5,5 +5,5 @@
 
 [node name="EffectRoot" unique_id=1403908602 instance=ExtResource("1_iybaq")]
 
-[node name="Sprite2D" parent="." index="0"]
+[node name="Sprite2D" parent="." index="0" unique_id=350959924]
 texture = ExtResource("2_y8fv8")

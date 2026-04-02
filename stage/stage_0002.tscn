@@ -39,77 +39,77 @@ size = Vector2(128, 400)
 [node name="Stage" unique_id=763866020 instance=ExtResource("1_2tfht")]
 BgmStream = ExtResource("2_jf3i7")
 
-[node name="ColorRect" parent="Background/Parallax2D_1" index="0"]
+[node name="ColorRect" parent="Background/Parallax2D_1" parent_id_path=PackedInt32Array(243324851) index="0" unique_id=716916825]
 color = Color(0.117647, 0.392157, 0.784314, 1)
 
-[node name="Background_1" parent="TileMap" index="1"]
+[node name="Background_1" parent="TileMap" parent_id_path=PackedInt32Array(1590114456) index="1" unique_id=1789821897]
 tile_map_data = PackedByteArray("AAAAAAAAAAAGAAAAAAAAAAEAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAMAAAAGAAAAAAAAAAQAAAAGAAAAAAAAAAUAAAAGAAAAAAAAAAYAAAAGAAAAAAAAAAcAAAAGAAAAAAAAAAgAAAAGAAAAAAAAAAkAAAAGAAAAAAAAAAoAAAAGAAAAAAAAAAsAAAAGAAAAAAAAAAwAAAAGAAAAAAAAAA0AAAAGAAAAAAAAAA4AAAAGAAAAAAABAAAAAAAGAAAAAAABAAEAAAAGAAAAAAABAAIAAAAGAAAAAAABAAMAAAAGAAAAAAABAAQAAAAGAAAAAAABAAUAAAAGAAAAAAABAAYAAAAGAAAAAAABAAcAAAAGAAAAAAABAAgAAAAGAAAAAAABAAkAAAAGAAAAAAABAAoAAAAGAAAAAAABAAsAAAAGAAAAAAABAAwAAAAGAAAAAAABAA0AAAAGAAAAAAABAA4AAAAGAAAAAAACAAAAAAAGAAAAAAACAAEAAAAGAAAAAAACAAIAAAAGAAAAAAACAAMAAAAGAAAAAAACAAQAAAAGAAAAAAACAAUAAAAGAAAAAAACAAYAAAAGAAAAAAACAAcAAAAGAAAAAAACAAgAAAAGAAAAAAACAAkAAAAGAAAAAAACAAoAAAAGAAAAAAACAAsAAAAGAAAAAAACAAwAAAAGAAAAAAACAA0AAAAGAAAAAAACAA4AAAAGAAAAAAADAAAAAAAGAAAAAAADAAEAAAAGAAAAAAADAAIAAAAGAAAAAAADAAMAAAAGAAAAAAADAAQAAAAGAAAAAAADAAUAAAAGAAAAAAADAAYAAAAGAAAAAAADAAcAAAAGAAAAAAADAAgAAAAGAAAAAAADAAkAAAAGAAAAAAADAAoAAAAGAAAAAAADAAsAAAAGAAAAAAADAAwAAAAGAAAAAAADAA0AAAAGAAAAAAADAA4AAAAGAAAAAAAEAAAAAAAGAAAAAAAEAAEAAAAGAAAAAAAEAAIAAAAGAAAAAAAEAAMAAAAGAAAAAAAEAAQAAAAGAAAAAAAEAAUAAAAGAAAAAAAEAAYAAAAGAAAAAAAEAAcAAAAGAAAAAAAEAAgAAAAGAAAAAAAEAAkAAAAGAAAAAAAEAAoAAAAGAAAAAAAEAAsAAAAGAAAAAAAEAAwAAAAGAAAAAAAEAA0AAAAGAAAAAAAEAA4AAAAGAAAAAAAFAAAAAAAGAAAAAAAFAAEAAAAGAAAAAAAFAAIAAAAGAAAAAAAFAAMAAAAGAAAAAAAFAAQAAAAGAAAAAAAFAAUAAAAGAAAAAAAFAAYAAAAGAAAAAAAFAAcAAAAGAAAAAAAFAAgAAAAGAAAAAAAFAAkAAAAGAAAAAAAFAAoAAAAGAAAAAAAFAAsAAAAGAAAAAAAFAAwAAAAGAAAAAAAFAA0AAAAGAAAAAAAFAA4AAAAGAAAAAAAGAAAAAAAGAAAAAAAGAAEAAAAGAAAAAAAGAAIAAAAGAAAAAAAGAAMAAAAGAAAAAAAGAAQAAAAGAAAAAAAGAAUAAAAGAAAAAAAGAAYAAAAGAAAAAAAGAAcAAAAGAAAAAAAGAAgAAAAGAAAAAAAGAAkAAAAGAAAAAAAGAAoAAAAGAAAAAAAGAAsAAAAGAAAAAAAGAAwAAAAGAAAAAAAGAA0AAAAGAAAAAAAGAA4AAAAGAAAAAAAHAAAAAAAGAAAAAAAHAAEAAAAGAAAAAAAHAAIAAAAGAAAAAAAHAAMAAAAGAAAAAAAHAAQAAAAGAAAAAAAHAAUAAAAGAAAAAAAHAAYAAAAGAAAAAAAHAAcAAAAGAAAAAAAHAAgAAAAGAAAAAAAHAAkAAAAGAAAAAAAHAAoAAAAGAAAAAAAHAAsAAAAGAAAAAAAHAAwAAAAGAAAAAAAHAA0AAAAGAAAAAAAHAA4AAAAGAAAAAAAIAAAAAAAGAAAAAAAIAAEAAAAGAAAAAAAIAAIAAAAGAAAAAAAIAAMAAAAGAAAAAAAIAAQAAAAGAAAAAAAIAAUAAAAGAAAAAAAIAAYAAAAGAAAAAAAIAAcAAAAGAAAAAAAIAAgAAAAGAAAAAAAIAAkAAAAGAAAAAAAIAAoAAAAGAAAAAAAIAAsAAAAGAAAAAAAIAAwAAAAGAAAAAAAIAA0AAAAGAAAAAAAIAA4AAAAGAAAAAAAJAAAAAAAGAAAAAAAJAAEAAAAGAAAAAAAJAAIAAAAGAAAAAAAJAAMAAAAGAAAAAAAJAAQAAAAGAAAAAAAJAAUAAAAGAAAAAAAJAAYAAAAGAAAAAAAJAAcAAAAGAAAAAAAJAAgAAAAGAAAAAAAJAAkAAAAGAAAAAAAJAAoAAAAGAAAAAAAJAAsAAAAGAAAAAAAJAAwAAAAGAAAAAAAJAA0AAAAGAAAAAAAJAA4AAAAGAAAAAAAKAAAAAAAGAAAAAAAKAAEAAAAGAAAAAAAKAAIAAAAGAAAAAAAKAAMAAAAGAAAAAAAKAAQAAAAGAAAAAAAKAAUAAAAGAAAAAAAKAAYAAAAGAAAAAAAKAAcAAAAGAAAAAAAKAAgAAAAGAAAAAAAKAAkAAAAGAAAAAAAKAAoAAAAGAAAAAAAKAAsAAAAGAAAAAAAKAAwAAAAGAAAAAAAKAA0AAAAGAAAAAAAKAA4AAAAGAAAAAAALAAAAAAAGAAAAAAALAAEAAAAGAAAAAAALAAIAAAAGAAAAAAALAAMAAAAGAAAAAAALAAQAAAAGAAAAAAALAAUAAAAGAAAAAAALAAYAAAAGAAAAAAALAAcAAAAGAAAAAAALAAgAAAAGAAAAAAALAAkAAAAGAAAAAAALAAoAAAAGAAAAAAALAAsAAAAGAAAAAAALAAwAAAAGAAAAAAALAA0AAAAGAAAAAAALAA4AAAAGAAAAAAAMAAAAAAAGAAAAAAAMAAEAAAAGAAAAAAAMAAIAAAAGAAAAAAAMAAMAAAAGAAAAAAAMAAQAAAAGAAAAAAAMAAUAAAAGAAAAAAAMAAYAAAAGAAAAAAAMAAcAAAAGAAAAAAAMAAgAAAAGAAAAAAAMAAkAAAAGAAAAAAAMAAoAAAAGAAAAAAAMAAsAAAAGAAAAAAAMAAwAAAAGAAAAAAAMAA0AAAAGAAAAAAAMAA4AAAAGAAAAAAANAAAAAAAGAAAAAAANAAEAAAAGAAAAAAANAAIAAAAGAAAAAAANAAMAAAAGAAAAAAANAAQAAAAGAAAAAAANAAUAAAAGAAAAAAANAAYAAAAGAAAAAAANAAcAAAAGAAAAAAANAAgAAAAGAAAAAAANAAkAAAAGAAAAAAANAAoAAAAGAAAAAAANAAsAAAAGAAAAAAANAAwAAAAGAAAAAAANAA0AAAAGAAAAAAANAA4AAAAGAAAAAAAOAAAAAAAGAAAAAAAOAAEAAAAGAAAAAAAOAAIAAAAGAAAAAAAOAAMAAAAGAAAAAAAOAAQAAAAGAAAAAAAOAAUAAAAGAAAAAAAOAAYAAAAGAAAAAAAOAAcAAAAGAAAAAAAOAAgAAAAGAAAAAAAOAAkAAAAGAAAAAAAOAAoAAAAGAAAAAAAOAAsAAAAGAAAAAAAOAAwAAAAGAAAAAAAOAA0AAAAGAAAAAAAOAA4AAAAGAAAAAAAPAAAAAAAGAAAAAAAPAAEAAAAGAAAAAAAPAAIAAAAGAAAAAAAPAAMAAAAGAAAAAAAPAAQAAAAGAAAAAAAPAAUAAAAGAAAAAAAPAAYAAAAGAAAAAAAPAAcAAAAGAAAAAAAPAAgAAAAGAAAAAAAPAAkAAAAGAAAAAAAPAAoAAAAGAAAAAAAPAAsAAAAGAAAAAAAPAAwAAAAGAAAAAAAPAA0AAAAGAAAAAAAPAA4AAAAGAAAAAAAQAAAAAAAGAAAAAAAQAAEAAAAGAAAAAAAQAAIAAAAGAAAAAAAQAAMAAAAGAAAAAAAQAAQAAAAGAAAAAAAQAAUAAAAGAAAAAAAQAAYAAAAGAAAAAAAQAAcAAAAGAAAAAAAQAAgAAAAGAAAAAAAQAAkAAAAGAAAAAAAQAAoAAAAGAAAAAAAQAAsAAAAGAAAAAAAQAAwAAAAGAAAAAAAQAA0AAAAGAAAAAAAQAA4AAAAGAAAAAAARAAAAAAAGAAAAAAARAAEAAAAGAAAAAAARAAIAAAAGAAAAAAARAAMAAAAGAAAAAAARAAQAAAAGAAAAAAARAAUAAAAGAAAAAAARAAYAAAAGAAAAAAARAAcAAAAGAAAAAAARAAgAAAAGAAAAAAARAAkAAAAGAAAAAAARAAoAAAAGAAAAAAARAAsAAAAGAAAAAAARAAwAAAAGAAAAAAARAA0AAAAGAAAAAAARAA4AAAAGAAAAAAASAAAAAAAGAAAAAAASAAEAAAAGAAAAAAASAAIAAAAGAAAAAAASAAMAAAAGAAAAAAASAAQAAAAGAAAAAAASAAUAAAAGAAAAAAASAAYAAAAGAAAAAAASAAcAAAAGAAAAAAASAAgAAAAGAAAAAAASAAkAAAAGAAAAAAASAAoAAAAGAAAAAAASAAsAAAAGAAAAAAASAAwAAAAGAAAAAAASAA0AAAAGAAAAAAASAA4AAAAGAAAAAAATAAAAAAAGAAAAAAATAAEAAAAGAAAAAAATAAIAAAAGAAAAAAATAAMAAAAGAAAAAAATAAQAAAAGAAAAAAATAAUAAAAGAAAAAAATAAYAAAAGAAAAAAATAAcAAAAGAAAAAAATAAgAAAAGAAAAAAATAAkAAAAGAAAAAAATAAoAAAAGAAAAAAATAAsAAAAGAAAAAAATAAwAAAAGAAAAAAATAA0AAAAGAAAAAAATAA4AAAAGAAAAAAA=")
 
-[node name="Ground" parent="TileMap" index="2"]
+[node name="Ground" parent="TileMap" parent_id_path=PackedInt32Array(1590114456) index="2" unique_id=719859096]
 tile_map_data = PackedByteArray("AAAGAAkAAAAEAAcAAAAJAAgAAAAEAAcAAAAKAAgAAAAEAAcAAAANAAkAAAAEAAcAAAAGAAoAAAAFAAcAAAAGAAsAAAAFAAcAAAAGAAwAAAAFAAcAAAAGAA0AAAAFAAcAAAAGAA4AAAAFAAcAAAAJAAkAAAAFAAcAAAAJAAoAAAAFAAcAAAAJAAsAAAAFAAcAAAAJAAwAAAAFAAcAAAAJAA0AAAAFAAcAAAAJAA4AAAAFAAcAAAAKAAkAAAAFAAcAAAAKAAoAAAAFAAcAAAAKAAsAAAAFAAcAAAAKAAwAAAAFAAcAAAAKAA0AAAAFAAcAAAAKAA4AAAAFAAcAAAANAAoAAAAFAAcAAAANAAsAAAAFAAcAAAANAAwAAAAFAAcAAAANAA0AAAAFAAcAAAANAA4AAAAFAAcAAAADAAoAAAAEAAcAAAAQAAoAAAAEAAcAAAADAAsAAAAFAAcAAAADAAwAAAAFAAcAAAADAA0AAAAFAAcAAAADAA4AAAAFAAcAAAAQAAsAAAAFAAcAAAAQAAwAAAAFAAcAAAAQAA0AAAAFAAcAAAAQAA4AAAAFAAcAAAATAAsAAAAEAAcAAAATAAwAAAAFAAcAAAATAA0AAAAFAAcAAAATAA4AAAAFAAcAAAAAAAsAAAAEAAcAAAAAAAwAAAAFAAcAAAAAAA0AAAAFAAcAAAAAAA4AAAAFAAcAAAD//w4AAAAGAAAAAAD//w0AAAAGAAAAAAD//wwAAAAGAAAAAAD//wsAAAAGAAAAAAD//woAAAAGAAAAAAD//wkAAAAGAAAAAAD//wgAAAAGAAAAAAD//wcAAAAGAAAAAAD//wYAAAAGAAAAAAD//wUAAAAGAAAAAAD//wQAAAAGAAAAAAD//wMAAAAGAAAAAAD//wIAAAAGAAAAAAD//wEAAAAGAAAAAAD//wAAAAAGAAAAAAAUAA4AAAAGAAAAAAAUAA0AAAAGAAAAAAAUAAwAAAAGAAAAAAAUAAsAAAAGAAAAAAAUAAoAAAAGAAAAAAAUAAkAAAAGAAAAAAAUAAgAAAAGAAAAAAAUAAcAAAAGAAAAAAAUAAYAAAAGAAAAAAAUAAUAAAAGAAAAAAAUAAQAAAAGAAAAAAAUAAMAAAAGAAAAAAAUAAIAAAAGAAAAAAAUAAAAAAAGAAAAAAAUAAEAAAAGAAAAAAD/////AAAGAAAAAAD///7/AAAGAAAAAAD///3/AAAGAAAAAAD///z/AAAGAAAAAAD///v/AAAGAAAAAAD///r/AAAGAAAAAAD///n/AAAGAAAAAAD///j/AAAGAAAAAAD///f/AAAGAAAAAAD///b/AAAGAAAAAAD///X/AAAGAAAAAAD///T/AAAGAAAAAAD///P/AAAGAAAAAAAUAP//AAAGAAAAAAAUAP7/AAAGAAAAAAAUAP3/AAAGAAAAAAAUAPz/AAAGAAAAAAAUAPv/AAAGAAAAAAAUAPr/AAAGAAAAAAAUAPn/AAAGAAAAAAAUAPj/AAAGAAAAAAAUAPf/AAAGAAAAAAAUAPb/AAAGAAAAAAAUAPX/AAAGAAAAAAAUAPT/AAAGAAAAAAAUAPP/AAAGAAAAAAA=")
 
-[node name="Player_1" parent="Spawn" index="0"]
+[node name="Player_1" parent="Spawn" parent_id_path=PackedInt32Array(1260666912) index="0" unique_id=1130300222]
 position = Vector2(16, 351)
 
-[node name="Player_2" parent="Spawn" index="1"]
+[node name="Player_2" parent="Spawn" parent_id_path=PackedInt32Array(1260666912) index="1" unique_id=1508515330]
 position = Vector2(624, 351)
 
-[node name="Player_3" parent="Spawn" index="2"]
+[node name="Player_3" parent="Spawn" parent_id_path=PackedInt32Array(1260666912) index="2" unique_id=515069250]
 position = Vector2(208, 287)
 
-[node name="Player_4" parent="Spawn" index="3"]
+[node name="Player_4" parent="Spawn" parent_id_path=PackedInt32Array(1260666912) index="3" unique_id=1088525128]
 position = Vector2(432, 287)
 
-[node name="Player_5" parent="Spawn" index="4"]
+[node name="Player_5" parent="Spawn" parent_id_path=PackedInt32Array(1260666912) index="4" unique_id=523433254]
 position = Vector2(112, 319)
 
-[node name="Player_6" parent="Spawn" index="5"]
+[node name="Player_6" parent="Spawn" parent_id_path=PackedInt32Array(1260666912) index="5" unique_id=1832598475]
 position = Vector2(528, 319)
 
-[node name="Player_7" parent="Spawn" index="6"]
+[node name="Player_7" parent="Spawn" parent_id_path=PackedInt32Array(1260666912) index="6" unique_id=1204168380]
 position = Vector2(320, 255)
 
-[node name="Player_1" parent="Respawn" index="0"]
+[node name="Player_1" parent="Respawn" parent_id_path=PackedInt32Array(494900941) index="0" unique_id=902964928]
 position = Vector2(16, -48)
 
-[node name="Player_2" parent="Respawn" index="1"]
+[node name="Player_2" parent="Respawn" parent_id_path=PackedInt32Array(494900941) index="1" unique_id=2049719751]
 position = Vector2(624, -48)
 
-[node name="Player_3" parent="Respawn" index="2"]
+[node name="Player_3" parent="Respawn" parent_id_path=PackedInt32Array(494900941) index="2" unique_id=606101080]
 position = Vector2(208, -112)
 
-[node name="Player_4" parent="Respawn" index="3"]
+[node name="Player_4" parent="Respawn" parent_id_path=PackedInt32Array(494900941) index="3" unique_id=839752695]
 position = Vector2(432, -112)
 
-[node name="Player_5" parent="Respawn" index="4"]
+[node name="Player_5" parent="Respawn" parent_id_path=PackedInt32Array(494900941) index="4" unique_id=345764008]
 position = Vector2(112, -80)
 
-[node name="Player_6" parent="Respawn" index="5"]
+[node name="Player_6" parent="Respawn" parent_id_path=PackedInt32Array(494900941) index="5" unique_id=1281201875]
 position = Vector2(528, -80)
 
-[node name="Player_7" parent="Respawn" index="6"]
+[node name="Player_7" parent="Respawn" parent_id_path=PackedInt32Array(494900941) index="6" unique_id=482730009]
 position = Vector2(320, -144)
 
-[node name="OpenDialogCommand" parent="Scenario/Referee/Draw" index="0" unique_id=1922921736 instance=ExtResource("2_ot1k7")]
+[node name="OpenDialogCommand" parent="Scenario/Referee/Draw" parent_id_path=PackedInt32Array(900708988) index="0" unique_id=1922921736 instance=ExtResource("2_ot1k7")]
 DialogPath = "res://screen/game_result_dialog.tscn"
 ArgumentKey = "MessageDialog"
 Argument = ["なし", Color(1, 1, 1, 1)]
 
-[node name="OpenDialogCommand" parent="Scenario/Referee/Winner" index="0" unique_id=1492123540 instance=ExtResource("2_ot1k7")]
+[node name="OpenDialogCommand" parent="Scenario/Referee/Winner" parent_id_path=PackedInt32Array(336038202) index="0" unique_id=1492123540 instance=ExtResource("2_ot1k7")]
 DialogPath = "res://screen/game_result_dialog.tscn"
 ArgumentKey = "MessageDialog"
 Argument = ["なし", Color(0, 0, 0, 1)]
 
-[node name="OutsideArea_1" parent="Scenario" index="1"]
+[node name="OutsideArea_1" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="1" unique_id=1473808628]
 collision_mask = 8
 
-[node name="VisibleTrigger_1" parent="Scenario" index="2" unique_id=1982446100 instance=ExtResource("3_qc4u2")]
+[node name="VisibleTrigger_1" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="2" unique_id=1982446100 instance=ExtResource("3_qc4u2")]
 
 [node name="ShowHudMessageCommand" parent="Scenario/VisibleTrigger_1" index="0" unique_id=1362151026 instance=ExtResource("4_jf3i7")]
 Text1 = "ようこそ！"
 Text2 = "石畳の闘技場へ！！"
 
-[node name="PushingArea_1" parent="Scenario" index="3" unique_id=1887035003 instance=ExtResource("5_2tfht")]
+[node name="PushingArea_1" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="3" unique_id=1887035003 instance=ExtResource("5_2tfht")]
 position = Vector2(16, 416)
 collision_layer = 0
 collision_mask = 4
@@ -135,7 +135,7 @@ shape = SubResource("RectangleShape2D_eas63")
 [node name="OffsetPositionCommand" parent="Scenario/PushingArea_1" index="2" unique_id=1999497286 instance=ExtResource("8_jf3i7")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_2" parent="Scenario" index="4" unique_id=409263131 instance=ExtResource("5_2tfht")]
+[node name="PushingArea_2" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="4" unique_id=409263131 instance=ExtResource("5_2tfht")]
 position = Vector2(112, 400)
 collision_layer = 0
 collision_mask = 4
@@ -161,7 +161,7 @@ shape = SubResource("RectangleShape2D_reui7")
 [node name="OffsetPositionCommand" parent="Scenario/PushingArea_2" index="2" unique_id=1535774078 instance=ExtResource("8_jf3i7")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_3" parent="Scenario" index="5" unique_id=541632653 instance=ExtResource("5_2tfht")]
+[node name="PushingArea_3" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="5" unique_id=541632653 instance=ExtResource("5_2tfht")]
 position = Vector2(208, 386)
 collision_layer = 0
 collision_mask = 4
@@ -188,7 +188,7 @@ shape = SubResource("RectangleShape2D_w5xg0")
 [node name="OffsetPositionCommand" parent="Scenario/PushingArea_3" index="2" unique_id=812211310 instance=ExtResource("8_jf3i7")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_4" parent="Scenario" index="6" unique_id=1545545451 instance=ExtResource("5_2tfht")]
+[node name="PushingArea_4" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="6" unique_id=1545545451 instance=ExtResource("5_2tfht")]
 position = Vector2(432, 384)
 collision_layer = 0
 collision_mask = 4
@@ -214,7 +214,7 @@ shape = SubResource("RectangleShape2D_w5xg0")
 [node name="OffsetPositionCommand" parent="Scenario/PushingArea_4" index="2" unique_id=1737946838 instance=ExtResource("8_jf3i7")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_5" parent="Scenario" index="7" unique_id=1124128615 instance=ExtResource("5_2tfht")]
+[node name="PushingArea_5" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="7" unique_id=1124128615 instance=ExtResource("5_2tfht")]
 position = Vector2(528, 400)
 collision_layer = 0
 collision_mask = 4
@@ -240,7 +240,7 @@ shape = SubResource("RectangleShape2D_reui7")
 [node name="OffsetPositionCommand" parent="Scenario/PushingArea_5" index="2" unique_id=2064172350 instance=ExtResource("8_jf3i7")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_6" parent="Scenario" index="8" unique_id=720450372 instance=ExtResource("5_2tfht")]
+[node name="PushingArea_6" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="8" unique_id=720450372 instance=ExtResource("5_2tfht")]
 position = Vector2(624, 416)
 collision_layer = 0
 collision_mask = 4
@@ -266,7 +266,7 @@ shape = SubResource("RectangleShape2D_eas63")
 [node name="OffsetPositionCommand" parent="Scenario/PushingArea_6" index="2" unique_id=1706214609 instance=ExtResource("8_jf3i7")]
 Value = Vector2(0, -1)
 
-[node name="PushingArea_7" parent="Scenario" index="9" unique_id=1459883854 instance=ExtResource("5_2tfht")]
+[node name="PushingArea_7" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="9" unique_id=1459883854 instance=ExtResource("5_2tfht")]
 position = Vector2(320, 368)
 collision_layer = 0
 collision_mask = 4
@@ -292,7 +292,7 @@ shape = SubResource("RectangleShape2D_2tfht")
 [node name="OffsetPositionCommand" parent="Scenario/PushingArea_7" index="2" unique_id=18957841 instance=ExtResource("8_jf3i7")]
 Value = Vector2(0, -1)
 
-[node name="JumpArea_1" parent="Scenario" index="10" unique_id=570071568 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_1" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="10" unique_id=570071568 instance=ExtResource("5_2tfht")]
 position = Vector2(16, 350)
 collision_layer = 0
 collision_mask = 4
@@ -320,7 +320,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_1" index="2" unique_id=989178565 instance=ExtResource("9_ot1k7")]
 Direction = 2
 
-[node name="JumpArea_2" parent="Scenario" index="11" unique_id=1843373585 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_2" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="11" unique_id=1843373585 instance=ExtResource("5_2tfht")]
 position = Vector2(112, 318)
 collision_layer = 0
 collision_mask = 4
@@ -348,7 +348,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_2" index="2" unique_id=1899114580 instance=ExtResource("9_ot1k7")]
 Direction = 3
 
-[node name="JumpArea_3" parent="Scenario" index="12" unique_id=2092679948 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_3" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="12" unique_id=2092679948 instance=ExtResource("5_2tfht")]
 position = Vector2(208, 286)
 collision_layer = 0
 collision_mask = 4
@@ -376,7 +376,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_3" index="2" unique_id=1363493204 instance=ExtResource("9_ot1k7")]
 Direction = 3
 
-[node name="JumpArea_4" parent="Scenario" index="13" unique_id=458842100 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_4" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="13" unique_id=458842100 instance=ExtResource("5_2tfht")]
 position = Vector2(432, 286)
 collision_layer = 0
 collision_mask = 4
@@ -404,7 +404,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_4" index="2" unique_id=2005229526 instance=ExtResource("9_ot1k7")]
 Direction = 3
 
-[node name="JumpArea_5" parent="Scenario" index="14" unique_id=317647595 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_5" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="14" unique_id=317647595 instance=ExtResource("5_2tfht")]
 position = Vector2(528, 318)
 collision_layer = 0
 collision_mask = 4
@@ -432,7 +432,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_5" index="2" unique_id=1865653205 instance=ExtResource("9_ot1k7")]
 Direction = 3
 
-[node name="JumpArea_6" parent="Scenario" index="15" unique_id=95657643 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_6" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="15" unique_id=95657643 instance=ExtResource("5_2tfht")]
 position = Vector2(624, 350)
 collision_layer = 0
 collision_mask = 4
@@ -460,7 +460,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_6" index="2" unique_id=994315156 instance=ExtResource("9_ot1k7")]
 Direction = 1
 
-[node name="JumpArea_7" parent="Scenario" index="16" unique_id=904530137 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_7" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="16" unique_id=904530137 instance=ExtResource("5_2tfht")]
 position = Vector2(320, 254)
 collision_layer = 0
 collision_mask = 4
@@ -488,7 +488,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_7" index="2" unique_id=680343845 instance=ExtResource("9_ot1k7")]
 Direction = 3
 
-[node name="JumpArea_8" parent="Scenario" index="17" unique_id=2117578888 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_8" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="17" unique_id=2117578888 instance=ExtResource("5_2tfht")]
 position = Vector2(16, 221)
 collision_layer = 0
 collision_mask = 4
@@ -516,7 +516,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_8" index="2" unique_id=694143020 instance=ExtResource("9_ot1k7")]
 Direction = 2
 
-[node name="JumpArea_9" parent="Scenario" index="18" unique_id=1313829480 instance=ExtResource("5_2tfht")]
+[node name="JumpArea_9" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="18" unique_id=1313829480 instance=ExtResource("5_2tfht")]
 position = Vector2(624, 221)
 collision_layer = 0
 collision_mask = 4
@@ -544,7 +544,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 [node name="JumpFighterCommand" parent="Scenario/JumpArea_9" index="2" unique_id=701404864 instance=ExtResource("9_ot1k7")]
 Direction = 1
 
-[node name="LandingArea_1" parent="Scenario" index="19" unique_id=289989509 instance=ExtResource("5_2tfht")]
+[node name="LandingArea_1" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="19" unique_id=289989509 instance=ExtResource("5_2tfht")]
 position = Vector2(16, 148)
 collision_layer = 0
 collision_mask = 4
@@ -571,7 +571,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 
 [node name="SetStateLandingCommand" parent="Scenario/LandingArea_1" index="2" unique_id=1414091415 instance=ExtResource("10_qc4u2")]
 
-[node name="LandingArea_2" parent="Scenario" index="20" unique_id=945097514 instance=ExtResource("5_2tfht")]
+[node name="LandingArea_2" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="20" unique_id=945097514 instance=ExtResource("5_2tfht")]
 position = Vector2(112, 116)
 collision_layer = 0
 collision_mask = 4
@@ -598,7 +598,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 
 [node name="SetStateLandingCommand" parent="Scenario/LandingArea_2" index="2" unique_id=1040867974 instance=ExtResource("10_qc4u2")]
 
-[node name="LandingArea_3" parent="Scenario" index="21" unique_id=365899902 instance=ExtResource("5_2tfht")]
+[node name="LandingArea_3" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="21" unique_id=365899902 instance=ExtResource("5_2tfht")]
 position = Vector2(208, 84)
 collision_layer = 0
 collision_mask = 4
@@ -625,7 +625,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 
 [node name="SetStateLandingCommand" parent="Scenario/LandingArea_3" index="2" unique_id=690243789 instance=ExtResource("10_qc4u2")]
 
-[node name="LandingArea_4" parent="Scenario" index="22" unique_id=1324679105 instance=ExtResource("5_2tfht")]
+[node name="LandingArea_4" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="22" unique_id=1324679105 instance=ExtResource("5_2tfht")]
 position = Vector2(432, 84)
 collision_layer = 0
 collision_mask = 4
@@ -652,7 +652,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 
 [node name="SetStateLandingCommand" parent="Scenario/LandingArea_4" index="2" unique_id=1917018965 instance=ExtResource("10_qc4u2")]
 
-[node name="LandingArea_5" parent="Scenario" index="23" unique_id=1812825221 instance=ExtResource("5_2tfht")]
+[node name="LandingArea_5" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="23" unique_id=1812825221 instance=ExtResource("5_2tfht")]
 position = Vector2(528, 116)
 collision_layer = 0
 collision_mask = 4
@@ -679,7 +679,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 
 [node name="SetStateLandingCommand" parent="Scenario/LandingArea_5" index="2" unique_id=1393069028 instance=ExtResource("10_qc4u2")]
 
-[node name="LandingArea_6" parent="Scenario" index="24" unique_id=1904240312 instance=ExtResource("5_2tfht")]
+[node name="LandingArea_6" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="24" unique_id=1904240312 instance=ExtResource("5_2tfht")]
 position = Vector2(624, 148)
 collision_layer = 0
 collision_mask = 4
@@ -706,7 +706,7 @@ debug_color = Color(1, 1, 0, 0.392157)
 
 [node name="SetStateLandingCommand" parent="Scenario/LandingArea_6" index="2" unique_id=1041731746 instance=ExtResource("10_qc4u2")]
 
-[node name="LandingArea_7" parent="Scenario" index="25" unique_id=1265121270 instance=ExtResource("5_2tfht")]
+[node name="LandingArea_7" parent="Scenario" parent_id_path=PackedInt32Array(759445518) index="25" unique_id=1265121270 instance=ExtResource("5_2tfht")]
 position = Vector2(320, 52)
 collision_layer = 0
 collision_mask = 4
@@ -733,5 +733,5 @@ debug_color = Color(1, 1, 0, 0.392157)
 
 [node name="SetStateLandingCommand" parent="Scenario/LandingArea_7" index="2" unique_id=1846646210 instance=ExtResource("10_qc4u2")]
 
-[node name="Camera" parent="." index="10"]
+[node name="Camera" parent="." index="10" unique_id=310750223]
 visible = false

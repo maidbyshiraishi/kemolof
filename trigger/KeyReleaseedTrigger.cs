@@ -1,8 +1,8 @@
 using Godot;
-using kemolof.command;
-using kemolof.stage;
+using maid_by_shiraishi.command;
+using maid_by_shiraishi.stage;
 
-namespace kemolof.trigger;
+namespace maid_by_shiraishi.trigger;
 
 /// <summary>
 /// キーの開放でコマンドを実行するトリガー

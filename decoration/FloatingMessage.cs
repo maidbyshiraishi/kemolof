@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.decoration;
+namespace maid_by_shiraishi.decoration;
 
 /// <summary>
 /// フローティングメッセージ

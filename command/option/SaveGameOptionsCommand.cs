@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command.option;
+namespace maid_by_shiraishi.command.option;
 
 /// <summary>
 /// ゲームオプションを保存するコマンド

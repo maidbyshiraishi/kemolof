@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.screen;
+using maid_by_shiraishi.screen;
 
-namespace kemolof.theater;
+namespace maid_by_shiraishi.theater;
 
 /// <summary>
 /// スクロールシアターダイアログ

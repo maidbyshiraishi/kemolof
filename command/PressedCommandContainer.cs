@@ -1,7 +1,7 @@
 using Godot;
 using static Godot.Control;
 
-namespace kemolof.command;
+namespace maid_by_shiraishi.command;
 
 /// <summary>
 /// 押下コマンドコンテナ

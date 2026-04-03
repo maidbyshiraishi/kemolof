@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.screen;
+using maid_by_shiraishi.screen;
 
-namespace kemolof.command;
+namespace maid_by_shiraishi.command;
 
 /// <summary>
 /// CanvasItemを表示するコマンド

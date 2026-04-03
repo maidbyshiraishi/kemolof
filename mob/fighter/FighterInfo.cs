@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.data;
+using maid_by_shiraishi.data;
 
-namespace kemolof.mob.fighter;
+namespace maid_by_shiraishi.mob.fighter;
 
 /// <summary>
 /// ファイター情報

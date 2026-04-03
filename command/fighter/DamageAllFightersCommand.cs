@@ -1,9 +1,9 @@
 using Godot;
 using Godot.Collections;
-using kemolof.stage;
-using kemolof.system;
+using maid_by_shiraishi.stage;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command.fighter;
+namespace maid_by_shiraishi.command.fighter;
 
 /// <summary>
 /// ファイター全員にダメージコマンド

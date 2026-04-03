@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace kemolof.mob.shot;
+namespace maid_by_shiraishi.mob.shot;
 
 /// <summary>
 /// 飛び道具の親

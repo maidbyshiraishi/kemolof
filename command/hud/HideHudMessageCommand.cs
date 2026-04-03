@@ -1,8 +1,8 @@
 using Godot;
-using kemolof.stage.hud;
-using kemolof.system;
+using maid_by_shiraishi.stage.hud;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command.hud;
+namespace maid_by_shiraishi.command.hud;
 
 /// <summary>
 /// HUDメッセージを非表示するコマンド

@@ -1,4 +1,4 @@
-namespace kemolof.stage;
+namespace maid_by_shiraishi.stage;
 
 /// <summary>
 /// 画面間で状態を保存するオブジェクトのインタフェース

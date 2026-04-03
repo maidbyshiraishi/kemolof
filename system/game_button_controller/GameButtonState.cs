@@ -1,4 +1,4 @@
-namespace kemolof.system.game_button_controller;
+namespace maid_by_shiraishi.system.game_button_controller;
 
 /// <summary>
 /// GameButtonControllerで使用されるボタンの状態

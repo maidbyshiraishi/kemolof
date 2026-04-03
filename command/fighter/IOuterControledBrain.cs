@@ -1,6 +1,6 @@
 using Godot.Collections;
 
-namespace kemolof.command.fighter;
+namespace maid_by_shiraishi.command.fighter;
 
 /// <summary>
 /// ファイター外部制御インタフェース

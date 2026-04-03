@@ -1,4 +1,4 @@
-namespace kemolof.system.waza_analyzer;
+namespace maid_by_shiraishi.system.waza_analyzer;
 
 public partial class WazaKey
 {

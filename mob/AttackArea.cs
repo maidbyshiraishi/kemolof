@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace kemolof.mob;
+namespace maid_by_shiraishi.mob;
 
 /// <summary>
 /// 攻撃判定

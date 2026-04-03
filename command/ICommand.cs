@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.command;
+namespace maid_by_shiraishi.command;
 
 /// <summary>
 /// コマンドノードインタフェース

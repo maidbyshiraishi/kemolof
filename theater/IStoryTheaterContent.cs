@@ -1,4 +1,4 @@
-namespace kemolof.theater;
+namespace maid_by_shiraishi.theater;
 
 /// <summary>
 /// ストーリーシアターのインタフェース

@@ -1,11 +1,11 @@
 using Godot;
 using Godot.Collections;
-using kemolof.mob.brain;
-using kemolof.stage;
-using kemolof.system;
-using kemolof.system.waza_analyzer;
+using maid_by_shiraishi.mob.brain;
+using maid_by_shiraishi.stage;
+using maid_by_shiraishi.system;
+using maid_by_shiraishi.system.waza_analyzer;
 
-namespace kemolof.mob.fighter;
+namespace maid_by_shiraishi.mob.fighter;
 
 /// <summary>
 /// ファイターの親

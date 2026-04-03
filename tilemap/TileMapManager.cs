@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.tilemap;
+namespace maid_by_shiraishi.tilemap;
 
 /// <summary>
 /// タイルマップ制御

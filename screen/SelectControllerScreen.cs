@@ -1,9 +1,9 @@
 using Godot;
-using kemolof.mob.fighter;
-using kemolof.system;
-using kemolof.system.joy_pad_controller;
+using maid_by_shiraishi.mob.fighter;
+using maid_by_shiraishi.system;
+using maid_by_shiraishi.system.joy_pad_controller;
 
-namespace kemolof.screen;
+namespace maid_by_shiraishi.screen;
 
 /// <summary>
 /// コントローラー選択画面

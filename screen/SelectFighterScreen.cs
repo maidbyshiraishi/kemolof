@@ -1,11 +1,11 @@
 using Godot;
 using Godot.Collections;
-using kemolof.mob.fighter;
-using kemolof.system;
-using kemolof.system.joy_pad_controller;
-using kemolof.trigger;
+using maid_by_shiraishi.mob.fighter;
+using maid_by_shiraishi.system;
+using maid_by_shiraishi.system.joy_pad_controller;
+using maid_by_shiraishi.trigger;
 
-namespace kemolof.screen;
+namespace maid_by_shiraishi.screen;
 
 /// <summary>
 /// ファイター選択画面

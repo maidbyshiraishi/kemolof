@@ -1,9 +1,9 @@
 using Godot;
 using Godot.Collections;
-using kemolof.mob.fighter;
-using kemolof.mob.shot;
+using maid_by_shiraishi.mob.fighter;
+using maid_by_shiraishi.mob.shot;
 
-namespace kemolof.mob.brain;
+namespace maid_by_shiraishi.mob.brain;
 
 /// <summary>
 /// 視界

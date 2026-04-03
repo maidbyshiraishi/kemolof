@@ -1,8 +1,8 @@
 using Godot;
 using Godot.Collections;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.mob.shot;
+namespace maid_by_shiraishi.mob.shot;
 
 /// <summary>
 /// 忍者必殺技3

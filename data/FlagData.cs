@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace kemolof.data;
+namespace maid_by_shiraishi.data;
 
 /// <summary>
 /// フラグ

@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.command;
+using maid_by_shiraishi.command;
 
-namespace kemolof.trigger;
+namespace maid_by_shiraishi.trigger;
 
 /// <summary>
 /// 接触時にコマンドを実行するトリガー

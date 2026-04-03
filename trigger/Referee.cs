@@ -1,10 +1,10 @@
 using Godot;
 using Godot.Collections;
-using kemolof.command;
-using kemolof.command.dialog;
-using kemolof.mob.fighter;
+using maid_by_shiraishi.command;
+using maid_by_shiraishi.command.dialog;
+using maid_by_shiraishi.mob.fighter;
 
-namespace kemolof.trigger;
+namespace maid_by_shiraishi.trigger;
 
 /// <summary>
 /// キーの開放でコマンドを実行するトリガー

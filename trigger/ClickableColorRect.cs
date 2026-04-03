@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.trigger;
+namespace maid_by_shiraishi.trigger;
 
 /// <summary>
 /// クリック可能なColorRect

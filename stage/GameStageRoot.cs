@@ -1,12 +1,12 @@
 using Godot;
 using Godot.Collections;
-using kemolof.mob.brain;
-using kemolof.mob.fighter;
-using kemolof.screen;
-using kemolof.system;
-using kemolof.trigger;
+using maid_by_shiraishi.mob.brain;
+using maid_by_shiraishi.mob.fighter;
+using maid_by_shiraishi.screen;
+using maid_by_shiraishi.system;
+using maid_by_shiraishi.trigger;
 
-namespace kemolof.stage;
+namespace maid_by_shiraishi.stage;
 
 /// <summary>
 /// ゲームステージの親

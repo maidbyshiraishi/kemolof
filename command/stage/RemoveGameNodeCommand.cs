@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.stage;
+using maid_by_shiraishi.stage;
 
-namespace kemolof.command.stage;
+namespace maid_by_shiraishi.command.stage;
 
 /// <summary>
 /// 接触したGameNodeを除去するコマンド

@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command.dialog;
+namespace maid_by_shiraishi.command.dialog;
 
 /// <summary>
 /// ダイアログを閉じるコマンド

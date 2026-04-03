@@ -1,8 +1,8 @@
 using Godot;
-using kemolof.mob.fighter;
-using kemolof.system.waza_analyzer;
+using maid_by_shiraishi.mob.fighter;
+using maid_by_shiraishi.system.waza_analyzer;
 
-namespace kemolof.command.fighter;
+namespace maid_by_shiraishi.command.fighter;
 
 /// <summary>
 /// ファイターをジャンプさせるコマンド

@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.command;
+using maid_by_shiraishi.command;
 
-namespace kemolof.path;
+namespace maid_by_shiraishi.path;
 
 /// <summary>
 /// パスに沿って動くもの

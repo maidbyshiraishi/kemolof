@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command.state;
+namespace maid_by_shiraishi.command.state;
 
 /// <summary>
 /// ステージ情報を保存するコマンド

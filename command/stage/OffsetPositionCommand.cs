@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.command.stage;
+namespace maid_by_shiraishi.command.stage;
 
 /// <summary>
 /// 位置調整を行うコマンド

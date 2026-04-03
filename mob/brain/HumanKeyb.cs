@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.system.waza_analyzer;
+using maid_by_shiraishi.system.waza_analyzer;
 
-namespace kemolof.mob.brain;
+namespace maid_by_shiraishi.mob.brain;
 
 /// <summary>
 /// ファイターキーボード操作

@@ -1,10 +1,10 @@
 using Godot;
-using kemolof.data;
-using kemolof.mob.fighter;
+using maid_by_shiraishi.data;
+using maid_by_shiraishi.mob.fighter;
 using System;
 using System.Text.RegularExpressions;
 
-namespace kemolof.system;
+namespace maid_by_shiraishi.system;
 
 /// <summary>
 /// ゲームのユーザーデータのセーブとロードを管理

@@ -1,8 +1,8 @@
 using Godot;
-using kemolof.command;
-using kemolof.screen;
+using maid_by_shiraishi.command;
+using maid_by_shiraishi.screen;
 
-namespace kemolof.theater;
+namespace maid_by_shiraishi.theater;
 
 /// <summary>
 /// ストーリーシアターダイアログ

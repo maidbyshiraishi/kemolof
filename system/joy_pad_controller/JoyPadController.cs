@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace kemolof.system.joy_pad_controller;
+namespace maid_by_shiraishi.system.joy_pad_controller;
 
 /// <summary>
 /// 複数のゲームパッドのボタン状態を取り扱う

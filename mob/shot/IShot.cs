@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.mob.shot;
+namespace maid_by_shiraishi.mob.shot;
 
 /// <summary>
 /// Shotインタフェース

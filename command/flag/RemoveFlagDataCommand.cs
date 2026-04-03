@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command.flag;
+namespace maid_by_shiraishi.command.flag;
 
 /// <summary>
 /// ゲームフラグを削除するコマンド

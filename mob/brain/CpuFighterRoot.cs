@@ -1,10 +1,10 @@
 using Godot;
 using Godot.Collections;
-using kemolof.command.fighter;
-using kemolof.mob.fighter;
-using kemolof.system.waza_analyzer;
+using maid_by_shiraishi.command.fighter;
+using maid_by_shiraishi.mob.fighter;
+using maid_by_shiraishi.system.waza_analyzer;
 
-namespace kemolof.mob.brain;
+namespace maid_by_shiraishi.mob.brain;
 
 /// <summary>
 /// ファイターCPU操作の親

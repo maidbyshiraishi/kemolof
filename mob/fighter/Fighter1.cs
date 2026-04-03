@@ -1,11 +1,11 @@
 using Godot;
 using Godot.Collections;
-using kemolof.command.fighter;
-using kemolof.mob.shot;
-using kemolof.system;
-using kemolof.system.waza_analyzer;
+using maid_by_shiraishi.command.fighter;
+using maid_by_shiraishi.mob.shot;
+using maid_by_shiraishi.system;
+using maid_by_shiraishi.system.waza_analyzer;
 
-namespace kemolof.mob.fighter;
+namespace maid_by_shiraishi.mob.fighter;
 
 /// <summary>
 /// ファイター1「青メイド」

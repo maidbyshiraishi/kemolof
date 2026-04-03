@@ -1,8 +1,8 @@
 using Godot;
-using kemolof.decoration;
-using kemolof.system;
+using maid_by_shiraishi.decoration;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command.decoration;
+namespace maid_by_shiraishi.command.decoration;
 
 /// <summary>
 /// デコレーションを表示するコマンド

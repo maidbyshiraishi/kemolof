@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.trigger;
+using maid_by_shiraishi.trigger;
 
-namespace kemolof.screen;
+namespace maid_by_shiraishi.screen;
 
 /// <summary>
 /// メッセージダイアログ

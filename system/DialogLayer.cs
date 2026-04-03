@@ -1,9 +1,9 @@
 using Godot;
 using Godot.Collections;
-using kemolof.screen;
-using kemolof.stage;
+using maid_by_shiraishi.screen;
+using maid_by_shiraishi.stage;
 
-namespace kemolof.system;
+namespace maid_by_shiraishi.system;
 
 /// <summary>
 /// 画面遷移・ダイアログ制御

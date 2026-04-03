@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.screen;
+namespace maid_by_shiraishi.screen;
 
 /// <summary>
 /// 音量設定ダイアログ

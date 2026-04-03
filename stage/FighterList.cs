@@ -1,9 +1,9 @@
 using Godot;
 using Godot.Collections;
-using kemolof.mob;
-using kemolof.mob.fighter;
+using maid_by_shiraishi.mob;
+using maid_by_shiraishi.mob.fighter;
 
-namespace kemolof.stage;
+namespace maid_by_shiraishi.stage;
 
 public partial class FighterList : Node2D
 {

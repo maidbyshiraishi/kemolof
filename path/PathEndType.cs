@@ -1,4 +1,4 @@
-namespace kemolof.path;
+namespace maid_by_shiraishi.path;
 
 /// <summary>
 /// パス終端タイプ

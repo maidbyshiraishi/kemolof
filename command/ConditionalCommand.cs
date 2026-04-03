@@ -1,8 +1,8 @@
 using Godot;
 using Godot.Collections;
-using kemolof.system;
+using maid_by_shiraishi.system;
 
-namespace kemolof.command;
+namespace maid_by_shiraishi.command;
 
 /// <summary>
 /// 条件式コマンド

@@ -1,7 +1,7 @@
 using Godot;
-using kemolof.mob.fighter;
+using maid_by_shiraishi.mob.fighter;
 
-namespace kemolof.command.fighter;
+namespace maid_by_shiraishi.command.fighter;
 
 /// <summary>
 /// ファイターを着陸状態へ遷移させるコマンド

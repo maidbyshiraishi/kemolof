@@ -1,9 +1,9 @@
 using Godot;
 using Godot.Collections;
-using kemolof.system;
-using kemolof.trigger;
+using maid_by_shiraishi.system;
+using maid_by_shiraishi.trigger;
 
-namespace kemolof.screen;
+namespace maid_by_shiraishi.screen;
 
 /// <summary>
 /// ステージ選択画面

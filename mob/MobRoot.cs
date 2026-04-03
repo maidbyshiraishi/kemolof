@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.mob;
+namespace maid_by_shiraishi.mob;
 
 /// <summary>
 /// 物理挙動するオブジェクトの親

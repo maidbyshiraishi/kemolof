@@ -1,6 +1,6 @@
 using Godot;
 
-namespace kemolof.decoration;
+namespace maid_by_shiraishi.decoration;
 
 /// <summary>
 /// 飾りエフェクト

@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace kemolof.system;
+namespace maid_by_shiraishi.system;
 
 /// <summary>
 /// ダイアログ引数制御

@@ -5,7 +5,7 @@ namespace maid_by_shiraishi.system.game_button_controller;
 /// <summary>
 /// ゲームの入力の連打、押しっぱなしを検出する
 /// </summary>
-public partial class GamePads : Node
+public partial class GameButtonController : Node
 {
     [Export]
     public string Action { get; set; }

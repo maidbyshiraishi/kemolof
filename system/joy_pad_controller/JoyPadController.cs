@@ -332,7 +332,7 @@ public partial class JoyPadController : Node
     public bool IsActionJustPressed(int deviceIndex, string actionName) => IsJustActionCommon(deviceIndex, actionName, JustMode.Pressed);
 
     /// <summary>
-    /// 指定したデバイスIDのゲームパッドに対し、Godot.IsActionJustReleased
+    /// 指定したデバイスIDのゲームパッドに対し、Godot.IsActionJustReleasedっぽい動きをする
     /// IsJustActionCommonをIsActionJustReleasedモードで実行する
     /// ソレっぽい結果を返すのは確認したが、どの程度Godot.Inputと同じ動きなのかは検証していない。
     /// </summary>

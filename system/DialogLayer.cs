@@ -88,6 +88,7 @@ public partial class DialogLayer : CanvasLayer
         Push(dnode);
         AddChild(dnode);
         dnode.Active();
+        dnode.ProcessMode = ProcessModeEnum.Always;
         Input.MouseMode = dnode.MouseCaptured ? Input.MouseModeEnum.Captured : Input.MouseModeEnum.Visible;
     }
 
@@ -136,8 +137,8 @@ public partial class DialogLayer : CanvasLayer
         else if (!skipActive && GetCurrentDialog() is DialogRoot dialogRoot)
         {
             dialogRoot.Active();
+            dialogRoot.ProcessMode = ProcessModeEnum.Always;
             Input.MouseMode = dialogRoot.MouseCaptured ? Input.MouseModeEnum.Captured : Input.MouseModeEnum.Visible;
-            dialogRoot.ProcessMode = ProcessModeEnum.Inherit;
         }
     }
 

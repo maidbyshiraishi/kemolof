@@ -1,0 +1,97 @@
+格闘ゲームのコマンド関連
+
+
+関連するソースコード
+
+https://github.com/maidbyshiraishi/kemolof/blob/main/system/waza_analyzer/WazaKey.cs
+https://github.com/maidbyshiraishi/kemolof/blob/main/mob/fighter/FighterRoot.cs
+https://github.com/maidbyshiraishi/kemolof/blob/main/mob/fighter/fighter_1.tscn
+https://github.com/maidbyshiraishi/kemolof/blob/main/system/waza_analyzer/waza_analyzer.tscn
+https://github.com/maidbyshiraishi/kemolof/blob/main/mob/brain/BrainRoot.cs
+https://github.com/maidbyshiraishi/kemolof/blob/main/mob/brain/human_keyb.tscn
+https://github.com/maidbyshiraishi/kemolof/blob/main/mob/brain/human_pad.tscn
+
+
+キーフラグ(WazaKeyクラス)
+
+キーの状態はビットフラグとして管理する。同時に複数のフラグを立てることで同時押しに対応できる。
+"けもろふ"では操作キャラクターごとに4方向2ボタン計6キーを使用する。キーとビットの対応はWazaKeyクラスの定数で定義されている。
+"けもろふ"では使用していないが、タメコマンド用に追加で1ビット使用している。
+未使用ビットは8方向6ボタン計14キーで使いたい場合などに利用できる。int型は32bitなのでタメコマンド用フラグを除いた最大31キーまで少しの変更で対応できる・・・はず。
+プレイヤーのキー入力から作成されたWazaKeyクラスのオブジェクトの履歴を配列の先頭から順に新しいキー入力となるように配列に格納したものをキーバッファと呼ぶ。
+
+
+コマンドの定義
+
+コマンド1は2つの配列と登録名で構成される。登録名はプログラム内でコマンドの成立を確認するために用いられる。ゲームで使用する名称でなくてもいい。どの技なのか判別できれば"waza_1"などでもよく、例えば"昇竜拳"である必要はない。
+コマンドはキャラクターが右を向いている想定で定義する。ゲーム実行時にコマンドの左右を反転させたい場合、WazaAnalyzerクラスのAnalyzeWaza関数実行時に左方向フラグをtrueで指定する。
+1つ目の配列はコマンドデータで、キーを押す順番を定義する。
+2つ目の配列はマスクデータで、コマンドをどの程度厳密に扱うか調整するために使用される。
+
+
+コマンド例
+
+1つ目の配列は順に押すキーを定義したコマンドデータで、コマンドが下＞下＞キックの場合、下記のようになる。同じキーが連続する場合はFreeを挟む。また、同時押しはorで連結する。orなので連結する順番は問わない。ナナメ方向は方向キーの同時押しとして対応する。例えば、右ナナメ上ならWazaKey.Right | WazaKey.Upとなる。
+
+Array<int> wazaCommand =
+[
+	WazaKey.Down, // 下
+	WazaKey.Free, // 離す
+	WazaKey.Down, // 下
+	WazaKey.Kick, // キック
+];
+
+2つ目の配列はマスクデータで、今回のマスクデータは以下のように作成した。コマンドで押す必要のあるキーは、すべてマスクしなければならない。他のキーをどうするかはゲームの仕様や人による。
+
+Array<int> wazaMask =
+[
+	WazaKey.Down, // 下
+	WazaKey.Down, // なし、下を離せ
+	WazaKey.Down | WazaKey.Kick, // 下、下とキックを同時入力するな
+	WazaKey.Punch | WazaKey.Kick, // キック、パンチとキックは間違うな、下を入れっぱなしは許す
+];
+
+最初は下キーのみマスクする。コマンドの最初の下キーは他キーが押されていても下キーさえ押されていればOKとする。厳密に下キーだけ押してほしいなら利用する全6キーすべてをorで接続し、WazaKey.Up | WazaKey.Down | WazaKey.Left | WazaKey.Right | WazaKey.Punch|WazaKey.Kickと指定する。orなので連結する順番は問わない。
+2つ目のマスクは下キーをコマンド通りに離しているか確認するために下キーとする。他キーはマスクしていないので押していても押していなくても無視される。
+3つ目は下キーとキックキーの2キーを同時にマスクしている。コマンドの3つ目は下キーなので、下キーをマスクして押されていることを確認できるようにしなければならない。また、このタイミングで先走ってキックキーを同時に押していないかも確認したいため、キックキーもマスクの対象にした。先走って押してもいいならキックキーをマスクしなくてもよい。マスクしたキー以外のキーは無視される。
+最後にパンチキーとキックキーの2キーをマスクした。コマンドの最後はキックキーなのでキックキーをマスクしなければならない。また、キックキーに加えてパンチキーをマスクすることで、苦し紛れにパンチキーとキックキーを同時押ししてもコマンドが成立しないようになる。今回、下キーはマスクしていない。ここで下キーをマスクすれば、前コマンドの下キーを押したままでキックキーを押しても技が成立しなくなる。下キーを押したままでキックキーを押してもコマンドが成立してもよいなら、下キーはマスクしなくてもよい。
+
+
+コマンドを受け付けるキャラクターごとにWazaAnalyzerクラスのインスタンスを用意して、それぞれキャラクターごとに技の登録を行う。コマンドが完成したらWazaAnalyzerクラスのAddWaza関数で登録する。コマンドの登録は優先順位の高い技から登録すること。
+
+例
+AddWaza("waza_1", wazaCommand, wazaMask);
+
+
+
+コマンドの解析(WazaAnalyzerクラス)
+
+コマンドの解析はWazaAnalyzerクラスで行う。任意のタイミングでWazaAnalyzerクラスのインスタンスに登録されたコマンドが成立したか検証できる。
+キャラクターごとにWazaAnalyzerクラスのインスタンスを作り、キャラクターごとにコマンドを登録する。
+任意のタイミングでコマンドの登録名とキーバッファとキャラクターが左右どちら向きかを引数としてAnalyzeWaza関数を使用する。AnalyzeWaza関数はコマンドが成立した場合はtrueを返す。
+"けもろふ"では、コマンドが成立したときにキーバッファをカラにする後始末やキャラクター間で共通の挙動についてはFighterRootクラスで処理している。
+WazaAnalyzerクラスはシステム全体で1つのインスタンスを共有して使用することは想定していない。そのようにも使えるかもしれないが、確認していない。
+
+詳しい処理内容はソースコード内にコメントとして記入している。
+
+
+
+キーバッファ
+
+"けもろふ"ではBrainRootクラスを介してキーバッファを取り扱う。
+キーバッファの追加は各キャラクターの_Process関数内で行っている。
+CPUもキーバッファにキーを追加してコマンドを成立させることで行動する。
+
+例えばキーボードでの追加処理は下記のようになる。アクション名はインプットマップで定義する。
+
+InsertBuffer(
+	  (Input.IsActionPressed("game_keyb_up") ? WazaKey.Up : 0)
+	| (Input.IsActionPressed("game_keyb_down") ? WazaKey.Down : 0)
+	| (Input.IsActionPressed("game_keyb_left") ? WazaKey.Left : 0)
+	| (Input.IsActionPressed("game_keyb_right") ? WazaKey.Right : 0)
+	| (Input.IsActionPressed("game_keyb_punch") ? WazaKey.Punch : 0)
+	| (Input.IsActionPressed("game_keyb_kick") ? WazaKey.Kick : 0)
+);
+
+
+以上

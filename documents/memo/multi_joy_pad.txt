@@ -1,0 +1,9 @@
+複数のゲームパッドを個別に扱いたい
+
+
+関連するソースコード
+
+https://github.com/maidbyshiraishi/kemolof/blob/main/system/joy_pad_controller/joy_pad_controller.tscn
+
+
+処理内容はソースコード内にコメントとして記入している。

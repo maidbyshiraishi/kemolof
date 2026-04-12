@@ -1,0 +1,81 @@
+ダイアログを開く
+
+
+関連するソースコード
+
+https://github.com/maidbyshiraishi/kemolof/blob/main/system/dialog_layer.tscn
+https://github.com/maidbyshiraishi/kemolof/blob/main/screen/DialogRoot.cs
+https://github.com/maidbyshiraishi/kemolof/blob/main/system/dialog_argument.tscn
+
+
+前提条件
+
+ダイアログを開くには、プロジェクト設定のグローバルタブでDialogLayerという名前で自動読み込みに設定されたres://system/dialog_layer.tscnを利用する。
+新たに開くダイアログへのデータ受け渡しのため、プロジェクト設定のグローバルタブでDialogArgumentという名前で自動読み込みに設定されたres://system/dialog_argument.tscnを利用する。
+DialogLayerクラスで扱うダイアログはDialogRootクラスを継承したシーンのみとする。
+
+
+ダイアログを開く
+
+新たに開くダイアログへデータ受け渡しを行わない場合、以下のようにダイアログを開く。
+
+例
+GetNode<DialogLayer>("/root/DialogLayer").OpenDialog("res://screen/option_list_dialog.tscn");
+
+まず、GetNode<DialogLayer>("/root/DialogLayer")で自動読み込みされたグローバルなインスタンスを取得する。次にOpenDialog関数の引数で開きたいダイアログのリソースパスを指定する。
+
+
+新たに開くダイアログへデータ受け渡しを行う場合、以下のようにダイアログを開く。
+
+例
+GetNode<DialogLayer>("/root/DialogLayer").OpenDialog("res://screen/option_list_dialog.tscn", "argument_name", [1 ,2, 3, "string1", "string2", "string3"]);
+
+新たに開くダイアログへ引き渡されるデータはGodot.Collection.Arrayのオブジェクトでなければならない。
+OpenDialog関数を実行する際、追加の引数としてデータのキー名とArray<Variant>のオブジェクトを設定する。
+引き渡したデータは、新たに開くダイアログのDialogRootクラスの_EnterTree関数の実行時にm_Argument変数に読み込まれる。m_Argument変数のスコープはprotectedであり、DialogRootクラスを継承した新たに開くダイアログ内から参照できる。新たに開くダイアログで独自に_EnterTree関数を実装する場合、親クラスの_EnterTree関数を忘れずに実行すること。
+
+
+ダイアログを開くと以下の順で処理が行われる。
+
+ノードツリーがポーズされる。
+既に他のダイアログが開かれているかどうか確認する
+	他のダイアログが開かれていない場合
+		画面のInactive関数が実行される。
+	他のダイアログが開かれている場合
+		前回最後に開かれたダイアログのInactive関数が実行される。
+		前回最後に開かれたダイアログがプロセスモードがポーズ可能に設定されポーズされる。
+新たに開くダイアログがシーンツリーに追加される。その際、GodotEngineの各種処理が実行される。シーンがロードされる際には_Init関数、_EnterTree関数、_Ready関数の順で呼び出しが行われる。新たに開くダイアログへデータの受け渡しが行われた場合、新たに開くダイアログの_EnterTree関数内で読み込みが行われる。
+新たに開くダイアログのActive関数が実行される。
+新たに開くダイアログのプロセスモードが常時に設定される。
+新たに開くダイアログのExportプロパティMouseCapturedを確認し、マウスカーソルの表示と非表示を切り替える。
+
+
+ダイアログを閉じる
+
+例
+GetNode<DialogLayer>("/root/DialogLayer").CloseDialog();
+
+ダイアログを閉じると、開いていたダイアログを開く前に他のダイアログを開いていた場合、そのダイアログがアクティブになる。開いていたダイアログを開く前に他のダイアログを開いていなかった場合、画面がアクティブになる。
+
+
+ダイアログを閉じる際にUndo関数を実行する場合は
+
+例
+GetNode<DialogLayer>("/root/DialogLayer").CloseDialog(true);
+
+
+ダイアログを閉じると以下の処理が行われる
+
+ダイアログを閉じる際にUndo関数を実行する指定がある場合、今から閉じるダイアログのUndo関数が実行される。一時的なシステム状態の変更などを元に戻す用途で使用される。たぶん、Inactive関数内で処理しても変わらない。
+今から閉じるダイアログのInactive関数が実行される。
+今から閉じるダイアログのClose関数が実行される。関数内でQueFree関数が実行される。その際、GodotEngineの各種処理が実行される。例えば、_ExitTree関数が実行される。
+今から閉じるダイアログの前に他のダイアログが開かれているかどうか確認する
+	今から閉じるダイアログの前に他のダイアログが開かれていない場合
+		画面のActive関数が実行される。
+	今から閉じるダイアログの前に他のダイアログが開かれている場合
+		今から閉じるダイアログの前に開かれたダイアログのActive関数が実行される。
+		今から閉じるダイアログの前に開かれたダイアログのExportプロパティMouseCapturedを確認し、マウスカーソルの表示と非表示を切り替える。
+		今から閉じるダイアログの前に開かれたダイアログのプロセスモードが常時に設定される。
+
+
+以上

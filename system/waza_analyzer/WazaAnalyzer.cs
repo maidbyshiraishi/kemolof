@@ -45,7 +45,7 @@ public partial class WazaAnalyzer : Node
         for (int i = 0; i < _lrConversionTable.Length; i++)
         {
             // 左右ビットを入れ替える
-            _lrConversionTable[i] = SwapBits(i, 2, 3);
+            _lrConversionTable[i] = SwapBits(i, WazaKey.Left, WazaKey.Right);
         }
     }
 
@@ -57,31 +57,7 @@ public partial class WazaAnalyzer : Node
     /// <param name="index1">入れ替えたいビット1</param>
     /// <param name="index2">入れ替えたいビット2</param>
     /// <returns>入れ替え後の値</returns>
-    private static int SwapBits(int value, int index1, int index2)
-    {
-        // 対象ビットを1にする
-        int mask1 = 1 << index1;
-        int mask2 = 1 << index2;
-        // 対象ビットを調べる
-        bool bit1 = (value & mask1) != 0;
-        bool bit2 = (value & mask2) != 0;
-        // 対象ビットをゼロにする
-        value &= ~mask1;
-        value &= ~mask2;
-
-        // 対象ビットを入れ替えて書き戻す
-        if (bit1)
-        {
-            value |= mask2;
-        }
-
-        if (bit2)
-        {
-            value |= mask1;
-        }
-
-        return value;
-    }
+    private static int SwapBits(int value, int index1, int index2) => (value & index1) == index1 == ((value & index2) == index2) ? value : (index1 | index2) ^ value;
 
     /// <summary>
     /// 必殺技を登録する。

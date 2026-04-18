@@ -1,0 +1,44 @@
+音楽プレーヤー
+
+
+関連するソースコード
+
+https://github.com/maidbyshiraishi/kemolof/blob/main/system/music_player.tscn
+
+
+前提条件
+
+BGMの再生は、プロジェクト設定のグローバルタブでMusicPlayerという名前で自動読み込みに設定されたres://system/music_player.tscnを利用する。
+
+
+BGMの再生や停止、切り替えを行う方法
+
+再生の例
+GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastPlayまたはMusicPlayer.Command.Play, AudioStreamクラスのオブジェクト);
+
+停止の例
+GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastMuteまたはMusicPlayer.Command.Mute);
+
+まず、GetNode<MusicPlayer>("/root/MusicPlayer")で自動読み込みされたグローバルなインスタンスを取得する。次にPlay関数を実行する。引数でMusicPlayer.Commandの命令とAudioStreamクラスのオブジェクトを指定する。MusicPlayer.Commandの命令は下記の通り。
+
+MusicPlayer.Commandの命令一覧
+	MusicPlayer.Command.None: 何もしない
+	MusicPlayer.Command.FastPlay: BGMを即再生する
+	MusicPlayer.Command.FastMute: BGMを即ミュートする
+	MusicPlayer.Command.Play: BGMをクロスフェード再生する
+	MusicPlayer.Command.Mute: BGMを徐々にミュートする
+
+MusicPlayer.Command.FastPlayまたはMusicPlayer.Command.Playの場合、Play関数の引数はMusicPlayer.Commandの命令とAudioStreamクラスのオブジェクトの2つを指定する。
+
+MusicPlayer.Command.FastMuteまたはMusicPlayer.Command.Muteの場合、Play関数の引数はMusicPlayer.Commandの命令のみで、AudioStreamクラスのオブジェクトを指定しても指定しなくても無視される。
+
+
+BGMを一時停止・BGMを再開する
+
+一時停止の例
+GetNode<MusicPlayer>("/root/MusicPlayer").Pause(true);
+
+BGMを再開する例
+GetNode<MusicPlayer>("/root/MusicPlayer").Pause(false);
+
+Play関数にMusicPlayer.Command.MuteやMusicPlayer.Command.FastMuteを指定した場合とは異なり、再開するとBGMは一時停止した位置から演奏が再開される。

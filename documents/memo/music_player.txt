@@ -1,44 +1,44 @@
-‰¹ŠyƒvƒŒ[ƒ„[
+éŸ³æ¥½ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼
 
 
-ŠÖ˜A‚·‚éƒ\[ƒXƒR[ƒh
+é–¢é€£ã™ã‚‹ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰
 
 https://github.com/maidbyshiraishi/kemolof/blob/main/system/music_player.tscn
 
 
-‘O’ñğŒ
+å‰ææ¡ä»¶
 
-BGM‚ÌÄ¶‚ÍAƒvƒƒWƒFƒNƒgİ’è‚ÌƒOƒ[ƒoƒ‹ƒ^ƒu‚ÅMusicPlayer‚Æ‚¢‚¤–¼‘O‚Å©“®“Ç‚İ‚İ‚Éİ’è‚³‚ê‚½res://system/music_player.tscn‚ğ—˜—p‚·‚éB
-
-
-BGM‚ÌÄ¶‚â’â~AØ‚è‘Ö‚¦‚ğs‚¤•û–@
-
-Ä¶‚Ì—á
-GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastPlay‚Ü‚½‚ÍMusicPlayer.Command.Play, AudioStreamƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg);
-
-’â~‚Ì—á
-GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastMute‚Ü‚½‚ÍMusicPlayer.Command.Mute);
-
-‚Ü‚¸AGetNode<MusicPlayer>("/root/MusicPlayer")‚Å©“®“Ç‚İ‚İ‚³‚ê‚½ƒOƒ[ƒoƒ‹‚ÈƒCƒ“ƒXƒ^ƒ“ƒX‚ğæ“¾‚·‚éBŸ‚ÉPlayŠÖ”‚ğÀs‚·‚éBˆø”‚ÅMusicPlayer.Command‚Ì–½—ß‚ÆAudioStreamƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ğw’è‚·‚éBMusicPlayer.Command‚Ì–½—ß‚Í‰º‹L‚Ì’Ê‚èB
-
-MusicPlayer.Command‚Ì–½—ßˆê——
-	MusicPlayer.Command.None: ‰½‚à‚µ‚È‚¢
-	MusicPlayer.Command.FastPlay: BGM‚ğ‘¦Ä¶‚·‚é
-	MusicPlayer.Command.FastMute: BGM‚ğ‘¦ƒ~ƒ…[ƒg‚·‚é
-	MusicPlayer.Command.Play: BGM‚ğƒNƒƒXƒtƒF[ƒhÄ¶‚·‚é
-	MusicPlayer.Command.Mute: BGM‚ğ™X‚Éƒ~ƒ…[ƒg‚·‚é
-
-MusicPlayer.Command.FastPlay‚Ü‚½‚ÍMusicPlayer.Command.Play‚Ìê‡APlayŠÖ”‚Ìˆø”‚ÍMusicPlayer.Command‚Ì–½—ß‚ÆAudioStreamƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚Ì2‚Â‚ğw’è‚·‚éB
-
-MusicPlayer.Command.FastMute‚Ü‚½‚ÍMusicPlayer.Command.Mute‚Ìê‡APlayŠÖ”‚Ìˆø”‚ÍMusicPlayer.Command‚Ì–½—ß‚Ì‚İ‚ÅAAudioStreamƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ğw’è‚µ‚Ä‚àw’è‚µ‚È‚­‚Ä‚à–³‹‚³‚ê‚éB
+BGMã®å†ç”Ÿã¯ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆè¨­å®šã®ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¿ãƒ–ã§MusicPlayerã¨ã„ã†åå‰ã§è‡ªå‹•èª­ã¿è¾¼ã¿ã«è¨­å®šã•ã‚ŒãŸres://system/music_player.tscnã‚’åˆ©ç”¨ã™ã‚‹ã€‚
 
 
-BGM‚ğˆê’â~EBGM‚ğÄŠJ‚·‚é
+BGMã®å†ç”Ÿã‚„åœæ­¢ã€åˆ‡ã‚Šæ›¿ãˆã‚’è¡Œã†æ–¹æ³•
 
-ˆê’â~‚Ì—á
+å†ç”Ÿã®ä¾‹
+GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastPlayã¾ãŸã¯MusicPlayer.Command.Play, AudioStreamã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ);
+
+åœæ­¢ã®ä¾‹
+GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastMuteã¾ãŸã¯MusicPlayer.Command.Mute);
+
+ã¾ãšã€GetNode<MusicPlayer>("/root/MusicPlayer")ã§è‡ªå‹•èª­ã¿è¾¼ã¿ã•ã‚ŒãŸã‚°ãƒ­ãƒ¼ãƒãƒ«ãªã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’å–å¾—ã™ã‚‹ã€‚æ¬¡ã«Playé–¢æ•°ã‚’å®Ÿè¡Œã™ã‚‹ã€‚å¼•æ•°ã§MusicPlayer.Commandã®å‘½ä»¤ã¨AudioStreamã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã™ã‚‹ã€‚MusicPlayer.Commandã®å‘½ä»¤ã¯ä¸‹è¨˜ã®é€šã‚Šã€‚
+
+MusicPlayer.Commandã®å‘½ä»¤ä¸€è¦§
+	MusicPlayer.Command.None: ä½•ã‚‚ã—ãªã„
+	MusicPlayer.Command.FastPlay: BGMã‚’å³å†ç”Ÿã™ã‚‹
+	MusicPlayer.Command.FastMute: BGMã‚’å³ãƒŸãƒ¥ãƒ¼ãƒˆã™ã‚‹
+	MusicPlayer.Command.Play: BGMã‚’ã‚¯ãƒ­ã‚¹ãƒ•ã‚§ãƒ¼ãƒ‰å†ç”Ÿã™ã‚‹
+	MusicPlayer.Command.Mute: BGMã‚’å¾ã€…ã«ãƒŸãƒ¥ãƒ¼ãƒˆã™ã‚‹
+
+MusicPlayer.Command.FastPlayã¾ãŸã¯MusicPlayer.Command.Playã®å ´åˆã€Playé–¢æ•°ã®å¼•æ•°ã¯MusicPlayer.Commandã®å‘½ä»¤ã¨AudioStreamã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®2ã¤ã‚’æŒ‡å®šã™ã‚‹ã€‚
+
+MusicPlayer.Command.FastMuteã¾ãŸã¯MusicPlayer.Command.Muteã®å ´åˆã€Playé–¢æ•°ã®å¼•æ•°ã¯MusicPlayer.Commandã®å‘½ä»¤ã®ã¿ã§ã€AudioStreamã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã—ã¦ã‚‚æŒ‡å®šã—ãªãã¦ã‚‚ç„¡è¦–ã•ã‚Œã‚‹ã€‚
+
+
+BGMã‚’ä¸€æ™‚åœæ­¢ãƒ»BGMã‚’å†é–‹ã™ã‚‹
+
+ä¸€æ™‚åœæ­¢ã®ä¾‹
 GetNode<MusicPlayer>("/root/MusicPlayer").Pause(true);
 
-BGM‚ğÄŠJ‚·‚é—á
+BGMã‚’å†é–‹ã™ã‚‹ä¾‹
 GetNode<MusicPlayer>("/root/MusicPlayer").Pause(false);
 
-PlayŠÖ”‚ÉMusicPlayer.Command.Mute‚âMusicPlayer.Command.FastMute‚ğw’è‚µ‚½ê‡‚Æ‚ÍˆÙ‚È‚èAÄŠJ‚·‚é‚ÆBGM‚Íˆê’â~‚µ‚½ˆÊ’u‚©‚ç‰‰‘t‚ªÄŠJ‚³‚ê‚éB
+Playé–¢æ•°ã«MusicPlayer.Command.Muteã‚„MusicPlayer.Command.FastMuteã‚’æŒ‡å®šã—ãŸå ´åˆã¨ã¯ç•°ãªã‚Šã€å†é–‹ã™ã‚‹ã¨BGMã¯ä¸€æ™‚åœæ­¢ã—ãŸä½ç½®ã‹ã‚‰æ¼”å¥ãŒå†é–‹ã•ã‚Œã‚‹ã€‚

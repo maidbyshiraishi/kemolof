@@ -9,6 +9,7 @@ https://github.com/maidbyshiraishi/kemolof/blob/main/system/music_player.tscn
 前提条件
 
 BGMの再生は、プロジェクト設定のグローバルタブでMusicPlayerという名前で自動読み込みに設定されたres://system/music_player.tscnを利用する。
+また、オーディオバスレイアウトの各種バスの設定の影響を受ける。audio_bus_layout.txtを参照すること。
 
 
 BGMの再生や停止、切り替えを行う方法
@@ -31,6 +32,8 @@ MusicPlayer.Commandの命令一覧
 MusicPlayer.Command.FastPlayまたはMusicPlayer.Command.Playの場合、Play関数の引数はMusicPlayer.Commandの命令とAudioStreamクラスのオブジェクトの2つを指定する。
 
 MusicPlayer.Command.FastMuteまたはMusicPlayer.Command.Muteの場合、Play関数の引数はMusicPlayer.Commandの命令のみで、AudioStreamクラスのオブジェクトを指定しても指定しなくても無視される。
+
+一時停止時とシーンの切り替え時、BGMは演奏を継続する。
 
 
 BGMを一時停止・BGMを再開する

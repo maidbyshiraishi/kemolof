@@ -7,7 +7,7 @@ using maid_by_shiraishi.mob.fighter;
 namespace maid_by_shiraishi.trigger;
 
 /// <summary>
-/// キーの開放でコマンドを実行するトリガー
+/// ゲームの勝敗を監視するトリガー
 /// </summary>
 public partial class Referee : Node
 {
@@ -16,10 +16,7 @@ public partial class Referee : Node
     private bool _finished = false;
     private bool _started = false;
 
-    public override void _Ready() =>
-        // Godotエディタからシグナルを接続すると
-        // リリースビルドのエクスポート時、接続が失われることがある。
-        GetNode<Timer>("Timer").Timeout += JudgeGame;
+    public override void _Ready() => GetNode<Timer>("Timer").Timeout += JudgeGame;
 
     public void StartJudge(bool started) => _started = started;
 

@@ -4,7 +4,7 @@ using maid_by_shiraishi.mob.fighter;
 namespace maid_by_shiraishi.command.fighter;
 
 /// <summary>
-/// ファイターが場外
+/// ファイターを場外にするコマンド
 /// </summary>
 public partial class OutsideFighterCommand : CommandRoot
 {

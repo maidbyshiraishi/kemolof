@@ -11,7 +11,7 @@
 [ext_resource type="SpriteFrames" uid="uid://4jhv6rqkv01w" path="res://contents/screen/select_fighter_screen/selected.tres" id="7_0e1rh"]
 [ext_resource type="Script" uid="uid://b6q328cyq1oy7" path="res://trigger/ClickableAnimatedSprite2D.cs" id="7_p72ly"]
 [ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="7_vayuq"]
-[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="8_p72ly"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://trigger/PressedCommandTrigger.cs" id="8_p72ly"]
 [ext_resource type="PackedScene" uid="uid://dvbavm6ut2uel" path="res://command/dialog/open_screen_command.tscn" id="11_17426"]
 [ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="12_0e1rh"]
 [ext_resource type="Script" uid="uid://dx0ofojs0m47p" path="res://trigger/ClickableColorRect.cs" id="15_p72ly"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b80876roihxb4" path="res://contents/screen/select_fighter_screen/select_fighter.png" id="3_a1vu2"]
 [ext_resource type="Texture2D" uid="uid://c0s6sx0k5667b" path="res://contents/screen/waza_command_screen/fighter.png" id="3_tw1ft"]
 [ext_resource type="Texture2D" uid="uid://1rj0y2gel2p" path="res://contents/screen/waza_command_screen/keys.png" id="3_ubuwm"]
-[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="4_a1vu2"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://trigger/PressedCommandTrigger.cs" id="4_a1vu2"]
 [ext_resource type="PackedScene" uid="uid://c6qlmwp7c1hu5" path="res://command/dialog/close_dialog_command.tscn" id="5_8jehl"]
 [ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="5_c4efp"]
 [ext_resource type="PackedScene" uid="uid://g1lqac5js7pi" path="res://command/theater/go_page_command.tscn" id="6_tw1ft"]

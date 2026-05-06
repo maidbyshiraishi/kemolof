@@ -2,10 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_m16sm"]
 [ext_resource type="Script" uid="uid://322xyg67h8tu" path="res://screen/ScreenOptionDialog.cs" id="2_luj6q"]
-[ext_resource type="Script" uid="uid://ddpxrl2viocbi" path="res://command/ToggledCommandContainer.cs" id="5_6qy83"]
+[ext_resource type="Script" uid="uid://ddpxrl2viocbi" path="res://trigger/ToggledCommandTrigger.cs" id="5_6qy83"]
 [ext_resource type="PackedScene" uid="uid://73dqa18ykkwt" path="res://command/focus.tscn" id="5_8jhn7"]
 [ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="5_hmtv0"]
-[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="6_pt5pa"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://trigger/PressedCommandTrigger.cs" id="6_pt5pa"]
 [ext_resource type="PackedScene" uid="uid://c3y2panllhvxf" path="res://command/dialog/save_screen_options_command.tscn" id="7_qwuuy"]
 [ext_resource type="PackedScene" uid="uid://c1rbo6273ktjc" path="res://command/dialog/open_file_manager_command.tscn" id="9_0ojyc"]
 [ext_resource type="PackedScene" uid="uid://c6qlmwp7c1hu5" path="res://command/dialog/close_dialog_command.tscn" id="9_mjuga"]

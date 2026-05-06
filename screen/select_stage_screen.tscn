@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b2msn8guia62" path="res://contents/screen/select_stage_screen/picture_stage_0005.png" id="7_wc7lv"]
 [ext_resource type="Texture2D" uid="uid://uokbutismunv" path="res://contents/screen/select_stage_screen/left.png" id="9_lau16"]
 [ext_resource type="Script" uid="uid://b6q328cyq1oy7" path="res://trigger/ClickableAnimatedSprite2D.cs" id="10_wc7lv"]
-[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="11_nvv8q"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://trigger/PressedCommandTrigger.cs" id="11_nvv8q"]
 [ext_resource type="Texture2D" uid="uid://w0f30v2205ua" path="res://contents/screen/select_stage_screen/right.png" id="14_wc7lv"]
 [ext_resource type="PackedScene" uid="uid://r4oifw5npwps" path="res://trigger/key_releaseed_trigger.tscn" id="16_a3lai"]
 [ext_resource type="Theme" uid="uid://cib6gefddtud7" path="res://contents/theme/theme_small.tres" id="16_buqjm"]

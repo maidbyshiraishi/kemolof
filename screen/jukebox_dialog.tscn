@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="1_d5hvi"]
 [ext_resource type="Script" uid="uid://cf7w4x10j02ww" path="res://screen/JukeboxDialog.cs" id="2_lfgcj"]
 [ext_resource type="PackedScene" uid="uid://bwnbq0d05nrbf" path="res://command/audio/change_bgm_command.tscn" id="4_vx7g3"]
-[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://command/PressedCommandContainer.cs" id="5_jao6p"]
+[ext_resource type="Script" uid="uid://8uskx3kitgjn" path="res://trigger/PressedCommandTrigger.cs" id="5_jao6p"]
 [ext_resource type="PackedScene" uid="uid://73dqa18ykkwt" path="res://command/focus.tscn" id="6_jao6p"]
 [ext_resource type="AudioStream" uid="uid://tgkh7rwxcl7q" path="res://contents/bgm/bgm10.ogg" id="7_1ktcg"]
 [ext_resource type="PackedScene" uid="uid://cpr5v3p6w81h3" path="res://command/audio/play_se_command.tscn" id="7_dkqhw"]

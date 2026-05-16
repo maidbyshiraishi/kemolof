@@ -36,12 +36,16 @@ public partial class GameStageRoot : DialogRoot, IStateful
         FighterList fighterList = GetNode<FighterList>("Fighter");
         string name = "";
 
+        Array<int> spawnNumber = [1, 2, 3, 4, 5, 6, 7];
+        spawnNumber.Shuffle();
+
         for (int i = 0; i < 7; i++)
         {
             _info[i] = gameDataManager.GetFighterInfo(i);
             BrainRoot brain = null;
             string brainPath = null;
             int deviceIndex = -1;
+            int spawnIndex = spawnNumber[i];
 
             if (-1 < _info[i].Keyb)
             {
@@ -88,9 +92,9 @@ public partial class GameStageRoot : DialogRoot, IStateful
                 fighter.FighterName = $"{fighter.FighterName} ({name})";
                 fighter.FighterId = i;
                 fighter.FighterColor = _info[i].Color;
-                Vector2 spawnPosition = GetNode<Marker2D>($"Spawn/Player_{i + 1}").GlobalPosition;
+                Vector2 spawnPosition = GetNode<Marker2D>($"Spawn/Player_{spawnIndex}").GlobalPosition;
                 fighter.GlobalPosition = spawnPosition;
-                Vector2 respawnPosition = GetNode<Marker2D>($"Respawn/Player_{i + 1}").GlobalPosition;
+                Vector2 respawnPosition = GetNode<Marker2D>($"Respawn/Player_{spawnIndex}").GlobalPosition;
                 fighter.RespawnPosition = respawnPosition;
                 fighter.AddChild(brain);
                 fighterList.AddChild(fighter);

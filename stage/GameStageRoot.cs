@@ -92,10 +92,8 @@ public partial class GameStageRoot : DialogRoot, IStateful
                 fighter.FighterName = $"{fighter.FighterName} ({name})";
                 fighter.FighterId = i;
                 fighter.FighterColor = _info[i].Color;
-                Vector2 spawnPosition = GetNode<Marker2D>($"Spawn/Player_{spawnIndex}").GlobalPosition;
-                fighter.GlobalPosition = spawnPosition;
-                Vector2 respawnPosition = GetNode<Marker2D>($"Respawn/Player_{spawnIndex}").GlobalPosition;
-                fighter.RespawnPosition = respawnPosition;
+                fighter.GlobalPosition = GetNode<Marker2D>($"Spawn/Player_{spawnIndex}").GlobalPosition;
+                fighter.RespawnPosition = GetNode<Marker2D>($"Respawn/Player_{spawnIndex}").GlobalPosition;
                 fighter.AddChild(brain);
                 fighterList.AddChild(fighter);
             }

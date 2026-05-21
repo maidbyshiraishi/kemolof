@@ -1,0 +1,6 @@
+エラーへの対処
+
+
+Unable to find fallback package folderエラー
+
+Godotを更新すると古いバージョンのファイルがアチコチに残る。掃除したくなると思うが、心機一転やり直すつもりで新旧全部消すと.Net版はVisualStudioのプロジェクトがアンロード済になったり、コンパイル時にNuGet.Packaging.Core.PackagingException: Unable to find fallback package folderとか言われてコンパイルできなくなる。これはC#のソリューションファイルを再生成したり、.vsフォルダや.godotフォルダを削除したり、VisualStudioやGodotエディタからアレコレ試しても直らない。削除した必要なファイルを戻すか、%APPDATA%/Roaming/NuGet/config/Godot.Offline.Configを削除すると直る。NuGetを正しく使用すれば直るのかもしれないが、NuGetについては何も知らないのでわからない。VisualStudioとGodotエディタのどちらを起動したときに直ったかは調べていない。

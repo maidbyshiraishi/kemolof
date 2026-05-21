@@ -374,7 +374,13 @@ public partial class FighterRoot : MobRoot, IGameNode
     {
     }
 
-    public void PlayMieVoice() => PlayRandomVoice(MieVoice);
+    public void PlayMieVoice()
+    {
+        if (MieVoice.Count != 0)
+        {
+            GetNode<SePlayer>("/root/SePlayer").Play(MieVoice.PickRandom(), false, true);
+        }
+    }
 
     public void PlayActionVoice() => PlayRandomVoice(ActionVoice);
 

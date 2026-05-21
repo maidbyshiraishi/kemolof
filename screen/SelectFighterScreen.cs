@@ -47,6 +47,7 @@ public partial class SelectFighterScreen : DialogRoot
         GetNode<ClickableAnimatedSprite2D>("Up4").Pressed += Up4;
         GetNode<ClickableAnimatedSprite2D>("Up5").Pressed += Up5;
         GetNode<ClickableAnimatedSprite2D>("Up6").Pressed += Up6;
+        GetNode<ClickableAnimatedSprite2D>("Up7").Pressed += Up7;
 
         GetNode<ClickableAnimatedSprite2D>("Down1").Pressed += Down1;
         GetNode<ClickableAnimatedSprite2D>("Down2").Pressed += Down2;
@@ -54,6 +55,7 @@ public partial class SelectFighterScreen : DialogRoot
         GetNode<ClickableAnimatedSprite2D>("Down4").Pressed += Down4;
         GetNode<ClickableAnimatedSprite2D>("Down5").Pressed += Down5;
         GetNode<ClickableAnimatedSprite2D>("Down6").Pressed += Down6;
+        GetNode<ClickableAnimatedSprite2D>("Down7").Pressed += Down7;
 
         GetNode<ClickableColorRect>("Select1").Pressed += Select1;
         GetNode<ClickableColorRect>("Select2").Pressed += Select2;
@@ -61,6 +63,7 @@ public partial class SelectFighterScreen : DialogRoot
         GetNode<ClickableColorRect>("Select4").Pressed += Select4;
         GetNode<ClickableColorRect>("Select5").Pressed += Select5;
         GetNode<ClickableColorRect>("Select6").Pressed += Select6;
+        GetNode<ClickableColorRect>("Select7").Pressed += Select7;
 
         for (int i = 0; i < 7; i++)
         {

@@ -1,7 +1,7 @@
 using Godot;
 using maid_by_shiraishi.system;
 
-namespace maid_by_shiraishi.command.dialog;
+namespace maid_by_shiraishi.command.option;
 
 /// <summary>
 /// 画面オプションを保存するコマンド

@@ -76,7 +76,7 @@ public partial class SelectStageScreen : DialogRoot
         _gameDataManager.SetStageNo(stageNo - 1);
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         base._Process(delta);
 

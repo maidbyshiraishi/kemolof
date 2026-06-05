@@ -108,7 +108,7 @@ public partial class SelectFighterScreen : DialogRoot
         }
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         base._Process(delta);
         Array<int> keyb = [];

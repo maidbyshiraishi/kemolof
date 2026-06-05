@@ -26,7 +26,7 @@ public partial class CpuFighter4 : CpuFighterRoot
         }
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         string fighterState = Fighter.State;
 

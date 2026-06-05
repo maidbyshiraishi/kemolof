@@ -11,7 +11,7 @@ public partial class FighterList : Node2D
 
     public Array<FighterRoot> GetAvailableFighters() => _fighter;
 
-    public override void _Process(double delta) => CallDeferred(MethodName.UpdateFighterList, []);
+    public override void _PhysicsProcess(double delta) => CallDeferred(MethodName.UpdateFighterList, []);
 
     public void UpdateFighterList()
     {

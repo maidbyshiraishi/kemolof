@@ -8,7 +8,7 @@ namespace maid_by_shiraishi.mob.brain;
 /// </summary>
 public partial class HumanKeyb : BrainRoot
 {
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         if (Fighter.State is "mie")
         {

@@ -16,7 +16,7 @@ public partial class HumanPad : BrainRoot
         _pad = GetNode<JoyPadController>("/root/JoyPadController");
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         if (Fighter.State is "mie")
         {

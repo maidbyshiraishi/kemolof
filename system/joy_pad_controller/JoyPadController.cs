@@ -55,7 +55,7 @@ public partial class JoyPadController : Node
         Input.JoyConnectionChanged += OnJoyConnectionChanged;
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         base._Process(delta);
         // 呼び出しを今すぐ行わずにアイドル時間に延滞させる

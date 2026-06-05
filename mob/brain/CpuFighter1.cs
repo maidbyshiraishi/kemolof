@@ -21,7 +21,7 @@ public partial class CpuFighter1 : CpuFighterRoot
         _waza3Area = GetNode<SightArea>("Waza3Area");
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         string fighterState = Fighter.State;
 

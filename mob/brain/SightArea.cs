@@ -66,7 +66,7 @@ public partial class SightArea : Area2D
         return null;
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         if (ConnectArea)
         {

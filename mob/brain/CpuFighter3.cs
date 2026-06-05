@@ -19,7 +19,7 @@ public partial class CpuFighter3 : CpuFighterRoot
         _waza2Ray = GetNode<RayCast2D>("Waza2Ray");
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         string fighterState = Fighter.State;
 

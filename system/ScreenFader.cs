@@ -12,7 +12,6 @@ public partial class ScreenFader : CanvasLayer
     [Signal]
     public delegate void ScreenFadeFinishedEventHandler();
 
-
     private AnimatedSprite2D _animatedSprite2D;
 
     public override void _Ready()
@@ -46,5 +45,5 @@ public partial class ScreenFader : CanvasLayer
         AnimationFinished();
     }
 
-    public void AnimationFinished() => EmitSignal(SignalName.ScreenFadeFinished);
+    public void AnimationFinished() => _ = EmitSignal(SignalName.ScreenFadeFinished);
 }

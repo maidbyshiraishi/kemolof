@@ -9,12 +9,10 @@ namespace maid_by_shiraishi.data;
 public class PackData : DataRoot
 {
     public FlagData FlagData { get; set; } = new();
+
     public int StageNo { get; set; } = 0;
 
-    public PackData()
-    {
-        StageNo = 0;
-    }
+    public PackData() => StageNo = 0;
 
     public void StartNewGame() => Backup();
 

@@ -216,45 +216,45 @@ public partial class SelectFighterScreen : DialogRoot
         GetNode<AnimatedSprite2D>($"Down{playerIndex + 1}").Visible = false;
     }
 
-    public void Up1() => _ = UpdateSelect(0, true, false, false);
+    public void Up1() => UpdateSelect(0, true, false, false);
 
-    public void Up2() => _ = UpdateSelect(1, true, false, false);
+    public void Up2() => UpdateSelect(1, true, false, false);
 
-    public void Up3() => _ = UpdateSelect(2, true, false, false);
+    public void Up3() => UpdateSelect(2, true, false, false);
 
-    public void Up4() => _ = UpdateSelect(3, true, false, false);
+    public void Up4() => UpdateSelect(3, true, false, false);
 
-    public void Up5() => _ = UpdateSelect(4, true, false, false);
+    public void Up5() => UpdateSelect(4, true, false, false);
 
-    public void Up6() => _ = UpdateSelect(5, true, false, false);
+    public void Up6() => UpdateSelect(5, true, false, false);
 
-    public void Up7() => _ = UpdateSelect(6, true, false, false);
+    public void Up7() => UpdateSelect(6, true, false, false);
 
-    public void Down1() => _ = UpdateSelect(0, false, true, false);
+    public void Down1() => UpdateSelect(0, false, true, false);
 
-    public void Down2() => _ = UpdateSelect(1, false, true, false);
+    public void Down2() => UpdateSelect(1, false, true, false);
 
-    public void Down3() => _ = UpdateSelect(2, false, true, false);
+    public void Down3() => UpdateSelect(2, false, true, false);
 
-    public void Down4() => _ = UpdateSelect(3, false, true, false);
+    public void Down4() => UpdateSelect(3, false, true, false);
 
-    public void Down5() => _ = UpdateSelect(4, false, true, false);
+    public void Down5() => UpdateSelect(4, false, true, false);
 
-    public void Down6() => _ = UpdateSelect(5, false, true, false);
+    public void Down6() => UpdateSelect(5, false, true, false);
 
-    public void Down7() => _ = UpdateSelect(6, false, true, false);
+    public void Down7() => UpdateSelect(6, false, true, false);
 
-    public void Select1() => _ = UpdateSelect(0, false, false, true);
+    public void Select1() => UpdateSelect(0, false, false, true);
 
-    public void Select2() => _ = UpdateSelect(1, false, false, true);
+    public void Select2() => UpdateSelect(1, false, false, true);
 
-    public void Select3() => _ = UpdateSelect(2, false, false, true);
+    public void Select3() => UpdateSelect(2, false, false, true);
 
-    public void Select4() => _ = UpdateSelect(3, false, false, true);
+    public void Select4() => UpdateSelect(3, false, false, true);
 
-    public void Select5() => _ = UpdateSelect(4, false, false, true);
+    public void Select5() => UpdateSelect(4, false, false, true);
 
-    public void Select6() => _ = UpdateSelect(5, false, false, true);
+    public void Select6() => UpdateSelect(5, false, false, true);
 
-    public void Select7() => _ = UpdateSelect(6, false, false, true);
+    public void Select7() => UpdateSelect(6, false, false, true);
 }

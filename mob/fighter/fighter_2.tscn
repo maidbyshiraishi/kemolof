@@ -97,12 +97,12 @@ region = Rect2(150, 0, 30, 57)
 [sub_resource type="SpriteFrames" id="SpriteFrames_82qj6"]
 animations = [{
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"waza_1",
 "speed": 5.0
 }, {
@@ -125,7 +125,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jov4w")
 }],
-"loop": false,
+"loop": 0,
 "name": &"waza_2",
 "speed": 15.0
 }, {
@@ -148,7 +148,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l8xhf")
 }],
-"loop": false,
+"loop": 0,
 "name": &"waza_3",
 "speed": 15.0
 }]

@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dvy8ox4sfd5hc" path="res://trigger/visible_trigger.tscn" id="10_e3o6m"]
 [ext_resource type="PackedScene" uid="uid://bwnbq0d05nrbf" path="res://command/audio/change_bgm_command.tscn" id="11_e33n5"]
 [ext_resource type="AudioStream" uid="uid://yrsd3ic1ixy8" path="res://contents/bgm/bgm11.ogg" id="12_u7v5c"]
+[ext_resource type="PackedScene" uid="uid://cxafv8tj6dexo" path="res://trigger/timer_trigger.tscn" id="13_e33n5"]
+[ext_resource type="PackedScene" uid="uid://cc0w3te8ab0ed" path="res://command/show_canvas_item_command.tscn" id="14_u7v5c"]
 
 [node name="MessageDialog" type="Control" unique_id=1217251838]
 light_mask = 2
@@ -68,6 +70,7 @@ light_mask = 2
 anchors_preset = 0
 
 [node name="Back" type="Button" parent="Control" unique_id=14596745]
+visible = false
 light_mask = 2
 layout_mode = 0
 offset_left = 256.0
@@ -111,3 +114,14 @@ position = Vector2(56, 88)
 [node name="ChangeBgmCommand" parent="VisibleTrigger" unique_id=586091304 instance=ExtResource("11_e33n5")]
 Command = 1
 Stream = ExtResource("12_u7v5c")
+
+[node name="Timer" type="Timer" parent="VisibleTrigger" unique_id=1829906350]
+wait_time = 0.8
+one_shot = true
+autostart = true
+
+[node name="TimerTrigger" parent="VisibleTrigger/Timer" unique_id=1966955842 instance=ExtResource("13_e33n5")]
+
+[node name="ShowCanvasItemCommand" parent="VisibleTrigger/Timer/TimerTrigger" unique_id=1258075526 node_paths=PackedStringArray("Target") instance=ExtResource("14_u7v5c")]
+Target = NodePath("../../../../Control/Back")
+GrubFocus = true

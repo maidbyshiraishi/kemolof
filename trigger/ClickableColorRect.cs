@@ -27,11 +27,11 @@ public partial class ClickableColorRect : ColorRect
 
             if (_last && !now)
             {
-                _ = EmitSignal(SignalName.MouseExited);
+                _ = EmitSignal(Control.SignalName.MouseExited);
             }
             else if (!_last && now)
             {
-                _ = EmitSignal(SignalName.MouseEntered);
+                _ = EmitSignal(Control.SignalName.MouseEntered);
             }
 
             _last = now;

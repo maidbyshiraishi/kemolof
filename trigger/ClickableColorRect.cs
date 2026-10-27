@@ -10,12 +10,6 @@ public partial class ClickableColorRect : ColorRect
     [Signal]
     public delegate void PressedEventHandler();
 
-    [Signal]
-    public delegate void MouseEnteredEventHandler();
-
-    [Signal]
-    public delegate void MouseExitedEventHandler();
-
     private bool _last = false;
 
     public override void _Input(InputEvent @event)

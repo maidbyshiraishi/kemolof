@@ -1,0 +1,32 @@
+前提
+
+Native AOTでネイティブコードを生成する場合、
+
+1. VistualStudioインストーラから".NETデスクトップ開発"に加え、個別のコンポーネントから"x64/x86用MSVCビルドツール"をインストールする。
+
+
+2. csprojを下記のように修正する。
+
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <PublishAOT>true</PublishAOT>
+  </PropertyGroup>
+  <ItemGroup>
+    <TrimmerRootAssembly Include="GodotSharp" />
+    <TrimmerRootAssembly Include="$(TargetName)" />
+  </ItemGroup>
+</Project>
+
+3. 通常通りGodotエディタから実行する。
+
+以上
+
+
+その他
+
+Godotエディタからゲームをエクスポートすると、ネイティブコードが生成され、data_??????_windows_x86_64内に入っていた.NETランタイム関連のファイルがなくなっていた。
+
+手持ちの自作ゲームで確認したところ、ゲームが起動してもすぐに終了してしまったり、シーンの読み込みに失敗したり、動作は不安定だった。

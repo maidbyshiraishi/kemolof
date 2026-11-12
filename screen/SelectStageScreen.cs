@@ -40,7 +40,7 @@ public partial class SelectStageScreen : DialogRoot
     {
         base._Ready();
 
-        _gameDataManager = GetNode<GameDataManager>("/root/GameDataManager");
+        _gameDataManager = SystemHub.GetGameDataManager();
         _stageList = GetNode<AnimatedSprite2D>("StageList");
 
         foreach (int item in StageIndex)
@@ -82,18 +82,18 @@ public partial class SelectStageScreen : DialogRoot
 
         if (Input.IsActionJustReleased("ui_left"))
         {
-            GetNode<SePlayer>("/root/SePlayer").Play("menu_move", true);
+            SystemHub.GetSePlayer().Play("menu_move", true);
             BackStageIndex();
         }
         else if (Input.IsActionJustReleased("ui_right"))
         {
-            GetNode<SePlayer>("/root/SePlayer").Play("menu_move", true);
+            SystemHub.GetSePlayer().Play("menu_move", true);
             NextStageIndex();
         }
         else if (Input.IsActionJustReleased("ui_accept") || Input.IsActionJustReleased("ui_select"))
         {
-            GetNode<SePlayer>("/root/SePlayer").Play("menu_select", true);
-            GetNode<DialogLayer>("/root/DialogLayer").OpenScreen("res://screen/select_fighter_screen.tscn", Fadeout, Fadein);
+            SystemHub.GetSePlayer().Play("menu_select", true);
+            SystemHub.GetDialogLayer().OpenScreen("res://screen/select_fighter_screen.tscn", Fadeout, Fadein);
         }
     }
 

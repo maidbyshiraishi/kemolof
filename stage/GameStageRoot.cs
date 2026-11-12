@@ -31,7 +31,7 @@ public partial class GameStageRoot : DialogRoot, IStateful
 
     public override void _Ready()
     {
-        GameDataManager gameDataManager = GetNode<GameDataManager>("/root/GameDataManager");
+        GameDataManager gameDataManager = SystemHub.GetGameDataManager();
         _referee = GetNode<Referee>("Scenario/Referee");
         FighterList fighterList = GetNode<FighterList>("Fighter");
         string name = "";
@@ -114,7 +114,7 @@ public partial class GameStageRoot : DialogRoot, IStateful
 
     public override void InitializeNode()
     {
-        GetNode<GameDataManager>("/root/GameDataManager").Restore();
+        SystemHub.GetGameDataManager().Restore();
         GetTree().CallGroup(IGameNode.GameNodeGroup, "InitializeNode");
         LoadState();
         PlayBgm();
@@ -166,7 +166,7 @@ public partial class GameStageRoot : DialogRoot, IStateful
     {
         if (NoBgm)
         {
-            GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.Mute);
+            SystemHub.GetMusicPlayer().Play(MusicPlayer.Command.Mute);
             return;
         }
 
@@ -175,7 +175,7 @@ public partial class GameStageRoot : DialogRoot, IStateful
             return;
         }
 
-        GetNode<MusicPlayer>("/root/MusicPlayer").Play(MusicPlayer.Command.FastPlay, BgmStream);
+        SystemHub.GetMusicPlayer().Play(MusicPlayer.Command.FastPlay, BgmStream);
     }
 
     #region IStatefulインタフェース

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://j2iklkils73q" path="res://mob/fighter/Fighter1.cs" id="1_sushp"]
 [ext_resource type="PackedScene" uid="uid://dcaaok2vhuha4" path="res://decoration/effect_damage.tscn" id="2_2wrk7"]
-[ext_resource type="PackedScene" uid="uid://bh0d1pl6uidn6" path="res://system/se_player.tscn" id="2_6fhxr"]
 [ext_resource type="Texture2D" uid="uid://do6244aynl8wi" path="res://contents/image/fighter/life_up.png" id="2_l3bp0"]
 [ext_resource type="Theme" uid="uid://dttxtjxuax841" path="res://contents/theme/theme_default.tres" id="2_rf6kg"]
 [ext_resource type="Texture2D" uid="uid://cgfymxpgmcewo" path="res://contents/image/fighter/life_under.png" id="2_uuqcr"]
@@ -200,8 +199,6 @@ texture_under = ExtResource("2_uuqcr")
 texture_over = ExtResource("2_l3bp0")
 texture_progress = ExtResource("3_uuqcr")
 texture_progress_offset = Vector2(2, 2)
-
-[node name="SePlayer" parent="." unique_id=1484002387 instance=ExtResource("2_6fhxr")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1685598237]
 libraries/ = ExtResource("6_e4n0r")

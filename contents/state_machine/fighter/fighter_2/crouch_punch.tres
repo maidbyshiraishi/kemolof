@@ -687,219 +687,205 @@ tracks/56/keys = {
 "update": 1,
 "values": [Vector2(1, 1)]
 }
-tracks/57/type = "method"
+tracks/57/type = "value"
 tracks/57/imported = false
 tracks/57/enabled = true
-tracks/57/path = NodePath("SePlayer")
+tracks/57/path = NodePath("Character/AttackArea1:position")
 tracks/57/interp = 1
 tracks/57/loop_wrap = true
 tracks/57/keys = {
-"times": PackedFloat32Array(0.15),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["fighter_punch", false, false],
-"method": &"Play"
-}]
-}
-tracks/58/type = "value"
-tracks/58/imported = false
-tracks/58/enabled = true
-tracks/58/path = NodePath("Character/AttackArea1:position")
-tracks/58/interp = 1
-tracks/58/loop_wrap = true
-tracks/58/keys = {
 "times": PackedFloat32Array(0.1, 0.29),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Vector2(0, 0), Vector2(26, 0)]
 }
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Character/AttackArea1:rotation")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
 tracks/59/type = "value"
 tracks/59/imported = false
 tracks/59/enabled = true
-tracks/59/path = NodePath("Character/AttackArea1:rotation")
+tracks/59/path = NodePath("Character/AttackArea1:scale")
 tracks/59/interp = 1
 tracks/59/loop_wrap = true
 tracks/59/keys = {
 "times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0.0]
+"values": [Vector2(1, 1)]
 }
 tracks/60/type = "value"
 tracks/60/imported = false
 tracks/60/enabled = true
-tracks/60/path = NodePath("Character/AttackArea1:scale")
+tracks/60/path = NodePath("CollisionShape2D:position")
 tracks/60/interp = 1
 tracks/60/loop_wrap = true
 tracks/60/keys = {
 "times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2(1, 1)]
+"update": 0,
+"values": [Vector2(0, -45)]
 }
 tracks/61/type = "value"
 tracks/61/imported = false
 tracks/61/enabled = true
-tracks/61/path = NodePath("CollisionShape2D:position")
+tracks/61/path = NodePath("CollisionShape2D:rotation")
 tracks/61/interp = 1
 tracks/61/loop_wrap = true
 tracks/61/keys = {
 "times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -45)]
+"values": [0.0]
 }
 tracks/62/type = "value"
 tracks/62/imported = false
 tracks/62/enabled = true
-tracks/62/path = NodePath("CollisionShape2D:rotation")
+tracks/62/path = NodePath("CollisionShape2D:scale")
 tracks/62/interp = 1
 tracks/62/loop_wrap = true
 tracks/62/keys = {
 "times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(1, 0.7)]
 }
 tracks/63/type = "value"
 tracks/63/imported = false
 tracks/63/enabled = true
-tracks/63/path = NodePath("CollisionShape2D:scale")
+tracks/63/path = NodePath("Character/DamageArea1:position")
 tracks/63/interp = 1
 tracks/63/loop_wrap = true
 tracks/63/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 0.7)]
-}
-tracks/64/type = "value"
-tracks/64/imported = false
-tracks/64/enabled = true
-tracks/64/path = NodePath("Character/DamageArea1:position")
-tracks/64/interp = 1
-tracks/64/loop_wrap = true
-tracks/64/keys = {
 "times": PackedFloat32Array(0.1, 0.29),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Vector2(-4, -6), Vector2(9, -21)]
 }
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Character/DamageArea1:rotation")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
 tracks/65/type = "value"
 tracks/65/imported = false
 tracks/65/enabled = true
-tracks/65/path = NodePath("Character/DamageArea1:rotation")
+tracks/65/path = NodePath("Character/DamageArea1:scale")
 tracks/65/interp = 1
 tracks/65/loop_wrap = true
 tracks/65/keys = {
 "times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0.0]
+"values": [Vector2(1, 1)]
 }
 tracks/66/type = "value"
 tracks/66/imported = false
 tracks/66/enabled = true
-tracks/66/path = NodePath("Character/DamageArea1:scale")
+tracks/66/path = NodePath("Character/DamageArea2:position")
 tracks/66/interp = 1
 tracks/66/loop_wrap = true
 tracks/66/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2(1, 1)]
-}
-tracks/67/type = "value"
-tracks/67/imported = false
-tracks/67/enabled = true
-tracks/67/path = NodePath("Character/DamageArea2:position")
-tracks/67/interp = 1
-tracks/67/loop_wrap = true
-tracks/67/keys = {
 "times": PackedFloat32Array(0.1, 0.29),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Vector2(-1, 19), Vector2(6, 20)]
 }
+tracks/67/type = "value"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("Character/DamageArea2:rotation")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
 tracks/68/type = "value"
 tracks/68/imported = false
 tracks/68/enabled = true
-tracks/68/path = NodePath("Character/DamageArea2:rotation")
+tracks/68/path = NodePath("Character/DamageArea2:scale")
 tracks/68/interp = 1
 tracks/68/loop_wrap = true
 tracks/68/keys = {
 "times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0.0]
+"values": [Vector2(1, 1)]
 }
 tracks/69/type = "value"
 tracks/69/imported = false
 tracks/69/enabled = true
-tracks/69/path = NodePath("Character/DamageArea2:scale")
+tracks/69/path = NodePath("Character/DamageArea3:position")
 tracks/69/interp = 1
 tracks/69/loop_wrap = true
 tracks/69/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.1, 0.29),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(1, 1)]
+"values": [Vector2(6, 43), Vector2(-2, 53)]
 }
 tracks/70/type = "value"
 tracks/70/imported = false
 tracks/70/enabled = true
-tracks/70/path = NodePath("Character/DamageArea3:position")
+tracks/70/path = NodePath("Character/DamageArea3:rotation")
 tracks/70/interp = 1
 tracks/70/loop_wrap = true
 tracks/70/keys = {
 "times": PackedFloat32Array(0.1, 0.29),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(6, 43), Vector2(-2, 53)]
+"values": [0.0, 1.5708]
 }
 tracks/71/type = "value"
 tracks/71/imported = false
 tracks/71/enabled = true
-tracks/71/path = NodePath("Character/DamageArea3:rotation")
+tracks/71/path = NodePath("Character/DamageArea3:scale")
 tracks/71/interp = 1
 tracks/71/loop_wrap = true
 tracks/71/keys = {
-"times": PackedFloat32Array(0.1, 0.29),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0.0, 1.5708]
-}
-tracks/72/type = "value"
-tracks/72/imported = false
-tracks/72/enabled = true
-tracks/72/path = NodePath("Character/DamageArea3:scale")
-tracks/72/interp = 1
-tracks/72/loop_wrap = true
-tracks/72/keys = {
 "times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [Vector2(1, 1)]
 }
-tracks/73/type = "value"
-tracks/73/imported = false
-tracks/73/enabled = true
-tracks/73/path = NodePath("Character/AttackArea1/AttackCollision:disabled")
-tracks/73/interp = 1
-tracks/73/loop_wrap = true
-tracks/73/keys = {
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("Character/AttackArea1/AttackCollision:disabled")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
 "times": PackedFloat32Array(0.1, 0.29),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
 }
-tracks/74/type = "method"
-tracks/74/imported = false
-tracks/74/enabled = true
-tracks/74/path = NodePath(".")
-tracks/74/interp = 1
-tracks/74/loop_wrap = true
-tracks/74/keys = {
+tracks/73/type = "method"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath(".")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{

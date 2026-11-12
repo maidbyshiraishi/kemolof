@@ -172,7 +172,7 @@ public partial class Fighter2 : FighterRoot
                 if (jump)
                 {
                     PlayActionVoice();
-                    PlayRandomVoice(JumpSe);
+                    PlayRandomVoice(JumpSe, false);
                     JumpAction(delta);
                 }
                 else
@@ -191,7 +191,7 @@ public partial class Fighter2 : FighterRoot
                 if (kick)
                 {
                     PlayActionVoice();
-                    PlayRandomVoice(JumpKickSe);
+                    PlayRandomVoice(JumpKickSe, false);
                 }
 
                 break;
@@ -213,7 +213,7 @@ public partial class Fighter2 : FighterRoot
                 if (jump)
                 {
                     PlayActionVoice();
-                    PlayRandomVoice(JumpSe);
+                    PlayRandomVoice(JumpSe, false);
                     JumpAction(delta);
                 }
                 else
@@ -262,19 +262,19 @@ public partial class Fighter2 : FighterRoot
         if (state is "stand_guard" && FighterRightSide != attackArea.RightSide && (row == 1 || row == 2))
         {
             AddDamageEffect(EffectGuard, damageArea);
-            PlayRandomVoice(damageArea.GuardVoice);
+            PlayRandomVoice(damageArea.GuardVoice, false);
             return;
         }
         else if (state is "crouch_guard" && FighterRightSide != attackArea.RightSide && (row == 1 || row == 3))
         {
             AddDamageEffect(EffectGuard, damageArea);
-            PlayRandomVoice(damageArea.GuardVoice);
+            PlayRandomVoice(damageArea.GuardVoice, false);
             return;
         }
         else if (state is "stand_guard" or "crouch_guard" && FighterRightSide != attackArea.RightSide)
         {
             AddDamageEffect(EffectGuard, damageArea);
-            PlayRandomVoice(damageArea.GuardVoice);
+            PlayRandomVoice(damageArea.GuardVoice, false);
             return;
         }
         else
@@ -282,7 +282,7 @@ public partial class Fighter2 : FighterRoot
             AddDamageEffect(EffectDamage, damageArea);
             life -= attackArea.Attack;
             m_Brain.ClearBuffer();
-            PlayRandomVoice(attackArea.HitVoice);
+            PlayRandomVoice(attackArea.HitVoice, false);
         }
 
         // ライフがゼロ以下になったら死亡する

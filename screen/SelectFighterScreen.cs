@@ -38,8 +38,8 @@ public partial class SelectFighterScreen : DialogRoot
     public override void _Ready()
     {
         base._Ready();
-        _joyPad = GetNode<JoyPadController>("/root/JoyPadController");
-        _gameDataManager = GetNode<GameDataManager>("/root/GameDataManager");
+        _joyPad = SystemHub.GetJoyPadController();
+        _gameDataManager = SystemHub.GetGameDataManager();
 
         GetNode<ClickableAnimatedSprite2D>("Up1").Pressed += Up1;
         GetNode<ClickableAnimatedSprite2D>("Up2").Pressed += Up2;
@@ -152,7 +152,7 @@ public partial class SelectFighterScreen : DialogRoot
         if (IsSelectedAll())
         {
             int stageNo = _gameDataManager.GetStageNo();
-            GetNode<DialogLayer>("/root/DialogLayer").OpenScreen(string.Format(NextScreenPath, stageNo + 1), Fadeout, Fadein);
+            SystemHub.GetDialogLayer().OpenScreen(string.Format(NextScreenPath, stageNo + 1), Fadeout, Fadein);
         }
     }
 
@@ -183,7 +183,7 @@ public partial class SelectFighterScreen : DialogRoot
         {
             if (0 < frame)
             {
-                GetNode<SePlayer>("/root/SePlayer").Play("menu_move", true);
+                SystemHub.GetSePlayer().Play("menu_move", true);
                 GetNode<Sprite2D>($"Fighter{playerIndex + 1}").Frame = frame - 1;
             }
         }
@@ -191,7 +191,7 @@ public partial class SelectFighterScreen : DialogRoot
         {
             if (frame < NumOfFighter - 1)
             {
-                GetNode<SePlayer>("/root/SePlayer").Play("menu_move", true);
+                SystemHub.GetSePlayer().Play("menu_move", true);
                 GetNode<Sprite2D>($"Fighter{playerIndex + 1}").Frame = frame + 1;
             }
         }
@@ -210,7 +210,7 @@ public partial class SelectFighterScreen : DialogRoot
     {
         _info[playerIndex].FighterNo = fighterNo;
         GetNode<Sprite2D>($"Fighter{playerIndex + 1}").Frame = fighterNo;
-        GetNode<SePlayer>("/root/SePlayer").Play("menu_select", true);
+        SystemHub.GetSePlayer().Play("menu_select", true);
         GetNode<AnimatedSprite2D>($"Selected{playerIndex + 1}").Visible = true;
         GetNode<AnimatedSprite2D>($"Up{playerIndex + 1}").Visible = false;
         GetNode<AnimatedSprite2D>($"Down{playerIndex + 1}").Visible = false;

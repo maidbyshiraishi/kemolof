@@ -1,3 +1,4 @@
+using maid_by_shiraishi.system;
 using maid_by_shiraishi.system.joy_pad_controller;
 using maid_by_shiraishi.system.waza_analyzer;
 
@@ -13,7 +14,7 @@ public partial class HumanPad : BrainRoot
     public override void _Ready()
     {
         base._Ready();
-        _pad = GetNode<JoyPadController>("/root/JoyPadController");
+        _pad = SystemHub.GetJoyPadController();
     }
 
     public override void _PhysicsProcess(double delta)

@@ -31,7 +31,7 @@ public partial class Fighter4Shot2 : MobRoot, IShot
         // リリースビルドのエクスポート時、接続が失われることがある。
         GetNode<AnimatedSprite2D>("Effect").AnimationFinished += AnimationFinished;
 
-        m_SePlayer = GetNode<SePlayer>("SePlayer");
+        m_SePlayer = SystemHub.GetSePlayer();
         _effect = GetNode<AnimatedSprite2D>("Effect");
         _animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
         _animatedSprite2D.Visible = false;

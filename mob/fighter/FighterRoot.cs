@@ -143,7 +143,7 @@ public partial class FighterRoot : MobRoot, IGameNode
         }
 
         m_Brain = GetNode<BrainRoot>("Brain");
-        m_SePlayer = GetNode<SePlayer>("SePlayer");
+        m_SePlayer = SystemHub.GetSePlayer();
         m_AnimationTree = GetNode<AnimationTree>("AnimationTree");
         m_StateMachine = (AnimationNodeStateMachinePlayback)m_AnimationTree.Get("parameters/playback");
         m_LifeBar = GetNode<TextureProgressBar>("Status/LifeBar");
@@ -325,13 +325,10 @@ public partial class FighterRoot : MobRoot, IGameNode
 
     public virtual void Damaged(AttackArea attackArea, DamageArea damageArea, int row)
     {
-        GD.Print("attacked!");
-
         double life = m_LifeBar.Value;
 
         if (Dead || attackArea.Attack == 0)
         {
-            GD.Print("attack zero");
             return;
         }
 
@@ -378,7 +375,7 @@ public partial class FighterRoot : MobRoot, IGameNode
     {
         if (MieVoice.Count != 0)
         {
-            GetNode<SePlayer>("/root/SePlayer").Play(MieVoice.PickRandom(), false, true);
+            SystemHub.GetSePlayer().Play(MieVoice.PickRandom(), false, true);
         }
     }
 
@@ -390,19 +387,19 @@ public partial class FighterRoot : MobRoot, IGameNode
 
     public void PlayDeadVoice() => PlayRandomVoice(DeadVoice);
 
-    protected void PlayRandomVoice(Array<string> voice)
+    protected void PlayRandomVoice(Array<string> se, bool voice = true)
     {
-        if (voice.Count != 0)
+        if (se.Count != 0)
         {
-            m_SePlayer.Play(voice.PickRandom(), true);
+            m_SePlayer.Play(se.PickRandom(), false, voice);
         }
     }
 
-    protected void PlayVoice(string voice)
+    protected void PlayVoice(string se, bool voice)
     {
-        if (!string.IsNullOrWhiteSpace(voice))
+        if (!string.IsNullOrWhiteSpace(se))
         {
-            m_SePlayer.Play(voice, true);
+            m_SePlayer.Play(se, false, true);
         }
     }
 

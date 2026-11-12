@@ -70,7 +70,6 @@ public partial class CpuFighterRoot : BrainRoot, IOuterControledBrain
 
         if (GetParent() is FighterRoot fighter)
         {
-            _ = GetParent<FighterRoot>();
             FighterId = fighter.FighterId;
         }
     }

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="kemolof"
 config/description="『けもろふ』は格闘ゲームをよく知らない人が作った最大7人の同時プレイに対応した自作格闘ゲームです。"
-config/version="1.2.3"
+config/version="1.2.4"
 config/tags=PackedStringArray("maid_by_shiraishi")
 run/main_scene="res://screen/splash_screen.tscn"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
@@ -20,17 +20,7 @@ config/icon="uid://1jhafvjuf3eb"
 
 [autoload]
 
-StopExecTwice="*res://system/StopExecTwice.cs"
-ScreenOption="*res://system/screen_option.tscn"
-DialogLayer="*res://system/dialog_layer.tscn"
-DialogArgument="*res://system/dialog_argument.tscn"
-ScreenFader="*res://system/screen_fader.tscn"
-JoyPadController="*res://system/joy_pad_controller/joy_pad_controller.tscn"
-GameDataManager="*res://system/game_data_manager.tscn"
-GameOption="*res://system/game_option.tscn"
-MusicPlayer="*res://system/music_player.tscn"
-SePlayer="*res://system/se_player.tscn"
-Screenshot="*res://system/screenshot.tscn"
+SystemHub="*uid://bky3ueu0jaisb"
 
 [display]
 

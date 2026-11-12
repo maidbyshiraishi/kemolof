@@ -20,6 +20,12 @@ public partial class VolumeOptionDialog : DialogRoot
     [Export]
     public float SeVolume { get; set; } = 100f;
 
+    /// <summary>
+    /// 音声音量
+    /// </summary>
+    [Export]
+    public float VoiceVolume { get; set; } = 100f;
+
     public override void _Ready()
     {
         base._Ready();
@@ -28,6 +34,7 @@ public partial class VolumeOptionDialog : DialogRoot
         // リリースビルドのエクスポート時、接続が失われることがある。
         GetNode<HSlider>("Control/BgmSlider").ValueChanged += BgmVolumeChanged;
         GetNode<HSlider>("Control/SeSlider").ValueChanged += SeVolumeChanged;
+        GetNode<HSlider>("Control/VoiceSlider").ValueChanged += VoiceVolumeChanged;
     }
 
     public override void Active()
@@ -43,13 +50,16 @@ public partial class VolumeOptionDialog : DialogRoot
     /// </summary>
     public override void UpdateDialogScreen()
     {
-        GameOption option = GetNode<GameOption>("/root/GameOption");
+        GameOption option = SystemHub.GetGameOption();
         BgmVolume = option.BgmVolume;
         GetNode<Label>("BgmValue").Text = $"{BgmVolume}%";
         GetNode<HSlider>("Control/BgmSlider").SetValueNoSignal(BgmVolume);
         SeVolume = option.SeVolume;
         GetNode<Label>("SeValue").Text = $"{SeVolume}%";
         GetNode<HSlider>("Control/SeSlider").SetValueNoSignal(SeVolume);
+        VoiceVolume = option.VoiceVolume;
+        GetNode<Label>("VoiceValue").Text = $"{VoiceVolume}%";
+        GetNode<HSlider>("Control/VoiceSlider").SetValueNoSignal(VoiceVolume);
     }
 
     /// <summary>
@@ -60,7 +70,7 @@ public partial class VolumeOptionDialog : DialogRoot
     {
         BgmVolume = (float)value;
         GetNode<Label>("BgmValue").Text = $"{BgmVolume}%";
-        GameOption option = GetNode<GameOption>("/root/GameOption");
+        GameOption option = SystemHub.GetGameOption();
         option.BgmVolume = BgmVolume;
         option.SetOptions();
     }
@@ -73,9 +83,23 @@ public partial class VolumeOptionDialog : DialogRoot
     {
         SeVolume = (float)value;
         GetNode<Label>("SeValue").Text = $"{SeVolume}%";
-        GameOption option = GetNode<GameOption>("/root/GameOption");
+        GameOption option = SystemHub.GetGameOption();
         option.SeVolume = SeVolume;
         option.SetOptions();
-        GetNode<SePlayer>("/root/SePlayer").Play("menu_select", true);
+        SystemHub.GetSePlayer().Play("menu_select", true);
+    }
+
+    /// <summary>
+    /// 音声音量が変更された
+    /// </summary>
+    /// <param name="value">音量</param>
+    public void VoiceVolumeChanged(double value)
+    {
+        VoiceVolume = (float)value;
+        GetNode<Label>("VoiceValue").Text = $"{VoiceVolume}%";
+        GameOption option = SystemHub.GetGameOption();
+        option.VoiceVolume = VoiceVolume;
+        option.SetOptions();
+        SystemHub.GetSePlayer().Play("fighter_1_guha", false, true);
     }
 }

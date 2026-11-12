@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bfygg33ntyk47" path="res://decoration/effect_guard.tscn" id="3_vu3vs"]
 [ext_resource type="Texture2D" uid="uid://do6244aynl8wi" path="res://contents/image/fighter/life_up.png" id="4_0y551"]
 [ext_resource type="Texture2D" uid="uid://dm4ox6peeqkwy" path="res://contents/image/fighter/life_bar.png" id="5_65mpp"]
-[ext_resource type="PackedScene" uid="uid://bh0d1pl6uidn6" path="res://system/se_player.tscn" id="6_8wd67"]
 [ext_resource type="AnimationLibrary" uid="uid://bigxx1tyyufor" path="res://contents/state_machine/fighter/fighter_3/animation_player.tres" id="7_mklcy"]
 [ext_resource type="Texture2D" uid="uid://dibjmxvgonb8f" path="res://contents/image/fighter/fighter_3/hip.png" id="12_mklcy"]
 [ext_resource type="Texture2D" uid="uid://qj1mt6ewg3jp" path="res://contents/image/fighter/fighter_3/aura_waza_3.png" id="25_mklcy"]
@@ -251,8 +250,6 @@ texture_under = ExtResource("3_bpa8y")
 texture_over = ExtResource("4_0y551")
 texture_progress = ExtResource("5_65mpp")
 texture_progress_offset = Vector2(2, 2)
-
-[node name="SePlayer" parent="." unique_id=797792970 instance=ExtResource("6_8wd67")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1073205697]
 libraries/ = ExtResource("7_mklcy")

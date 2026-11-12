@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqpgy51srnr4l"]
+
+[ext_resource type="Script" uid="uid://ckeci2kdaw1n2" path="res://system/StopExecTwice.cs" id="1_fjhye"]
+
+[node name="StopExecTwice" type="Node" unique_id=1517550604]
+script = ExtResource("1_fjhye")

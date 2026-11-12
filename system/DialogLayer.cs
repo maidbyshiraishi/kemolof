@@ -20,6 +20,8 @@ namespace maid_by_shiraishi.system;
 public partial class DialogLayer : CanvasLayer
 {
     private readonly Array<DialogRoot> _history = [];
+    private string _nextScreenPath;
+    private string _nextScreenFadein;
 
     /// <summary>
     /// 現在の画面を返す
@@ -49,7 +51,7 @@ public partial class DialogLayer : CanvasLayer
 
         if (!string.IsNullOrWhiteSpace(key))
         {
-            GetNode<DialogArgument>("/root/DialogArgument").SetArgument(key, argument);
+            SystemHub.GetDialogArgument().SetArgument(key, argument);
         }
 
         GetTree().Paused = true;
@@ -160,28 +162,46 @@ public partial class DialogLayer : CanvasLayer
 
         if (!string.IsNullOrWhiteSpace(key))
         {
-            GetNode<DialogArgument>("/root/DialogArgument").SetArgument(key, argument);
+            SystemHub.GetDialogArgument().SetArgument(key, argument);
         }
 
         GetTree().Paused = true;
-        _ = CallDeferred(MethodName.DeferredOpenScreen, [path, fadeout, fadein]);
+        _ = CallDeferred(MethodName.OpenScreenStep1, [path, fadeout, fadein]);
     }
 
-    protected async void DeferredOpenScreen(string path, string fadeout, string fadein)
+    protected void OpenScreenStep1(string path, string fadeout, string fadein)
     {
-        ScreenFader fader = GetNode<ScreenFader>("/root/ScreenFader");
+        _nextScreenPath = path;
+        _nextScreenFadein = fadein;
+        ScreenFader fader = SystemHub.GetScreenFader();
+        fader.ScreenFadeFinished -= OpenScreenStep2;
+        fader.ScreenFadeFinished -= OpenScreenStep3;
+        fader.ScreenFadeFinished += OpenScreenStep2;
         fader.ScreenFade(fadeout);
-        _ = await ToSignal(fader, ScreenFader.SignalName.ScreenFadeFinished);
+    }
+
+    protected void OpenScreenStep2()
+    {
         CloseAllDialog();
         GetCurrentScreen()?.Inactive();
 
-        if (Lib.GetPackedScene(path) is PackedScene pack)
+        if (Lib.GetPackedScene(_nextScreenPath) is PackedScene pack)
         {
             _ = GetTree().ChangeSceneToPacked(pack);
         }
 
-        fader.ScreenFade(fadein);
-        _ = await ToSignal(fader, ScreenFader.SignalName.ScreenFadeFinished);
+        ScreenFader fader = SystemHub.GetScreenFader();
+        fader.ScreenFadeFinished -= OpenScreenStep2;
+        fader.ScreenFadeFinished -= OpenScreenStep3;
+        fader.ScreenFadeFinished += OpenScreenStep3;
+        fader.ScreenFade(_nextScreenFadein);
+    }
+
+    protected void OpenScreenStep3()
+    {
+        ScreenFader fader = SystemHub.GetScreenFader();
+        fader.ScreenFadeFinished -= OpenScreenStep2;
+        fader.ScreenFadeFinished -= OpenScreenStep3;
         DialogRoot current = GetCurrentScreen();
         current.Active();
         Input.MouseMode = current.MouseCaptured ? Input.MouseModeEnum.Captured : Input.MouseModeEnum.Visible;

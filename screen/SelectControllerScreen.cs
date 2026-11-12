@@ -17,8 +17,8 @@ public partial class SelectControllerScreen : DialogRoot
     public override void _Ready()
     {
         base._Ready();
-        _gameDataManager = GetNode<GameDataManager>("/root/GameDataManager");
-        _joyPad = GetNode<JoyPadController>("/root/JoyPadController");
+        _gameDataManager = SystemHub.GetGameDataManager();
+        _joyPad = SystemHub.GetJoyPadController();
         _joyPad.JoyConnectionChanged += OnJoyConnectionChanged;
 
         // パッドの接続台数に応じてPad選択ボタンを有効化する。
@@ -195,8 +195,6 @@ public partial class SelectControllerScreen : DialogRoot
         // キーボードに割り当てる。デバイス4はCPU普通へ割り当てる
         if (!connected)
         {
-            _ = _joyPad.DeviceCount();
-
             for (int i = 0; i < 7; i++)
             {
                 if (GetNode<Button>($"Control/Pad{device + 1}_{i + 1}").ButtonPressed)

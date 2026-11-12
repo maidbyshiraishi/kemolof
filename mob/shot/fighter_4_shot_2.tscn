@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://db8hbi1ec6vl4" path="res://mob/AttackArea.cs" id="2_y5fs0"]
 [ext_resource type="Texture2D" uid="uid://b5280jb7xcx5b" path="res://contents/image/shot/fighter_4_shot_2.png" id="3_w06dc"]
 [ext_resource type="Texture2D" uid="uid://b6nkeismufuem" path="res://contents/image/shot/fighter_4_shot_2_effect.png" id="4_y5fs0"]
-[ext_resource type="PackedScene" uid="uid://bh0d1pl6uidn6" path="res://system/se_player.tscn" id="5_y5fs0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w06dc"]
 size = Vector2(160, 136)
@@ -130,5 +129,3 @@ scale = Vector2(8, 6.25)
 sprite_frames = SubResource("SpriteFrames_laq18")
 autoplay = "default"
 frame = 4
-
-[node name="SePlayer" parent="." unique_id=1719034153 instance=ExtResource("5_y5fs0")]

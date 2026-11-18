@@ -1,4 +1,5 @@
 using Godot;
+using System;
 using System.Collections.Generic;
 
 namespace maid_by_shiraishi.system.waza_analyzer;
@@ -66,16 +67,16 @@ public partial class WazaAnalyzer : Node
     /// <param name="wazaName">必殺技名</param>
     /// <param name="command">必殺技コマンド</param>
     /// <param name="mask">必殺技マスク</param>
-    public void AddWaza(string wazaName, Godot.Collections.Array<int> command, Godot.Collections.Array<int> mask)
+    public void AddWaza(string wazaName, int[] command, int[] mask)
     {
-        if (string.IsNullOrWhiteSpace(wazaName) || command is null || command.Count is 0 || mask is null || mask.Count is 0 || _waza.ContainsKey(wazaName))
+        if (string.IsNullOrWhiteSpace(wazaName) || command is null || command.Length is 0 || mask is null || mask.Length is 0 || _waza.ContainsKey(wazaName))
         {
             return;
         }
 
-        int commandLength = command.Count;
+        int commandLength = command.Length;
 
-        if (commandLength != mask.Count)
+        if (commandLength != mask.Length)
         {
             GD.PrintErr($"{wazaName}のコマンドとマスクのサイズが一致しません。");
             return;
@@ -84,8 +85,8 @@ public partial class WazaAnalyzer : Node
         // キーバッファは新から旧の順序、必殺技のキー順は旧から新の順序で定義する。
         // そのため、必殺技のキー順は逆順にしてから解析する必要がある。
         // 実行の度に逆順にする必要はないので、あらかじめ逆順にしておく
-        command.Reverse();
-        mask.Reverse();
+        Array.Reverse(command);
+        Array.Reverse(mask);
 
         // キー入力の対象ビットをそのまま判定すると技に登場するキーを同時に連打すると技が発動する。
         // コマンドのキーごとに同時押しを認めないためのキー入力に対してマスクデータを適用する。
@@ -96,7 +97,7 @@ public partial class WazaAnalyzer : Node
         bool[] tame = new bool[commandLength];
         int bufferSize = 0;
 
-        for (int i = 0; i < command.Count; i++)
+        for (int i = 0; i < command.Length; i++)
         {
             // キーのタメフラグをとりあえず除去する
             int tameRemoved = command[i] & WazaKey.RemoveTameFlagMask;
@@ -136,9 +137,9 @@ public partial class WazaAnalyzer : Node
     /// <param name="buffer">キーバッファ</param>
     /// <param name="rightSide">右側か</param>
     /// <returns>必殺技が発動したか</returns>
-    public bool AnalyzeWaza(string wazaName, Godot.Collections.Array<int> buffer, bool rightSide)
+    public bool AnalyzeWaza(string wazaName, int[] buffer, bool rightSide)
     {
-        if (string.IsNullOrWhiteSpace(wazaName) || buffer is null || buffer.Count is 0 || _waza.Count == 0 || !_waza.TryGetValue(wazaName, out Waza waza))
+        if (string.IsNullOrWhiteSpace(wazaName) || buffer is null || _waza.Count == 0 || !_waza.TryGetValue(wazaName, out Waza waza))
         {
             return false;
         }
@@ -147,7 +148,7 @@ public partial class WazaAnalyzer : Node
         int[] wazaCommand = waza.Command;
         int commandLength = wazaCommand.Length;
         int[] wazaMask = waza.Mask;
-        int wazaBufferSize = Mathf.Min(buffer.Count, waza.BufferSize);
+        int wazaBufferSize = waza.BufferSize;
 
         // キーバッファのサイズがコマンドの長さよりも小さい場合は解析失敗
         if (wazaBufferSize < commandLength)

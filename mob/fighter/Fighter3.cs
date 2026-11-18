@@ -27,13 +27,13 @@ public partial class Fighter3 : FighterRoot
     protected override void EntryWaza()
     {
         // waza_1: 碁石投げ、どこでも発動
-        Array<int> waza1Command =
+        int[] waza1Command =
         [
             WazaKey.Down,
             WazaKey.Punch | WazaKey.Kick,
             WazaKey.Up,
         ];
-        Array<int> waza1Mask =
+        int[] waza1Mask =
         [
             // 下、下とパンチキックを同時押しするな
             WazaKey.Down | WazaKey.Punch | WazaKey.Kick,
@@ -45,14 +45,14 @@ public partial class Fighter3 : FighterRoot
         AddWaza("waza_1", waza1Command, waza1Mask);
 
         // waza_2: ビート板アッパーカット、地上で発動
-        Array<int> waza2Command =
+        int[] waza2Command =
         [
             WazaKey.Down,
             WazaKey.Right,
             WazaKey.Punch | WazaKey.Kick,
             WazaKey.Up,
         ];
-        Array<int> waza2Mask =
+        int[] waza2Mask =
         [
             // 下
             WazaKey.Down,
@@ -66,7 +66,7 @@ public partial class Fighter3 : FighterRoot
         AddWaza("waza_2", waza2Command, waza2Mask);
 
         // waza_3: 白スク降臨、どこでも発動
-        Array<int> waza3Command =
+        int[] waza3Command =
         [
             WazaKey.Right,
             WazaKey.Down,
@@ -76,7 +76,7 @@ public partial class Fighter3 : FighterRoot
             WazaKey.Left,
             WazaKey.Up,
         ];
-        Array<int> waza3Mask =
+        int[] waza3Mask =
         [
             // 右、絶対に右からスタート
             WazaKey.Up | WazaKey.Down | WazaKey.Left | WazaKey.Right,
@@ -106,7 +106,7 @@ public partial class Fighter3 : FighterRoot
             return;
         }
 
-        Array<int> buffer = m_Brain.GetBufferCopy();
+        int[] buffer = m_Brain.GetBufferCopy();
         bool rightSide = FighterRightSide;
         bool onFloor = IsOnFloor();
         IsForwardOrBack(rightSide, out bool forward, out bool back);

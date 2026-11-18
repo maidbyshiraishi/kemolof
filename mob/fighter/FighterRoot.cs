@@ -246,9 +246,9 @@ public partial class FighterRoot : MobRoot, IGameNode
     {
     }
 
-    protected void AddWaza(string wazaName, Array<int> wazaCommand, Array<int> wazaMask) => _wazaAnalyzer.AddWaza(wazaName, wazaCommand, wazaMask);
+    protected void AddWaza(string wazaName, int[] wazaCommand, int[] wazaMask) => _wazaAnalyzer.AddWaza(wazaName, wazaCommand, wazaMask);
 
-    protected bool AnalyzeWaza(string wazaName, Array<int> buffer)
+    protected bool AnalyzeWaza(string wazaName, int[] buffer)
     {
         if (_wazaAnalyzer.AnalyzeWaza(wazaName, buffer, FighterRightSide))
         {

@@ -33,13 +33,13 @@ public partial class Fighter4 : FighterRoot
     protected override void EntryWaza()
     {
         // waza_1: メイドにあげた手裏剣、いつでも発動
-        Array<int> waza1Command =
+        int[] waza1Command =
         [
             WazaKey.Down,
             WazaKey.Right,
             WazaKey.Punch,
         ];
-        Array<int> waza1Mask =
+        int[] waza1Mask =
         [
             // 青メイドwaza1と共通
             // 下
@@ -52,7 +52,7 @@ public partial class Fighter4 : FighterRoot
         AddWaza("waza_1", waza1Command, waza1Mask);
 
         // waza_2: 完全シノビの術、地上で発動
-        Array<int> waza2Command =
+        int[] waza2Command =
         [
             WazaKey.Down,
             WazaKey.Left,
@@ -61,7 +61,7 @@ public partial class Fighter4 : FighterRoot
             WazaKey.Down,
             WazaKey.Punch,
         ];
-        Array<int> waza2Mask =
+        int[] waza2Mask =
         [
             // 下
             WazaKey.Down,
@@ -79,7 +79,7 @@ public partial class Fighter4 : FighterRoot
         AddWaza("waza_2", waza2Command, waza2Mask);
 
         // waza_3: ときどき食用、地上で発動
-        Array<int> waza3Command =
+        int[] waza3Command =
         [
             WazaKey.Punch,
             WazaKey.Down,
@@ -88,7 +88,7 @@ public partial class Fighter4 : FighterRoot
             WazaKey.Punch,
             WazaKey.Up,
         ];
-        Array<int> waza3Mask =
+        int[] waza3Mask =
         [
             // パンチ、パンチとキックを間違うな
             WazaKey.Punch | WazaKey.Kick,
@@ -116,7 +116,7 @@ public partial class Fighter4 : FighterRoot
             return;
         }
 
-        Array<int> buffer = m_Brain.GetBufferCopy();
+        int[] buffer = m_Brain.GetBufferCopy();
         bool rightSide = FighterRightSide;
         bool onFloor = IsOnFloor();
         IsForwardOrBack(rightSide, out bool forward, out bool back);

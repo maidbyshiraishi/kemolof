@@ -1,7 +1,6 @@
 using Godot;
-using Godot.Collections;
 using maid_by_shiraishi.mob.fighter;
-using maid_by_shiraishi.system.waza_analyzer;
+using maid_by_shiraishi.system;
 
 namespace maid_by_shiraishi.mob.brain;
 
@@ -31,7 +30,7 @@ public partial class BrainRoot : Node2D
     /// <summary>
     /// キーバッファ
     /// </summary>
-    protected Array<int> m_Buffer = [];
+    protected IntRingBuffer m_Buffer;
 
     private int _now;
     private int _last;
@@ -39,6 +38,7 @@ public partial class BrainRoot : Node2D
     public override void _Ready()
     {
         base._Ready();
+        m_Buffer = new(BufferSize);
         Fighter = GetParent<FighterRoot>();
     }
 
@@ -57,13 +57,7 @@ public partial class BrainRoot : Node2D
     {
         _last = _now;
         _now = key;
-        m_Buffer.Insert(0, key);
-
-        // バッファサイズが大きくなり過ぎた場合は古いデータを切り捨てる
-        if (BufferSize < m_Buffer.Count)
-        {
-            _ = m_Buffer.Resize(BufferSize);
-        }
+        m_Buffer.Insert(key);
     }
 
     /// <summary>
@@ -78,7 +72,7 @@ public partial class BrainRoot : Node2D
     /// キーバッファのコピーを返す
     /// </summary>
     /// <returns>キーバッファのコピー</returns>
-    public Array<int> GetBufferCopy() => m_Buffer.Duplicate();
+    public int[] GetBufferCopy() => m_Buffer.GetCopy();
 
     /// <summary>
     /// 指定キーが押されているか返す
@@ -120,5 +114,5 @@ public partial class BrainRoot : Node2D
     /// 今フレームで押されたキーを返す
     /// </summary>
     /// <returns>今フレームで押されたキー</returns>
-    public int GetNowBuffer() => 0 < m_Buffer.Count ? m_Buffer[0] : WazaKey.Free;
+    public int GetNowBuffer() => m_Buffer.GetNow();
 }

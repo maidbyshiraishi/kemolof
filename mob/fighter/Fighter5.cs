@@ -25,14 +25,14 @@ public partial class Fighter5 : FighterRoot
     {
         // waza_1: 全裸の波動、地上で発動
         // ↓↘→+P
-        Array<int> waza1Command =
+        int[] waza1Command =
         [
             WazaKey.Down,
             WazaKey.Right | WazaKey.Down,
             WazaKey.Right,
             WazaKey.Punch,
         ];
-        Array<int> waza1Mask =
+        int[] waza1Mask =
         [
             // 下、右を一緒に押すな
             WazaKey.Right | WazaKey.Down,
@@ -47,14 +47,14 @@ public partial class Fighter5 : FighterRoot
 
         // waza_2: 全裸の滝登り、地上で発動
         // →↓↘+P
-        Array<int> waza2Command =
+        int[] waza2Command =
         [
             WazaKey.Right,
             WazaKey.Down,
             WazaKey.Right | WazaKey.Down,
             WazaKey.Punch,
         ];
-        Array<int> waza2Mask =
+        int[] waza2Mask =
         [
             // 右、下を一緒に押すな
             WazaKey.Right | WazaKey.Down,
@@ -69,14 +69,14 @@ public partial class Fighter5 : FighterRoot
 
         // waza_3: 全裸トルネード、地上で発動
         // ↓↙←+K
-        Array<int> waza3Command =
+        int[] waza3Command =
         [
             WazaKey.Down,
             WazaKey.Down | WazaKey.Left,
             WazaKey.Left,
             WazaKey.Kick,
         ];
-        Array<int> waza3Mask =
+        int[] waza3Mask =
         [
             // 下、左を一緒に押すな
             WazaKey.Down | WazaKey.Left,
@@ -100,7 +100,7 @@ public partial class Fighter5 : FighterRoot
             return;
         }
 
-        Array<int> buffer = m_Brain.GetBufferCopy();
+        int[] buffer = m_Brain.GetBufferCopy();
         bool rightSide = FighterRightSide;
         bool onFloor = IsOnFloor();
         IsForwardOrBack(rightSide, out bool forward, out bool back);
